@@ -1,0 +1,16 @@
+{
+  "name": "space-trains",
+  "version": "0.1.0",
+  "title": "Space Trains",
+  "author": "FragJacker",
+  "factorio_version": "1.1",
+  "description": "This mod adds in space themed trains. They are best used together with the Krastorio 2 and Space Exploration mod.",
+  "dependencies": [
+    "base >= 1.1",
+    "(?) space-exploration >= 0.2.1",
+    "(?) Krastorio >= 0.2.1""
+  ],
+  "package": {
+    "ignore": [".crowdin.yml", ".git", ".github", ".gitignore", ".kakrc", ".vscode"]
+  }
+}
