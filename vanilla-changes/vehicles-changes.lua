@@ -5,7 +5,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "space-locomotive",
+    name = "recipe-space-locomotive",
     -- energy_required = 60,
     energy_required = 2,
     enabled = false,
@@ -17,11 +17,43 @@ data:extend({
       -- { "processing-unit", 20 },
       -- { "rare-metals", 80 },
     },
-    result = "space-locomotive",
+    result = "item-space-locomotive",
+  },
+  {
+    type = "recipe",
+    name = "recipe-space-cargo-wagon",
+    -- energy_required = 60,
+    energy_required = 2,
+    enabled = false,
+    allow_productivity = true,
+    ingredients = {
+      -- { "locomotive", 1 },
+      -- { "electronic-components", 20 },
+      -- { "steel-gear-wheel", 20 },
+      -- { "processing-unit", 20 },
+      -- { "rare-metals", 80 },
+    },
+    result = "item-space-cargo-wagon",
+  },
+  {
+    type = "recipe",
+    name = "recipe-space-fluid-wagon",
+    -- energy_required = 60,
+    energy_required = 2,
+    enabled = false,
+    allow_productivity = true,
+    ingredients = {
+      -- { "locomotive", 1 },
+      -- { "electronic-components", 20 },
+      -- { "steel-gear-wheel", 20 },
+      -- { "processing-unit", 20 },
+      -- { "rare-metals", 80 },
+    },
+    result = "item-space-fluid-wagon",
   },
   {
     type = "technology",
-    name = "tech-space-locomotive",
+    name = "tech-space-trains",
     mod = "space-trains",
     icon = "__space-trains__/technologies/space-locomotive.png",
     icon_size = 256,
@@ -29,7 +61,15 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "space-locomotive",
+        recipe = "recipe-space-locomotive",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "recipe-space-fluid-wagon",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "recipe-space-cargo-wagon",
       },
     },
     prerequisites = { "railway", "nuclear-power", "production-science-pack" },
