@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item-with-entity-data",
     name = "item-space-locomotive",
-    icon = "__space-trains__/icons/vehicles/space-locomotive.png",
+    icon = "__se-space-trains__/icons/vehicles/space-locomotive.png",
     icon_size = 64,
     subgroup = "transport",
     order = "a[train-system]-f[space-locomotive.png]",

@@ -55,7 +55,7 @@ data:extend({
     type = "technology",
     name = "tech-space-trains",
     mod = "space-trains",
-    icon = "__space-trains__/technologies/space-locomotive.png",
+    icon = "__se-space-trains__/technologies/space-locomotive.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {
