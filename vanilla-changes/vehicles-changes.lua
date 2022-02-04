@@ -52,6 +52,46 @@ data:extend({
     result = "item-space-fluid-wagon",
   },
   {
+    type = "recipe",
+    name = "space-train-battery-charging-station",
+    energy_required = 5,
+    enabled = false,
+    ingredients =
+    {
+      -- {"iron-plate", 15},
+      -- {"advanced-circuit", 5},
+      -- {"copper-cable", 20}
+    },
+    result = "space-train-battery-charging-station"
+  },
+  
+  {
+    type = "recipe",
+    name = "space-train-battery-pack",
+    energy_required = 10,
+    enabled = false,
+    ingredients =
+    {
+      -- {"steel-plate", 2},
+      -- {"battery", 20}
+    },
+    result = "space-train-battery-pack"
+  },
+  
+  {
+    type = "recipe",
+    name = "space-train-battery-pack-recharge",
+    category = "electrical",
+    energy_required = 10,
+    enabled = false,
+    ingredients =
+    {
+      {"space-train-discharged-battery-pack", 1}
+    },
+    result = "space-train-battery-pack"
+  },
+  --TECHNOMANS
+  {
     type = "technology",
     name = "tech-space-trains",
     mod = "space-trains",
@@ -71,6 +111,18 @@ data:extend({
         type = "unlock-recipe",
         recipe = "recipe-space-cargo-wagon",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "space-train-battery-charging-station"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "space-train-battery-pack"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "space-train-battery-pack-recharge"
+      }
     },
     prerequisites = { "railway", "nuclear-power", "production-science-pack" },
     unit = {
