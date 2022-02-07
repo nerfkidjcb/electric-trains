@@ -95,6 +95,7 @@ space_train_wheels = {
                  "__se-space-trains__/prototypes/entities/vehicles/maglev_cushions_2.png"},
     line_length = 8,
     lines_per_file = 16,
+    scale = 1.4,
     hr_version = {
         priority = "very-low",
         width = 250,
@@ -111,7 +112,7 @@ space_train_wheels = {
         line_length = 4,
         lines_per_file = 8,
         shift = {0, 0.1}, -- original shifting from spritesheeter (likely needs doubling or halving)
-        scale = 0.4
+        scale = 0.775
     }
 }
 
@@ -119,7 +120,7 @@ data:extend({ -- Battery charging interface
 {
     type = "electric-energy-interface",
     name = "space-locomotive-charging-dummy",
-    icon = "__se-space-trains__/icons/vehicles/space-locomotive.png",
+    icon = "__se-space-trains__/graphics/icons/space-locomotive.png",
     icon_size = 32, -- icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation", "not-blueprintable"},
     corpse = "small-remnants",
@@ -227,7 +228,7 @@ data:extend({ -- Battery charging interface
 {
     type = "locomotive",
     name = "space-locomotive",
-    icon = "__se-space-trains__/icons/vehicles/space-locomotive.png",
+    icon = "__se-space-trains__/graphics/icons/space-locomotive.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     minable = {
@@ -238,7 +239,6 @@ data:extend({ -- Battery charging interface
         filename = "__core__/sound/deconstruct-medium.ogg"
     },
     max_health = 1500,
-    equipment_grid = "kr-locomotive-grid",
     corpse = "locomotive-remnants",
     dying_explosion = "locomotive-explosion",
     collision_box = {{-0.6, -2.6}, {0.6, 2.6}},
@@ -248,8 +248,6 @@ data:extend({ -- Battery charging interface
     damaged_trigger_effect = hit_effects.entity(),
     weight = 12000,
     max_speed = 2.6,
-    -- max_speed = 1.0185,
-    -- max_speed = 1.2035,
     max_power = "6MW",
     reversing_power_modifier = 1.0,
     braking_force = 40,
@@ -344,7 +342,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0, wagon_vertical_shift},
-            scale = train_scale,
+            scale = train_scale*2,
             hr_version = {
                 priority = "very-low",
                 dice = 4,
@@ -393,6 +391,7 @@ data:extend({ -- Battery charging interface
             lines_per_file = 8,
             shift = {0, -0.64},
             apply_runtime_tint = true,
+            scale = train_scale*2,
             hr_version = {
                 priority = "very-low",
                 flags = {"mask"},
@@ -443,7 +442,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0, wagon_vertical_shift},
-            scale = train_scale,
+            scale = train_scale*2,
             hr_version = {
                 priority = "very-low",
                 flags = {"shadow"},
@@ -495,6 +494,7 @@ data:extend({ -- Battery charging interface
             line_length = 8,
             lines_per_file = 16,
             shift = {0, wagon_vertical_shift},
+            scale = train_scale*2,
             hr_version = {
                 priority = "very-low",
                 blend_mode = "additive",
@@ -590,7 +590,7 @@ data:extend({ -- Battery charging interface
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
-    inventory_size = 40,
+    inventory_size = 50,
     minable = {
         mining_time = 0.5,
         result = "item-space-cargo-wagon"
@@ -659,6 +659,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0, wagon_vertical_shift},
+            scale = train_scale*2,
             hr_version = {
                 priority = "very-low",
                 dice = 4,
@@ -693,6 +694,7 @@ data:extend({ -- Battery charging interface
                          "__se-space-trains__/prototypes/entities/vehicles/space_cargo_wagon_mask_4.png"},
             line_length = 4,
             lines_per_file = 8,
+            scale = train_scale*2,
             hr_version = {
                 flags = {"mask"},
                 priority = "very-low",
@@ -729,6 +731,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0.8, wagon_vertical_shift},
+            scale = train_scale*2,
             hr_version = {
                 flags = {"shadow"},
                 priority = "very-low",
@@ -794,7 +797,7 @@ data:extend({ -- Battery charging interface
         volume = 0.8
     },
     max_health = 600,
-    capacity = 25000,
+    capacity = 30000,
     corpse = "fluid-wagon-remnants",
     dying_explosion = "fluid-wagon-explosion",
     collision_box = {{-0.6, -2.4}, {0.6, 2.4}},
@@ -854,6 +857,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0, -0.64},
+            scale = train_scale*2,
             hr_version = {
                 priority = "very-low",
                 dice = 4,
@@ -888,6 +892,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0, -0.64},
+            scale = train_scale*2,
             hr_version = {
                 flags = {"shadow"},
                 priority = "very-low",

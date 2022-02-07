@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item-with-entity-data",
     name = "item-space-locomotive",
-    icon = "__se-space-trains__/icons/vehicles/space-locomotive.png",
+    icon = "__se-space-trains__/graphics/icons/space-locomotive.png",
     icon_size = 64,
     subgroup = "transport",
     order = "a[train-system]-f[space-locomotive.png]",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "item-with-entity-data",
     name = "item-space-cargo-wagon",
-    icon = "__base__/graphics/icons/cargo-wagon.png",
+    icon = "__se-space-trains__/graphics/icons/space-cargo-wagon.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "train-transport",
     order = "a[train-system]-g[cargo-wagon]",
@@ -22,7 +22,7 @@ data:extend({
   {
     type = "item-with-entity-data",
     name = "item-space-fluid-wagon",
-    icon = "__base__/graphics/icons/fluid-wagon.png",
+    icon = "__se-space-trains__/graphics/icons/space-fluid-wagon.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "train-transport",
     order = "a[train-system]-h[fluid-wagon]",

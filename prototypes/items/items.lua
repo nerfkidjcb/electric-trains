@@ -37,10 +37,10 @@ data:extend(
   {
     type = "item",
     name = "space-locomotive-fuel-dummy",
-    localised_name = {'template.deg-electric-fuel-dummy'},
-    icon = "__base__/graphics/icons/accumulator.png",
+    localised_name = {'deg-electric-fuel-dummy-desc'},
+    icon = "__se-space-trains__/graphics/icons/lightning-bolt.png",
     icons = {
-      {icon = "__se-space-trains__/icons/vehicles/space-locomotive.png", icon_size = 32},
+      {icon = "__se-space-trains__/graphics/icons/space-locomotive.png", icon_size = 32},
       {icon = "__se-space-trains__/graphics/icons/lightning-bolt.png", icon_size = 32, scale = 0.5, shift = {12, 12}}
     },
     fuel_category = "electrical",
@@ -53,7 +53,7 @@ data:extend(
   { -- defined to stop Factorio complaining about not having an item to place for the charging point
     type = "item",
     name = "space-locomotive-charging-dummy",
-    icon = "__se-space-trains__/icons/vehicles/space-locomotive.png",
+    icon = "__se-space-trains__/graphics/icons/space-locomotive.png",
     icon_size = 32,
     subgroup = "transport",
     order = "a[train-system]-c[train-stop]-a",

@@ -77,33 +77,45 @@ data:extend({{
     result = "space-train-battery-pack"
 }})
 
+if mods["Krastorio2"] then
+    data.raw["locomotive"]["space-locomotive"].equipment_grid = "kr-locomotive-grid"
+    data.raw["cargo-wagon"]["space-cargo-wagon"].equipment_grid = "kr-wagons-grid"
+    data.raw["fluid-wagon"]["space-fluid-wagon"].equipment_grid = "kr-wagons-grid"
+end
+
 if mods["space-exploration"] then
-    data.raw["technology"]["se-space-rail"].effects = {{
+    table.insert(data.raw["technology"]["se-space-rail"].effects, {
         type = "unlock-recipe",
         recipe = "recipe-space-locomotive"
-    }, {
+    })
+    table.insert(data.raw["technology"]["se-space-rail"].effects, {
         type = "unlock-recipe",
         recipe = "recipe-space-fluid-wagon"
-    }, {
+    })
+    table.insert(data.raw["technology"]["se-space-rail"].effects, {
         type = "unlock-recipe",
         recipe = "recipe-space-cargo-wagon"
-    }, {
+    })
+    table.insert(data.raw["technology"]["se-space-rail"].effects, {
         type = "unlock-recipe",
         recipe = "space-train-battery-charging-station"
-    }, {
+    })
+    table.insert(data.raw["technology"]["se-space-rail"].effects, {
         type = "unlock-recipe",
         recipe = "space-train-battery-pack"
-    }, {
+    })
+    table.insert(data.raw["technology"]["se-space-rail"].effects, {
         type = "unlock-recipe",
         recipe = "space-train-battery-pack-recharge"
-    }}
+    })
+    data.raw["assembling-machine"]["space-train-battery-charging-station"].se_allow_in_space = true
 else
     data:extend({ -- TECHNOMANS
     {
         type = "technology",
         name = "tech-space-trains",
         mod = "space-trains",
-        icon = "__se-space-trains__/technologies/space-locomotive.png",
+        icon = "__se-space-trains__/graphics/icons/space-trains-tech.png",
         icon_size = 256,
         icon_mipmaps = 4,
         effects = {{
