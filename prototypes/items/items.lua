@@ -4,7 +4,7 @@ data:extend(
     type = "item",
     name = "space-train-battery-charging-station",
     icon = "__se-space-trains__/graphics/icons/space-train-charging-station.png",
-    icon_size = 128, icon_mipmaps = 4,
+    icon_size = 128,
     subgroup = "production-machine",
     order = "h[train-system]",
     place_result = "space-train-battery-charging-station",
