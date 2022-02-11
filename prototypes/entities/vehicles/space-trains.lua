@@ -14,42 +14,44 @@ local sounds = require("__base__/prototypes/entity/sounds")
 function space_accumulator_picture(tint, repeat_count)
     return {
         layers = {{
-            filename = "__base__/graphics/entity/accumulator/accumulator.png",
+            filename = "__se-space-trains__/graphics/entity/space-train-charging-station/space_charging_station.png",
             priority = "high",
-            width = 66,
-            height = 94,
+            width = 224,
+            height = 224,
             repeat_count = repeat_count,
             shift = util.by_pixel(0, -10),
             tint = tint,
             animation_speed = 0.5,
+            scale = 0.4,
             hr_version = {
-                filename = "__base__/graphics/entity/accumulator/hr-accumulator.png",
+                filename = "__se-space-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station.png",
                 priority = "high",
-                width = 130,
-                height = 189,
+                width = 448,
+                height = 448,
                 repeat_count = repeat_count,
                 shift = util.by_pixel(0, -11),
                 tint = tint,
                 animation_speed = 0.5,
-                scale = 0.5
+                scale = 0.2
             }
         }, {
-            filename = "__base__/graphics/entity/accumulator/accumulator-shadow.png",
+            filename = "__se-space-trains__/graphics/entity/space-train-charging-station/space_charging_station_shadow.png",
             priority = "high",
-            width = 120,
-            height = 54,
+            width = 224,
+            height = 80,
             repeat_count = repeat_count,
             shift = util.by_pixel(28, 6),
             draw_as_shadow = true,
+            scale = 0.4,
             hr_version = {
-                filename = "__base__/graphics/entity/accumulator/hr-accumulator-shadow.png",
+                filename = "__se-space-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_shadow.png",
                 priority = "high",
-                width = 234,
-                height = 106,
+                width = 448,
+                height = 160,
                 repeat_count = repeat_count,
                 shift = util.by_pixel(29, 6),
                 draw_as_shadow = true,
-                scale = 0.5
+                scale = 0.2
             }
         }}
     }
@@ -57,30 +59,31 @@ end
 
 function space_accumulator_charge()
     return {
-        layers = {accumulator_picture({
+        layers = {space_accumulator_picture({
             r = 1,
             g = 1,
             b = 1,
             a = 1
-        }, 24), {
-            filename = "__base__/graphics/entity/accumulator/accumulator-charge.png",
+        }, 30), {
+            filename = "__se-space-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_lightning.png",
             priority = "high",
-            width = 90,
-            height = 100,
+            width = 224,
+            height = 224,
             line_length = 6,
-            frame_count = 24,
+            frame_count = 30,
             draw_as_glow = true,
-            shift = util.by_pixel(0, -22),
+            shift = util.by_pixel(0, -11),
+            scale = 0.4,
             hr_version = {
-                filename = "__base__/graphics/entity/accumulator/hr-accumulator-charge.png",
+                filename = "__se-space-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_lightning.png",
                 priority = "high",
-                width = 178,
-                height = 206,
+                width = 448,
+                height = 448,
                 line_length = 6,
-                frame_count = 24,
+                frame_count = 30,
                 draw_as_glow = true,
-                shift = util.by_pixel(0, -22),
-                scale = 0.5
+                shift = util.by_pixel(0, -11),
+                scale = 0.2
             }
         }}
     }
@@ -138,9 +141,8 @@ data:extend({ -- Battery charging interface
 {
     type = "assembling-machine",
     name = "space-train-battery-charging-station",
-    icon = "__base__/graphics/icons/accumulator.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icon = "__se-space-trains__/graphics/icons/space-train-charging-station.png",
+    icon_size = 128,
     flags = {"placeable-neutral", "player-creation"},
     minable = {
         mining_time = 0.1,
