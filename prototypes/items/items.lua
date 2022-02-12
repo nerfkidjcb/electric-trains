@@ -16,6 +16,24 @@ data:extend(
     name = "space-train-battery-pack",
     icon = "__se-space-trains__/graphics/icons/battery.png",
     icon_size = 128,
+    pictures =
+    {
+      layers =
+      {
+        {
+          size = 128,
+          filename = "__se-space-trains__/graphics/icons/battery.png",
+          scale = 0.125,
+        },
+        {
+          draw_as_light = true,
+          flags = {"light"},
+          size = 128,
+          filename = "__se-space-trains__/graphics/icons/battery_light.png",
+          scale = 0.125,
+        }
+      }
+    },
     fuel_category = "electrical",
     fuel_value = "100MJ",
     burnt_result = "space-train-discharged-battery-pack",

@@ -66,7 +66,7 @@ data:extend({{
         -- {"steel-plate", 2},
         -- {"battery", 20}
     },
-    result = "space-train-battery-pack"
+    result = "space-train-discharged-battery-pack"
 }, {
     type = "recipe",
     name = "space-train-battery-pack-recharge",
