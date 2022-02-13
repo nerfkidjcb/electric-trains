@@ -121,24 +121,6 @@ space_train_wheels = {
 
 data:extend({ -- Battery charging interface
 {
-    type = "electric-energy-interface",
-    name = "space-locomotive-charging-dummy",
-    icon = "__se-space-trains__/graphics/icons/space-locomotive.png",
-    icon_size = 32, -- icon_mipmaps = 4,
-    flags = {"placeable-neutral", "player-creation", "not-blueprintable"},
-    corpse = "small-remnants",
-    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-    energy_source = {
-        type = "electric",
-        buffer_capacity = "250MJ",
-        usage_priority = "primary-input",
-        input_flow_limit = "25MW",
-        output_flow_limit = "0kW"
-    },
-    charge_cooldown = 45,
-    discharge_cooldown = 30
-}, -- Battery charging station
-{
     type = "assembling-machine",
     name = "space-train-battery-charging-station",
     icon = "__se-space-trains__/graphics/icons/space-train-charging-station.png",
@@ -166,11 +148,6 @@ data:extend({ -- Battery charging interface
         input_flow_limit = "10MW",
         output_flow_limit = "0kW",
         drain = "500W"
-    },
-    energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        drain = "3kW"
     },
     fast_replaceable_group = "assembling-machine",
     always_draw_idle_animation = true,
@@ -221,11 +198,6 @@ data:extend({ -- Battery charging interface
         fade_in_ticks = 4,
         fade_out_ticks = 20
     },
-
-    module_specification = {
-        module_slots = 1
-    },
-    allowed_effects = {"consumption", "speed", "pollution"}
 }, -- Actual Space Trains now
 {
     type = "locomotive",
