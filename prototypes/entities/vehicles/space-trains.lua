@@ -32,7 +32,7 @@ function space_accumulator_picture(tint, repeat_count)
                 shift = util.by_pixel(0, -16),
                 tint = tint,
                 animation_speed = 0.5,
-                scale = 0.5,
+                scale = 0.5
             }
         }, {
             filename = "__se-space-trains__/graphics/entity/space-train-charging-station/space_charging_station_shadow.png",
@@ -51,7 +51,7 @@ function space_accumulator_picture(tint, repeat_count)
                 repeat_count = repeat_count,
                 shift = util.by_pixel(32, 11),
                 draw_as_shadow = true,
-                scale = 0.5,
+                scale = 0.5
             }
         }}
     }
@@ -185,7 +185,7 @@ data:extend({ -- Battery charging interface
     close_sound = sounds.machine_close,
     working_sound = {
         sound = {
-            filename = "__base__/sound/accumulator-working.ogg",
+            filename = "__se-space-trains__/sound/space-charging-sound.ogg",
             volume = 0.4
         },
         idle_sound = {
@@ -197,7 +197,7 @@ data:extend({ -- Battery charging interface
         audible_distance_modifier = 0.5,
         fade_in_ticks = 4,
         fade_out_ticks = 20
-    },
+    }
 }, -- Actual Space Trains now
 {
     type = "locomotive",
@@ -316,7 +316,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0, wagon_vertical_shift},
-            scale = train_scale*2,
+            scale = train_scale * 2,
             hr_version = {
                 priority = "very-low",
                 dice = 4,
@@ -365,7 +365,7 @@ data:extend({ -- Battery charging interface
             lines_per_file = 8,
             shift = {0, wagon_vertical_shift},
             apply_runtime_tint = true,
-            scale = train_scale*2,
+            scale = train_scale * 2,
             hr_version = {
                 priority = "very-low",
                 flags = {"mask"},
@@ -416,7 +416,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0, wagon_vertical_shift},
-            scale = train_scale*2,
+            scale = train_scale * 2,
             hr_version = {
                 priority = "very-low",
                 flags = {"shadow"},
@@ -468,7 +468,7 @@ data:extend({ -- Battery charging interface
             line_length = 8,
             lines_per_file = 16,
             shift = {0, wagon_vertical_shift},
-            scale = train_scale*2,
+            scale = train_scale * 2,
             hr_version = {
                 priority = "very-low",
                 blend_mode = "additive",
@@ -532,17 +532,14 @@ data:extend({ -- Battery charging interface
     }, {
         type = "play-sound",
         sound = sounds.train_brakes
-    }, {
-        type = "play-sound",
-        sound = sounds.train_brake_screech
     }},
-    drive_over_tie_trigger = drive_over_tie(),
-    tie_distance = 50,
+    --drive_over_tie_trigger = drive_over_tie(),
+    --tie_distance = 50,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
         sound = {
-            filename = "__base__/sound/train-engine.ogg",
-            volume = 0.4
+            filename = "__se-space-trains__/sound/space-train-engine.ogg",
+            volume = 0.45
         },
         match_speed_to_activity = true,
         max_sounds_per_type = 2
@@ -633,7 +630,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0, wagon_vertical_shift},
-            scale = train_scale*2,
+            scale = train_scale * 2,
             hr_version = {
                 priority = "very-low",
                 dice = 4,
@@ -668,7 +665,7 @@ data:extend({ -- Battery charging interface
                          "__se-space-trains__/prototypes/entities/vehicles/space_cargo_wagon_mask_4.png"},
             line_length = 4,
             lines_per_file = 8,
-            scale = train_scale*2,
+            scale = train_scale * 2,
             hr_version = {
                 flags = {"mask"},
                 priority = "very-low",
@@ -705,7 +702,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0.8, wagon_vertical_shift},
-            scale = train_scale*2,
+            scale = train_scale * 2,
             hr_version = {
                 flags = {"shadow"},
                 priority = "very-low",
@@ -740,8 +737,8 @@ data:extend({ -- Battery charging interface
         scale = 0.5
     },
     wheels = space_train_wheels,
-    drive_over_tie_trigger = drive_over_tie(),
-    tie_distance = 50,
+    --drive_over_tie_trigger = drive_over_tie(),
+    --tie_distance = 50,
     working_sound = {
         sound = {
             filename = "__base__/sound/train-wheels.ogg",
@@ -831,7 +828,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0, -0.64},
-            scale = train_scale*2,
+            scale = train_scale * 2,
             hr_version = {
                 priority = "very-low",
                 dice = 4,
@@ -866,7 +863,7 @@ data:extend({ -- Battery charging interface
             line_length = 4,
             lines_per_file = 8,
             shift = {0, -0.64},
-            scale = train_scale*2,
+            scale = train_scale * 2,
             hr_version = {
                 flags = {"shadow"},
                 priority = "very-low",
@@ -901,8 +898,8 @@ data:extend({ -- Battery charging interface
         scale = 0.5
     },
     wheels = space_train_wheels,
-    drive_over_tie_trigger = drive_over_tie(),
-    tie_distance = 50,
+    --drive_over_tie_trigger = drive_over_tie(),
+    --tie_distance = 50,
     working_sound = {
         sound = {
             filename = "__base__/sound/train-wheels.ogg",

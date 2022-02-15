@@ -26,11 +26,11 @@ data:extend({{
         }}
     },
     fuel_category = "electrical",
-    fuel_value = "100MJ",
+    fuel_value = "50MJ",
     burnt_result = "space-train-discharged-battery-pack",
     subgroup = "intermediate-product",
     order = "s-a[battery-pack]",
-    stack_size = 10
+    stack_size = 20
 }, {
     type = "item",
     name = "space-train-discharged-battery-pack",
@@ -38,5 +38,5 @@ data:extend({{
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "s-b[discharged-battery-pack]",
-    stack_size = 10
+    stack_size = 20
 }})
