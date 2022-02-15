@@ -14,7 +14,7 @@ data:extend({{
     name = "recipe-space-cargo-wagon",
     energy_required = 60,
     enabled = false,
-    ingredients = {{"cargo-wagon", 1}, {"processing-unit", 10}
+    ingredients = {{"cargo-wagon", 1}, {"advanced-circuit", 10}
     },
     result = "item-space-cargo-wagon"
 }, {
@@ -22,13 +22,13 @@ data:extend({{
     name = "recipe-space-fluid-wagon",
     energy_required = 60,
     enabled = false,
-    ingredients = {{"fluid-wagon", 1}, {"processing-unit", 10}
+    ingredients = {{"fluid-wagon", 1}, {"advanced-circuit", 10}
     },
     result = "item-space-fluid-wagon"
 }, {
     type = "recipe",
     name = "space-train-battery-charging-station",
-    energy_required = 5,
+    energy_required = 10,
     enabled = false,
     ingredients = {{"steel-plate", 15}, {"advanced-circuit", 5}, {"copper-cable", 20}},
     result = "space-train-battery-charging-station"
@@ -46,7 +46,7 @@ data:extend({{
     name = "space-train-battery-pack-recharge",
     category = "electrical",
     hidden = true,
-    energy_required = 10,
+    energy_required = 30,
     enabled = false,
     icon = "__se-space-trains__/graphics/icons/battery.png",
     icon_size = 128,
@@ -67,9 +67,9 @@ data:extend({{
     energy_required = 10,
     enabled = false,
     category = "chemistry",
-    ingredients = {{"space-train-destroyed-battery-pack", 1}, {"steel-plate", 1}
+    ingredients = {{"space-train-destroyed-battery-pack", 1}, {type = "fluid", name = "sulfuric-acid", amount = 20}
     },
-    result = "space-train-battery-pack"
+    result = "space-train-discharged-battery-pack"
 }})
 
 if mods["Krastorio2"] then
@@ -81,6 +81,11 @@ if mods["Krastorio2"] then
     table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-gear-wheel", 20})
     table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-gear-wheel", 20})
     table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-gear-wheel", 20})
+    table.insert(data.raw["recipe"]["space-train-battery-pack"].ingredients, {"lithium-sulfur-battery", 20})
+    table.insert(data.raw["recipe"]["space-train-battery-pack-refurbish"].ingredients, {"lithium-sulfur-battery", 10})
+else
+    table.insert(data.raw["recipe"]["space-train-battery-pack"].ingredients, {"battery", 20})
+    table.insert(data.raw["recipe"]["space-train-battery-pack-refurbish"].ingredients, {"battery", 10})
 end
 
 if mods["space-exploration"] then
@@ -117,13 +122,12 @@ if mods["space-exploration"] then
     table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"se-heat-shielding", 20})
     table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"se-heat-shielding", 20})
     table.insert(data.raw["recipe"]["space-train-battery-charging-station"].ingredients, {"se-heat-shielding", 20})
-    table.insert(data.raw["recipe"]["space-train-battery-pack"].ingredients, {"lithium-sulfur-battery", 20})
-    table.insert(data.raw["recipe"]["space-train-battery-pack-refurbish"].ingredients, {"lithium-sulfur-battery", 10})
 
     data.raw["assembling-machine"]["space-train-battery-charging-station"].se_allow_in_space = true
 else
-    table.insert(data.raw["recipe"]["space-train-battery-pack"].ingredients, {"battery", 20})
-    table.insert(data.raw["recipe"]["space-train-battery-pack-refurbish"].ingredients, {"battery", 10})
+    table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-plate", 20})
+    table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-plate", 20})
+    table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-plate", 20})
 
     data:extend({ -- TECHNOMANS
     {
@@ -157,11 +161,11 @@ else
         }},
         prerequisites = {"railway", "nuclear-power", "production-science-pack"},
         unit = {
-            -- count = 500,
+            count = 500,
             count = 5,
             ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
                            {"production-science-pack", 1}},
-            -- time = 60,
+            time = 60,
             time = 1
         }
     }})

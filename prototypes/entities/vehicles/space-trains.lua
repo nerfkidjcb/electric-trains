@@ -74,6 +74,7 @@ function space_accumulator_charge()
             draw_as_glow = true,
             shift = util.by_pixel(0, -16),
             scale = 1,
+            animation_speed = 3,
             hr_version = {
                 filename = "__se-space-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_lightning.png",
                 priority = "high",
@@ -83,7 +84,8 @@ function space_accumulator_charge()
                 frame_count = 30,
                 draw_as_glow = true,
                 shift = util.by_pixel(0, -16),
-                scale = 0.5
+                scale = 0.5,
+                animation_speed = 3
             }
         }}
     }
@@ -174,7 +176,7 @@ data:extend({ -- Battery charging interface
 
     water_reflection = accumulator_reflection(),
 
-    energy_usage = "10MW",
+    energy_usage = "1.7MW",
     crafting_categories = {"electrical"},
     crafting_speed = 1,
     fixed_recipe = "space-train-battery-pack-recharge",
