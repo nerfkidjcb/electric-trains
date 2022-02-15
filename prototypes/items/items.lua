@@ -33,10 +33,32 @@ data:extend({{
     stack_size = 20
 }, {
     type = "item",
+    name = "space-train-destroyed-battery-pack",
+    icon = "__se-space-trains__/graphics/icons/destroyed-battery.png",
+    icon_size = 128,
+    pictures = {
+        layers = {{
+            size = 128,
+            filename = "__se-space-trains__/graphics/icons/destroyed-battery.png",
+            scale = 0.125
+        }, {
+            draw_as_light = true,
+            flags = {"light"},
+            size = 128,
+            filename = "__se-space-trains__/graphics/icons/destroyed-battery_light.png",
+            scale = 0.125
+        }}
+    },
+    burnt_result = "space-train-discharged-battery-pack",
+    subgroup = "intermediate-product",
+    order = "s-a[destroyed-battery-pack]",
+    stack_size = 60
+}, {
+    type = "item",
     name = "space-train-discharged-battery-pack",
     icon = "__se-space-trains__/graphics/icons/discharged-battery.png",
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "s-b[discharged-battery-pack]",
-    stack_size = 20
+    stack_size = 60
 }})

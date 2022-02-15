@@ -255,7 +255,7 @@ data:extend({ -- Battery charging interface
     burner = {
         fuel_category = "electrical",
         effectivity = 0.95,
-        fuel_inventory_size = 1,
+        fuel_inventory_size = 3,
         burnt_inventory_size = 1
     },
     front_light = {{
@@ -539,7 +539,7 @@ data:extend({ -- Battery charging interface
     working_sound = {
         sound = {
             filename = "__se-space-trains__/sound/space-train-engine.ogg",
-            volume = 0.45
+            volume = 0.4
         },
         match_speed_to_activity = true,
         max_sounds_per_type = 2
