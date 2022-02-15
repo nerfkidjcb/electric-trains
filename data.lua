@@ -21,3 +21,15 @@ require("vanilla-changes/vehicles-changes")
 -- require(scripts_path .. "Squeak_Through")
 -- require(scripts_path .. "space-exploration")
 ---------------------------------------------------------------------------
+
+data:extend(
+{
+  {
+    type = "fuel-category",
+    name = "electrical"
+  },
+  {
+    type = "recipe-category",
+    name = "electrical"
+  }
+})
