@@ -8,6 +8,7 @@ local train_scale = 0.85
 local fluid_wagon_scale = 0.75
 local wagon_vertical_shift = -0.8
 local connection_length = 3
+local train_speed = 2.4
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
@@ -223,13 +224,13 @@ data:extend({ -- Battery charging interface
     alert_icon_shift = util.by_pixel(0, -24),
     damaged_trigger_effect = hit_effects.entity(),
     weight = 12000,
-    max_speed = 2.6,
-    max_power = "6MW",
+    max_speed = train_speed,
+    max_power = "4MW",
     reversing_power_modifier = 1.0,
     braking_force = 40,
     friction_force = 0.50,
     vertical_selection_shift = -0.5,
-    air_resistance = 0.0075, -- this is a percentage of current speed that will be subtracted
+    air_resistance = 0.0025, -- this is a percentage of current speed that will be subtracted
     connection_distance = connection_length,
     joint_distance = 4,
     energy_per_hit_point = 5,
@@ -554,7 +555,7 @@ data:extend({ -- Battery charging interface
         filename = "__base__/sound/train-door-close.ogg",
         volume = 0.4
     },
-    sound_minimum_speed = 0.25,
+    sound_minimum_speed = 0.5,
     water_reflection = locomotive_reflection()
 }, {
     type = "cargo-wagon",
@@ -580,7 +581,7 @@ data:extend({ -- Battery charging interface
     damaged_trigger_effect = hit_effects.entity(),
     vertical_selection_shift = -0.796875,
     weight = 1000,
-    max_speed = 1.5,
+    max_speed = train_speed,
     braking_force = 3,
     friction_force = 0.50,
     air_resistance = 0.01,
@@ -778,7 +779,7 @@ data:extend({ -- Battery charging interface
     damaged_trigger_effect = hit_effects.entity(),
     vertical_selection_shift = -0.796875,
     weight = 1000,
-    max_speed = 1.5,
+    max_speed = train_speed,
     braking_force = 3,
     friction_force = 0.50,
     air_resistance = 0.01,

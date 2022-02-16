@@ -38,8 +38,10 @@ data:extend({{
     category = "advanced-crafting",
     energy_required = 10,
     enabled = false,
+    allow_as_intermediate = false,
     ingredients = {{"steel-plate", 2}
     },
+    localised_name = {"recipe-name.space-train-discharged-battery-pack-desc"},
     result = "space-train-discharged-battery-pack"
 }, {
     type = "recipe",
@@ -51,6 +53,7 @@ data:extend({{
     icon = "__se-space-trains__/graphics/icons/battery.png",
     icon_size = 128,
     subgroup = "intermediate-product",
+    allow_as_intermediate = false,
     ingredients = {{"space-train-discharged-battery-pack", 1}},
     results = {{
         name = "space-train-destroyed-battery-pack",
@@ -69,6 +72,10 @@ data:extend({{
     category = "chemistry",
     ingredients = {{"space-train-destroyed-battery-pack", 1}, {type = "fluid", name = "sulfuric-acid", amount = 20}
     },
+    icon = "__se-space-trains__/graphics/icons/destroyed-battery.png",
+    icon_size = 128,
+    allow_as_intermediate = false,
+    localised_name = {"recipe-name.space-train-battery-pack-refurbish-desc"},
     result = "space-train-discharged-battery-pack"
 }})
 
@@ -81,8 +88,8 @@ if mods["Krastorio2"] then
     table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-gear-wheel", 20})
     table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-gear-wheel", 20})
     table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-gear-wheel", 20})
-    table.insert(data.raw["recipe"]["space-train-battery-pack"].ingredients, {"lithium-sulfur-battery", 20})
-    table.insert(data.raw["recipe"]["space-train-battery-pack-refurbish"].ingredients, {"lithium-sulfur-battery", 10})
+    table.insert(data.raw["recipe"]["space-train-battery-pack"].ingredients, {"lithium-sulfur-battery", 10})
+    table.insert(data.raw["recipe"]["space-train-battery-pack-refurbish"].ingredients, {"lithium-sulfur-battery", 5})
 else
     table.insert(data.raw["recipe"]["space-train-battery-pack"].ingredients, {"battery", 20})
     table.insert(data.raw["recipe"]["space-train-battery-pack-refurbish"].ingredients, {"battery", 10})
@@ -124,6 +131,8 @@ if mods["space-exploration"] then
     table.insert(data.raw["recipe"]["space-train-battery-charging-station"].ingredients, {"se-heat-shielding", 20})
 
     data.raw["assembling-machine"]["space-train-battery-charging-station"].se_allow_in_space = true
+    data.raw["recipe"]["space-train-battery-pack-refurbish"].category = "hard-recycling"
+    data.raw["recipe"]["space-train-battery-pack-refurbish"].subgroup = "space-recycling"
 else
     table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-plate", 20})
     table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-plate", 20})
