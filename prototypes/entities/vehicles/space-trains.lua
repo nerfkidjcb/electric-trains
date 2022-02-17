@@ -189,11 +189,11 @@ data:extend({ -- Battery charging interface
     working_sound = {
         sound = {
             filename = "__se-space-trains__/sound/space-charging-sound.ogg",
-            volume = 0.4
+            volume = 0.35
         },
         idle_sound = {
             filename = "__base__/sound/accumulator-idle.ogg",
-            volume = 0.35
+            volume = 0.3
         },
         -- persistent = true,
         max_sounds_per_type = 3,
@@ -830,7 +830,7 @@ data:extend({ -- Battery charging interface
                          "__se-space-trains__/prototypes/entities/vehicles/space_fluid_wagon_4.png"},
             line_length = 4,
             lines_per_file = 8,
-            shift = {0, -0.64},
+            shift = {0, -0.7},
             scale = train_scale * 2,
             hr_version = {
                 priority = "very-low",
@@ -846,7 +846,7 @@ data:extend({ -- Battery charging interface
                              "__se-space-trains__/prototypes/entities/vehicles/hr_space_fluid_wagon_4.png"},
                 line_length = 4,
                 lines_per_file = 8,
-                shift = {0, -0.64},
+                shift = {0, -0.7},
                 scale = fluid_wagon_scale
             }
         }, {
@@ -865,7 +865,7 @@ data:extend({ -- Battery charging interface
                          "__se-space-trains__/prototypes/entities/vehicles/space_fluid_wagon_shadows_4.png"},
             line_length = 4,
             lines_per_file = 8,
-            shift = {0, -0.64},
+            shift = {0, -0.7},
             scale = train_scale * 2,
             hr_version = {
                 flags = {"shadow"},
@@ -883,7 +883,7 @@ data:extend({ -- Battery charging interface
                              "__se-space-trains__/prototypes/entities/vehicles/hr_space_fluid_wagon_shadows_4.png"},
                 line_length = 4,
                 lines_per_file = 8,
-                shift = {0, -0.64},
+                shift = {0, -0.7},
                 scale = fluid_wagon_scale
             }
         }}
