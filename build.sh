@@ -17,6 +17,11 @@ if [ -d "$DIR_NAME" ]; then
 	rm -rf $DIR_NAME
 fi
 
+# Remove old archive
+if [ "$FINAL_MOD_FOLDER.zip" ]; then
+	rm $FINAL_MOD_FOLDER'.zip'
+fi
+
 # Remove make new build directory
 mkdir -p ./$DIR_NAME/$FINAL_MOD_FOLDER
 
@@ -41,7 +46,7 @@ fi
 
 
 # zip the file using 7zip
-cd $DIR_NAME
-7z a -r $FINAL_MOD_FOLDER'.zip' $FINAL_MOD_FOLDER
+#cd $DIR_NAME
+7z a -r $FINAL_MOD_FOLDER'.zip' ./$DIR_NAME/$FINAL_MOD_FOLDER
 
 #$SHELL
