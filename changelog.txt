@@ -1,10 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.5
-Date: ????
+Date: 20.02.2022
   Changes:
+    - Added Korean localisation, thanks to x2605.
+  Info:
+    - Added lossy pngquant compression to all the PNG files, drastically reducing mod file size while retaining all details.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.4
-Date: 2022-02-18
+Date: 18.02.2022
   Changes:
     - Switched to new changelog system. (Thanks to user Xor for the heads-up!)
 ---------------------------------------------------------------------------------------------------

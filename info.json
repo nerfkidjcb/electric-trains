@@ -11,6 +11,6 @@
     "? Krastorio2 >= 1.2.21"
   ],
   "package": {
-    "ignore": [".crowdin.yml", ".git", ".github", ".gitignore", "LICENSE", "README.md",".kakrc", ".vscode"]
+    "ignore": [".crowdin.yml", ".git", ".github", ".gitignore", ".build", "LICENSE", "README.md",".kakrc", ".vscode"]
   }
 }
