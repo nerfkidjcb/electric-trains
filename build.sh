@@ -18,7 +18,7 @@ if [ -d "$DIR_NAME" ]; then
 fi
 
 # Remove old archive
-if [ "$FINAL_MOD_FOLDER.zip" ]; then
+if [ -f "$FINAL_MOD_FOLDER.zip" ]; then
 	rm $FINAL_MOD_FOLDER'.zip'
 fi
 
@@ -35,18 +35,6 @@ find . -maxdepth 1 ! -regex '.*/'$DIR_NAME ! -regex '.*/'$BUILDER_NAME ! -regex 
 # run pngquant on the png files
 find ./$DIR_NAME/$FINAL_MOD_FOLDER -name '*.png' -print0 | xargs -0 -P5 -L1 pngquant --ext .png --force 256
 
-# unset debug mode in control.lua if it exists
-if test -f ./$DIR_NAME/$FINAL_MOD_FOLDER/$CONTROL_LUA; then
-	sed -i -e 's/is_debug_mode = true/is_debug_mode = false/g' ./$DIR_NAME/$FINAL_MOD_FOLDER/$CONTROL_LUA
-fi
-# unset debug mode in data.lua if it exists
-if test -f ./$DIR_NAME/$FINAL_MOD_FOLDER/$DATA_LUA; then
-	sed -i -e 's/is_debug_mode = true/is_debug_mode = false/g' ./$DIR_NAME/$FINAL_MOD_FOLDER/$DATA_LUA
-fi
-
-
 # zip the file using 7zip
 #cd $DIR_NAME
 7z a -r $FINAL_MOD_FOLDER'.zip' ./$DIR_NAME/$FINAL_MOD_FOLDER
-
-#$SHELL

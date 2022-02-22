@@ -1,10 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
-Date: ????
+Date: 22.02.2022
   Changes:
+    - Increased the resolution of the space trains.
+  Info:
+    - Moved the space train entity graphics to the graphics folder.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.5
-Date: 2022-02-20
+Date: 20.02.2022
   Changes:
     - Added Korean localisation, thanks to x2605.
   Info:
