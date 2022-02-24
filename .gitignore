@@ -40,4 +40,7 @@ luac.out
 *.hex
 
 # Factorio Build Folders
-*.build
+.build
+.idea
+.vscode
+.DS_Store
