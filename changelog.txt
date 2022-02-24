@@ -1,8 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
-Date: 22.02.2022
+Date: 23.02.2022
   Changes:
-    - Increased the resolution of the space trains.
+    - Doubled the resolution of the space locomotive sprite.
+    - Doubled the resolution of the space cargo wagon sprite.
+    - Doubled the resolution of the space fluid wagon sprite.
+    - Doubled the resolution of the space MAGLEV cushions sprite (''wheels'' of the trains).
   Info:
     - Moved the space train entity graphics to the graphics folder.
 ---------------------------------------------------------------------------------------------------
