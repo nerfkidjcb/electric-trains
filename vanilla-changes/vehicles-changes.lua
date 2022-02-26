@@ -69,7 +69,7 @@ if settings.startup["space-locomotive-speed-setting"].value == "238 km/h (Vanill
     data.raw["cargo-wagon"]["space-cargo-wagon"].max_speed = 1.1
     data.raw["fluid-wagon"]["space-fluid-wagon"].max_speed = 1.1
 end
-if settings.startup["space-cargo-wagon-capacity-setting"].value == "40 Items (Vanilla)" then
+if settings.startup["space-cargo-wagon-capacity-setting"].value == "40 Slots (Vanilla)" then
     data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 40
 end
 if settings.startup["space-fluid-wagon-capacity-setting"].value == "25.000 (Vanilla)" then
