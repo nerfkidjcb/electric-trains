@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.10
+Date: 04.06.2022
+  Changes:
+    - Fixed wrong icons for the Space Cargo and Fluid Wagon entities. They now use the proper one instead of the base game icons.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 19.04.2022
   Changes:

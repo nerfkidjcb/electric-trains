@@ -547,7 +547,7 @@ data:extend({ -- Battery charging interface
 }, {
     type = "cargo-wagon",
     name = "space-cargo-wagon",
-    icon = "__base__/graphics/icons/cargo-wagon.png",
+    icon = "__se-space-trains__/graphics/icons/space-cargo-wagon.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
@@ -745,7 +745,7 @@ data:extend({ -- Battery charging interface
 }, {
     type = "fluid-wagon",
     name = "space-fluid-wagon",
-    icon = "__base__/graphics/icons/fluid-wagon.png",
+    icon = "__se-space-trains__/graphics/icons/space-fluid-wagon.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
