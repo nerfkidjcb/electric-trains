@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.11
+Date: 12.06.2022
+  Changes:
+    - Added a version check to make sure the battery refurbishment recipe, when used, ends up in the correct and existing subcategory for all version of Space Exploration.
+    - Added tech prerequisites for every used ingredient for Space Train production, to the Space Trains Tech.
+    - Added an additional speed setting for the Space train 378 km/h, which serves as a middle ground option between vanilla and default.
+  Balancing:
+    - Removed the nuclear power plant prerequisite for the Space Train Tech when playing vanilla.
+    - Changed the Space Trains Tech to be placed after lithium-sulfur batteries in the tech tree when using Krastorio2.
+    - The Space Cargo Wagon, Space Fluid Wagon and Powerpack Charging Station now require blue instead of red circuits to produce. (Amount remains the same)
+    - Added 20 steel plates each as ingredients for the Space Train Locomotive, Cargo and Fluid Wagon.
+    - Replaced the 20 steel plates ingredient with 80 rare metals for the Space Locomotive recipe when Krastorio2 is active.
+  Bugfixes:
+    - Fixed Space Train Powerpacks not requiring any batteries as ingredients when the Battery refurbishment setting is disabled.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.10
 Date: 04.06.2022
   Changes:

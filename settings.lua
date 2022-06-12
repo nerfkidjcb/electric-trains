@@ -39,6 +39,7 @@ data:extend({
         default_value = "518 km/h (Default)",
         allowed_values = {
             "238 km/h (Vanilla)",
+            "378 km/h",
             "518 km/h (Default)"
         }
     }
