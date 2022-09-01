@@ -7,21 +7,21 @@ data:extend({{
   energy_required = 60,
   enabled = false,
   ingredients = {{"locomotive", 1}, {"processing-unit", 20}},
-  result = "item-space-locomotive"
+  result = "space-locomotive"
 }, {
   type = "recipe",
   name = "recipe-space-cargo-wagon",
   energy_required = 60,
   enabled = false,
   ingredients = {{"cargo-wagon", 1}, {"processing-unit", 10}},
-  result = "item-space-cargo-wagon"
+  result = "space-cargo-wagon"
 }, {
   type = "recipe",
   name = "recipe-space-fluid-wagon",
   energy_required = 60,
   enabled = false,
   ingredients = {{"fluid-wagon", 1}, {"processing-unit", 10}},
-  result = "item-space-fluid-wagon"
+  result = "space-fluid-wagon"
 }, {
   type = "recipe",
   name = "space-train-battery-charging-station",

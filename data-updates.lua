@@ -12,6 +12,8 @@ elseif settings.startup["space-locomotive-speed-setting"].value == "378 km/h" th
 end
 if settings.startup["space-cargo-wagon-capacity-setting"].value == "40 Slots (Vanilla)" then
   data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 40
+elseif settings.startup["space-cargo-wagon-capacity-setting"].value == "120 Slots (Extended)" then
+  data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 120
 end
 if settings.startup["space-fluid-wagon-capacity-setting"].value == "25.000 (Vanilla)" then
   data.raw["fluid-wagon"]["space-fluid-wagon"].capacity = 25000
@@ -75,7 +77,7 @@ if mods["Krastorio2"] then
   data.raw["fluid-wagon"]["space-fluid-wagon"].equipment_grid = "kr-wagons-grid"
 
   data.raw["recipe"]["recipe-space-locomotive"].ingredients =
-    {{"processing-unit", 5}, {"copper-cable", 20}, {"electronic-components", 20}, {"steel-gear-wheel", 20},
+    {{"locomotive", 1}, {"processing-unit", 20}, {"electronic-components", 20}, {"steel-gear-wheel", 20},
      {"rare-metals", 80}}
   table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-gear-wheel", 20})
   table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-gear-wheel", 20})

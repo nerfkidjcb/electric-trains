@@ -211,7 +211,7 @@ data:extend({ -- Battery charging interface
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     minable = {
         mining_time = 1,
-        result = "item-space-locomotive"
+        result = "space-locomotive"
     },
     mined_sound = {
         filename = "__core__/sound/deconstruct-medium.ogg"
@@ -554,7 +554,7 @@ data:extend({ -- Battery charging interface
     inventory_size = 50,
     minable = {
         mining_time = 0.5,
-        result = "item-space-cargo-wagon"
+        result = "space-cargo-wagon"
     },
     mined_sound = {
         filename = "__core__/sound/deconstruct-large.ogg",
@@ -751,7 +751,7 @@ data:extend({ -- Battery charging interface
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     minable = {
         mining_time = 0.5,
-        result = "item-space-fluid-wagon"
+        result = "space-fluid-wagon"
     },
     mined_sound = {
         filename = "__core__/sound/deconstruct-large.ogg",

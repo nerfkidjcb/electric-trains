@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.12
+Date: 01.09.2022
+  Changes:
+    - Changed naming of the Space Locomotive item from 'item-space-locomotive' to 'space-locomotive' for better mod compatibility.
+    - Changed naming of the Space Cargo Wagon item from 'item-space-cargo-wagon' to 'space-cargo-wagon' for better mod compatibility.
+    - Changed naming of the Space Fluid Wagon item from 'item-space-fluid-wagon' to 'space-fluid-wagon' for better mod compatibility.
+    - Added a new 120 Items capacity setting for the Space Cargo Wagon.
+    - Removed copper cable cost for the Space Locomotive when playing with Space Exploration and Krastorio 2 Mod.
+  Balancing:
+    - Increased the processing unit cost from 5 -> 20 for the Space Locomotive when playing with Space Exploration and Krastorio 2 Mod.
+  Bugfixes:
+    - Fixed the Space Locomotive missing the Locomotive ingredient when playing with Space Exploration and Krastorio 2 Mod.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.11
 Date: 12.06.2022
   Changes:

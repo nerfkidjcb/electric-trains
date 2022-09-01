@@ -1,0 +1,16 @@
+{
+  "item-with-entity-data": [
+    [
+      "item-space-locomotive",
+      "space-locomotive"
+    ],
+    [
+      "item-space-cargo-wagon",
+      "space-cargo-wagon"
+    ],
+    [
+      "item-space-fluid-wagon",
+      "space-fluid-wagon"
+    ]
+  ]
+}
