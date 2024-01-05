@@ -224,7 +224,7 @@ data:extend({ -- Battery charging interface
     drawing_box = {{-1, -4}, {1, 3}},
     alert_icon_shift = util.by_pixel(0, -24),
     damaged_trigger_effect = hit_effects.entity(),
-    weight = 12000,
+    weight = 2000,
     max_speed = train_speed,
     max_power = "4MW",
     reversing_power_modifier = 1.0,
