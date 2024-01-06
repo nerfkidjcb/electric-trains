@@ -207,11 +207,11 @@ else
       time = 60
     }
   }})
-  -- Add infinite techs for increasing the max_speed of the electric trains.
+  -- Add infinite techs for increasing the braking force of the trains. (Would love to have a TechnologyModifier for top speed too, but that's not possible yet.)
   data:extend({  
     {
     type = "technology",
-    name = "tech-space-trains-max-speed-1",
+    name = "tech-space-trains-braking-force-1",
     icon_size = 256, icon_mipmaps = 4,
     icons = 
     {
@@ -220,7 +220,7 @@ else
         icon_size = 256, icon_mipmaps = 4
       },
       {
-        icon = "__core__/graphics/icons/technology/constants/constant-speed.png",
+        icon = "__core__/graphics/icons/technology/constants/constant-braking-force.png",
         icon_size = 128,
         icon_mipmaps = 3,
         shift = {100, 100}
