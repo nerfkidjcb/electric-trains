@@ -4,7 +4,7 @@
   "title": "Electric Trains",
   "author": "NerfKidJcb",
   "factorio_version": "1.1",
-  "description": "This mod adds UPS friendly Space Exploration themed, MAGLEV propulsed, trains. This is a vanilla-esque branch of se-space-trains with more balanced physics and recipes. Credit to FragJacker for most of the designs and code.",
+  "description": "This mod adds UPS friendly space themed, MAGLEV, trains. This is a vanilla-esque branch of se-space-trains with more balanced physics and recipes. Credit to FragJacker for most of the designs and code.",
   "dependencies": [
     "base >= 1.1"
   ],
