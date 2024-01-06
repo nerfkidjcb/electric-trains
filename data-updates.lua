@@ -84,93 +84,93 @@ end
   table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-plate", 40})
   table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"electric-engine-unit", 5})
 
-  data:extend({ 
+data:extend({ 
+{
+  type = "technology",
+  name = "tech-space-trains",
+  mod = "space-trains",
+  icon = "__electric-trains__/graphics/icons/space-trains-tech.png",
+  icon_size = 256,
+  icon_mipmaps = 4,
+  effects = {{
+    type = "unlock-recipe",
+    recipe = "recipe-space-locomotive"
+  }, {
+    type = "unlock-recipe",
+    recipe = "recipe-space-fluid-wagon"
+  }, {
+    type = "unlock-recipe",
+    recipe = "recipe-space-cargo-wagon"
+  }, {
+    type = "unlock-recipe",
+    recipe = "space-train-battery-charging-station"
+  }, {
+    type = "unlock-recipe",
+    recipe = "space-train-battery-pack"
+  }, {
+    type = "unlock-recipe",
+    recipe = "space-train-battery-pack-recharge"
+  }},
+  prerequisites = {"steel-processing", "advanced-electronics-2", "battery", "railway", "production-science-pack"},
+  unit = {
+    count = 500,
+    ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+                    {"production-science-pack", 1}},
+    time = 60
+  }
+}})
+-- Add infinite techs for increasing the braking force of the trains. (Would love to have a TechnologyModifier for top speed too, but that's not possible yet.)
+data:extend({  
   {
-    type = "technology",
-    name = "tech-space-trains",
-    mod = "space-trains",
-    icon = "__electric-trains__/graphics/icons/space-trains-tech.png",
-    icon_size = 256,
-    icon_mipmaps = 4,
-    effects = {{
-      type = "unlock-recipe",
-      recipe = "recipe-space-locomotive"
-    }, {
-      type = "unlock-recipe",
-      recipe = "recipe-space-fluid-wagon"
-    }, {
-      type = "unlock-recipe",
-      recipe = "recipe-space-cargo-wagon"
-    }, {
-      type = "unlock-recipe",
-      recipe = "space-train-battery-charging-station"
-    }, {
-      type = "unlock-recipe",
-      recipe = "space-train-battery-pack"
-    }, {
-      type = "unlock-recipe",
-      recipe = "space-train-battery-pack-recharge"
-    }},
-    prerequisites = {"steel-processing", "advanced-electronics-2", "battery", "railway", "production-science-pack"},
-    unit = {
-      count = 500,
-      ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
-                     {"production-science-pack", 1}},
-      time = 60
+  type = "technology",
+  name = "tech-space-trains-braking-force-1",
+  icon_size = 256, icon_mipmaps = 4,
+  icons = 
+  {
+    {
+      icon = "__electric-trains__/graphics/icons/space-trains-tech.png",
+      icon_size = 256, icon_mipmaps = 4
+    },
+    {
+      icon = "__core__/graphics/icons/technology/constants/constant-braking-force.png",
+      icon_size = 128,
+      icon_mipmaps = 3,
+      shift = {100, 100}
     }
-  }})
-  -- Add infinite techs for increasing the braking force of the trains. (Would love to have a TechnologyModifier for top speed too, but that's not possible yet.)
-  data:extend({  
+  },
+  effects =
+  {
     {
-    type = "technology",
-    name = "tech-space-trains-braking-force-1",
-    icon_size = 256, icon_mipmaps = 4,
-    icons = 
+      type = "train-braking-force-bonus",
+      modifier = 0.05
+    } 
+  },
+  prerequisites = {"space-science-pack", "tech-space-trains"}, 
+  unit =
+  {
+    count_formula = "2^L*1000", 
+    ingredients =
     {
-      {
-        icon = "__electric-trains__/graphics/icons/space-trains-tech.png",
-        icon_size = 256, icon_mipmaps = 4
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-braking-force.png",
-        icon_size = 128,
-        icon_mipmaps = 3,
-        shift = {100, 100}
-      }
+      {"automation-science-pack", 1},
+      {"logistic-science-pack", 1},
+      {"chemical-science-pack", 1},
+      {"production-science-pack", 1},
+      {"utility-science-pack", 1},
+      {"space-science-pack", 1}
     },
-    effects =
-    {
-      {
-        type = "train-braking-force-bonus",
-        modifier = 0.05
-      } 
-    },
-    prerequisites = {"space-science-pack", "tech-space-trains"}, 
-    unit =
-    {
-      count_formula = "2^L*1000", 
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
-        {"utility-science-pack", 1},
-        {"space-science-pack", 1}
-      },
-      time = 60
-    },
-    max_level = "infinite",
-    order = "e-k-d"
-  }})
-  if settings.startup["space-battery-decay-enable-setting"].value then
-    table.insert(data.raw["technology"]["tech-space-trains"].effects, {
-      type = "unlock-recipe",
-      recipe = "space-train-battery-pack-refurbish"
-    })
-  end
-  if mods["Krastorio2"] then -- Change the technology spot to be behind Lithium-Sulfur Batteries
-    table.insert(data.raw["technology"]["tech-space-trains"].prerequisites, "advanced-electronics")
-    table.insert(data.raw["technology"]["tech-space-trains"].prerequisites, "kr-lithium-sulfur-battery")
-  end
+    time = 60
+  },
+  max_level = "infinite",
+  order = "e-k-d"
+}})
+if settings.startup["space-battery-decay-enable-setting"].value then
+  table.insert(data.raw["technology"]["tech-space-trains"].effects, {
+    type = "unlock-recipe",
+    recipe = "space-train-battery-pack-refurbish"
+  })
 end
+if mods["Krastorio2"] then -- Change the technology spot to be behind Lithium-Sulfur Batteries
+  table.insert(data.raw["technology"]["tech-space-trains"].prerequisites, "advanced-electronics")
+  table.insert(data.raw["technology"]["tech-space-trains"].prerequisites, "kr-lithium-sulfur-battery")
+end
+
