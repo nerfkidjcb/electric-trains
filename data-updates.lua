@@ -207,6 +207,50 @@ else
       time = 60
     }
   }})
+  -- Add infinite techs for increasing the max_speed of the electric trains.
+  data:extend({  
+    {
+    type = "technology",
+    name = "tech-space-trains-max-speed-1",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = 
+    {
+      {
+        icon = "__se-space-trains__/graphics/icons/space-trains-tech.png",
+        icon_size = 256, icon_mipmaps = 4
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-speed.png",
+        icon_size = 128,
+        icon_mipmaps = 3,
+        shift = {100, 100}
+      }
+    },
+    effects =
+    {
+      {
+        type = "train-braking-force-bonus",
+        modifier = 0.05
+      } 
+    },
+    prerequisites = {"space-science-pack", "tech-space-trains"}, 
+    unit =
+    {
+      count_formula = "2^L*1000", 
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1}
+      },
+      time = 60
+    },
+    max_level = "infinite",
+    order = "e-k-d"
+  }})
   if settings.startup["space-battery-decay-enable-setting"].value then
     table.insert(data.raw["technology"]["tech-space-trains"].effects, {
       type = "unlock-recipe",
