@@ -10,18 +10,22 @@ elseif settings.startup["space-locomotive-speed-setting"].value == "378 km/h" th
   data.raw["cargo-wagon"]["space-cargo-wagon"].max_speed = 1.75
   data.raw["fluid-wagon"]["space-fluid-wagon"].max_speed = 1.75
 end
+
 if settings.startup["space-cargo-wagon-capacity-setting"].value == "40 Slots (Vanilla)" then
   data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 40
 elseif settings.startup["space-cargo-wagon-capacity-setting"].value == "120 Slots (Extended)" then
   data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 120
 end
+
 if settings.startup["space-fluid-wagon-capacity-setting"].value == "25.000 (Vanilla)" then
   data.raw["fluid-wagon"]["space-fluid-wagon"].capacity = 25000
 end
+
 if settings.startup["space-battery-pack-energy-density-setting"].value == "100 MJ" then
   data.raw["assembling-machine"]["space-train-battery-charging-station"].energy_usage = "3.3MW"
   data.raw["item"]["space-train-battery-pack"].fuel_value = "100MJ"
 end
+
 if settings.startup["space-battery-decay-enable-setting"].value then
   data:extend({{
     type = "item",
@@ -69,100 +73,9 @@ else
   }}
 end
 ------------------------------------------
--- Handling Mod cases happens here
+-- Changes to recipes and technologies.
 ------------------------------------------
-if mods["Krastorio2"] then
-  data.raw["locomotive"]["space-locomotive"].equipment_grid = "kr-locomotive-grid"
-  data.raw["cargo-wagon"]["space-cargo-wagon"].equipment_grid = "kr-wagons-grid"
-  data.raw["fluid-wagon"]["space-fluid-wagon"].equipment_grid = "kr-wagons-grid"
 
-  data.raw["recipe"]["recipe-space-locomotive"].ingredients =
-    {{"locomotive", 1}, {"processing-unit", 20}, {"electronic-components", 20}, {"steel-gear-wheel", 20},
-     {"rare-metals", 80}}
-  table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-gear-wheel", 20})
-  table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-gear-wheel", 20})
-  table.insert(data.raw["recipe"]["space-train-battery-pack"].ingredients, {"lithium-sulfur-battery", 10})
-  if settings.startup["space-battery-decay-enable-setting"].value then
-    table.insert(data.raw["recipe"]["space-train-battery-pack-refurbish"].ingredients, {"lithium-sulfur-battery", 5})
-  end
-else
-  if settings.startup["space-battery-decay-enable-setting"].value then
-    table.insert(data.raw["recipe"]["space-train-battery-pack-refurbish"].ingredients, {"battery", 10})
-  end
-end
-
-if mods["space-exploration"] then
-  table.insert(data.raw["technology"]["se-space-rail"].effects, {
-    type = "unlock-recipe",
-    recipe = "recipe-space-locomotive"
-  })
-  table.insert(data.raw["technology"]["se-space-rail"].effects, {
-    type = "unlock-recipe",
-    recipe = "recipe-space-fluid-wagon"
-  })
-  table.insert(data.raw["technology"]["se-space-rail"].effects, {
-    type = "unlock-recipe",
-    recipe = "recipe-space-cargo-wagon"
-  })
-  table.insert(data.raw["technology"]["se-space-rail"].effects, {
-    type = "unlock-recipe",
-    recipe = "space-train-battery-charging-station"
-  })
-  table.insert(data.raw["technology"]["se-space-rail"].effects, {
-    type = "unlock-recipe",
-    recipe = "space-train-battery-pack"
-  })
-  table.insert(data.raw["technology"]["se-space-rail"].effects, {
-    type = "unlock-recipe",
-    recipe = "space-train-battery-pack-recharge"
-  })
-
-  -- Handle Battery decay in Space Exploration.
-  if settings.startup["space-battery-decay-enable-setting"].value then
-    table.insert(data.raw["technology"]["se-space-rail"].effects, {
-      type = "unlock-recipe",
-      recipe = "space-train-battery-pack-refurbish"
-    })
-    data.raw["recipe"]["space-train-battery-pack-refurbish"].category = "hard-recycling"
-
-    -- Check for the installed version of Space Exploration and handle it.
-    old_version = util.split(mods["space-exploration"], ".")
-    if tonumber(old_version[2]) <= 5 then -- Check if this is pre v0.6.0 SE
-      data.raw["recipe"]["space-train-battery-pack-refurbish"].subgroup = "space-recycling"
-    else
-      data.raw["recipe"]["space-train-battery-pack-refurbish"].subgroup = "recycling"
-    end
-  end
-
-  -- Add new prerequisites to the Space Train Tech to reflect the newly required ingredients.
-  table.insert(data.raw["technology"]["se-space-rail"].prerequisites, "se-heat-shielding")
-  table.insert(data.raw["technology"]["se-space-rail"].prerequisites, "steel-processing")
-  table.insert(data.raw["technology"]["se-space-rail"].prerequisites, "advanced-electronics-2")
-  -- Add new prerequisites to the Space Train Tech if Krastorio 2 is used.
-  if mods["Krastorio2"] then
-    table.insert(data.raw["technology"]["se-space-rail"].prerequisites, "advanced-electronics")
-    table.insert(data.raw["technology"]["se-space-rail"].prerequisites, "kr-lithium-sulfur-battery")
-  end
-
-  -- Change recipes accordingly when space exploration mods are installed and used.
-  table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"se-heat-shielding", 20})
-  table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"se-heat-shielding", 20})
-  table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"se-heat-shielding", 20})
-  table.insert(data.raw["recipe"]["space-train-battery-charging-station"].ingredients, {"se-heat-shielding", 20})
-
-  data.raw["assembling-machine"]["space-train-battery-charging-station"].se_allow_in_space = true
-
-  if mods["space-exploration"] and not mods["Krastorio2"] then
-    table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-plate", 20})
-    table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-plate", 20})
-    table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-plate", 20})
-  end
-else
-  -- Handle adding a new tech for Space Trains if Space Exploration is not used. (Vanilla)
-  -- table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-plate", 20})
-  -- table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-plate", 20})
-  -- table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-plate", 20})
-  -- UPDATE: More realistic and expensive recipes for the Electric Locomotive and wagons
   table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-plate", 40})
   table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"rocket-control-unit", 10})
   table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"electric-engine-unit", 50})
@@ -170,9 +83,8 @@ else
   table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"electric-engine-unit", 5})
   table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-plate", 40})
   table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"electric-engine-unit", 5})
-  -- END UPDATE
 
-  data:extend({ -- TECHNOMANS
+  data:extend({ 
   {
     type = "technology",
     name = "tech-space-trains",
