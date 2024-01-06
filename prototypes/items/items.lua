@@ -1,7 +1,7 @@
 data:extend({{
     type = "item",
     name = "space-train-battery-charging-station",
-    icon = "__se-space-trains__/graphics/icons/space-train-charging-station.png",
+    icon = "__electric-trains__/graphics/icons/space-train-charging-station.png",
     icon_size = 128,
     subgroup = "production-machine",
     order = "h[train-system]",
@@ -10,18 +10,18 @@ data:extend({{
 }, {
     type = "item",
     name = "space-train-battery-pack",
-    icon = "__se-space-trains__/graphics/icons/battery.png",
+    icon = "__electric-trains__/graphics/icons/battery.png",
     icon_size = 128,
     pictures = {
         layers = {{
             size = 128,
-            filename = "__se-space-trains__/graphics/icons/battery.png",
+            filename = "__electric-trains__/graphics/icons/battery.png",
             scale = 0.125
         }, {
             draw_as_light = true,
             flags = {"light"},
             size = 128,
-            filename = "__se-space-trains__/graphics/icons/battery_light.png",
+            filename = "__electric-trains__/graphics/icons/battery_light.png",
             scale = 0.125
         }}
     },
@@ -34,7 +34,7 @@ data:extend({{
 },{
     type = "item",
     name = "space-train-discharged-battery-pack",
-    icon = "__se-space-trains__/graphics/icons/discharged-battery.png",
+    icon = "__electric-trains__/graphics/icons/discharged-battery.png",
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "s-b[discharged-battery-pack]",

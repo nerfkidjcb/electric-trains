@@ -26,18 +26,18 @@ if settings.startup["space-battery-decay-enable-setting"].value then
   data:extend({{
     type = "item",
     name = "space-train-destroyed-battery-pack",
-    icon = "__se-space-trains__/graphics/icons/destroyed-battery.png",
+    icon = "__electric-trains__/graphics/icons/destroyed-battery.png",
     icon_size = 128,
     pictures = {
       layers = {{
         size = 128,
-        filename = "__se-space-trains__/graphics/icons/destroyed-battery.png",
+        filename = "__electric-trains__/graphics/icons/destroyed-battery.png",
         scale = 0.125
       }, {
         draw_as_light = true,
         flags = {"light"},
         size = 128,
-        filename = "__se-space-trains__/graphics/icons/destroyed-battery_light.png",
+        filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
         scale = 0.125
       }}
     },
@@ -56,7 +56,7 @@ if settings.startup["space-battery-decay-enable-setting"].value then
       name = "sulfuric-acid",
       amount = 20
     }},
-    icon = "__se-space-trains__/graphics/icons/destroyed-battery.png",
+    icon = "__electric-trains__/graphics/icons/destroyed-battery.png",
     icon_size = 128,
     allow_as_intermediate = false,
     localised_name = {"recipe-name.space-train-battery-pack-refurbish-desc"},
@@ -177,7 +177,7 @@ else
     type = "technology",
     name = "tech-space-trains",
     mod = "space-trains",
-    icon = "__se-space-trains__/graphics/icons/space-trains-tech.png",
+    icon = "__electric-trains__/graphics/icons/space-trains-tech.png",
     icon_size = 256,
     icon_mipmaps = 4,
     effects = {{
@@ -216,7 +216,7 @@ else
     icons = 
     {
       {
-        icon = "__se-space-trains__/graphics/icons/space-trains-tech.png",
+        icon = "__electric-trains__/graphics/icons/space-trains-tech.png",
         icon_size = 256, icon_mipmaps = 4
       },
       {

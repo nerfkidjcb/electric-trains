@@ -46,7 +46,7 @@ data:extend({{
   hidden = true,
   energy_required = 30,
   enabled = false,
-  icon = "__se-space-trains__/graphics/icons/battery.png",
+  icon = "__electric-trains__/graphics/icons/battery.png",
   icon_size = 128,
   subgroup = "intermediate-product",
   allow_as_intermediate = false,
