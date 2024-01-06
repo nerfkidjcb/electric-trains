@@ -158,10 +158,19 @@ if mods["space-exploration"] then
     table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-plate", 20})
   end
 else
-  -- Handle adding a new tech for Space Trains if Space Exploration is not used.
-  table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-plate", 20})
-  table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-plate", 20})
-  table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-plate", 20})
+  -- Handle adding a new tech for Space Trains if Space Exploration is not used. (Vanilla)
+  -- table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-plate", 20})
+  -- table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-plate", 20})
+  -- table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-plate", 20})
+  -- UPDATE: More realistic and expensive recipes for the Electric Locomotive and wagons
+  table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-plate", 40})
+  table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"rocket-control-unit", 10})
+  table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"electric-engine-unit", 50})
+  table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-plate", 40})
+  table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"electric-engine-unit", 5})
+  table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-plate", 40})
+  table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"electric-engine-unit", 5})
+  -- END UPDATE
 
   data:extend({ -- TECHNOMANS
   {
