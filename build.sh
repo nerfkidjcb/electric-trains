@@ -38,3 +38,5 @@ find ./$DIR_NAME/$FINAL_MOD_FOLDER -name '*.png' -print0 | xargs -0 -P5 -L1 pngq
 # zip the file using 7zip
 #cd $DIR_NAME
 7z a -r $FINAL_MOD_FOLDER'.zip' ./$DIR_NAME/$FINAL_MOD_FOLDER
+
+# done!
