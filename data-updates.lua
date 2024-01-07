@@ -1,33 +1,33 @@
 ------------------------------------------
 -- Startup Settings handling happens here.
 ------------------------------------------
-if settings.startup["space-locomotive-speed-setting"].value == "238 km/h (Vanilla)" then
+if settings.startup["electric-locomotive-speed-setting"].value == "238 km/h (Vanilla)" then
   data.raw["locomotive"]["space-locomotive"].max_speed = 1.1
   data.raw["cargo-wagon"]["space-cargo-wagon"].max_speed = 1.1
   data.raw["fluid-wagon"]["space-fluid-wagon"].max_speed = 1.1
-elseif settings.startup["space-locomotive-speed-setting"].value == "378 km/h" then
+elseif settings.startup["electric-locomotive-speed-setting"].value == "378 km/h" then
   data.raw["locomotive"]["space-locomotive"].max_speed = 1.75
   data.raw["cargo-wagon"]["space-cargo-wagon"].max_speed = 1.75
   data.raw["fluid-wagon"]["space-fluid-wagon"].max_speed = 1.75
 end
 
-if settings.startup["space-cargo-wagon-capacity-setting"].value == "40 Slots (Vanilla)" then
+if settings.startup["electric-cargo-wagon-capacity-setting"].value == "40 Slots (Vanilla)" then
   data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 40
-elseif settings.startup["space-cargo-wagon-capacity-setting"].value == "120 Slots (Extended)" then
+elseif settings.startup["electric-cargo-wagon-capacity-setting"].value == "120 Slots (Extended)" then
   data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 120
 end
 
-if settings.startup["space-fluid-wagon-capacity-setting"].value == "25.000 (Vanilla)" then
+if settings.startup["electric-fluid-wagon-capacity-setting"].value == "25.000 (Vanilla)" then
   data.raw["fluid-wagon"]["space-fluid-wagon"].capacity = 25000
 end
 
-if settings.startup["space-battery-pack-energy-density-setting"].value == "100 MJ" then
+if settings.startup["train-battery-pack-energy-density-setting"].value == "100 MJ" then
   data.raw["assembling-machine"]["space-train-battery-charging-station"].energy_usage = "3.3MW"
   data.raw["assembling-machine"]["experimental-space-train-battery-charging-station"].energy_usage = "33MW"
   data.raw["item"]["space-train-battery-pack"].fuel_value = "100MJ"
 end
 
-if settings.startup["space-battery-decay-enable-setting"].value then
+if settings.startup["train-battery-decay-enable-setting"].value then
   data:extend({{
     type = "item",
     name = "space-train-destroyed-battery-pack",
@@ -194,7 +194,7 @@ data:extend({
     max_level = "infinite",
     order = "e-k-d"
   }})
-  if settings.startup["space-battery-decay-enable-setting"].value then
+  if settings.startup["train-battery-decay-enable-setting"].value then
     table.insert(data.raw["technology"]["tech-space-trains"].effects, {
       type = "unlock-recipe",
       recipe = "space-train-battery-pack-refurbish"
