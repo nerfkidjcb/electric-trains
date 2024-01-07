@@ -16,5 +16,9 @@ data:extend(
   {
     type = "recipe-category",
     name = "electrical"
+  },
+  {
+    type = "recipe-category",
+    name = "faster-electrical"
   }
 })
