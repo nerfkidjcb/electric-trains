@@ -197,6 +197,35 @@ data:extend({
     max_level = "infinite",
     order = "e-k-d"
   }})
+
+  -- Electric locomotive wagon
+  data:extend({{
+    type = "technology",
+    name = "tech-electric-locomotive-wagon",
+    icon = "__electric-trains__/graphics/icons/electric-locomotive-wagon.png",
+    icon_size = 64, 
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "recipe-electric-locomotive-wagon"
+      } 
+    },
+    prerequisites = {"space-science-pack", "tech-space-trains"}, 
+    unit =
+    {
+      count = 2000,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1}   
+      },
+      time = 60
+    },
+  }})
   if settings.startup["train-battery-decay-enable-setting"].value then
     table.insert(data.raw["technology"]["tech-space-trains"].effects, {
       type = "unlock-recipe",

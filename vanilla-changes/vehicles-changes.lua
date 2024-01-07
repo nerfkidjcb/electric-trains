@@ -13,7 +13,7 @@ data:extend({{
   type = "recipe",
   name = "recipe-electric-locomotive-wagon",
   energy_required = 60,
-  enabled = true, -- TODO hide this behind research at some point
+  enabled = false, 
   ingredients = {{"locomotive", 1}, {"processing-unit", 20}},
   result = "electric-locomotive-wagon"
 },
