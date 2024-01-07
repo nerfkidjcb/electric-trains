@@ -59,9 +59,89 @@ function space_accumulator_picture(tint, repeat_count)
     }
 end
 
+function experimental_space_accumulator_picture(tint, repeat_count)
+    return {
+        layers = {{
+            filename = "__electric-trains__/graphics/entity/space-train-charging-station/experimental_space_charging_station.png",
+            priority = "high",
+            width = 64,
+            height = 96,
+            repeat_count = repeat_count,
+            shift = util.by_pixel(0, -16),
+            tint = tint,
+            animation_speed = 1.5,
+            scale = 1,
+            hr_version = {
+                filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_experimental_space_charging_station.png",
+                priority = "high",
+                width = 128,
+                height = 192,
+                repeat_count = repeat_count,
+                shift = util.by_pixel(0, -16),
+                tint = tint,
+                animation_speed = 1.5,
+                scale = 0.5
+            }
+        }, {
+            filename = "__electric-trains__/graphics/entity/space-train-charging-station/space_charging_station_shadow.png",
+            priority = "high",
+            width = 144,
+            height = 45,
+            repeat_count = repeat_count,
+            shift = util.by_pixel(32, 11),
+            draw_as_shadow = true,
+            scale = 1,
+            hr_version = {
+                filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_shadow.png",
+                priority = "high",
+                width = 285,
+                height = 91,
+                repeat_count = repeat_count,
+                shift = util.by_pixel(32, 11),
+                draw_as_shadow = true,
+                scale = 0.5
+            }
+        }}
+    }
+end
+
 function space_accumulator_charge()
     return {
         layers = {space_accumulator_picture({
+            r = 1,
+            g = 1,
+            b = 1,
+            a = 1
+        }, 30), {
+            filename = "__electric-trains__/graphics/entity/space-train-charging-station/space_charging_station_lightning.png",
+            priority = "high",
+            width = 64,
+            height = 96,
+            line_length = 6,
+            frame_count = 30,
+            draw_as_glow = true,
+            shift = util.by_pixel(0, -16),
+            scale = 1,
+            animation_speed = 1,
+            hr_version = {
+                filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_lightning.png",
+                priority = "high",
+                width = 128,
+                height = 192,
+                line_length = 6,
+                frame_count = 30,
+                draw_as_glow = true,
+                shift = util.by_pixel(0, -16),
+                scale = 0.5,
+                animation_speed = 1
+            }
+        }}
+    }
+end
+
+function experimental_space_accumulator_charge()
+    return {
+        layers = {experimental_space_accumulator_picture({
             r = 1,
             g = 1,
             b = 1,
@@ -202,7 +282,87 @@ data:extend({ -- Battery charging interface
         fade_in_ticks = 4,
         fade_out_ticks = 20
     }
-}, -- Actual Space Trains now
+}, -- Experimental Battery Charging Interface
+{
+    type = "assembling-machine",
+    name = "experimental-space-train-battery-charging-station",
+    icon = "__electric-trains__/graphics/icons/experimental-space-train-charging-station.png",
+    icon_size = 128,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {
+        mining_time = 1,
+        result = "experimental-space-train-battery-charging-station"
+    },
+    max_health = 150,
+    resistances = {{
+        type = "fire",
+        percent = 70
+    }},
+    corpse = "accumulator-remnants",
+    dying_explosion = "accumulator-explosion",
+    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
+    selection_box = {{-1, -1}, {1, 1}},
+    damaged_trigger_effect = hit_effects.entity(),
+    drawing_box = {{-1, -1.5}, {1, 1}},
+    energy_source = {
+        type = "electric",
+        buffer_capacity = "20MJ",
+        usage_priority = "primary-input",
+        input_flow_limit = "10MW",
+        output_flow_limit = "0kW",
+        drain = "500W"
+    },
+    fast_replaceable_group = "assembling-machine",
+    always_draw_idle_animation = true,
+    idle_animation = experimental_space_accumulator_picture(),
+    working_visualisations = {{
+        effect = "flicker",
+        fadeout = true,
+        light = {
+            intensity = 0.2,
+            size = 9.9,
+            shift = {0.0, 0.0},
+            color = {
+                r = 0.25,
+                g = 0.25,
+                b = 0.8
+            }
+        }
+    }, {
+        effect = "flicker",
+        fadeout = true,
+        draw_as_light = true,
+        animation = experimental_space_accumulator_charge()
+    }},
+
+    water_reflection = accumulator_reflection(),
+
+    energy_usage = "10MW",
+    crafting_categories = {"faster-electrical"},
+    crafting_speed = 1,
+    fixed_recipe = "faster-space-train-battery-pack-recharge",
+    show_recipe_icon = false,
+
+    vehicle_impact_sound = sounds.generic_impact,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    working_sound = {
+        sound = {
+            filename = "__electric-trains__/sound/space-charging-sound.ogg",
+            volume = 0.35
+        },
+        idle_sound = {
+            filename = "__base__/sound/accumulator-idle.ogg",
+            volume = 0.3
+        },
+        -- persistent = true,
+        max_sounds_per_type = 3,
+        audible_distance_modifier = 0.5,
+        fade_in_ticks = 4,
+        fade_out_ticks = 20
+    }
+}, 
+-- Actual Space Trains now
 {
     type = "locomotive",
     name = "space-locomotive",

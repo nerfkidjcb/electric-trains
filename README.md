@@ -25,12 +25,20 @@ Once again I would like to thank FragJacker for creating the original mod, and f
 ![Powerpack Charging Station](graphics/icons/space-train-charging-station.png)
 ![Charged Powerpack](graphics/icons/battery.png)
 
-- Train Powerpack Charging Station.
+- Train Powerpack Charging Station, or:
+
+![Experimental Powerpack Charging Station](graphics/icons/experimental-space-train-charging-station.png)
+![Experimental Charged Powerpack](graphics/icons/fast-battery.png)
+
+- (0.1.2+) an Experimental Train Powerpack Charging Station which works much faster, but uses considerably more power, and has a much higher chance of destroying the powerpack.
 
 ![Destroyed Powerpack](graphics/icons/destroyed-battery.png)
 
-- Train PowerPacks have a 1% chance of becoming destroyed when charging.
-- You can refurbish old powerpacks in the vanilla chemical plant with a new recipe.
+- Train PowerPacks have a 1% chance of becoming destroyed when charging normally, and a 15% chance of becoming destroyed when charging in the experimental charging station.
+
+![Refurbished Powerpack](public/refurbishment.png)
+
+- You can refurbish old powerpacks in a vanilla chemical plant with a new recipe.
 
   ![MiniMap Icons](graphics/entity/vehicles/space-trains/space-locomotive-minimap-representation.png)
   ![MiniMap Icons](graphics/entity/vehicles/space-trains/space-cargo-wagon-minimap-representation.png)
@@ -44,7 +52,7 @@ Once again I would like to thank FragJacker for creating the original mod, and f
 
 ## Planned Features
 
-- Experimental Train Powerpack Charging Station (new research), which has a higher rate of charge but has a much larger chance of destroying the powerpack.
+- Having a "power car" that looks like a cargo car but provides power and interfaces like a locomotive. This will be aesthetically pleasing for configurations such as 2-8 trains. 
 
 ## Changelog
 
