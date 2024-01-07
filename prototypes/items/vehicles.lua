@@ -15,7 +15,7 @@ data:extend({{
   icon = "__electric-trains__/graphics/icons/electric-locomotive-wagon.png",
   icon_size = 64,
   subgroup = "train-transport",
-  order = "a[train-system]-g[locomotive]",
+  order = "a[train-system]-f[locomotiveb]",
   place_result = "electric-locomotive-wagon",
   stack_size = 5
 },
