@@ -76,7 +76,7 @@ data:extend({{
   name = "faster-space-train-battery-pack-recharge",
   category = "faster-electrical",
   hidden = true,
-  energy_required = 120,
+  energy_required = 40,
   enabled = false,
   icon = "__electric-trains__/graphics/icons/fast-battery.png",
   icon_size = 128,

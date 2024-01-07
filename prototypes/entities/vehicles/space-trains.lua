@@ -339,7 +339,7 @@ data:extend({ -- Battery charging interface
 
     energy_usage = "10MW",
     crafting_categories = {"faster-electrical"},
-    crafting_speed = 3,
+    crafting_speed = 1,
     fixed_recipe = "faster-space-train-battery-pack-recharge",
     show_recipe_icon = false,
 
