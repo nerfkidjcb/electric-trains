@@ -52,7 +52,9 @@ Once again I would like to thank FragJacker for creating the original mod, and f
 
 ## Planned Features
 
-- Having a "power car" that looks like a cargo car but provides power and interfaces like a locomotive. This will be aesthetically pleasing for configurations such as 2-8 trains. 
+- Having a "power car" that looks like a cargo car but provides power and interfaces like a locomotive. This will be aesthetically pleasing for configurations such as 2-8 trains.
+- Long distance locomotives that have a greater fuel slot size? (Maybe)
+- Express versions of the electric locomotive and wagons that are even faster, but use more powerpacks? (Maybe)
 
 ## Changelog
 
