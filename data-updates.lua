@@ -72,6 +72,10 @@ else
     name = "space-train-battery-pack",
     amount = 1
   }}
+  data.raw["recipe"]["faster-space-train-battery-pack-recharge"].results = {{
+    name = "space-train-battery-pack",
+    amount = 1
+  }}
 end
 ------------------------------------------
 -- Changes to recipes and technologies.
