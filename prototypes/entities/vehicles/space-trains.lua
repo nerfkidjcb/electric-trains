@@ -704,7 +704,350 @@ data:extend({ -- Battery charging interface
     },
     sound_minimum_speed = 0.5,
     water_reflection = locomotive_reflection()
-}, {
+}, 
+{
+    type = "locomotive",
+    name = "electric-locomotive-wagon",
+    icon = "__electric-trains__/graphics/icons/electric-locomotive-wagon.png",
+    icon_size = 64,
+    flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
+    minable = {
+        mining_time = 1,
+        result = "electric-locomotive-wagon"
+    },
+    mined_sound = {
+        filename = "__core__/sound/deconstruct-medium.ogg"
+    },
+    max_health = 1500,
+    corpse = "cargo-wagon-remnants",
+    dying_explosion = "locomotive-explosion",
+    collision_box = {{-0.6, -2.6}, {0.6, 2.6}},
+    selection_box = {{-1, -3}, {1, 3}},
+    drawing_box = {{-1, -4}, {1, 3}},
+    alert_icon_shift = util.by_pixel(0, -24),
+    damaged_trigger_effect = hit_effects.entity(),
+    weight = 4000,
+    max_speed = train_speed,
+    max_power = "4MW",
+    reversing_power_modifier = 1.0,
+    braking_force = 40,
+    friction_force = 0.50,
+    vertical_selection_shift = -0.5,
+    air_resistance = 0.0025, -- this is a percentage of current speed that will be subtracted
+    connection_distance = connection_length,
+    joint_distance = 4,
+    energy_per_hit_point = 5,
+    resistances = {{
+        type = "fire",
+        decrease = 20,
+        percent = 75
+    }, {
+        type = "physical",
+        decrease = 15,
+        percent = 30
+    }, {
+        type = "impact",
+        decrease = 50,
+        percent = 75
+    }, {
+        type = "explosion",
+        decrease = 15,
+        percent = 30
+    }, {
+        type = "acid",
+        decrease = 5,
+        percent = 25
+    }},
+    burner = {
+        fuel_category = "electrical",
+        effectivity = 0.95,
+        fuel_inventory_size = 3,
+        burnt_inventory_size = 1
+    },
+    front_light = {{
+        type = "oriented",
+        minimum_darkness = 0.3,
+        picture = {
+            filename = "__core__/graphics/light-cone.png",
+            priority = "extra-high",
+            flags = {"light"},
+            scale = 2,
+            width = 200,
+            height = 200
+        },
+        shift = {-0.6, -16},
+        size = 2,
+        intensity = 0.8,
+        color = space_train_light_color
+    }, {
+        type = "oriented",
+        minimum_darkness = 0.3,
+        picture = {
+            filename = "__core__/graphics/light-cone.png",
+            priority = "extra-high",
+            flags = {"light"},
+            scale = 2,
+            width = 200,
+            height = 200
+        },
+        shift = {0.6, -16},
+        size = 2,
+        intensity = 0.8,
+        color = space_train_light_color
+    }},
+    back_light = rolling_stock_back_light(),
+    stand_by_light = rolling_stock_stand_by_light(),
+    color = {
+        r = 0.92,
+        g = 0.07,
+        b = 0,
+        a = 0.5
+    },
+    pictures = {
+        layers = {{
+            dice = 4,
+            priority = "very-low",
+            width = 500,
+            height = 300,
+            direction_count = 256,
+            allow_low_quality_rotation = true,
+            filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_1.png",
+                         "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_2.png",
+                         "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_3.png",
+                         "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_4.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_5.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_6.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_7.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_8.png"},
+            line_length = 4,
+            lines_per_file = 8,
+            shift = {0, wagon_vertical_shift},
+            scale = train_scale * 2,
+            hr_version = {
+                priority = "very-low",
+                dice = 4,
+                width = 1000,
+                height = 600,
+                direction_count = 256,
+                allow_low_quality_rotation = true,
+                filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_1.png",
+                             "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_2.png",
+                             "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_3.png",
+                             "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_4.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_5.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_6.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_7.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_8.png"},
+                line_length = 4,
+                lines_per_file = 8,
+                shift = {0, wagon_vertical_shift},
+                scale = train_scale
+            }
+        }, {
+            priority = "very-low",
+            flags = {"mask"},
+            dice = 4,
+            width = 500,
+            height = 300,
+            direction_count = 256,
+            allow_low_quality_rotation = true,
+            filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_mask_1.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_mask_2.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_mask_3.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_mask_4.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_mask_5.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_mask_6.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_mask_7.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_mask_8.png"},
+            line_length = 4,
+            lines_per_file = 8,
+            shift = {0, wagon_vertical_shift},
+            apply_runtime_tint = true,
+            scale = train_scale * 2,
+            hr_version = {
+                priority = "very-low",
+                flags = {"mask"},
+                dice = 4,
+                width = 1000,
+                height = 600,
+                direction_count = 256,
+                allow_low_quality_rotation = true,
+                filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_mask_1.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_mask_2.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_mask_3.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_mask_4.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_mask_5.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_mask_6.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_mask_7.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_mask_8.png"},
+                line_length = 4,
+                lines_per_file = 8,
+                shift = {0, wagon_vertical_shift},
+                apply_runtime_tint = true,
+                scale = train_scale
+            }
+        }, {
+            priority = "very-low",
+            dice = 4,
+            flags = {"shadow"},
+            width = 500,
+            height = 300,
+            direction_count = 256,
+            draw_as_shadow = true,
+            allow_low_quality_rotation = true,
+            filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_shadows_1.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_shadows_2.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_shadows_3.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_shadows_4.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_shadows_5.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_shadows_6.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_shadows_7.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric_locomotive_wagon_shadows_8.png"},
+            line_length = 4,
+            lines_per_file = 8,
+            shift = {0, wagon_vertical_shift},
+            scale = train_scale * 2,
+            hr_version = {
+                priority = "very-low",
+                flags = {"shadow"},
+                width = 1000,
+                height = 600,
+                direction_count = 256,
+                draw_as_shadow = true,
+                allow_low_quality_rotation = true,
+                filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_shadows_1.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_shadows_2.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_shadows_3.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_shadows_4.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_shadows_5.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_shadows_6.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_shadows_7.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/hr_electric_locomotive_wagon_shadows_8.png"},
+                line_length = 4,
+                lines_per_file = 8,
+                shift = {0, wagon_vertical_shift},
+                scale = train_scale
+            }
+        }}
+    },
+    front_light_pictures = {
+        layers = {{
+            priority = "very-low",
+            blend_mode = "additive",
+            draw_as_light = true,
+            tint = {
+                r = 1.0,
+                g = 1.0,
+                b = 1.0,
+                a = 0.25
+            },
+            width = 500,
+            height = 300,
+            direction_count = 256,
+            allow_low_quality_rotation = true,
+            filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_1.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_2.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_3.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_4.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_5.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_6.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_7.png",
+                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_8.png"},
+            line_length = 4,
+            lines_per_file = 8,
+            shift = {0, wagon_vertical_shift},
+            scale = train_scale * 2,
+            hr_version = {
+                priority = "very-low",
+                blend_mode = "additive",
+                draw_as_light = true,
+                tint = {
+                    r = 1.0,
+                    g = 1.0,
+                    b = 1.0,
+                    a = 0.25
+                },
+                width = 1000,
+                height = 600,
+                direction_count = 256,
+                allow_low_quality_rotation = true,
+                filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_1.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_2.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_3.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_4.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_5.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_6.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_7.png",
+                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_8.png"},
+                line_length = 4,
+                lines_per_file = 8,
+                shift = {0, wagon_vertical_shift},
+                scale = train_scale
+            }
+        }}
+    },
+    minimap_representation = {
+        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric-locomotive-wagon-minimap-representation.png",
+        flags = {"icon"},
+        size = {20, 40},
+        scale = 0.5
+    },
+    selected_minimap_representation = {
+        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric-locomotive-wagon-selected-minimap-representation.png",
+        flags = {"icon"},
+        size = {20, 40},
+        scale = 0.5
+    },
+    wheels = space_train_wheels,
+    stop_trigger = { -- left side
+    {
+        type = "create-trivial-smoke",
+        repeat_count = 125,
+        smoke_name = "smoke-train-stop",
+        initial_height = 0,
+        -- smoke goes to the left
+        speed = {-0.03, 0},
+        speed_multiplier = 0.75,
+        speed_multiplier_deviation = 1.1,
+        offset_deviation = {{-0.75, -2.7}, {-0.3, 2.7}}
+    }, -- right side
+    {
+        type = "create-trivial-smoke",
+        repeat_count = 125,
+        smoke_name = "smoke-train-stop",
+        initial_height = 0,
+        -- smoke goes to the right
+        speed = {0.03, 0},
+        speed_multiplier = 0.75,
+        speed_multiplier_deviation = 1.1,
+        offset_deviation = {{0.3, -2.7}, {0.75, 2.7}}
+    }, {
+        type = "play-sound",
+        sound = sounds.train_brakes
+    }},
+    --drive_over_tie_trigger = drive_over_tie(),
+    --tie_distance = 50,
+    vehicle_impact_sound = sounds.generic_impact,
+    working_sound = {
+        sound = {
+            filename = "__electric-trains__/sound/space-train-engine.ogg",
+            volume = 0.4
+        },
+        match_speed_to_activity = true,
+        max_sounds_per_type = 2
+    },
+    open_sound = {
+        filename = "__base__/sound/train-door-open.ogg",
+        volume = 0.5
+    },
+    close_sound = {
+        filename = "__base__/sound/train-door-close.ogg",
+        volume = 0.4
+    },
+    sound_minimum_speed = 0.5,
+    water_reflection = locomotive_reflection()
+
+},{
     type = "cargo-wagon",
     name = "space-cargo-wagon",
     icon = "__electric-trains__/graphics/icons/space-cargo-wagon.png",
