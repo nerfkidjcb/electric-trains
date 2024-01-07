@@ -69,7 +69,7 @@ function experimental_space_accumulator_picture(tint, repeat_count)
             repeat_count = repeat_count,
             shift = util.by_pixel(0, -16),
             tint = tint,
-            animation_speed = 0.5,
+            animation_speed = 1.5,
             scale = 1,
             hr_version = {
                 filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_experimental_space_charging_station.png",
@@ -79,7 +79,7 @@ function experimental_space_accumulator_picture(tint, repeat_count)
                 repeat_count = repeat_count,
                 shift = util.by_pixel(0, -16),
                 tint = tint,
-                animation_speed = 0.5,
+                animation_speed = 1.5,
                 scale = 0.5
             }
         }, {
@@ -122,7 +122,7 @@ function space_accumulator_charge()
             draw_as_glow = true,
             shift = util.by_pixel(0, -16),
             scale = 1,
-            animation_speed = 3,
+            animation_speed = 1,
             hr_version = {
                 filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_lightning.png",
                 priority = "high",
@@ -133,7 +133,7 @@ function space_accumulator_charge()
                 draw_as_glow = true,
                 shift = util.by_pixel(0, -16),
                 scale = 0.5,
-                animation_speed = 3
+                animation_speed = 1
             }
         }}
     }
