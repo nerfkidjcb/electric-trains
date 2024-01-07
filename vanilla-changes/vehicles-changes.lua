@@ -85,11 +85,11 @@ data:extend({{
   ingredients = {{"space-train-discharged-battery-pack", 1}},
   results = {{
     name = "space-train-destroyed-battery-pack",
-    probability = 0.1,
+    probability = 0.15,
     amount = 1
   }, {
     name = "space-train-battery-pack",
-    probability = 0.9,
+    probability = 0.85,
     amount = 1
   }}
 }})
