@@ -8,7 +8,16 @@ data:extend({{
   enabled = false,
   ingredients = {{"locomotive", 1}, {"processing-unit", 20}},
   result = "space-locomotive"
-}, {
+}, -- Electric Locomotive Wagon
+{
+  type = "recipe",
+  name = "recipe-electric-locomotive-wagon",
+  energy_required = 60,
+  enabled = true, -- TODO hide this behind research at some point
+  ingredients = {{"locomotive", 1}, {"processing-unit", 20}},
+  result = "electric-locomotive-wagon"
+},
+{
   type = "recipe",
   name = "recipe-space-cargo-wagon",
   energy_required = 60,
