@@ -7,14 +7,26 @@ data:extend({{
   order = "a[train-system]-f[locomotive]",
   place_result = "space-locomotive",
   stack_size = 5
-}, {
+}, 
+-- Electric Locomotive Wagon
+{
+  type = "item-with-entity-data",
+  name = "electric-locomotive-wagon",
+  icon = "__electric-trains__/graphics/icons/electric-locomotive-wagon.png",
+  icon_size = 64,
+  subgroup = "train-transport",
+  order = "a[train-system]-g[locomotive]",
+  place_result = "electric-locomotive-wagon",
+  stack_size = 5
+},
+{
   type = "item-with-entity-data",
   name = "space-cargo-wagon",
   icon = "__electric-trains__/graphics/icons/space-cargo-wagon.png",
   icon_size = 64,
   icon_mipmaps = 4,
   subgroup = "train-transport",
-  order = "a[train-system]-g[cargo-wagon]",
+  order = "a[train-system]-h[cargo-wagon]",
   place_result = "space-cargo-wagon",
   stack_size = 5
 }, {
@@ -24,7 +36,7 @@ data:extend({{
   icon_size = 64,
   icon_mipmaps = 4,
   subgroup = "train-transport",
-  order = "a[train-system]-h[fluid-wagon]",
+  order = "a[train-system]-i[fluid-wagon]",
   place_result = "space-fluid-wagon",
   stack_size = 5
 }})
