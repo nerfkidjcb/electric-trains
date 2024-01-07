@@ -35,7 +35,7 @@ data:extend({{
   name = "experimental-space-train-battery-charging-station",
   energy_required = 10,
   enabled = false,
-  ingredients = {{"steel-plate", 50}, {"processing-unit", 50}, {"copper-cable", 200}},
+  ingredients = {{"steel-plate", 25}, {"processing-unit", 50}, {"copper-cable", 200}, {"space-train-battery-charging-station", 1}},
   result = "experimental-space-train-battery-charging-station"
 },{
   type = "recipe",
@@ -52,7 +52,7 @@ data:extend({{
   name = "space-train-battery-pack-recharge",
   category = "electrical",
   hidden = true,
-  energy_required = 120,
+  energy_required = 60,
   enabled = false,
   icon = "__electric-trains__/graphics/icons/battery.png",
   icon_size = 128,
@@ -76,7 +76,7 @@ data:extend({{
   name = "faster-space-train-battery-pack-recharge",
   category = "faster-electrical",
   hidden = true,
-  energy_required = 40,
+  energy_required = 20,
   enabled = false,
   icon = "__electric-trains__/graphics/icons/fast-battery.png",
   icon_size = 128,
