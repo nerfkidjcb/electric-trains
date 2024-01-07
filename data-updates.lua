@@ -175,18 +175,18 @@ if mods["Krastorio2"] then -- Change the technology spot to be behind Lithium-Su
   table.insert(data.raw["technology"]["tech-space-trains"].prerequisites, "kr-lithium-sulfur-battery")
 end
 
--- Add new research for experimental chargers that unlock the faster-space-train-battery-pack-recharge recipe.
+-- Add new research for experimental chargers that unlock the experimental charging station.
 data:extend({
   {
     type = "technology",
     name = "tech-space-trains-experimental-charging",
     mod = "space-trains",
-    icon = "__electric-trains__/graphics/icons/space-trains-tech.png",
-    icon_size = 256,
+    icon = "__electric-trains__/graphics/icons/experimental-space-train-charging-station.png",
+    icon_size = 128,
     icon_mipmaps = 4,
     effects = {{
       type = "unlock-recipe",
-      recipe = "space-train-battery-charging-station"
+      recipe = "experimental-space-train-battery-charging-station"
     }, {
       type = "unlock-recipe",
       recipe = "faster-space-train-battery-pack-recharge"

@@ -258,9 +258,9 @@ data:extend({ -- Battery charging interface
     water_reflection = accumulator_reflection(),
 
     energy_usage = "1.7MW",
-    crafting_categories = {"electrical"},
+    crafting_categories = {"faster-electrical"},
     crafting_speed = 3,
-    fixed_recipe = "space-train-battery-pack-recharge",
+    fixed_recipe = "faster-space-train-battery-pack-recharge",
     show_recipe_icon = false,
 
     vehicle_impact_sound = sounds.generic_impact,
