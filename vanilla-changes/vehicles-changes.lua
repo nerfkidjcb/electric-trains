@@ -29,7 +29,15 @@ data:extend({{
   enabled = false,
   ingredients = {{"steel-plate", 15}, {"processing-unit", 5}, {"copper-cable", 20}},
   result = "space-train-battery-charging-station"
-}, {
+}, -- Experimental charging station
+{
+  type = "recipe",
+  name = "space-train-battery-charging-station",
+  energy_required = 10,
+  enabled = false,
+  ingredients = {{"steel-plate", 50}, {"processing-unit", 50}, {"copper-cable", 200}},
+  result = "space-train-battery-charging-station"
+},
   type = "recipe",
   name = "space-train-battery-pack",
   category = "advanced-crafting",
@@ -60,4 +68,27 @@ data:extend({{
     probability = 0.99,
     amount = 1
   }}
-}})
+},
+{
+  -- Faster space train battery park recharge
+  type = "recipe",
+  name = "faster-space-train-battery-pack-recharge",
+  category = "electrical",
+  hidden = true,
+  energy_required = 60,
+  enabled = false,
+  icon = "__electric-trains__/graphics/icons/battery.png",
+  icon_size = 128,
+  subgroup = "intermediate-product",
+  allow_as_intermediate = false,
+  ingredients = {{"space-train-discharged-battery-pack", 1}},
+  results = {{
+    name = "space-train-destroyed-battery-pack",
+    probability = 0.1,
+    amount = 1
+  }, {
+    name = "space-train-battery-pack",
+    probability = 0.9,
+    amount = 1
+  }}
+})
