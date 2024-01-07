@@ -202,7 +202,87 @@ data:extend({ -- Battery charging interface
         fade_in_ticks = 4,
         fade_out_ticks = 20
     }
-}, -- Actual Space Trains now
+}, -- Experimental Battery Charging Interface
+{
+    type = "assembling-machine",
+    name = "experimental-space-train-battery-charging-station",
+    icon = "__electric-trains__/graphics/icons/experimental-space-train-charging-station.png",
+    icon_size = 128,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {
+        mining_time = 1,
+        result = "experimental-space-train-battery-charging-station"
+    },
+    max_health = 150,
+    resistances = {{
+        type = "fire",
+        percent = 70
+    }},
+    corpse = "accumulator-remnants",
+    dying_explosion = "accumulator-explosion",
+    collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
+    selection_box = {{-1, -1}, {1, 1}},
+    damaged_trigger_effect = hit_effects.entity(),
+    drawing_box = {{-1, -1.5}, {1, 1}},
+    energy_source = {
+        type = "electric",
+        buffer_capacity = "20MJ",
+        usage_priority = "primary-input",
+        input_flow_limit = "10MW",
+        output_flow_limit = "0kW",
+        drain = "500W"
+    },
+    fast_replaceable_group = "assembling-machine",
+    always_draw_idle_animation = true,
+    idle_animation = space_accumulator_picture(),
+    working_visualisations = {{
+        effect = "flicker",
+        fadeout = true,
+        light = {
+            intensity = 0.2,
+            size = 9.9,
+            shift = {0.0, 0.0},
+            color = {
+                r = 0.25,
+                g = 0.25,
+                b = 0.8
+            }
+        }
+    }, {
+        effect = "flicker",
+        fadeout = true,
+        draw_as_light = true,
+        animation = space_accumulator_charge()
+    }},
+
+    water_reflection = accumulator_reflection(),
+
+    energy_usage = "1.7MW",
+    crafting_categories = {"electrical"},
+    crafting_speed = 3,
+    fixed_recipe = "space-train-battery-pack-recharge",
+    show_recipe_icon = false,
+
+    vehicle_impact_sound = sounds.generic_impact,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    working_sound = {
+        sound = {
+            filename = "__electric-trains__/sound/space-charging-sound.ogg",
+            volume = 0.35
+        },
+        idle_sound = {
+            filename = "__base__/sound/accumulator-idle.ogg",
+            volume = 0.3
+        },
+        -- persistent = true,
+        max_sounds_per_type = 3,
+        audible_distance_modifier = 0.5,
+        fade_in_ticks = 4,
+        fade_out_ticks = 20
+    }
+}, 
+-- Actual Space Trains now
 {
     type = "locomotive",
     name = "space-locomotive",
