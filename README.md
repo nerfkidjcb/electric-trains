@@ -52,7 +52,7 @@ Once again I would like to thank FragJacker for creating the original mod, and f
 
 ## Planned Features
 
-- We have just completed the Experimental Train Powerpack Charging Station, but we are looking at adding more experimental research and recipes in the future!
+- Having a "power car" that looks like a cargo car but provides power and interfaces like a locomotive. This will be aesthetically pleasing for configurations such as 2-8 trains. 
 
 ## Changelog
 
