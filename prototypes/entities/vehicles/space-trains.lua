@@ -59,9 +59,89 @@ function space_accumulator_picture(tint, repeat_count)
     }
 end
 
+function experimental_space_accumulator_picture(tint, repeat_count)
+    return {
+        layers = {{
+            filename = "__electric-trains__/graphics/entity/space-train-charging-station/experimental_space_charging_station.png",
+            priority = "high",
+            width = 64,
+            height = 96,
+            repeat_count = repeat_count,
+            shift = util.by_pixel(0, -16),
+            tint = tint,
+            animation_speed = 0.5,
+            scale = 1,
+            hr_version = {
+                filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_experimental_space_charging_station.png",
+                priority = "high",
+                width = 128,
+                height = 192,
+                repeat_count = repeat_count,
+                shift = util.by_pixel(0, -16),
+                tint = tint,
+                animation_speed = 0.5,
+                scale = 0.5
+            }
+        }, {
+            filename = "__electric-trains__/graphics/entity/space-train-charging-station/space_charging_station_shadow.png",
+            priority = "high",
+            width = 144,
+            height = 45,
+            repeat_count = repeat_count,
+            shift = util.by_pixel(32, 11),
+            draw_as_shadow = true,
+            scale = 1,
+            hr_version = {
+                filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_shadow.png",
+                priority = "high",
+                width = 285,
+                height = 91,
+                repeat_count = repeat_count,
+                shift = util.by_pixel(32, 11),
+                draw_as_shadow = true,
+                scale = 0.5
+            }
+        }}
+    }
+end
+
 function space_accumulator_charge()
     return {
         layers = {space_accumulator_picture({
+            r = 1,
+            g = 1,
+            b = 1,
+            a = 1
+        }, 30), {
+            filename = "__electric-trains__/graphics/entity/space-train-charging-station/space_charging_station_lightning.png",
+            priority = "high",
+            width = 64,
+            height = 96,
+            line_length = 6,
+            frame_count = 30,
+            draw_as_glow = true,
+            shift = util.by_pixel(0, -16),
+            scale = 1,
+            animation_speed = 3,
+            hr_version = {
+                filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_lightning.png",
+                priority = "high",
+                width = 128,
+                height = 192,
+                line_length = 6,
+                frame_count = 30,
+                draw_as_glow = true,
+                shift = util.by_pixel(0, -16),
+                scale = 0.5,
+                animation_speed = 3
+            }
+        }}
+    }
+end
+
+function experimental_space_accumulator_charge()
+    return {
+        layers = {experimental_space_accumulator_picture({
             r = 1,
             g = 1,
             b = 1,
@@ -234,7 +314,7 @@ data:extend({ -- Battery charging interface
     },
     fast_replaceable_group = "assembling-machine",
     always_draw_idle_animation = true,
-    idle_animation = space_accumulator_picture(),
+    idle_animation = experimental_space_accumulator_picture(),
     working_visualisations = {{
         effect = "flicker",
         fadeout = true,
@@ -252,7 +332,7 @@ data:extend({ -- Battery charging interface
         effect = "flicker",
         fadeout = true,
         draw_as_light = true,
-        animation = space_accumulator_charge()
+        animation = experimental_space_accumulator_charge()
     }},
 
     water_reflection = accumulator_reflection(),

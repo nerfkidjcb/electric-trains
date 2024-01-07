@@ -14,7 +14,7 @@ data:extend({{
     icon = "__electric-trains__/graphics/icons/experimental-space-train-charging-station.png",
     icon_size = 128,
     subgroup = "production-machine",
-    order = "h[train-system]",
+    order = "i[train-system]",
     place_result = "experimental-space-train-battery-charging-station",
     stack_size = 10
 },
