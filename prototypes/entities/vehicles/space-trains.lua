@@ -764,37 +764,7 @@ data:extend({ -- Battery charging interface
         fuel_inventory_size = 3,
         burnt_inventory_size = 1
     },
-    front_light = {{
-        type = "oriented",
-        minimum_darkness = 0.3,
-        picture = {
-            filename = "__core__/graphics/light-cone.png",
-            priority = "extra-high",
-            flags = {"light"},
-            scale = 2,
-            width = 200,
-            height = 200
-        },
-        shift = {-0.6, -16},
-        size = 2,
-        intensity = 0.8,
-        color = space_train_light_color
-    }, {
-        type = "oriented",
-        minimum_darkness = 0.3,
-        picture = {
-            filename = "__core__/graphics/light-cone.png",
-            priority = "extra-high",
-            flags = {"light"},
-            scale = 2,
-            width = 200,
-            height = 200
-        },
-        shift = {0.6, -16},
-        size = 2,
-        intensity = 0.8,
-        color = space_train_light_color
-    }},
+    
     back_light = rolling_stock_back_light(),
     stand_by_light = rolling_stock_stand_by_light(),
     color = {
