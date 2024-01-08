@@ -4,7 +4,7 @@
   "title": "Electric Trains",
   "author": "NerfKidJcb",
   "factorio_version": "1.1",
-  "description": "This should be overwritten by the factorio mod page",
+  "description": "This should be overwritten by the factorio mod page unless you downloaded this manually. Check out the link below :)",
   "dependencies": [
     "base >= 1.1"
   ],
