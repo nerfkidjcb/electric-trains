@@ -59,7 +59,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     ingredients = {{"space-train-destroyed-battery-pack", 1}, {
       type = "fluid",
       name = "sulfuric-acid",
-      amount = 20
+      amount = 200
     }},
     icon = "__electric-trains__/graphics/icons/destroyed-battery.png",
     icon_size = 128,
