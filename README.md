@@ -58,8 +58,9 @@ Or,
 
 ## Planned Features
 
-- Long distance locomotives that have a greater fuel slot size? (Maybe)
-- Express versions of the electric locomotive and wagons that are even faster, but use more powerpacks? (Maybe)
+- Efficiency Train Powerpack: lasts for much longer than normal powerpack
+- Speed Train Powerpack: increases the top speed with reduced range
+- Acceleration Train Powerpack: increases acceleration with reduced range
 
 ## Changelog
 
