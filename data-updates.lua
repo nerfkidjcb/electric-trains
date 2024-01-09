@@ -59,7 +59,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     ingredients = {{"space-train-destroyed-battery-pack", 1}, {
       type = "fluid",
       name = "sulfuric-acid",
-      amount = 20
+      amount = 200
     }},
     icon = "__electric-trains__/graphics/icons/destroyed-battery.png",
     icon_size = 128,
@@ -84,6 +84,9 @@ end
   table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-plate", 40})
   table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"rocket-control-unit", 10})
   table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"electric-engine-unit", 50})
+  table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {"steel-plate", 40})
+  table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {"rocket-control-unit", 10})
+  table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {"electric-engine-unit", 50})
   table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-plate", 40})
   table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"electric-engine-unit", 5})
   table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-plate", 40})
@@ -193,6 +196,35 @@ data:extend({
     },
     max_level = "infinite",
     order = "e-k-d"
+  }})
+
+  -- Electric Wagon Locomotive
+  data:extend({{
+    type = "technology",
+    name = "tech-electric-locomotive-wagon",
+    icon = "__electric-trains__/graphics/icons/electric-locomotive-wagon.png",
+    icon_size = 64, 
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "recipe-electric-locomotive-wagon"
+      } 
+    },
+    prerequisites = {"space-science-pack", "tech-space-trains"}, 
+    unit =
+    {
+      count = 2000,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1}   
+      },
+      time = 60
+    },
   }})
   if settings.startup["train-battery-decay-enable-setting"].value then
     table.insert(data.raw["technology"]["tech-space-trains"].effects, {
