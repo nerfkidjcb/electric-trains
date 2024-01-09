@@ -14,24 +14,28 @@ FINAL_MOD_FOLDER=$MODNAME'_'$VERSION
 
 # Remove old build directory
 if [ -d "$DIR_NAME" ]; then
+	echo "Removing old build directory..."
 	rm -rf $DIR_NAME
 fi
 
 # Remove old archive
 if [ -f "$FINAL_MOD_FOLDER.zip" ]; then
+	echo "Removing old zip file..."
 	rm $FINAL_MOD_FOLDER'.zip'
 fi
 
 # Remove make new build directory
 mkdir -p ./$DIR_NAME/$FINAL_MOD_FOLDER
 
+echo "Copying files to build directory..."
 # Copy files into the new directory
 # - not the new build directory
 # - not the build script
 # - not .git
 # - not .gitignore
-find . -maxdepth 1 ! -regex '.*/'$DIR_NAME ! -regex '.*/'$BUILDER_NAME ! -regex '.*/'$GIT ! -regex '.*/'$GITIGNORE ! -regex '.*/'$DOCUMENTATION ! -regex '.*/'$VSCODE ! -regex '.' -exec cp -r '{}' $DIR_NAME/$FINAL_MOD_FOLDER \;
+find . -maxdepth 1 ! -regex '.*/'$DIR_NAME ! -regex '.*/'$BUILDER_NAME ! -regex '.*/'$GIT ! -regex '.*/'$GITIGNORE ! -regex '.*/'$DOCUMENTATION ! -regex '.*/'$VSCODE ! -regex '.' ! -regex '.*.zip' -exec cp -r '{}' $DIR_NAME/$FINAL_MOD_FOLDER \;
 
+echo "Running pngquant on png files..."
 # run pngquant on the png files
 find ./$DIR_NAME/$FINAL_MOD_FOLDER -name '*.png' -print0 | xargs -0 -P5 -L1 pngquant --ext .png --force 256
 
@@ -39,4 +43,4 @@ find ./$DIR_NAME/$FINAL_MOD_FOLDER -name '*.png' -print0 | xargs -0 -P5 -L1 pngq
 #cd $DIR_NAME
 7z a -r $FINAL_MOD_FOLDER'.zip' ./$DIR_NAME/$FINAL_MOD_FOLDER
 
-# done!
+echo "Electric Trains mod build complete!"
