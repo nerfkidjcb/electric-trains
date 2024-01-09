@@ -1,0 +1,31 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2024-01-06
+  Info:
+    - Initial release
+    - Forked from se-space-trains
+  Features:
+    - Rebranded research and added new infinite research.
+    - Renamed all new entities and items.
+    - New MiniMap icons for electric trains.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2024-01-07
+  Info:
+    - Added Experimental Train Powerpack Charging Stations. (New research)
+    - A new "Faster Train Powerpack Charging" recipe for the experimental charging station.
+  Features:
+    - New building and recipe icons for the experimental charging station.
+  Balancing:
+    - All researches have sensible prerequisites and required science cost.
+    - Experimental charging stations use a lot more power than regular charging stations.
+    - Longer powerpack charge times.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 2024-01-09
+  Info:
+    - Added the Electric Wagon Locomotive.
+  Features:
+    - Introduces the Electric Wagon Locomotive. This is the same as the Electric Locomotive, but with the visual properties of a wagon. This helps the aesthetics of longer train configurations such as 2-8. This can be unlocked after researching the Electric Wagon Locomotive research.
+  Balancing:
+    - Battery refurbishment is now a little more expensive, although no ingredients have changed.
