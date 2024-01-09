@@ -8,7 +8,7 @@ data:extend({{
   enabled = false,
   ingredients = {{"locomotive", 1}, {"processing-unit", 20}},
   result = "space-locomotive"
-}, -- Electric Locomotive Wagon
+}, -- Electric Wagon Locomotive
 {
   type = "recipe",
   name = "recipe-electric-locomotive-wagon",

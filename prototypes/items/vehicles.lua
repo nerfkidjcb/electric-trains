@@ -8,7 +8,7 @@ data:extend({{
   place_result = "space-locomotive",
   stack_size = 5
 }, 
--- Electric Locomotive Wagon
+-- Electric Wagon Locomotive
 {
   type = "item-with-entity-data",
   name = "electric-locomotive-wagon",

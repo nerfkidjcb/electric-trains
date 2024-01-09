@@ -48,9 +48,9 @@ Or,
   ![MiniMap Icons](graphics/entity/vehicles/space-trains/space-cargo-wagon-minimap-representation.png)
   ![MiniMap Icons](graphics/entity/vehicles/space-trains/space-fluid-wagon-minimap-representation.png)
 
-- Electric Locomotive Wagon, which is the same as a normal Electric Locomotive with the visual properties of an Electric Wagon. You can also select the colour of the entity.
+- Electric Wagon Locomotive, which is the same as a normal Electric Locomotive with the visual properties of an Electric Wagon. You can also select the colour of the entity.
 
-  ![Electric Locomotive Wagon](graphics/icons/electric-locomotive-wagon.png)
+  ![Electric Wagon Locomotive](graphics/icons/electric-locomotive-wagon.png)
 
 - New infinite research to increase the braking force of trains as a result of your testing and research into the new electric trains.
 

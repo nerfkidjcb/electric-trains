@@ -20,7 +20,7 @@
 
 # Version: 0.1.3 - 08.01.2024
 
-- Added the Electric Locomotive Wagon (Same as the Electric Locomotive, but with the visual properties of a wagon). This helps the aesthetics of longer train configurations such as 2-8. This can be unlocked after researching the Electric Locomotive Wagon research.
+- Added the Electric Wagon Locomotive (Same as the Electric Locomotive, but with the visual properties of a wagon). This helps the aesthetics of longer train configurations such as 2-8. This can be unlocked after researching the Electric Wagon Locomotive research.
 
 ### Some balance changes
 

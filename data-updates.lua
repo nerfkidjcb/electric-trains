@@ -198,7 +198,7 @@ data:extend({
     order = "e-k-d"
   }})
 
-  -- Electric locomotive wagon
+  -- Electric Wagon Locomotive
   data:extend({{
     type = "technology",
     name = "tech-electric-locomotive-wagon",
