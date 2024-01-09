@@ -900,62 +900,6 @@ data:extend({ -- Battery charging interface
             }
         }}
     },
-    front_light_pictures = {
-        layers = {{
-            priority = "very-low",
-            blend_mode = "additive",
-            draw_as_light = true,
-            tint = {
-                r = 1.0,
-                g = 1.0,
-                b = 1.0,
-                a = 0.25
-            },
-            width = 500,
-            height = 300,
-            direction_count = 256,
-            allow_low_quality_rotation = true,
-            filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_1.png",
-                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_2.png",
-                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_3.png",
-                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_4.png",
-                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_5.png",
-                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_6.png",
-                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_7.png",
-                        "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_lights_front_8.png"},
-            line_length = 4,
-            lines_per_file = 8,
-            shift = {0, wagon_vertical_shift},
-            scale = train_scale * 2,
-            hr_version = {
-                priority = "very-low",
-                blend_mode = "additive",
-                draw_as_light = true,
-                tint = {
-                    r = 1.0,
-                    g = 1.0,
-                    b = 1.0,
-                    a = 0.25
-                },
-                width = 1000,
-                height = 600,
-                direction_count = 256,
-                allow_low_quality_rotation = true,
-                filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_1.png",
-                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_2.png",
-                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_3.png",
-                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_4.png",
-                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_5.png",
-                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_6.png",
-                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_7.png",
-                            "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_lights_front_8.png"},
-                line_length = 4,
-                lines_per_file = 8,
-                shift = {0, wagon_vertical_shift},
-                scale = train_scale
-            }
-        }}
-    },
     minimap_representation = {
         filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric-locomotive-wagon-minimap-representation.png",
         flags = {"icon"},
