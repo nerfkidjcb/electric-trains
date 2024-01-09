@@ -53,7 +53,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
   }, {
     type = "recipe",
     name = "space-train-battery-pack-refurbish",
-    energy_required = 10,
+    energy_required = 120,
     enabled = false,
     category = "chemistry",
     ingredients = {{"space-train-destroyed-battery-pack", 1}, {
