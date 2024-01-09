@@ -34,7 +34,7 @@ data:extend({{
 }, {
   type = "recipe",
   name = "space-train-battery-charging-station",
-  energy_required = 10,
+  energy_required = 60,
   enabled = false,
   ingredients = {{"steel-plate", 15}, {"processing-unit", 5}, {"copper-cable", 20}},
   result = "space-train-battery-charging-station"
@@ -42,7 +42,7 @@ data:extend({{
 {
   type = "recipe",
   name = "experimental-space-train-battery-charging-station",
-  energy_required = 10,
+  energy_required = 120,
   enabled = false,
   ingredients = {{"steel-plate", 25}, {"processing-unit", 50}, {"copper-cable", 200}, {"space-train-battery-charging-station", 1}},
   result = "experimental-space-train-battery-charging-station"
