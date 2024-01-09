@@ -37,7 +37,7 @@ data:extend({{
         }}
     },
     fuel_category = "electrical",
-    fuel_value = "50MJ",
+    fuel_value = "25MJ",
     burnt_result = "space-train-discharged-battery-pack",
     subgroup = "intermediate-product",
     order = "s-a[battery-pack]",
