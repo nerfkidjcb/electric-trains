@@ -37,3 +37,10 @@ Version: 0.1.4
 Date: 09. 01. 2024
   Info:
     - Updated changelog to work with Factorio's parser.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: TDB
+  Balancing:
+    - Increased crafting time of all Powerpack charging stations.
+    - Increased destroyed refurbishment time.
+    - Halfed the default powerpack fuel value.
