@@ -357,6 +357,76 @@ data:extend({
       time = 60
     },
   }})
+
+  -- Speed battery packs
+  data:extend({{
+    type = "technology",
+    name = "tech-speed-battery-pack",
+    icon = "__electric-trains__/graphics/icons/speed-battery/speed-battery.png",
+    icon_size = 128,
+    icon_mipmaps = 4,
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "speed-battery-pack"
+    }, {
+      type = "unlock-recipe",
+      recipe = "speed-battery-pack-recharge"
+    }},
+    prerequisites = {"tech-space-trains", "tech-space-trains-experimental-charging"},
+    unit = {
+      count = 2000,
+      ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+      {"production-science-pack", 1}, {"utility-science-pack", 1}},
+      time = 60
+    }
+  }})
+
+  -- Acceleration battery packs
+  data:extend({{
+    type = "technology",
+    name = "tech-acceleration-battery-pack",
+    icon = "__electric-trains__/graphics/icons/acceleration-battery/acceleration-battery.png",
+    icon_size = 128,
+    icon_mipmaps = 4,
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "acceleration-battery-pack"
+    }, {
+      type = "unlock-recipe",
+      recipe = "acceleration-battery-pack-recharge"
+    }},
+    prerequisites = {"tech-space-trains", "tech-space-trains-experimental-charging"},
+    unit = {
+      count = 2000,
+      ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+      {"production-science-pack", 1}, {"utility-science-pack", 1}},
+      time = 60
+    }
+  }})
+
+  -- Efficiency battery packs
+  data:extend({{
+    type = "technology",
+    name = "tech-efficiency-battery-pack",
+    icon = "__electric-trains__/graphics/icons/efficiency-battery/efficiency-battery.png",
+    icon_size = 128,
+    icon_mipmaps = 4,
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "efficiency-battery-pack"
+    }, {
+      type = "unlock-recipe",
+      recipe = "efficiency-battery-pack-recharge"
+    }},
+    prerequisites = {"tech-space-trains", "tech-space-trains-experimental-charging"},
+    unit = {
+      count = 2000,
+      ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+      {"production-science-pack", 1}, {"utility-science-pack", 1}},
+      time = 60
+    }
+  }})
+
   if settings.startup["train-battery-decay-enable-setting"].value then
     table.insert(data.raw["technology"]["tech-space-trains"].effects, {
       type = "unlock-recipe",
