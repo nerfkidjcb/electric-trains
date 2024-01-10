@@ -418,7 +418,7 @@ data:extend({ -- Battery charging interface
         fuel_category = "electrical",
         effectivity = 0.95,
         fuel_inventory_size = 3,
-        burnt_inventory_size = 1
+        burnt_inventory_size = 3
     },
     front_light = {{
         type = "oriented",
@@ -760,7 +760,7 @@ data:extend({ -- Battery charging interface
         fuel_category = "electrical",
         effectivity = 0.95,
         fuel_inventory_size = 3,
-        burnt_inventory_size = 1
+        burnt_inventory_size = 3
     },
     
     back_light = rolling_stock_back_light(),
