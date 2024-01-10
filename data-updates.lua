@@ -71,6 +71,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     },
     burnt_result = "discharged-speed-battery-pack",
     subgroup = "intermediate-product",
+    order = "s-d[destroyed-battery-pack]",
     stack_size = 20
   },{
     type = "item",
@@ -92,6 +93,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     },
     burnt_result = "discharged-acceleration-battery-pack",
     subgroup = "intermediate-product",
+    order = "s-b[destroyed-battery-pack]",
     stack_size = 20
   }, {
     type = "item",
@@ -113,6 +115,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     },
     burnt_result = "discharged-efficiency-battery-pack",
     subgroup = "intermediate-product",
+    order = "s-c[destroyed-battery-pack]",
     stack_size = 20
   }, -- Refurb for speed, acceleration and efficiency battery-packs
   {
