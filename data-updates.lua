@@ -49,7 +49,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     burnt_result = "space-train-discharged-battery-pack",
     subgroup = "intermediate-product",
     order = "s-a[destroyed-battery-pack]",
-    stack_size = 60
+    stack_size = 20
   }, -- Destroyed speed, acceleration and efficiency battery-packs
   {
     type = "item",
@@ -71,7 +71,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     },
     burnt_result = "discharged-speed-battery-pack",
     subgroup = "intermediate-product",
-    stack_size = 60
+    stack_size = 20
   },{
     type = "item",
     name = "destroyed-acceleration-battery-pack",
@@ -92,7 +92,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     },
     burnt_result = "discharged-acceleration-battery-pack",
     subgroup = "intermediate-product",
-    stack_size = 60
+    stack_size = 20
   }, {
     type = "item",
     name = "destroyed-efficiency-battery-pack",
@@ -113,7 +113,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     },
     burnt_result = "discharged-efficiency-battery-pack",
     subgroup = "intermediate-product",
-    stack_size = 60
+    stack_size = 20
   }, -- Refurb for speed, acceleration and efficiency battery-packs
   {
     type = "recipe",
