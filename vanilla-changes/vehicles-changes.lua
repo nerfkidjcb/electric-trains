@@ -56,7 +56,104 @@ data:extend({{
   ingredients = {{"steel-plate", 2}, {"battery", 20}},
   localised_name = {"recipe-name.space-train-discharged-battery-pack-desc"},
   result = "space-train-discharged-battery-pack"
-}, {
+}, -- Speed, acceleration and efficiency battery-packs
+{
+  type = "recipe",
+  name = "speed-battery-pack",
+  category = "advanced-crafting",
+  energy_required = 20,
+  enabled = false,
+  allow_as_intermediate = false,
+  ingredients = {{"steel-plate", 2}, {"battery", 20}, {"speed-module-3", 1}},
+  result = "discharged-speed-battery-pack"
+},{
+  type = "recipe",
+  name = "acceleration-battery-pack",
+  category = "advanced-crafting",
+  energy_required = 20,
+  enabled = false,
+  allow_as_intermediate = false,
+  ingredients = {{"steel-plate", 2}, {"battery", 20}, {"productivity-module-3", 1}},
+  result = "discharged-acceleration-battery-pack"
+},{
+  type = "recipe",
+  name = "efficiency-battery-pack",
+  category = "advanced-crafting",
+  energy_required = 20,
+  enabled = false,
+  allow_as_intermediate = false,
+  ingredients = {{"steel-plate", 2}, {"battery", 20}, {"effectivity-module-3", 1}},
+  result = "discharged-efficiency-battery-pack"
+}, -- Charging speed, acceleration and efficiency battery-packs
+
+{
+  type = "recipe",
+  name = "speed-battery-pack-recharge",
+  category = "faster-electrical",
+  hidden = false,
+  hide_from_player_crafting = true,
+  energy_required = 60,
+  enabled = false,
+  icon = "__electric-trains__/graphics/icons/speed-battery/faster-speed-battery.png",
+  icon_size = 128,
+  subgroup = "intermediate-product",
+  allow_as_intermediate = false,
+  ingredients = {{"discharged-speed-battery-pack", 1}},
+  results = {{
+    name = "destroyed-speed-battery-pack",
+    probability = 0.05,
+    amount = 1
+  }, {
+    name = "speed-battery-pack",
+    probability = 0.95,
+    amount = 1
+  }}
+},{
+  type = "recipe",
+  name = "acceleration-battery-pack-recharge",
+  category = "faster-electrical",
+  hidden = false,
+  hide_from_player_crafting = true,
+  energy_required = 60,
+  enabled = false,
+  icon = "__electric-trains__/graphics/icons/acceleration-battery/faster-acceleration-battery.png",
+  icon_size = 128,
+  subgroup = "intermediate-product",
+  allow_as_intermediate = false,
+  ingredients = {{"discharged-acceleration-battery-pack", 1}},
+  results = {{
+    name = "destroyed-acceleration-battery-pack",
+    probability = 0.05,
+    amount = 1
+  }, {
+    name = "acceleration-battery-pack",
+    probability = 0.95,
+    amount = 1
+  }}
+},{
+  type = "recipe",
+  name = "efficiency-battery-pack-recharge",
+  category = "faster-electrical",
+  hidden = false,
+  hide_from_player_crafting = true,
+  energy_required = 60,
+  enabled = false,
+  icon = "__electric-trains__/graphics/icons/efficiency-battery/faster-efficiency-battery.png",
+  icon_size = 128,
+  subgroup = "intermediate-product",
+  allow_as_intermediate = false,
+  ingredients = {{"discharged-efficiency-battery-pack", 1}},
+  results = {{
+    name = "destroyed-efficiency-battery-pack",
+    probability = 0.05,
+    amount = 1
+  }, {
+    name = "efficiency-battery-pack",
+    probability = 0.95,
+    amount = 1
+  }}
+}, 
+{
   type = "recipe",
   name = "space-train-battery-pack-recharge",
   category = "electrical",
