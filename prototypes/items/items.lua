@@ -142,5 +142,13 @@ data:extend({{
     subgroup = "intermediate-product",
     order = "s-d[battery-pack]",
     stack_size = 20
-}
+}, {
+    type = "item",
+    name = "discharged-efficiency-battery-pack",
+    icon = "__electric-trains__/graphics/icons/efficiency-battery/discharged-efficiency-battery.png",
+    icon_size = 128,
+    subgroup = "intermediate-product",
+    order = "s-d[discharged-battery-pack]",
+    stack_size = 60
+},
 })
