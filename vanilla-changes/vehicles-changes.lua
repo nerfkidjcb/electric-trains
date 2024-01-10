@@ -65,7 +65,7 @@ data:extend({{
   energy_required = 20,
   enabled = false,
   allow_as_intermediate = false,
-  ingredients = {{"steel-plate", 2}, {"battery", 20}, {"space-train-battery-pack", 1}, {"speed-module-3", 1}},
+  ingredients = {{"steel-plate", 2}, {"battery", 20}, {"space-train-discharged-battery-pack", 1}, {"speed-module-3", 1}},
   localised_name = {"recipe-name.discharged-speed-battery-pack-desc"},
   result = "discharged-speed-battery-pack",
   order = "s-[battery-pack-d]"
@@ -76,7 +76,7 @@ data:extend({{
   energy_required = 20,
   enabled = false,
   allow_as_intermediate = false,
-  ingredients = {{"steel-plate", 2}, {"battery", 20}, {"space-train-battery-pack", 1}, {"productivity-module-3", 1}},
+  ingredients = {{"steel-plate", 2}, {"battery", 20}, {"space-train-discharged-battery-pack", 1}, {"productivity-module-3", 1}},
   localised_name = {"recipe-name.discharged-acceleration-battery-pack-desc"},
   result = "discharged-acceleration-battery-pack",
   order = "s-[battery-pack-b]"
@@ -87,7 +87,7 @@ data:extend({{
   energy_required = 20,
   enabled = false,
   allow_as_intermediate = false,
-  ingredients = {{"steel-plate", 2}, {"battery", 20}, {"space-train-battery-pack", 1}, {"effectivity-module-3", 1}},
+  ingredients = {{"steel-plate", 2}, {"battery", 20}, {"space-train-battery-discharged-pack", 1}, {"effectivity-module-3", 1}},
   localised_name = {"recipe-name.discharged-efficiency-battery-pack-desc"},
   result = "discharged-efficiency-battery-pack",
   order = "s-[battery-pack-c]"
