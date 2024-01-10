@@ -85,7 +85,7 @@ data:extend({{
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "s-b[discharged-battery-pack]",
-    stack_size = 60
+    stack_size = 20
 },{
     type = "item",
     name = "acceleration-battery-pack",
@@ -119,7 +119,7 @@ data:extend({{
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "s-c[discharged-battery-pack]",
-    stack_size = 60
+    stack_size = 20
 }, {
     type = "item",
     name = "efficiency-battery-pack",
@@ -151,6 +151,6 @@ data:extend({{
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "s-d[discharged-battery-pack]",
-    stack_size = 60
+    stack_size = 20
 },
 })
