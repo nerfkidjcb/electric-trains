@@ -114,7 +114,56 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     burnt_result = "discharged-efficiency-battery-pack",
     subgroup = "intermediate-product",
     stack_size = 60
-  }
+  }, -- Refurb for speed, acceleration and efficiency battery-packs
+  {
+    type = "recipe",
+    name = "speed-battery-pack-refurbish",
+    energy_required = 120,
+    enabled = false,
+    category = "chemistry",
+    ingredients = {{"destroyed-speed-battery-pack", 1}, {"battery", 5}, {
+      type = "fluid",
+      name = "sulfuric-acid",
+      amount = 200
+    }},
+    icon = "__electric-trains__/graphics/icons/speed-battery/destroyed-speed-battery.png",
+    icon_size = 128,
+    allow_as_intermediate = false,
+    localised_name = {"recipe-name.speed-battery-pack-refurbish-desc"},
+    result = "speed-battery-pack"
+  },{
+    type = "recipe",
+    name = "acceleration-battery-pack-refurbish",
+    energy_required = 120,
+    enabled = false,
+    category = "chemistry",
+    ingredients = {{"destroyed-acceleration-battery-pack", 1}, {"battery", 5}, {
+      type = "fluid",
+      name = "sulfuric-acid",
+      amount = 200
+    }},
+    icon = "__electric-trains__/graphics/icons/acceleration-battery/destroyed-acceleration-battery.png",
+    icon_size = 128,
+    allow_as_intermediate = false,
+    localised_name = {"recipe-name.acceleration-battery-pack-refurbish-desc"},
+    result = "acceleration-battery-pack"
+  },{
+    type = "recipe",
+    name = "efficiency-battery-pack-refurbish",
+    energy_required = 120,
+    enabled = false,
+    category = "chemistry",
+    ingredients = {{"destroyed-efficiency-battery-pack", 1}, {"battery", 5}, {
+      type = "fluid",
+      name = "sulfuric-acid",
+      amount = 200
+    }},
+    icon = "__electric-trains__/graphics/icons/efficiency-battery/destroyed-efficiency-battery.png",
+    icon_size = 128,
+    allow_as_intermediate = false,
+    localised_name = {"recipe-name.efficiency-battery-pack-refurbish-desc"},
+    result = "efficiency-battery-pack"
+  },
     
   
   {
