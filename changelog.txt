@@ -40,6 +40,14 @@ Date: 09. 01. 2024
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: TDB
+  Info:
+    - Added three new researches: Acceleration Train Powerpack, Speed Train Powerpack and Efficiency Train Powerpack.
+    - Each research unlocks a new experimental powerpack that has its own unique properties. They can be charged at the experimental charging station and refurbished at a chemical plant.
+    - As a result of this, you can now select the recipes in Experimental Train Powerpack Charging Stations. (Your old stations will still work, and you won't need to select the recipe again)
+  Features:
+    - Speed Train Powerpack: This powerpack has a higher top speed than the regular powerpack, but has a lower acceleration and fuel efficiency.
+    - Acceleration Train Powerpack: This powerpack has a higher acceleration than the regular powerpack, but has a lower top speed and fuel efficiency.
+    - Efficiency Train Powerpack: This powerpack has a higher fuel efficiency than the regular powerpack, and no other downsides.
   Balancing:
     - Increased crafting time of all Powerpack charging stations.
     - Increased destroyed refurbishment time.
