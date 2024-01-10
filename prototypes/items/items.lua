@@ -75,7 +75,7 @@ data:extend({{
     fuel_acceleration_multiplier = 0.8,
     burnt_result = "discharged-speed-battery-pack",
     subgroup = "intermediate-product",
-    order = "s-b[battery-pack]",
+    order = "s-d[battery-pack]",
     stack_size = 20
 
 },{
@@ -84,7 +84,7 @@ data:extend({{
     icon = "__electric-trains__/graphics/icons/speed-battery/discharged-speed-battery.png",
     icon_size = 128,
     subgroup = "intermediate-product",
-    order = "s-b[discharged-battery-pack]",
+    order = "s-d[discharged-battery-pack]",
     stack_size = 20
 },{
     type = "item",
@@ -110,7 +110,7 @@ data:extend({{
     fuel_acceleration_multiplier = 1.5,
     burnt_result = "discharged-acceleration-battery-pack",
     subgroup = "intermediate-product",
-    order = "s-c[battery-pack]",
+    order = "s-b[battery-pack]",
     stack_size = 20
 }, {
     type = "item",
@@ -118,7 +118,7 @@ data:extend({{
     icon = "__electric-trains__/graphics/icons/acceleration-battery/discharged-acceleration-battery.png",
     icon_size = 128,
     subgroup = "intermediate-product",
-    order = "s-c[discharged-battery-pack]",
+    order = "s-b[discharged-battery-pack]",
     stack_size = 20
 }, {
     type = "item",
@@ -142,7 +142,7 @@ data:extend({{
     fuel_value = "60MJ",
     burnt_result = "discharged-efficiency-battery-pack",
     subgroup = "intermediate-product",
-    order = "s-d[battery-pack]",
+    order = "s-c[battery-pack]",
     stack_size = 20
 }, {
     type = "item",
@@ -150,7 +150,7 @@ data:extend({{
     icon = "__electric-trains__/graphics/icons/efficiency-battery/discharged-efficiency-battery.png",
     icon_size = 128,
     subgroup = "intermediate-product",
-    order = "s-d[discharged-battery-pack]",
+    order = "s-c[discharged-battery-pack]",
     stack_size = 20
 },
 })
