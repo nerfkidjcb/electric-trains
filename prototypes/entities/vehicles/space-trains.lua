@@ -261,7 +261,6 @@ data:extend({ -- Battery charging interface
     energy_usage = "1.7MW",
     crafting_categories = {"electrical"},
     crafting_speed = 1,
-    fixed_recipe = "space-train-battery-pack-recharge",
     show_recipe_icon = false,
 
     vehicle_impact_sound = sounds.generic_impact,
@@ -340,7 +339,6 @@ data:extend({ -- Battery charging interface
     energy_usage = "10MW",
     crafting_categories = {"faster-electrical"},
     crafting_speed = 1,
-    fixed_recipe = "faster-space-train-battery-pack-recharge",
     show_recipe_icon = false,
 
     vehicle_impact_sound = sounds.generic_impact,
