@@ -59,5 +59,6 @@ Date: TDB
     - Increased destroyed powerpack refurbishment time.
     - Halved the default powerpack fuel value.
     - All spent fuel items have a max stack of 20, due to the QOL change above.
+    - You no longer need to research space science to unlock experimental charging stations, but you do have to research Electric Wagon Locomotive.
   Localisation:
     - Added de localisation. (Thanks to Kartchampion05)

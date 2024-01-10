@@ -279,7 +279,7 @@ data:extend({
       type = "unlock-recipe",
       recipe = "faster-space-train-battery-pack-recharge"
     }},
-    prerequisites = {"tech-space-trains", "space-science-pack"},
+    prerequisites = {"tech-space-trains", "tech-electric-locomotive-wagon"},
     unit = {
       count = 20000,
       ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
@@ -346,7 +346,7 @@ data:extend({
         recipe = "recipe-electric-locomotive-wagon"
       } 
     },
-    prerequisites = {"space-science-pack", "tech-space-trains"}, 
+    prerequisites = {"tech-space-trains"}, 
     unit =
     {
       count = 2000,
