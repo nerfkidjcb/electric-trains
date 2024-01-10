@@ -7,8 +7,8 @@ data:extend({{
   type = "string-setting",
   name = "train-battery-pack-energy-density-setting",
   setting_type = "startup",
-  default_value = "50 MJ (Default)",
-  allowed_values = {"50 MJ (Default)", "100 MJ"}
+  default_value = "25 MJ (Default)",
+  allowed_values = {"25 MJ (Default)", "50 MJ"}
 }, {
   type = "string-setting",
   name = "electric-fluid-wagon-capacity-setting",

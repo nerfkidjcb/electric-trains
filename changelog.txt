@@ -38,9 +38,10 @@ Date: 09. 01. 2024
   Info:
     - Updated changelog to work with Factorio's parser.
 ---------------------------------------------------------------------------------------------------
-Version: 0.1.5
+Version: 0.2.0
 Date: TDB
   Info:
+    - This is a bigger update, with new features, balancing and quality of life changes from hours of play testing.
     - Added three new researches: Acceleration Train Powerpack, Speed Train Powerpack and Efficiency Train Powerpack.
     - Each research unlocks a new experimental powerpack that has its own unique properties. They can be charged at the experimental charging station and refurbished at a chemical plant.
     - As a result of this, you can now select the recipes in Experimental Train Powerpack Charging Stations. (Your old stations will still work, and you won't need to select the recipe again)
@@ -48,7 +49,15 @@ Date: TDB
     - Speed Train Powerpack: This powerpack has a higher top speed than the regular powerpack, but has a lower acceleration and fuel efficiency.
     - Acceleration Train Powerpack: This powerpack has a higher acceleration than the regular powerpack, but has a lower top speed and fuel efficiency.
     - Efficiency Train Powerpack: This powerpack has a higher fuel efficiency than the regular powerpack, and no other downsides.
+    - New icons for the experimental powerpacks, you can differentiate them by their a subtle colour change in the icon respective to the module they take. Yep, that's right. Each powerpack takes a tier 3 module to craft, making them quite expensive. This is to balance the huge benefits they can present.
+  Quality of Life:
+    - Electric Locomotives now have three output slots, to avoid "No burnt result space" messages stopping your trains during a phased powerpack changeover, or running your network on a mix of powerpacks.
+    - You can now manually select the recipes to be completed by charging stations. (Please submit a FAQ if you want the icon to display over the building in alt mode, I am still undecided on this)
+    - Better ordering of menu items.
   Balancing:
     - Increased crafting time of all Powerpack charging stations.
-    - Increased destroyed refurbishment time.
-    - Halfed the default powerpack fuel value.
+    - Increased destroyed powerpack refurbishment time.
+    - Halved the default powerpack fuel value.
+    - All spent fuel items have a max stack of 20, due to the QOL change above.
+  Localisation:
+    - Added de localisation. (Thanks to Kartchampion05)
