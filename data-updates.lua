@@ -133,7 +133,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     icon_size = 128,
     allow_as_intermediate = false,
     localised_name = {"recipe-name.speed-battery-pack-refurbish-desc"},
-    result = "speed-battery-pack",
+    result = "discharged-speed-battery-pack",
     order = "s-[battery-refurbish-d]"
   },{
     type = "recipe",
@@ -150,7 +150,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     icon_size = 128,
     allow_as_intermediate = false,
     localised_name = {"recipe-name.acceleration-battery-pack-refurbish-desc"},
-    result = "acceleration-battery-pack",
+    result = "discharged-acceleration-battery-pack",
     order = "s-[battery-refurbish-b]"
   },{
     type = "recipe",
@@ -167,7 +167,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     icon_size = 128,
     allow_as_intermediate = false,
     localised_name = {"recipe-name.efficiency-battery-pack-refurbish-desc"},
-    result = "efficiency-battery-pack",
+    result = "discharged-efficiency-battery-pack",
     order = "s-[battery-refurbish-c]"
   },
     
