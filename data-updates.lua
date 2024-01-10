@@ -432,4 +432,16 @@ data:extend({
       type = "unlock-recipe",
       recipe = "space-train-battery-pack-refurbish"
     })
+    table.insert(data.raw["technology"]["tech-speed-battery-pack"].effects, {
+      type = "unlock-recipe",
+      recipe = "speed-battery-pack-refurbish"
+    })
+    table.insert(data.raw["technology"]["tech-acceleration-battery-pack"].effects, {
+      type = "unlock-recipe",
+      recipe = "acceleration-battery-pack-refurbish"
+    })
+    table.insert(data.raw["technology"]["tech-efficiency-battery-pack"].effects, {
+      type = "unlock-recipe",
+      recipe = "efficiency-battery-pack-refurbish"
+    })
   end
