@@ -55,7 +55,8 @@ data:extend({{
   allow_as_intermediate = false,
   ingredients = {{"steel-plate", 2}, {"battery", 20}},
   localised_name = {"recipe-name.space-train-discharged-battery-pack-desc"},
-  result = "space-train-discharged-battery-pack"
+  result = "space-train-discharged-battery-pack",
+  order = "s-[battery-pack-a]"
 }, -- Speed, acceleration and efficiency battery-packs
 {
   type = "recipe",
@@ -65,7 +66,9 @@ data:extend({{
   enabled = false,
   allow_as_intermediate = false,
   ingredients = {{"steel-plate", 2}, {"battery", 20}, {"speed-module-3", 1}},
-  result = "discharged-speed-battery-pack"
+  localised_name = {"recipe-name.discharged-speed-battery-pack-desc"},
+  result = "discharged-speed-battery-pack",
+  order = "s-[battery-pack-d]"
 },{
   type = "recipe",
   name = "acceleration-battery-pack",
@@ -74,7 +77,9 @@ data:extend({{
   enabled = false,
   allow_as_intermediate = false,
   ingredients = {{"steel-plate", 2}, {"battery", 20}, {"productivity-module-3", 1}},
-  result = "discharged-acceleration-battery-pack"
+  localised_name = {"recipe-name.discharged-acceleration-battery-pack-desc"},
+  result = "discharged-acceleration-battery-pack",
+  order = "s-[battery-pack-b]"
 },{
   type = "recipe",
   name = "efficiency-battery-pack",
@@ -83,7 +88,9 @@ data:extend({{
   enabled = false,
   allow_as_intermediate = false,
   ingredients = {{"steel-plate", 2}, {"battery", 20}, {"effectivity-module-3", 1}},
-  result = "discharged-efficiency-battery-pack"
+  localised_name = {"recipe-name.discharged-efficiency-battery-pack-desc"},
+  result = "discharged-efficiency-battery-pack",
+  order = "s-[battery-pack-c]"
 }, -- Charging speed, acceleration and efficiency battery-packs
 
 {
@@ -99,6 +106,7 @@ data:extend({{
   subgroup = "intermediate-product",
   allow_as_intermediate = false,
   ingredients = {{"discharged-speed-battery-pack", 1}},
+  order = "d",
   results = {{
     name = "destroyed-speed-battery-pack",
     probability = 0.05,
@@ -121,6 +129,7 @@ data:extend({{
   subgroup = "intermediate-product",
   allow_as_intermediate = false,
   ingredients = {{"discharged-acceleration-battery-pack", 1}},
+  order = "b",
   results = {{
     name = "destroyed-acceleration-battery-pack",
     probability = 0.05,
@@ -143,6 +152,7 @@ data:extend({{
   subgroup = "intermediate-product",
   allow_as_intermediate = false,
   ingredients = {{"discharged-efficiency-battery-pack", 1}},
+  order = "c",
   results = {{
     name = "destroyed-efficiency-battery-pack",
     probability = 0.05,
@@ -191,6 +201,7 @@ data:extend({{
   subgroup = "intermediate-product",
   allow_as_intermediate = false,
   ingredients = {{"space-train-discharged-battery-pack", 1}},
+  order = "a",
   results = {{
     name = "space-train-destroyed-battery-pack",
     probability = 0.15,
