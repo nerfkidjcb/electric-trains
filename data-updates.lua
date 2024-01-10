@@ -50,7 +50,74 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     subgroup = "intermediate-product",
     order = "s-a[destroyed-battery-pack]",
     stack_size = 60
+  }, -- Destroyed speed, acceleration and efficiency battery-packs
+  {
+    type = "item",
+    name = "destroyed-speed-battery-pack",
+    icon = "__electric-trains__/graphics/icons/speed-battery/destroyed-speed-battery.png",
+    icon_size = 128,
+    pictures = {
+      layers = {{
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/speed-battery/destroyed-speed-battery.png",
+        scale = 0.125
+      }, {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
+        scale = 0.125
+      }}
+    },
+    burnt_result = "discharged-speed-battery-pack",
+    subgroup = "intermediate-product",
+    stack_size = 60
+  },{
+    type = "item",
+    name = "destroyed-acceleration-battery-pack",
+    icon = "__electric-trains__/graphics/icons/acceleration-battery/destroyed-acceleration-battery.png",
+    icon_size = 128,
+    pictures = {
+      layers = {{
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/acceleration-battery/destroyed-acceleration-battery.png",
+        scale = 0.125
+      }, {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
+        scale = 0.125
+      }}
+    },
+    burnt_result = "discharged-acceleration-battery-pack",
+    subgroup = "intermediate-product",
+    stack_size = 60
   }, {
+    type = "item",
+    name = "destroyed-efficiency-battery-pack",
+    icon = "__electric-trains__/graphics/icons/efficiency-battery/destroyed-efficiency-battery.png",
+    icon_size = 128,
+    pictures = {
+      layers = {{
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/efficiency-battery/destroyed-efficiency-battery.png",
+        scale = 0.125
+      }, {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
+        scale = 0.125
+      }}
+    },
+    burnt_result = "discharged-efficiency-battery-pack",
+    subgroup = "intermediate-product",
+    stack_size = 60
+  }
+    
+  
+  {
     type = "recipe",
     name = "space-train-battery-pack-refurbish",
     energy_required = 120,
@@ -66,7 +133,9 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     allow_as_intermediate = false,
     localised_name = {"recipe-name.space-train-battery-pack-refurbish-desc"},
     result = "space-train-discharged-battery-pack"
-  }})
+  }, -- Speed, acceleration and efficiency battery-pack ref
+
+})
 else
   data.raw["recipe"]["space-train-battery-pack-recharge"].results = {{
     name = "space-train-battery-pack",
@@ -74,6 +143,19 @@ else
   }}
   data.raw["recipe"]["faster-space-train-battery-pack-recharge"].results = {{
     name = "space-train-battery-pack",
+    amount = 1
+  }}
+  -- Same for faster speed, acceleration and efficiency battery-packs
+  data.raw["recipe"]["speed-battery-pack-recharge"].results = {{
+    name = "speed-battery-pack",
+    amount = 1
+  }}
+  data.raw["recipe"]["acceleration-battery-pack-recharge"].results = {{
+    name = "acceleration-battery-pack",
+    amount = 1
+  }}
+  data.raw["recipe"]["efficiency-battery-pack-recharge"].results = {{
+    name = "efficiency-battery-pack",
     amount = 1
   }}
 end
