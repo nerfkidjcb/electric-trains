@@ -37,7 +37,7 @@ data:extend({{
         }}
     },
     fuel_category = "electrical",
-    fuel_value = "25MJ",
+    fuel_value = "40MJ",
     burnt_result = "space-train-discharged-battery-pack",
     subgroup = "intermediate-product",
     order = "s-a[battery-pack]",
@@ -70,7 +70,7 @@ data:extend({{
         }}
     },
     fuel_category = "electrical",
-    fuel_value = "20MJ",
+    fuel_value = "32MJ",
     fuel_top_speed_multiplier = 1.5,
     fuel_acceleration_multiplier = 0.8,
     burnt_result = "discharged-speed-battery-pack",
@@ -105,7 +105,7 @@ data:extend({{
         }}
     },
     fuel_category = "electrical",
-    fuel_value = "20MJ",
+    fuel_value = "32MJ",
     fuel_top_speed_multiplier = 0.8,
     fuel_acceleration_multiplier = 1.5,
     burnt_result = "discharged-acceleration-battery-pack",
@@ -139,7 +139,7 @@ data:extend({{
         }}
     },
     fuel_category = "electrical",
-    fuel_value = "60MJ",
+    fuel_value = "120MJ",
     burnt_result = "discharged-efficiency-battery-pack",
     subgroup = "intermediate-product",
     order = "s-c[battery-pack]",

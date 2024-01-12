@@ -227,7 +227,7 @@ data:extend({ -- Battery charging interface
     drawing_box = {{-1, -1.5}, {1, 1}},
     energy_source = {
         type = "electric",
-        buffer_capacity = "20MJ",
+        buffer_capacity = "30MJ",
         usage_priority = "primary-input",
         input_flow_limit = "10MW",
         output_flow_limit = "0kW",
@@ -305,7 +305,7 @@ data:extend({ -- Battery charging interface
     drawing_box = {{-1, -1.5}, {1, 1}},
     energy_source = {
         type = "electric",
-        buffer_capacity = "20MJ",
+        buffer_capacity = "30MJ",
         usage_priority = "primary-input",
         input_flow_limit = "10MW",
         output_flow_limit = "0kW",

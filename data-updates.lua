@@ -21,10 +21,10 @@ if settings.startup["electric-fluid-wagon-capacity-setting"].value == "25.000 (V
   data.raw["fluid-wagon"]["space-fluid-wagon"].capacity = 25000
 end
 
-if settings.startup["train-battery-pack-energy-density-setting"].value == "100 MJ" then
+if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ" then
   data.raw["assembling-machine"]["space-train-battery-charging-station"].energy_usage = "3.3MW"
   data.raw["assembling-machine"]["experimental-space-train-battery-charging-station"].energy_usage = "33MW"
-  data.raw["item"]["space-train-battery-pack"].fuel_value = "100MJ"
+  data.raw["item"]["space-train-battery-pack"].fuel_value = "80MJ"
 end
 
 if settings.startup["train-battery-decay-enable-setting"].value then
