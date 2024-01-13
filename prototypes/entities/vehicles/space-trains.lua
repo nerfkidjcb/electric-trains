@@ -227,7 +227,7 @@ data:extend({ -- Battery charging interface
     drawing_box = {{-1, -1.5}, {1, 1}},
     energy_source = {
         type = "electric",
-        buffer_capacity = "20MJ",
+        buffer_capacity = "30MJ",
         usage_priority = "primary-input",
         input_flow_limit = "10MW",
         output_flow_limit = "0kW",
@@ -261,7 +261,6 @@ data:extend({ -- Battery charging interface
     energy_usage = "1.7MW",
     crafting_categories = {"electrical"},
     crafting_speed = 1,
-    fixed_recipe = "space-train-battery-pack-recharge",
     show_recipe_icon = false,
 
     vehicle_impact_sound = sounds.generic_impact,
@@ -306,7 +305,7 @@ data:extend({ -- Battery charging interface
     drawing_box = {{-1, -1.5}, {1, 1}},
     energy_source = {
         type = "electric",
-        buffer_capacity = "20MJ",
+        buffer_capacity = "30MJ",
         usage_priority = "primary-input",
         input_flow_limit = "10MW",
         output_flow_limit = "0kW",
@@ -340,7 +339,6 @@ data:extend({ -- Battery charging interface
     energy_usage = "10MW",
     crafting_categories = {"faster-electrical"},
     crafting_speed = 1,
-    fixed_recipe = "faster-space-train-battery-pack-recharge",
     show_recipe_icon = false,
 
     vehicle_impact_sound = sounds.generic_impact,
@@ -420,7 +418,7 @@ data:extend({ -- Battery charging interface
         fuel_category = "electrical",
         effectivity = 0.95,
         fuel_inventory_size = 3,
-        burnt_inventory_size = 1
+        burnt_inventory_size = 3
     },
     front_light = {{
         type = "oriented",
@@ -762,7 +760,7 @@ data:extend({ -- Battery charging interface
         fuel_category = "electrical",
         effectivity = 0.95,
         fuel_inventory_size = 3,
-        burnt_inventory_size = 1
+        burnt_inventory_size = 3
     },
     
     back_light = rolling_stock_back_light(),

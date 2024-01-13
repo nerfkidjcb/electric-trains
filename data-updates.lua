@@ -21,10 +21,10 @@ if settings.startup["electric-fluid-wagon-capacity-setting"].value == "25.000 (V
   data.raw["fluid-wagon"]["space-fluid-wagon"].capacity = 25000
 end
 
-if settings.startup["train-battery-pack-energy-density-setting"].value == "100 MJ" then
+if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ" then
   data.raw["assembling-machine"]["space-train-battery-charging-station"].energy_usage = "3.3MW"
   data.raw["assembling-machine"]["experimental-space-train-battery-charging-station"].energy_usage = "33MW"
-  data.raw["item"]["space-train-battery-pack"].fuel_value = "100MJ"
+  data.raw["item"]["space-train-battery-pack"].fuel_value = "80MJ"
 end
 
 if settings.startup["train-battery-decay-enable-setting"].value then
@@ -49,11 +49,133 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     burnt_result = "space-train-discharged-battery-pack",
     subgroup = "intermediate-product",
     order = "s-a[destroyed-battery-pack]",
-    stack_size = 60
+    stack_size = 20
+  }, -- Destroyed speed, acceleration and efficiency battery-packs
+  {
+    type = "item",
+    name = "destroyed-speed-battery-pack",
+    icon = "__electric-trains__/graphics/icons/speed-battery/destroyed-speed-battery.png",
+    icon_size = 128,
+    pictures = {
+      layers = {{
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/speed-battery/destroyed-speed-battery.png",
+        scale = 0.125
+      }, {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
+        scale = 0.125
+      }}
+    },
+    burnt_result = "discharged-speed-battery-pack",
+    subgroup = "intermediate-product",
+    order = "s-d[destroyed-battery-pack]",
+    stack_size = 20
+  },{
+    type = "item",
+    name = "destroyed-acceleration-battery-pack",
+    icon = "__electric-trains__/graphics/icons/acceleration-battery/destroyed-acceleration-battery.png",
+    icon_size = 128,
+    pictures = {
+      layers = {{
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/acceleration-battery/destroyed-acceleration-battery.png",
+        scale = 0.125
+      }, {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
+        scale = 0.125
+      }}
+    },
+    burnt_result = "discharged-acceleration-battery-pack",
+    subgroup = "intermediate-product",
+    order = "s-b[destroyed-battery-pack]",
+    stack_size = 20
   }, {
+    type = "item",
+    name = "destroyed-efficiency-battery-pack",
+    icon = "__electric-trains__/graphics/icons/efficiency-battery/destroyed-efficiency-battery.png",
+    icon_size = 128,
+    pictures = {
+      layers = {{
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/efficiency-battery/destroyed-efficiency-battery.png",
+        scale = 0.125
+      }, {
+        draw_as_light = true,
+        flags = {"light"},
+        size = 128,
+        filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
+        scale = 0.125
+      }}
+    },
+    burnt_result = "discharged-efficiency-battery-pack",
+    subgroup = "intermediate-product",
+    order = "s-c[destroyed-battery-pack]",
+    stack_size = 20
+  }, -- Refurb for speed, acceleration and efficiency battery-packs
+  {
+    type = "recipe",
+    name = "speed-battery-pack-refurbish",
+    energy_required = 120,
+    enabled = false,
+    category = "chemistry",
+    ingredients = {{"destroyed-speed-battery-pack", 1}, {"battery", 5}, {
+      type = "fluid",
+      name = "sulfuric-acid",
+      amount = 200
+    }},
+    icon = "__electric-trains__/graphics/icons/speed-battery/destroyed-speed-battery.png",
+    icon_size = 128,
+    allow_as_intermediate = false,
+    localised_name = {"recipe-name.speed-battery-pack-refurbish-desc"},
+    result = "discharged-speed-battery-pack",
+    order = "s-[battery-refurbish-d]"
+  },{
+    type = "recipe",
+    name = "acceleration-battery-pack-refurbish",
+    energy_required = 120,
+    enabled = false,
+    category = "chemistry",
+    ingredients = {{"destroyed-acceleration-battery-pack", 1}, {"battery", 5}, {
+      type = "fluid",
+      name = "sulfuric-acid",
+      amount = 200
+    }},
+    icon = "__electric-trains__/graphics/icons/acceleration-battery/destroyed-acceleration-battery.png",
+    icon_size = 128,
+    allow_as_intermediate = false,
+    localised_name = {"recipe-name.acceleration-battery-pack-refurbish-desc"},
+    result = "discharged-acceleration-battery-pack",
+    order = "s-[battery-refurbish-b]"
+  },{
+    type = "recipe",
+    name = "efficiency-battery-pack-refurbish",
+    energy_required = 120,
+    enabled = false,
+    category = "chemistry",
+    ingredients = {{"destroyed-efficiency-battery-pack", 1}, {"battery", 5}, {
+      type = "fluid",
+      name = "sulfuric-acid",
+      amount = 200
+    }},
+    icon = "__electric-trains__/graphics/icons/efficiency-battery/destroyed-efficiency-battery.png",
+    icon_size = 128,
+    allow_as_intermediate = false,
+    localised_name = {"recipe-name.efficiency-battery-pack-refurbish-desc"},
+    result = "discharged-efficiency-battery-pack",
+    order = "s-[battery-refurbish-c]"
+  },
+    
+  
+  {
     type = "recipe",
     name = "space-train-battery-pack-refurbish",
-    energy_required = 10,
+    energy_required = 120,
     enabled = false,
     category = "chemistry",
     ingredients = {{"space-train-destroyed-battery-pack", 1}, {
@@ -65,8 +187,11 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     icon_size = 128,
     allow_as_intermediate = false,
     localised_name = {"recipe-name.space-train-battery-pack-refurbish-desc"},
-    result = "space-train-discharged-battery-pack"
-  }})
+    result = "space-train-discharged-battery-pack",
+    order = "s-[battery-refurbish-a]"
+  }, -- Speed, acceleration and efficiency battery-pack ref
+
+})
 else
   data.raw["recipe"]["space-train-battery-pack-recharge"].results = {{
     name = "space-train-battery-pack",
@@ -74,6 +199,19 @@ else
   }}
   data.raw["recipe"]["faster-space-train-battery-pack-recharge"].results = {{
     name = "space-train-battery-pack",
+    amount = 1
+  }}
+  -- Same for faster speed, acceleration and efficiency battery-packs
+  data.raw["recipe"]["speed-battery-pack-recharge"].results = {{
+    name = "speed-battery-pack",
+    amount = 1
+  }}
+  data.raw["recipe"]["acceleration-battery-pack-recharge"].results = {{
+    name = "acceleration-battery-pack",
+    amount = 1
+  }}
+  data.raw["recipe"]["efficiency-battery-pack-recharge"].results = {{
+    name = "efficiency-battery-pack",
     amount = 1
   }}
 end
@@ -144,7 +282,7 @@ data:extend({
       type = "unlock-recipe",
       recipe = "faster-space-train-battery-pack-recharge"
     }},
-    prerequisites = {"tech-space-trains", "space-science-pack"},
+    prerequisites = {"tech-space-trains", "tech-electric-locomotive-wagon"},
     unit = {
       count = 20000,
       ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
@@ -211,7 +349,7 @@ data:extend({
         recipe = "recipe-electric-locomotive-wagon"
       } 
     },
-    prerequisites = {"space-science-pack", "tech-space-trains"}, 
+    prerequisites = {"tech-space-trains"}, 
     unit =
     {
       count = 2000,
@@ -226,9 +364,91 @@ data:extend({
       time = 60
     },
   }})
+
+  -- Speed battery packs
+  data:extend({{
+    type = "technology",
+    name = "tech-speed-battery-pack",
+    icon = "__electric-trains__/graphics/icons/speed-battery/speed-battery.png",
+    icon_size = 128,
+    icon_mipmaps = 4,
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "speed-battery-pack"
+    }, {
+      type = "unlock-recipe",
+      recipe = "speed-battery-pack-recharge"
+    }},
+    prerequisites = {"tech-space-trains", "tech-space-trains-experimental-charging"},
+    unit = {
+      count = 40000,
+      ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+      {"production-science-pack", 1}, {"utility-science-pack", 1}},
+      time = 60
+    }
+  }})
+
+  -- Acceleration battery packs
+  data:extend({{
+    type = "technology",
+    name = "tech-acceleration-battery-pack",
+    icon = "__electric-trains__/graphics/icons/acceleration-battery/acceleration-battery.png",
+    icon_size = 128,
+    icon_mipmaps = 4,
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "acceleration-battery-pack"
+    }, {
+      type = "unlock-recipe",
+      recipe = "acceleration-battery-pack-recharge"
+    }},
+    prerequisites = {"tech-space-trains", "tech-space-trains-experimental-charging"},
+    unit = {
+      count = 40000,
+      ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+      {"production-science-pack", 1}, {"utility-science-pack", 1}},
+      time = 60
+    }
+  }})
+
+  -- Efficiency battery packs
+  data:extend({{
+    type = "technology",
+    name = "tech-efficiency-battery-pack",
+    icon = "__electric-trains__/graphics/icons/efficiency-battery/efficiency-battery.png",
+    icon_size = 128,
+    icon_mipmaps = 4,
+    effects = {{
+      type = "unlock-recipe",
+      recipe = "efficiency-battery-pack"
+    }, {
+      type = "unlock-recipe",
+      recipe = "efficiency-battery-pack-recharge"
+    }},
+    prerequisites = {"tech-space-trains", "tech-space-trains-experimental-charging"},
+    unit = {
+      count = 40000,
+      ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+      {"production-science-pack", 1}, {"utility-science-pack", 1}},
+      time = 60
+    }
+  }})
+
   if settings.startup["train-battery-decay-enable-setting"].value then
     table.insert(data.raw["technology"]["tech-space-trains"].effects, {
       type = "unlock-recipe",
       recipe = "space-train-battery-pack-refurbish"
+    })
+    table.insert(data.raw["technology"]["tech-speed-battery-pack"].effects, {
+      type = "unlock-recipe",
+      recipe = "speed-battery-pack-refurbish"
+    })
+    table.insert(data.raw["technology"]["tech-acceleration-battery-pack"].effects, {
+      type = "unlock-recipe",
+      recipe = "acceleration-battery-pack-refurbish"
+    })
+    table.insert(data.raw["technology"]["tech-efficiency-battery-pack"].effects, {
+      type = "unlock-recipe",
+      recipe = "efficiency-battery-pack-refurbish"
     })
   end

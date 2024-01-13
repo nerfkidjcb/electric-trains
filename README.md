@@ -20,7 +20,7 @@ Once again I would like to thank FragJacker for creating the original mod, and f
   ![Electric Cargo Wagon](graphics/icons/space-cargo-wagon.png)
   ![Electric Fluid Wagon](graphics/icons/space-fluid-wagon.png)
 
-- Train Powerpacks (stack-size 60-Empty 20-Charged 20-Destroyed), that are charged in a new Train Powerpack Charging Station or an Experimental Train Powerpack Charging Station. These are used to power the electric trains. The Train Powerpack Charging Station is a new building that is unlocked with the electric train research. It can charge 3X faster than normal but has an increased chance of destroying the powerpack and a large energy consumption.
+- Train Powerpacks (stack-size 20-Empty 20-Charged 20-Destroyed), that are charged in a new Train Powerpack Charging Station or an Experimental Train Powerpack Charging Station. These are used to power the electric trains. The Train Powerpack Charging Station is a new building that is unlocked with the electric train research. It can charge 3X faster than normal but has an increased chance of destroying the powerpack and a large energy consumption.
 
   ![Discharged Powerpack](graphics/icons/discharged-battery.png)
 
@@ -42,6 +42,11 @@ Or,
 
   ![Refurbished Powerpack](public/refurbishment.png)
 
+- 0.2.0+ After researching Experimental Train Powerpack Charging Station, you can research the new Experimental Train Powerpacks; Speed, Efficiency and Acceleration. Each require a tier three module to craft and bring substantial benefits to the electric trains.
+  ![Speed Powerpack](graphics/icons/speed-battery/speed-battery.png) Speed Train Powerpack
+  ![Efficiency Powerpack](graphics/icons/efficiency-battery/efficiency-battery.png) Efficiency Train Powerpack
+  ![Acceleration Powerpack](graphics/icons/acceleration-battery/acceleration-battery.png) Acceleration Train Powerpack
+
 - Electric trains have subtly different MiniMap icons to distinguish them from vanilla trains:
 
   ![MiniMap Icons](graphics/entity/vehicles/space-trains/space-locomotive-minimap-representation.png)
@@ -58,9 +63,7 @@ Or,
 
 ## Planned Features
 
-- Efficiency Train Powerpack: lasts for much longer than normal powerpack
-- Speed Train Powerpack: increases the top speed with reduced range
-- Acceleration Train Powerpack: increases acceleration with reduced range
+- Adding an input filter to locomotives to allow for selective powerpack loading.
 
 ## Changelog
 
