@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
-Date: TDB
+Date: 13. 01. 2024
   Info:
     - This is a bigger update, with new features, balancing and quality of life changes from hours of play testing.
     - Added three new researches: Acceleration Train Powerpack, Speed Train Powerpack and Efficiency Train Powerpack.
