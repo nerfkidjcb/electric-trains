@@ -18,7 +18,7 @@ Date: TDB
   Balancing:
     - Increased crafting time of all Powerpack charging stations.
     - Increased destroyed powerpack refurbishment time.
-    - Halved the default powerpack fuel value.
+    - Decreased the default powerpack fuel value.
     - All spent fuel items have a max stack of 20, due to the QOL change above.
     - You no longer need to research space science to unlock experimental charging stations, but you do have to research Electric Wagon Locomotive.
 ---------------------------------------------------------------------------------------------------
