@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 24. 01. 2024
+  Info:
+    - Added compatibility for the Space Exploration mod. All researches and most recipes will be updated if you have the mod active.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 13. 01. 2024
   Info:
