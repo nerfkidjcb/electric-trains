@@ -25,6 +25,10 @@ if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ
   data.raw["assembling-machine"]["space-train-battery-charging-station"].energy_usage = "3.3MW"
   data.raw["assembling-machine"]["experimental-space-train-battery-charging-station"].energy_usage = "33MW"
   data.raw["item"]["space-train-battery-pack"].fuel_value = "80MJ"
+  -- Update the other battery packs too.
+  data.raw["item"]["speed-battery-pack"].fuel_value = "64MJ"
+  data.raw["item"]["acceleration-battery-pack"].fuel_value = "64MJ"
+  data.raw["item"]["efficiency-battery-pack"].fuel_value = "240MJ"
 end
 
 if settings.startup["train-battery-decay-enable-setting"].value then
