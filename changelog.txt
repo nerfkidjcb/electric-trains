@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 25. 01. 2024
+  Info:
+    - Fixed bug where turning off PowerPack decay in mod settings would stop Factorio loading when SE was active.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 24. 01. 2024
   Info:

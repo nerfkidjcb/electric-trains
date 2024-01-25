@@ -538,17 +538,26 @@ data:extend({
 
     -- Check for the installed version of Space Exploration and handle it.
     old_version = util.split(mods["space-exploration"], ".")
-    if tonumber(old_version[2]) <= 5 then -- Check if this is pre v0.6.0 SE
-      data.raw["recipe"]["space-train-battery-pack-refurbish"].subgroup = "space-recycling"
-    else
-      data.raw["recipe"]["space-train-battery-pack-refurbish"].subgroup = "recycling"
+    -- Check if the mod settings for decay are enabled.
+    if settings.startup["train-battery-decay-enable-setting"].value then
+      -- Check if this is pre v0.6.0 SE
+      if tonumber(old_version[2]) <= 5 then
+        -- Add the new recipes to the recycling category.
+        data.raw["recipe"]["space-train-battery-pack-refurbish"].subgroup = "space-recycling"
+        data.raw["recipe"]["speed-battery-pack-refurbish"].subgroup = "space-recycling"
+        data.raw["recipe"]["acceleration-battery-pack-refurbish"].subgroup = "space-recycling"
+        data.raw["recipe"]["efficiency-battery-pack-refurbish"].subgroup = "space-recycling"
+      else
+        -- Add the new recipes to the recycling category.
+        data.raw["recipe"]["space-train-battery-pack-refurbish"].subgroup = "recycling"
+        data.raw["recipe"]["speed-battery-pack-refurbish"].subgroup = "recycling"
+        data.raw["recipe"]["acceleration-battery-pack-refurbish"].subgroup = "recycling"
+        data.raw["recipe"]["efficiency-battery-pack-refurbish"].subgroup = "recycling"
+      end
+      -- Recyling stuff
+      data.raw["recipe"]["space-train-battery-pack-refurbish"].category = "hard-recycling"
+      data.raw["recipe"]["speed-battery-pack-refurbish"].category = "hard-recycling"
+      data.raw["recipe"]["acceleration-battery-pack-refurbish"].category = "hard-recycling"
+      data.raw["recipe"]["efficiency-battery-pack-refurbish"].category = "hard-recycling"
     end
-
-    -- Recyling stuff
-    data.raw["recipe"]["space-train-battery-pack-refurbish"].category = "hard-recycling"
-    data.raw["recipe"]["speed-battery-pack-refurbish"].category = "hard-recycling"
-    data.raw["recipe"]["acceleration-battery-pack-refurbish"].category = "hard-recycling"
-    data.raw["recipe"]["efficiency-battery-pack-refurbish"].category = "hard-recycling"
-
-
   end
