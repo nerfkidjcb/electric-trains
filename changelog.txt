@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 26. 01. 2024
+  Info:
+    - Fixed bug where increased powerpack fuel value was not being applied to higher tier powerpacks.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.2
 Date: 25. 01. 2024
   Info:
