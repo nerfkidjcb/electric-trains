@@ -524,8 +524,8 @@ data:extend({
 
     -- Make the new powerpacks only need tier one module
     data.raw["recipe"]["speed-battery-pack"].ingredients = {{"speed-module", 1}, {"battery", 5}}
-    data.raw["recipe"]["acceleration-battery-pack"].ingredients = {{"effectivity-module", 1}, {"battery", 5}}
-    data.raw["recipe"]["efficiency-battery-pack"].ingredients = {{"productivity-module", 1}, {"battery", 5}}
+    data.raw["recipe"]["acceleration-battery-pack"].ingredients = {{"productivity-module", 1}, {"battery", 5}}
+    data.raw["recipe"]["efficiency-battery-pack"].ingredients = {{"effectivity-module", 1}, {"battery", 5}}
 
     -- Replace all processing units with advanced circuits, since blue chips are much  harder to get in SE.
     data.raw["recipe"]["recipe-electric-locomotive"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 50}, {"locomotive", 1}, {"rocket-control-unit", 10}}
