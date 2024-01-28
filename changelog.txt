@@ -2,7 +2,7 @@
 Version: 0.2.4
 Date: 28. 01. 2024
   Info:
-    - Made some migrations in mod files to be more compatible with other mods.
+    - Made some migrations in mod files to be more compatible with other mods. (You will be hit with a migrated content pop up when loading into an older versioned save, but don't worry! Nothing will be affected.)
     - Electric fluid wagon now appears before the artillery wagon (next to vanilla fluid wagon) in the crafting menu.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.3
