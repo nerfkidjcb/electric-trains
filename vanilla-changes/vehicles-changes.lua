@@ -7,7 +7,8 @@ data:extend({{
   energy_required = 60,
   enabled = false,
   ingredients = {{"locomotive", 1}, {"processing-unit", 20}},
-  result = "electric-locomotive"
+  result = "electric-locomotive",
+  order = "a[train-system]-f[locomotive]"
 }, -- Electric Wagon Locomotive
 {
   type = "recipe",
@@ -15,7 +16,8 @@ data:extend({{
   energy_required = 60,
   enabled = false, 
   ingredients = {{"locomotive", 1}, {"processing-unit", 20}},
-  result = "electric-locomotive-wagon"
+  result = "electric-locomotive-wagon",
+  order = "a[train-system]-f[locomotiveb]"
 },
 {
   type = "recipe",
@@ -23,14 +25,16 @@ data:extend({{
   energy_required = 60,
   enabled = false,
   ingredients = {{"cargo-wagon", 1}, {"processing-unit", 10}},
-  result = "electric-cargo-wagon"
+  result = "electric-cargo-wagon",
+  order = "a[train-system]-h[cargo-wagon]"
 }, {
   type = "recipe",
   name = "recipe-electric-fluid-wagon",
   energy_required = 60,
   enabled = false,
   ingredients = {{"fluid-wagon", 1}, {"processing-unit", 10}},
-  result = "electric-fluid-wagon"
+  result = "electric-fluid-wagon",
+  order = "a[train-system]-h[fluid-wagon]"
 }, {
   type = "recipe",
   name = "electric-train-battery-charging-station",
