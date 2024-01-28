@@ -1,26 +1,26 @@
 data:extend({{
     type = "item",
-    name = "space-train-battery-charging-station",
-    icon = "__electric-trains__/graphics/icons/space-train-charging-station.png",
+    name = "electric-train-battery-charging-station",
+    icon = "__electric-trains__/graphics/icons/electric-train-charging-station.png",
     icon_size = 128,
     subgroup = "production-machine",
     order = "h[train-system]",
-    place_result = "space-train-battery-charging-station",
+    place_result = "electric-train-battery-charging-station",
     stack_size = 10
 }, -- Experimental charging station
 {
     type = "item",
-    name = "experimental-space-train-battery-charging-station",
-    icon = "__electric-trains__/graphics/icons/experimental-space-train-charging-station.png",
+    name = "experimental-electric-train-battery-charging-station",
+    icon = "__electric-trains__/graphics/icons/experimental-electric-train-charging-station.png",
     icon_size = 128,
     subgroup = "production-machine",
     order = "i[train-system]",
-    place_result = "experimental-space-train-battery-charging-station",
+    place_result = "experimental-electric-train-battery-charging-station",
     stack_size = 10
 },
 {
     type = "item",
-    name = "space-train-battery-pack",
+    name = "electric-train-battery-pack",
     icon = "__electric-trains__/graphics/icons/battery.png",
     icon_size = 128,
     pictures = {
@@ -38,13 +38,13 @@ data:extend({{
     },
     fuel_category = "electrical",
     fuel_value = "40MJ",
-    burnt_result = "space-train-discharged-battery-pack",
+    burnt_result = "electric-train-discharged-battery-pack",
     subgroup = "intermediate-product",
     order = "s-a[battery-pack]",
     stack_size = 20
 },{
     type = "item",
-    name = "space-train-discharged-battery-pack",
+    name = "electric-train-discharged-battery-pack",
     icon = "__electric-trains__/graphics/icons/discharged-battery.png",
     icon_size = 128,
     subgroup = "intermediate-product",

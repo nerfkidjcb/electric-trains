@@ -206,13 +206,13 @@ space_train_wheels = {
 data:extend({ -- Battery charging interface
 {
     type = "assembling-machine",
-    name = "space-train-battery-charging-station",
-    icon = "__electric-trains__/graphics/icons/space-train-charging-station.png",
+    name = "electric-train-battery-charging-station",
+    icon = "__electric-trains__/graphics/icons/electric-train-charging-station.png",
     icon_size = 128,
     flags = {"placeable-neutral", "player-creation"},
     minable = {
         mining_time = 0.1,
-        result = "space-train-battery-charging-station"
+        result = "electric-train-battery-charging-station"
     },
     max_health = 150,
     resistances = {{
@@ -284,13 +284,13 @@ data:extend({ -- Battery charging interface
 }, -- Experimental Battery Charging Interface
 {
     type = "assembling-machine",
-    name = "experimental-space-train-battery-charging-station",
-    icon = "__electric-trains__/graphics/icons/experimental-space-train-charging-station.png",
+    name = "experimental-electric-train-battery-charging-station",
+    icon = "__electric-trains__/graphics/icons/experimental-electric-train-charging-station.png",
     icon_size = 128,
     flags = {"placeable-neutral", "player-creation"},
     minable = {
         mining_time = 1,
-        result = "experimental-space-train-battery-charging-station"
+        result = "experimental-electric-train-battery-charging-station"
     },
     max_health = 150,
     resistances = {{
@@ -363,13 +363,13 @@ data:extend({ -- Battery charging interface
 -- Actual Space Trains now
 {
     type = "locomotive",
-    name = "space-locomotive",
-    icon = "__electric-trains__/graphics/icons/space-locomotive.png",
+    name = "electric-locomotive",
+    icon = "__electric-trains__/graphics/icons/electric-locomotive.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     minable = {
         mining_time = 1,
-        result = "space-locomotive"
+        result = "electric-locomotive"
     },
     mined_sound = {
         filename = "__core__/sound/deconstruct-medium.ogg"
@@ -643,13 +643,13 @@ data:extend({ -- Battery charging interface
         }}
     },
     minimap_representation = {
-        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/space-locomotive-minimap-representation.png",
+        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-minimap-representation.png",
         flags = {"icon"},
         size = {20, 40},
         scale = 0.5
     },
     selected_minimap_representation = {
-        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/space-locomotive-selected-minimap-representation.png",
+        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-selected-minimap-representation.png",
         flags = {"icon"},
         size = {20, 40},
         scale = 0.5
@@ -961,15 +961,15 @@ data:extend({ -- Battery charging interface
 
 },{
     type = "cargo-wagon",
-    name = "space-cargo-wagon",
-    icon = "__electric-trains__/graphics/icons/space-cargo-wagon.png",
+    name = "electric-cargo-wagon",
+    icon = "__electric-trains__/graphics/icons/electric-cargo-wagon.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     inventory_size = 50,
     minable = {
         mining_time = 0.5,
-        result = "space-cargo-wagon"
+        result = "electric-cargo-wagon"
     },
     mined_sound = {
         filename = "__core__/sound/deconstruct-large.ogg",
@@ -1130,13 +1130,13 @@ data:extend({ -- Battery charging interface
         }}
     },
     minimap_representation = {
-        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/space-cargo-wagon-minimap-representation.png",
+        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-cargo-wagon-minimap-representation.png",
         flags = {"icon"},
         size = {20, 40},
         scale = 0.5
     },
     selected_minimap_representation = {
-        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/space-cargo-wagon-selected-minimap-representation.png",
+        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-cargo-wagon-selected-minimap-representation.png",
         flags = {"icon"},
         size = {20, 40},
         scale = 0.5
@@ -1159,14 +1159,14 @@ data:extend({ -- Battery charging interface
     water_reflection = locomotive_reflection()
 }, {
     type = "fluid-wagon",
-    name = "space-fluid-wagon",
-    icon = "__electric-trains__/graphics/icons/space-fluid-wagon.png",
+    name = "electric-fluid-wagon",
+    icon = "__electric-trains__/graphics/icons/electric-fluid-wagon.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
     minable = {
         mining_time = 0.5,
-        result = "space-fluid-wagon"
+        result = "electric-fluid-wagon"
     },
     mined_sound = {
         filename = "__core__/sound/deconstruct-large.ogg",
@@ -1291,13 +1291,13 @@ data:extend({ -- Battery charging interface
         }}
     },
     minimap_representation = {
-        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/space-fluid-wagon-minimap-representation.png",
+        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-fluid-wagon-minimap-representation.png",
         flags = {"icon"},
         size = {20, 40},
         scale = 0.5
     },
     selected_minimap_representation = {
-        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/space-fluid-wagon-selected-minimap-representation.png",
+        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-fluid-wagon-selected-minimap-representation.png",
         flags = {"icon"},
         size = {20, 40},
         scale = 0.5
