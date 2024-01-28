@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: 28. 01. 2024
+  Info:
+    - Fixed SE compatibility bug where the advanced powerpack recipes had wrong modules. (Credit to bmc4 for pointing this out)
+---------------------------------------------------------------------------------------------------
 Version: 0.2.4
 Date: 28. 01. 2024
   Info:
