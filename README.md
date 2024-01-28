@@ -16,7 +16,7 @@ Once again I would like to thank FragJacker for creating the original mod, and f
 
 - Electric train research, which unlocks the electric locomotive and electric cargo and fluid wagons. These can run on your existing rail network. The electric locomotive has about a 20% increase in power to weight ratio over the vanilla locomotive and a 518Km/h max speed but uses a lot of Train Powerpacks.
 
-  ![Electric Locomotive](graphics/icons/space-locomotive.png)
+  ![Electric Locomotive](graphics/icons/electric-locomotive.png)
   ![Electric Cargo Wagon](graphics/icons/space-cargo-wagon.png)
   ![Electric Fluid Wagon](graphics/icons/space-fluid-wagon.png)
 
@@ -49,7 +49,7 @@ Or,
 
 - Electric trains have subtly different MiniMap icons to distinguish them from vanilla trains:
 
-  ![MiniMap Icons](graphics/entity/vehicles/space-trains/space-locomotive-minimap-representation.png)
+  ![MiniMap Icons](graphics/entity/vehicles/space-trains/electric-locomotive-minimap-representation.png)
   ![MiniMap Icons](graphics/entity/vehicles/space-trains/space-cargo-wagon-minimap-representation.png)
   ![MiniMap Icons](graphics/entity/vehicles/space-trains/space-fluid-wagon-minimap-representation.png)
 

@@ -2,29 +2,29 @@
 -- Startup Settings handling happens here.
 ------------------------------------------
 if settings.startup["electric-locomotive-speed-setting"].value == "238 km/h (Vanilla)" then
-  data.raw["locomotive"]["space-locomotive"].max_speed = 1.1
-  data.raw["cargo-wagon"]["space-cargo-wagon"].max_speed = 1.1
-  data.raw["fluid-wagon"]["space-fluid-wagon"].max_speed = 1.1
+  data.raw["locomotive"]["electric-locomotive"].max_speed = 1.1
+  data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 1.1
+  data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 1.1
 elseif settings.startup["electric-locomotive-speed-setting"].value == "378 km/h" then
-  data.raw["locomotive"]["space-locomotive"].max_speed = 1.75
-  data.raw["cargo-wagon"]["space-cargo-wagon"].max_speed = 1.75
-  data.raw["fluid-wagon"]["space-fluid-wagon"].max_speed = 1.75
+  data.raw["locomotive"]["electric-locomotive"].max_speed = 1.75
+  data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 1.75
+  data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 1.75
 end
 
 if settings.startup["electric-cargo-wagon-capacity-setting"].value == "40 Slots (Vanilla)" then
-  data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 40
+  data.raw["cargo-wagon"]["electric-cargo-wagon"].inventory_size = 40
 elseif settings.startup["electric-cargo-wagon-capacity-setting"].value == "120 Slots (Extended)" then
-  data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 120
+  data.raw["cargo-wagon"]["electric-cargo-wagon"].inventory_size = 120
 end
 
 if settings.startup["electric-fluid-wagon-capacity-setting"].value == "25.000 (Vanilla)" then
-  data.raw["fluid-wagon"]["space-fluid-wagon"].capacity = 25000
+  data.raw["fluid-wagon"]["electric-fluid-wagon"].capacity = 25000
 end
 
 if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ" then
-  data.raw["assembling-machine"]["space-train-battery-charging-station"].energy_usage = "3.3MW"
-  data.raw["assembling-machine"]["experimental-space-train-battery-charging-station"].energy_usage = "33MW"
-  data.raw["item"]["space-train-battery-pack"].fuel_value = "80MJ"
+  data.raw["assembling-machine"]["electric-train-battery-charging-station"].energy_usage = "3.3MW"
+  data.raw["assembling-machine"]["experimental-electric-train-battery-charging-station"].energy_usage = "33MW"
+  data.raw["item"]["electric-train-battery-pack"].fuel_value = "80MJ"
   -- Update the other battery packs too.
   data.raw["item"]["speed-battery-pack"].fuel_value = "64MJ"
   data.raw["item"]["acceleration-battery-pack"].fuel_value = "64MJ"
@@ -34,7 +34,7 @@ end
 if settings.startup["train-battery-decay-enable-setting"].value then
   data:extend({{
     type = "item",
-    name = "space-train-destroyed-battery-pack",
+    name = "electric-train-destroyed-battery-pack",
     icon = "__electric-trains__/graphics/icons/destroyed-battery.png",
     icon_size = 128,
     pictures = {
@@ -50,7 +50,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
         scale = 0.125
       }}
     },
-    burnt_result = "space-train-discharged-battery-pack",
+    burnt_result = "electric-train-discharged-battery-pack",
     subgroup = "intermediate-product",
     order = "s-a[destroyed-battery-pack]",
     stack_size = 20
@@ -178,11 +178,11 @@ if settings.startup["train-battery-decay-enable-setting"].value then
   
   {
     type = "recipe",
-    name = "space-train-battery-pack-refurbish",
+    name = "electric-train-battery-pack-refurbish",
     energy_required = 120,
     enabled = false,
     category = "chemistry",
-    ingredients = {{"space-train-destroyed-battery-pack", 1}, {
+    ingredients = {{"electric-train-destroyed-battery-pack", 1}, {
       type = "fluid",
       name = "sulfuric-acid",
       amount = 200
@@ -190,19 +190,19 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     icon = "__electric-trains__/graphics/icons/destroyed-battery.png",
     icon_size = 128,
     allow_as_intermediate = false,
-    localised_name = {"recipe-name.space-train-battery-pack-refurbish-desc"},
-    result = "space-train-discharged-battery-pack",
+    localised_name = {"recipe-name.electric-train-battery-pack-refurbish-desc"},
+    result = "electric-train-discharged-battery-pack",
     order = "s-[battery-refurbish-a]"
   }, -- Speed, acceleration and efficiency battery-pack ref
 
 })
 else
-  data.raw["recipe"]["space-train-battery-pack-recharge"].results = {{
-    name = "space-train-battery-pack",
+  data.raw["recipe"]["electric-train-battery-pack-recharge"].results = {{
+    name = "electric-train-battery-pack",
     amount = 1
   }}
-  data.raw["recipe"]["faster-space-train-battery-pack-recharge"].results = {{
-    name = "space-train-battery-pack",
+  data.raw["recipe"]["faster-electric-train-battery-pack-recharge"].results = {{
+    name = "electric-train-battery-pack",
     amount = 1
   }}
   -- Same for faster speed, acceleration and efficiency battery-packs
@@ -223,43 +223,43 @@ end
 -- Changes to recipes and technologies.
 ------------------------------------------
 
-  table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"steel-plate", 40})
-  table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"rocket-control-unit", 10})
-  table.insert(data.raw["recipe"]["recipe-space-locomotive"].ingredients, {"electric-engine-unit", 50})
+  table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {"steel-plate", 40})
+  table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {"rocket-control-unit", 10})
+  table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {"electric-engine-unit", 50})
   table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {"steel-plate", 40})
   table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {"rocket-control-unit", 10})
   table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {"electric-engine-unit", 50})
-  table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"steel-plate", 40})
-  table.insert(data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients, {"electric-engine-unit", 5})
-  table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"steel-plate", 40})
-  table.insert(data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients, {"electric-engine-unit", 5})
+  table.insert(data.raw["recipe"]["recipe-electric-cargo-wagon"].ingredients, {"steel-plate", 40})
+  table.insert(data.raw["recipe"]["recipe-electric-cargo-wagon"].ingredients, {"electric-engine-unit", 5})
+  table.insert(data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients, {"steel-plate", 40})
+  table.insert(data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients, {"electric-engine-unit", 5})
 
 data:extend({ 
 {
   type = "technology",
-  name = "tech-space-trains",
+  name = "tech-electric-trains",
   mod = "space-trains",
   icon = "__electric-trains__/graphics/icons/space-trains-tech.png",
   icon_size = 256,
   icon_mipmaps = 4,
   effects = {{
     type = "unlock-recipe",
-    recipe = "recipe-space-locomotive"
+    recipe = "recipe-electric-locomotive"
   }, {
     type = "unlock-recipe",
-    recipe = "recipe-space-fluid-wagon"
+    recipe = "recipe-electric-fluid-wagon"
   }, {
     type = "unlock-recipe",
-    recipe = "recipe-space-cargo-wagon"
+    recipe = "recipe-electric-cargo-wagon"
   }, {
     type = "unlock-recipe",
-    recipe = "space-train-battery-charging-station"
+    recipe = "electric-train-battery-charging-station"
   }, {
     type = "unlock-recipe",
-    recipe = "space-train-battery-pack"
+    recipe = "electric-train-battery-pack"
   }, {
     type = "unlock-recipe",
-    recipe = "space-train-battery-pack-recharge"
+    recipe = "electric-train-battery-pack-recharge"
   }},
   prerequisites = {"steel-processing", "advanced-electronics-2", "battery", "railway", "production-science-pack", "utility-science-pack", "electric-engine", "rocket-control-unit"},
   unit = {
@@ -274,19 +274,19 @@ data:extend({
 data:extend({
   {
     type = "technology",
-    name = "tech-space-trains-experimental-charging",
+    name = "tech-electric-trains-experimental-charging",
     mod = "space-trains",
-    icon = "__electric-trains__/graphics/icons/experimental-space-train-charging-station.png",
+    icon = "__electric-trains__/graphics/icons/experimental-electric-train-charging-station.png",
     icon_size = 128,
     icon_mipmaps = 4,
     effects = {{
       type = "unlock-recipe",
-      recipe = "experimental-space-train-battery-charging-station"
+      recipe = "experimental-electric-train-battery-charging-station"
     }, {
       type = "unlock-recipe",
-      recipe = "faster-space-train-battery-pack-recharge"
+      recipe = "faster-electric-train-battery-pack-recharge"
     }},
-    prerequisites = {"tech-space-trains", "tech-electric-locomotive-wagon"},
+    prerequisites = {"tech-electric-trains", "tech-electric-locomotive-wagon"},
     unit = {
       count = 20000,
       ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
@@ -299,7 +299,7 @@ data:extend({
   data:extend({  
     {
     type = "technology",
-    name = "tech-space-trains-braking-force-1",
+    name = "tech-electric-trains-braking-force-1",
     icon_size = 256, icon_mipmaps = 4,
     icons = 
     {
@@ -321,7 +321,7 @@ data:extend({
         modifier = 0.05
       } 
     },
-    prerequisites = {"space-science-pack", "tech-space-trains", "tech-space-trains-experimental-charging"}, 
+    prerequisites = {"space-science-pack", "tech-electric-trains", "tech-electric-trains-experimental-charging"}, 
     unit =
     {
       count_formula = "2^L*1000", 
@@ -353,7 +353,7 @@ data:extend({
         recipe = "recipe-electric-locomotive-wagon"
       } 
     },
-    prerequisites = {"tech-space-trains"}, 
+    prerequisites = {"tech-electric-trains"}, 
     unit =
     {
       count = 2000,
@@ -383,7 +383,7 @@ data:extend({
       type = "unlock-recipe",
       recipe = "speed-battery-pack-recharge"
     }},
-    prerequisites = {"tech-space-trains", "tech-space-trains-experimental-charging"},
+    prerequisites = {"tech-electric-trains", "tech-electric-trains-experimental-charging"},
     unit = {
       count = 40000,
       ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
@@ -406,7 +406,7 @@ data:extend({
       type = "unlock-recipe",
       recipe = "acceleration-battery-pack-recharge"
     }},
-    prerequisites = {"tech-space-trains", "tech-space-trains-experimental-charging"},
+    prerequisites = {"tech-electric-trains", "tech-electric-trains-experimental-charging"},
     unit = {
       count = 40000,
       ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
@@ -429,7 +429,7 @@ data:extend({
       type = "unlock-recipe",
       recipe = "efficiency-battery-pack-recharge"
     }},
-    prerequisites = {"tech-space-trains", "tech-space-trains-experimental-charging"},
+    prerequisites = {"tech-electric-trains", "tech-electric-trains-experimental-charging"},
     unit = {
       count = 40000,
       ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
@@ -439,9 +439,9 @@ data:extend({
   }})
 
   if settings.startup["train-battery-decay-enable-setting"].value then
-    table.insert(data.raw["technology"]["tech-space-trains"].effects, {
+    table.insert(data.raw["technology"]["tech-electric-trains"].effects, {
       type = "unlock-recipe",
-      recipe = "space-train-battery-pack-refurbish"
+      recipe = "electric-train-battery-pack-refurbish"
     })
     table.insert(data.raw["technology"]["tech-speed-battery-pack"].effects, {
       type = "unlock-recipe",
@@ -459,25 +459,25 @@ data:extend({
 
   -- If the Space Exploration mod is installed, make compatibility changes.
   if mods["space-exploration"] then
-    -- Update the tech-space-trains technology.
+    -- Update the tech-electric-trains technology.
     -- Empty the ingredients table.
-    data.raw["technology"]["tech-space-trains"].unit.ingredients = {}
-    data.raw["technology"]["tech-space-trains"].unit.ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}}
-    data.raw["technology"]["tech-space-trains"].unit.count = 2000
+    data.raw["technology"]["tech-electric-trains"].unit.ingredients = {}
+    data.raw["technology"]["tech-electric-trains"].unit.ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}}
+    data.raw["technology"]["tech-electric-trains"].unit.count = 2000
     -- Remove the old science prerequisites.
-    data.raw["technology"]["tech-space-trains"].prerequisites = {}
+    data.raw["technology"]["tech-electric-trains"].prerequisites = {}
     -- Add the new science prerequisites.
-    data.raw["technology"]["tech-space-trains"].prerequisites = {"logistic-science-pack", "chemical-science-pack"}
+    data.raw["technology"]["tech-electric-trains"].prerequisites = {"logistic-science-pack", "chemical-science-pack"}
 
-    -- Update the tech-space-trains-experimental-charging technology.
+    -- Update the tech-electric-trains-experimental-charging technology.
     -- Empty the ingredients table.
-    data.raw["technology"]["tech-space-trains-experimental-charging"].unit.ingredients = {}
-    data.raw["technology"]["tech-space-trains-experimental-charging"].unit.ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}}
-    data.raw["technology"]["tech-space-trains-experimental-charging"].unit.count = 2000
+    data.raw["technology"]["tech-electric-trains-experimental-charging"].unit.ingredients = {}
+    data.raw["technology"]["tech-electric-trains-experimental-charging"].unit.ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}}
+    data.raw["technology"]["tech-electric-trains-experimental-charging"].unit.count = 2000
     -- Remove the old science prerequisites.
-    data.raw["technology"]["tech-space-trains-experimental-charging"].prerequisites = {}
+    data.raw["technology"]["tech-electric-trains-experimental-charging"].prerequisites = {}
     -- Add the new science prerequisites.
-    data.raw["technology"]["tech-space-trains-experimental-charging"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "tech-space-trains"}
+    data.raw["technology"]["tech-electric-trains-experimental-charging"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "tech-electric-trains"}
 
     -- Update the tech-electric-locomotive-wagon technology.
     -- Empty the ingredients table.
@@ -487,7 +487,7 @@ data:extend({
     -- Remove the old science prerequisites.
     data.raw["technology"]["tech-electric-locomotive-wagon"].prerequisites = {}
     -- Add the new science prerequisites.
-    data.raw["technology"]["tech-electric-locomotive-wagon"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "tech-space-trains"}  
+    data.raw["technology"]["tech-electric-locomotive-wagon"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "tech-electric-trains"}  
 
     -- Update the tech-speed-battery-pack technology.
     -- Empty the ingredients table.
@@ -497,7 +497,7 @@ data:extend({
     -- Remove the old science prerequisites.
     data.raw["technology"]["tech-speed-battery-pack"].prerequisites = {}
     -- Add the new science prerequisites.
-    data.raw["technology"]["tech-speed-battery-pack"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "tech-space-trains", "tech-space-trains-experimental-charging"}
+    data.raw["technology"]["tech-speed-battery-pack"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "tech-electric-trains", "tech-electric-trains-experimental-charging"}
 
     -- Update the tech-acceleration-battery-pack technology.
     -- Empty the ingredients table.
@@ -507,7 +507,7 @@ data:extend({
     -- Remove the old science prerequisites.
     data.raw["technology"]["tech-acceleration-battery-pack"].prerequisites = {}
     -- Add the new science prerequisites.
-    data.raw["technology"]["tech-acceleration-battery-pack"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "tech-space-trains", "tech-space-trains-experimental-charging"}
+    data.raw["technology"]["tech-acceleration-battery-pack"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "tech-electric-trains", "tech-electric-trains-experimental-charging"}
 
     -- Update the tech-efficiency-battery-pack technology.
     -- Empty the ingredients table.
@@ -517,10 +517,10 @@ data:extend({
     -- Remove the old science prerequisites.
     data.raw["technology"]["tech-efficiency-battery-pack"].prerequisites = {}
     -- Add the new science prerequisites.
-    data.raw["technology"]["tech-efficiency-battery-pack"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "tech-space-trains", "tech-space-trains-experimental-charging"}
+    data.raw["technology"]["tech-efficiency-battery-pack"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "tech-electric-trains", "tech-electric-trains-experimental-charging"}
 
     -- Just remove the braking force infinite techs.
-    data.raw["technology"]["tech-space-trains-braking-force-1"] = nil
+    data.raw["technology"]["tech-electric-trains-braking-force-1"] = nil
 
     -- Make the new powerpacks only need tier one module
     data.raw["recipe"]["speed-battery-pack"].ingredients = {{"speed-module", 1}, {"battery", 5}}
@@ -528,17 +528,17 @@ data:extend({
     data.raw["recipe"]["efficiency-battery-pack"].ingredients = {{"productivity-module", 1}, {"battery", 5}}
 
     -- Replace all processing units with advanced circuits, since blue chips are much  harder to get in SE.
-    data.raw["recipe"]["recipe-space-locomotive"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 50}, {"locomotive", 1}, {"rocket-control-unit", 10}}
+    data.raw["recipe"]["recipe-electric-locomotive"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 50}, {"locomotive", 1}, {"rocket-control-unit", 10}}
     data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 50}, {"locomotive", 1}, {"rocket-control-unit", 10}}
-    data.raw["recipe"]["recipe-space-cargo-wagon"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 5}, {"cargo-wagon", 1}}
-    data.raw["recipe"]["recipe-space-fluid-wagon"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 5}, {"fluid-wagon", 1}}
+    data.raw["recipe"]["recipe-electric-cargo-wagon"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 5}, {"cargo-wagon", 1}}
+    data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 5}, {"fluid-wagon", 1}}
     -- Change the charging station recipe to use advanced circuits instead of processing units.
-    data.raw["recipe"]["space-train-battery-charging-station"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"copper-cable", 50}}
-    data.raw["recipe"]["experimental-space-train-battery-charging-station"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 50}, {"copper-cable", 200}}
+    data.raw["recipe"]["electric-train-battery-charging-station"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"copper-cable", 50}}
+    data.raw["recipe"]["experimental-electric-train-battery-charging-station"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 50}, {"copper-cable", 200}}
 
     -- Allow charging in space
-    data.raw["assembling-machine"]["space-train-battery-charging-station"].se_allow_in_space = true
-    data.raw["assembling-machine"]["experimental-space-train-battery-charging-station"].se_allow_in_space = true
+    data.raw["assembling-machine"]["electric-train-battery-charging-station"].se_allow_in_space = true
+    data.raw["assembling-machine"]["experimental-electric-train-battery-charging-station"].se_allow_in_space = true
 
     -- Check for the installed version of Space Exploration and handle it.
     old_version = util.split(mods["space-exploration"], ".")
@@ -547,19 +547,19 @@ data:extend({
       -- Check if this is pre v0.6.0 SE
       if tonumber(old_version[2]) <= 5 then
         -- Add the new recipes to the recycling category.
-        data.raw["recipe"]["space-train-battery-pack-refurbish"].subgroup = "space-recycling"
+        data.raw["recipe"]["electric-train-battery-pack-refurbish"].subgroup = "space-recycling"
         data.raw["recipe"]["speed-battery-pack-refurbish"].subgroup = "space-recycling"
         data.raw["recipe"]["acceleration-battery-pack-refurbish"].subgroup = "space-recycling"
         data.raw["recipe"]["efficiency-battery-pack-refurbish"].subgroup = "space-recycling"
       else
         -- Add the new recipes to the recycling category.
-        data.raw["recipe"]["space-train-battery-pack-refurbish"].subgroup = "recycling"
+        data.raw["recipe"]["electric-train-battery-pack-refurbish"].subgroup = "recycling"
         data.raw["recipe"]["speed-battery-pack-refurbish"].subgroup = "recycling"
         data.raw["recipe"]["acceleration-battery-pack-refurbish"].subgroup = "recycling"
         data.raw["recipe"]["efficiency-battery-pack-refurbish"].subgroup = "recycling"
       end
       -- Recyling stuff
-      data.raw["recipe"]["space-train-battery-pack-refurbish"].category = "hard-recycling"
+      data.raw["recipe"]["electric-train-battery-pack-refurbish"].category = "hard-recycling"
       data.raw["recipe"]["speed-battery-pack-refurbish"].category = "hard-recycling"
       data.raw["recipe"]["acceleration-battery-pack-refurbish"].category = "hard-recycling"
       data.raw["recipe"]["efficiency-battery-pack-refurbish"].category = "hard-recycling"
