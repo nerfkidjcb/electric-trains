@@ -17,8 +17,8 @@ Once again I would like to thank FragJacker for creating the original mod, and f
 - Electric train research, which unlocks the electric locomotive and electric cargo and fluid wagons. These can run on your existing rail network. The electric locomotive has about a 20% increase in power to weight ratio over the vanilla locomotive and a 518Km/h max speed but uses a lot of Train Powerpacks.
 
   ![Electric Locomotive](graphics/icons/electric-locomotive.png)
-  ![Electric Cargo Wagon](graphics/icons/space-cargo-wagon.png)
-  ![Electric Fluid Wagon](graphics/icons/space-fluid-wagon.png)
+  ![Electric Cargo Wagon](graphics/icons/electric-cargo-wagon.png)
+  ![Electric Fluid Wagon](graphics/icons/electric-fluid-wagon.png)
 
 - Train Powerpacks (stack-size 20-Empty 20-Charged 20-Destroyed), that are charged in a new Train Powerpack Charging Station or an Experimental Train Powerpack Charging Station. These are used to power the electric trains. The Train Powerpack Charging Station is a new building that is unlocked with the electric train research. It can charge 3X faster than normal but has an increased chance of destroying the powerpack and a large energy consumption.
 
@@ -29,7 +29,7 @@ Once again I would like to thank FragJacker for creating the original mod, and f
 
 Or,
 
-![Experimental Powerpack Charging Station](graphics/icons/experimental-space-train-charging-station.png)
+![Experimental Powerpack Charging Station](graphics/icons/experimental-electric-train-charging-station.png)
 ![Experimental Charged Powerpack](graphics/icons/fast-battery.png)
 
 - (0.1.2+) an Experimental Train Powerpack Charging Station which works much faster, but uses considerably more power, and has a much higher chance of destroying the powerpack.
