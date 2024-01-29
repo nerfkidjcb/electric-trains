@@ -24,7 +24,7 @@ Once again I would like to thank FragJacker for creating the original mod, and f
 
   ![Discharged Powerpack](graphics/icons/discharged-battery.png)
 
-  ![Powerpack Charging Station](graphics/icons/space-train-charging-station.png)
+  ![Powerpack Charging Station](graphics/icons/electric-train-charging-station.png)
   ![Charged Powerpack](graphics/icons/battery.png)
 
 Or,
@@ -43,15 +43,22 @@ Or,
   ![Refurbished Powerpack](public/refurbishment.png)
 
 - 0.2.0+ After researching Experimental Train Powerpack Charging Station, you can research the new Experimental Train Powerpacks; Speed, Efficiency and Acceleration. Each require a tier three module to craft and bring substantial benefits to the electric trains.
+
   ![Speed Powerpack](graphics/icons/speed-battery/speed-battery.png) Speed Train Powerpack
+
   ![Efficiency Powerpack](graphics/icons/efficiency-battery/efficiency-battery.png) Efficiency Train Powerpack
+
   ![Acceleration Powerpack](graphics/icons/acceleration-battery/acceleration-battery.png) Acceleration Train Powerpack
+
+- 0.2.7+ There are now inexpensive, non-rechargable alkaline powerpacks. They are not as powerful as the rechargeable powerpacks, but are a good alternative if you don't want to deal with the recharging infrastructure.
+
+  ![Alkaline Powerpack](graphics/icons/alkaline-battery.png)
 
 - Electric trains have subtly different MiniMap icons to distinguish them from vanilla trains:
 
   ![MiniMap Icons](graphics/entity/vehicles/space-trains/electric-locomotive-minimap-representation.png)
-  ![MiniMap Icons](graphics/entity/vehicles/space-trains/space-cargo-wagon-minimap-representation.png)
-  ![MiniMap Icons](graphics/entity/vehicles/space-trains/space-fluid-wagon-minimap-representation.png)
+  ![MiniMap Icons](graphics/entity/vehicles/space-trains/electric-cargo-wagon-minimap-representation.png)
+  ![MiniMap Icons](graphics/entity/vehicles/space-trains/electric-fluid-wagon-minimap-representation.png)
 
 - Electric Wagon Locomotive, which is the same as a normal Electric Locomotive with the visual properties of an Electric Wagon. You can also select the colour of the entity.
 
