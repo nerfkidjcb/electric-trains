@@ -25,6 +25,6 @@ local function inherit_grid(base_name, copy_to_name)
 end
 
 inherit_grid("locomotive", "electric-locomotive")
-inherit_grid("locomotive", "electric-wagon-locomotive")
+inherit_grid("locomotive", "electric-locomotive-wagon")
 inherit_grid("cargo-wagon", "electric-cargo-wagon")
 inherit_grid("fluid-wagon", "electric-fluid-wagon")
