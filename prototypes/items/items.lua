@@ -20,6 +20,33 @@ data:extend({{
 },
 {
     type = "item",
+    name = "electric-train-alkaline-battery-pack",
+    icon = "__electric-trains__/graphics/icons/alkaline-battery.png",
+    icon_size = 128,
+    pictures = {
+        layers = {{
+            size = 128,
+            filename = "__electric-trains__/graphics/icons/battery.png",
+            scale = 0.125
+        }, {
+            draw_as_light = false,
+            flags = {"light"},
+            size = 128,
+            filename = "__electric-trains__/graphics/icons/battery_light.png",
+            scale = 0.125
+        }}
+    },
+    fuel_category = "electrical",
+    fuel_value = "120MJ",
+    burnt_result = "",
+    subgroup = "intermediate-product",
+    order = "s-a[battery-pack]",
+    stack_size = 20,
+    fuel_acceleration_multiplier = 0.65,
+    fuel_top_speed_multiplier = 0.8
+},
+{
+    type = "item",
     name = "electric-train-battery-pack",
     icon = "__electric-trains__/graphics/icons/battery.png",
     icon_size = 128,
@@ -40,7 +67,7 @@ data:extend({{
     fuel_value = "40MJ",
     burnt_result = "electric-train-discharged-battery-pack",
     subgroup = "intermediate-product",
-    order = "s-a[battery-pack]",
+    order = "s-b[battery-pack]",
     stack_size = 20
 },{
     type = "item",

@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.7
+Date: 29. 01. 2024
+  Info:
+    - New item and technology
+  Features:
+    - Alkaline PowerPacks are here! These can be researched immediately after electric trains and are an inexpensive way to run your electric train network. They have a high fuel value but cannot be recharged or refurbished. Trains run with decreased top speed and acceleration when using them.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.6
 Date: 29. 01. 2024
   Info:

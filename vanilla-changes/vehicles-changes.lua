@@ -61,6 +61,18 @@ data:extend({{
   localised_name = {"recipe-name.electric-train-discharged-battery-pack-desc"},
   result = "electric-train-discharged-battery-pack",
   order = "s-[battery-pack-a]"
+},{
+  type = "recipe",
+  name = "recipe-electric-train-alkaline-battery-pack",
+  category = "advanced-crafting",
+  energy_required = 10,
+  enabled = false,
+  allow_as_intermediate = false,
+  ingredients = {{"steel-plate", 2}, {"battery", 5}},
+  localised_name = {"recipe-name.electric-train-alkaline-battery-pack-desc"},
+  result = "electric-train-alkaline-battery-pack",
+  order = "s-[battery-pack-a]"
+
 }, -- Speed, acceleration and efficiency battery-packs
 {
   type = "recipe",
