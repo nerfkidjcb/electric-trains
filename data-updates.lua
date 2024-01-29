@@ -29,6 +29,7 @@ if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ
   data.raw["item"]["speed-battery-pack"].fuel_value = "64MJ"
   data.raw["item"]["acceleration-battery-pack"].fuel_value = "64MJ"
   data.raw["item"]["efficiency-battery-pack"].fuel_value = "240MJ"
+  data.raw["item"]["alkaline-battery-pack"].fuel_value = "240MJ"
 end
 
 if settings.startup["train-battery-decay-enable-setting"].value then
@@ -270,6 +271,28 @@ data:extend({
   }
 }})
 
+-- New research for alkaline battery packs.
+data:extend({
+  {
+    type = "technology",
+    name = "tech-alkaline-battery-pack",
+    mod = "space-trains",
+    icon = "__electric-trains__/graphics/icons/alkaline-battery.png",
+    icon_size = 128,
+    icon_mipmaps = 4,
+    effects =  {{
+      type = "unlock-recipe",
+      recipe = "recipe-electric-train-alkaline-battery-pack"  
+    }
+    },
+    prerequisites = {"tech-electric-trains"},
+    unit = {
+      count = 2000,
+      ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+      {"production-science-pack", 1}, {"utility-science-pack", 1}},
+      time = 60
+    }
+  }})
 -- Add new research for experimental chargers that unlock the experimental charging station.
 data:extend({
   {
@@ -457,6 +480,7 @@ data:extend({
     })
   end
 
+
   -- If the Space Exploration mod is installed, make compatibility changes.
   if mods["space-exploration"] then
     -- Update the tech-electric-trains technology.
@@ -469,6 +493,17 @@ data:extend({
     -- Add the new science prerequisites.
     data.raw["technology"]["tech-electric-trains"].prerequisites = {"logistic-science-pack", "chemical-science-pack"}
 
+
+    -- Update alkaline battery pack tech.
+    -- Empty the ingredients table.
+    data.raw["technology"]["tech-alkaline-battery-pack"].unit.ingredients = {}
+    data.raw["technology"]["tech-alkaline-battery-pack"].unit.ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}}
+    data.raw["technology"]["tech-alkaline-battery-pack"].unit.count = 2000
+    -- Remove the old science prerequisites.
+    data.raw["technology"]["tech-alkaline-battery-pack"].prerequisites = {}
+    -- Add the new science prerequisites.
+    data.raw["technology"]["tech-alkaline-battery-pack"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "tech-electric-trains"}
+    
     -- Update the tech-electric-trains-experimental-charging technology.
     -- Empty the ingredients table.
     data.raw["technology"]["tech-electric-trains-experimental-charging"].unit.ingredients = {}
