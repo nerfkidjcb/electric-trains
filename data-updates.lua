@@ -29,7 +29,7 @@ if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ
   data.raw["item"]["speed-battery-pack"].fuel_value = "64MJ"
   data.raw["item"]["acceleration-battery-pack"].fuel_value = "64MJ"
   data.raw["item"]["efficiency-battery-pack"].fuel_value = "240MJ"
-  data.raw["item"]["alkaline-battery-pack"].fuel_value = "240MJ"
+  data.raw["item"]["electric-train-alkaline-battery-pack"].fuel_value = "240MJ"
 end
 
 if settings.startup["train-battery-decay-enable-setting"].value then
