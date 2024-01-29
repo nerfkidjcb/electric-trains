@@ -2,7 +2,7 @@
 Version: 0.2.6
 Date: 29. 01. 2024
   Info:
-    - New compatibility with mods that add equipment grids to trains. (Credit to NullCascade for working on this)
+    - Electric rolling stock now inherit equipment grids if applicable (Credit to NullCascade for developing this feature)
     - Added optional dependencies to ensure smooth loading with mods that require data changes.
     - Updated the repository's readme file.
 ---------------------------------------------------------------------------------------------------
