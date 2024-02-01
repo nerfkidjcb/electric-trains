@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.9
+Date: 01. 02. 2024
+  Info:
+    - The Electric Trains research has prerequisites for rocket control unit and big electrical engine when Space Exploration is installed.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.8
 Date: 29. 01. 2024
   Info:
