@@ -491,7 +491,7 @@ data:extend({
     -- Remove the old science prerequisites.
     data.raw["technology"]["tech-electric-trains"].prerequisites = {}
     -- Add the new science prerequisites.
-    data.raw["technology"]["tech-electric-trains"].prerequisites = {"logistic-science-pack", "chemical-science-pack"}
+    data.raw["technology"]["tech-electric-trains"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "rocket-control-unit", "electric-engine"}
 
 
     -- Update alkaline battery pack tech.
