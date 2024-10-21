@@ -431,8 +431,10 @@ data:extend({ -- Battery charging interface
         decrease = 5,
         percent = 25
     }},
-    burner = {
-        fuel_category = "electrical",
+    energy_source = {
+        type = "burner",
+        fuel_categories = {"electrical"},
+        usage_priority = "primary-output",
         effectivity = 0.95,
         fuel_inventory_size = 3,
         burnt_inventory_size = 3
@@ -785,8 +787,10 @@ data:extend({ -- Battery charging interface
         decrease = 5,
         percent = 25
     }},
-    burner = {
-        fuel_category = "electrical",
+    energy_source = {
+        type = "burner",
+        fuel_categories = {"electrical"},
+        usage_priority = "primary-output",
         effectivity = 0.95,
         fuel_inventory_size = 3,
         burnt_inventory_size = 3
