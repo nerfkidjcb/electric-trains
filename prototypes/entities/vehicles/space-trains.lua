@@ -183,6 +183,23 @@ space_train_wheels = {
     line_length = 8,
     lines_per_file = 16,
     scale = 1.4 / 2,
+    rotated = {
+        width = 500,
+        height = 300,
+        direction_count = 256,
+        filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/hr_maglev_cushions_1.png",
+                     "__electric-trains__/graphics/entity/vehicles/space-trains/hr_maglev_cushions_2.png",
+                     "__electric-trains__/graphics/entity/vehicles/space-trains/hr_maglev_cushions_3.png",
+                     "__electric-trains__/graphics/entity/vehicles/space-trains/hr_maglev_cushions_4.png",
+                     "__electric-trains__/graphics/entity/vehicles/space-trains/hr_maglev_cushions_5.png",
+                     "__electric-trains__/graphics/entity/vehicles/space-trains/hr_maglev_cushions_6.png",
+                     "__electric-trains__/graphics/entity/vehicles/space-trains/hr_maglev_cushions_7.png",
+                     "__electric-trains__/graphics/entity/vehicles/space-trains/hr_maglev_cushions_8.png"},
+        line_length = 4,
+        lines_per_file = 8,
+        shift = {0, 0.1}, -- original shifting from spritesheeter (likely needs doubling or halving)
+        scale = 0.775 / 2
+    },
     hr_version = {
         priority = "very-low",
         width = 500,
@@ -458,6 +475,21 @@ data:extend({ -- Battery charging interface
         a = 0.5
     },
     pictures = {
+        rotated = {
+            width = 500,
+            height = 300,
+            direction_count = 256,
+            filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_1.png",
+                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_2.png",
+                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_3.png",
+                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_4.png",
+                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_5.png",
+                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_6.png",
+                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_7.png",
+                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_8.png"},
+            line_length = 4,
+            lines_per_file = 8,
+        },
         layers = {{
             dice = 4,
             priority = "very-low",
