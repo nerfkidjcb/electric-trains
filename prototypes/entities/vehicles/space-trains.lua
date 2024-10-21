@@ -451,8 +451,6 @@ data:extend({ -- Battery charging interface
         intensity = 0.8,
         color = space_train_light_color
     }},
-    back_light = rolling_stock_back_light(),
-    stand_by_light = rolling_stock_stand_by_light(),
     color = {
         r = 0.92,
         g = 0.07,
@@ -701,7 +699,6 @@ data:extend({ -- Battery charging interface
         volume = 0.4
     },
     sound_minimum_speed = 0.5,
-    water_reflection = locomotive_reflection()
 }, 
 {
     type = "locomotive",
@@ -763,8 +760,6 @@ data:extend({ -- Battery charging interface
         burnt_inventory_size = 3
     },
     
-    back_light = rolling_stock_back_light(),
-    stand_by_light = rolling_stock_stand_by_light(),
     color = {
         r = 0.92,
         g = 0.07,
@@ -957,7 +952,6 @@ data:extend({ -- Battery charging interface
         volume = 0.4
     },
     sound_minimum_speed = 0.5,
-    water_reflection = locomotive_reflection()
 
 },{
     type = "cargo-wagon",
@@ -1011,8 +1005,6 @@ data:extend({ -- Battery charging interface
         decrease = 3,
         percent = 20
     }},
-    back_light = rolling_stock_back_light(),
-    stand_by_light = rolling_stock_stand_by_light(),
     color = {
         r = 0.43,
         g = 0.23,
@@ -1156,7 +1148,6 @@ data:extend({ -- Battery charging interface
     close_sound = sounds.cargo_wagon_close,
     sound_minimum_speed = 1,
     vehicle_impact_sound = sounds.generic_impact,
-    water_reflection = locomotive_reflection()
 }, {
     type = "fluid-wagon",
     name = "electric-fluid-wagon",
@@ -1209,8 +1200,6 @@ data:extend({ -- Battery charging interface
         decrease = 3,
         percent = 20
     }},
-    back_light = rolling_stock_back_light(),
-    stand_by_light = rolling_stock_stand_by_light(),
     color = {
         r = 0.43,
         g = 0.23,
@@ -1315,5 +1304,4 @@ data:extend({ -- Battery charging interface
     crash_trigger = crash_trigger(),
     sound_minimum_speed = 0.1,
     vehicle_impact_sound = sounds.generic_impact,
-    water_reflection = locomotive_reflection()
 }})
