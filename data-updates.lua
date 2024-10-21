@@ -130,7 +130,10 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     energy_required = 120,
     enabled = false,
     category = "chemistry",
-    ingredients = {{"destroyed-speed-battery-pack", 1}, {"battery", 5}, {
+    ingredients = {
+      {type = "item", name = "destroyed-speed-battery-pack", amount = 1}, 
+      {type = "item", name = "battery", amount = 5}, 
+      {
       type = "fluid",
       name = "sulfuric-acid",
       amount = 200
@@ -149,7 +152,9 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     energy_required = 120,
     enabled = false,
     category = "chemistry",
-    ingredients = {{"destroyed-acceleration-battery-pack", 1}, {"battery", 5}, {
+    ingredients = {
+      {type = "item", name = "destroyed-acceleration-battery-pack", amount = 1}, 
+      {type = "item", name = "battery", amount = 5}, {
       type = "fluid",
       name = "sulfuric-acid",
       amount = 200
@@ -168,7 +173,9 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     energy_required = 120,
     enabled = false,
     category = "chemistry",
-    ingredients = {{"destroyed-efficiency-battery-pack", 1}, {"battery", 5}, {
+    ingredients = {
+      {type = "item", name = "destroyed-efficiency-battery-pack", amount = 1}, 
+      {type = "item", name = "battery", amount = 5}, {
       type = "fluid",
       name = "sulfuric-acid",
       amount = 200
@@ -181,8 +188,7 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     results = {
       {type="item", name="discharged-efficiency-battery-pack", amount=1}
     }
-  },
-    
+  },   
   
   {
     type = "recipe",
@@ -190,7 +196,8 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     energy_required = 120,
     enabled = false,
     category = "chemistry",
-    ingredients = {{"electric-train-destroyed-battery-pack", 1}, {
+    ingredients = {
+      {type = "item", name = "electric-train-destroyed-battery-pack", amount = 1}, {
       type = "fluid",
       name = "sulfuric-acid",
       amount = 200
@@ -217,9 +224,11 @@ else
   }}
   -- Same for faster speed, acceleration and efficiency battery-packs
   data.raw["recipe"]["speed-battery-pack-recharge"].results = {{
+    type = "item",
     name = "speed-battery-pack",
     amount = 1
-  }}
+}}
+
   data.raw["recipe"]["acceleration-battery-pack-recharge"].results = {{
     name = "acceleration-battery-pack",
     amount = 1

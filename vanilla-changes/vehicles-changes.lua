@@ -200,11 +200,13 @@ data:extend({
     order = "d",
     results = {
       {
+        type = "item",
         name = "destroyed-speed-battery-pack",
         probability = 0.05,
         amount = 1
       }, 
       {
+        type = "item",
         name = "speed-battery-pack",
         probability = 0.95,
         amount = 1
@@ -229,11 +231,13 @@ data:extend({
     order = "b",
     results = {
       {
+        type = "item",
         name = "destroyed-acceleration-battery-pack",
         probability = 0.05,
         amount = 1
       }, 
       {
+        type = "item",
         name = "acceleration-battery-pack",
         probability = 0.95,
         amount = 1
@@ -258,11 +262,13 @@ data:extend({
     order = "c",
     results = {
       {
+        type = "item",
         name = "destroyed-efficiency-battery-pack",
         probability = 0.05,
         amount = 1
       }, 
       {
+        type = "item",
         name = "efficiency-battery-pack",
         probability = 0.95,
         amount = 1
@@ -286,11 +292,13 @@ data:extend({
     },
     results = {
       {
+        type = "item",
         name = "electric-train-destroyed-battery-pack",
         probability = 0.01,
         amount = 1
       }, 
       {
+        type = "item",
         name = "electric-train-battery-pack",
         probability = 0.99,
         amount = 1
@@ -316,11 +324,13 @@ data:extend({
     order = "a",
     results = {
       {
+        type = "item",
         name = "electric-train-destroyed-battery-pack",
         probability = 0.15,
         amount = 1
       }, 
       {
+        type = "item",
         name = "electric-train-battery-pack",
         probability = 0.85,
         amount = 1
