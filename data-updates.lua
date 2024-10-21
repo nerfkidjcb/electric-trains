@@ -24,6 +24,7 @@ end
 if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ" then
   data.raw["assembling-machine"]["electric-train-battery-charging-station"].energy_usage = "3.3MW"
   data.raw["assembling-machine"]["experimental-electric-train-battery-charging-station"].energy_usage = "33MW"
+  data.raw["assembling-machine"]["experimental-electric-train-battery-charging-station"].max_power = "33MW"
   data.raw["item"]["electric-train-battery-pack"].fuel_value = "80MJ"
   -- Update the other battery packs too.
   data.raw["item"]["speed-battery-pack"].fuel_value = "64MJ"
