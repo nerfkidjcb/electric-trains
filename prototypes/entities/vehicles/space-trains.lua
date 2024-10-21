@@ -478,20 +478,6 @@ data:extend({ -- Battery charging interface
     },
     pictures = {
         rotated = {
-            width = 500,
-            height = 300,
-            direction_count = 256,
-            filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_1.png",
-                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_2.png",
-                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_3.png",
-                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_4.png",
-                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_5.png",
-                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_6.png",
-                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_7.png",
-                         "__electric-trains__/graphics/entity/vehicles/space-trains/space_locomotive_8.png"},
-            line_length = 4,
-            lines_per_file = 8,
-        },
         layers = {{
             dice = 4,
             priority = "very-low",
@@ -616,9 +602,10 @@ data:extend({ -- Battery charging interface
                 shift = {0, wagon_vertical_shift},
                 scale = train_scale
             }
-        }}
+        }}}
     },
     front_light_pictures = {
+        rotated = {
         layers = {{
             priority = "very-low",
             blend_mode = "additive",
@@ -672,7 +659,7 @@ data:extend({ -- Battery charging interface
                 shift = {0, wagon_vertical_shift},
                 scale = train_scale
             }
-        }}
+        }}}
     },
     minimap_representation = {
         filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-minimap-representation.png",
@@ -803,6 +790,7 @@ data:extend({ -- Battery charging interface
         a = 0.5
     },
     pictures = {
+        rotated = {
         layers = {{
             dice = 4,
             priority = "very-low",
@@ -927,7 +915,7 @@ data:extend({ -- Battery charging interface
                 shift = {0, wagon_vertical_shift},
                 scale = train_scale
             }
-        }}
+        }}}
     },
     minimap_representation = {
         filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-locomotive-wagon/electric-locomotive-wagon-minimap-representation.png",
@@ -1048,6 +1036,7 @@ data:extend({ -- Battery charging interface
         a = 0.5
     },
     pictures = {
+        rotated = {
         layers = {{
             priority = "very-low",
             dice = 4,
@@ -1155,7 +1144,7 @@ data:extend({ -- Battery charging interface
                 shift = {0.8, wagon_vertical_shift},
                 scale = cargo_wagon_scale
             }
-        }}
+        }}}
     },
     minimap_representation = {
         filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-cargo-wagon-minimap-representation.png",
@@ -1243,6 +1232,7 @@ data:extend({ -- Battery charging interface
         a = 0.5
     },
     pictures = {
+        rotated = {
         layers = {{
             priority = "very-low",
             dice = 4,
@@ -1313,7 +1303,7 @@ data:extend({ -- Battery charging interface
                 shift = {0, -0.7},
                 scale = fluid_wagon_scale
             }
-        }}
+        }}}
     },
     minimap_representation = {
         filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-fluid-wagon-minimap-representation.png",
