@@ -11,7 +11,9 @@ data:extend({
       {type = "item", name = "locomotive", amount = 1},
       {type = "item", name = "processing-unit", amount = 20}
     },
-    result = "electric-locomotive",
+    results = {
+      {type="item", name="electric-locomotive", amount=1}
+    },
     order = "a[train-system]-f[locomotive]"
   }, 
   -- Electric Wagon Locomotive
@@ -24,7 +26,9 @@ data:extend({
       {type = "item", name = "locomotive", amount = 1},
       {type = "item", name = "processing-unit", amount = 20}
     },
-    result = "electric-locomotive-wagon",
+    results = {
+      {type="item", name="electric-locomotive-wagon", amount=1}
+    },
     order = "a[train-system]-f[locomotiveb]"
   },
   {
@@ -36,7 +40,9 @@ data:extend({
       {type = "item", name = "cargo-wagon", amount = 1},
       {type = "item", name = "processing-unit", amount = 10}
     },
-    result = "electric-cargo-wagon",
+    results = {
+      {type="item", name="electric-cargo-wagon", amount=1}
+    },
     order = "a[train-system]-h[cargo-wagon]"
   }, 
   {
@@ -48,7 +54,9 @@ data:extend({
       {type = "item", name = "fluid-wagon", amount = 1},
       {type = "item", name = "processing-unit", amount = 10}
     },
-    result = "electric-fluid-wagon",
+    results = {
+      {type="item", name="electric-fluid-wagon", amount=1}
+    },
     order = "a[train-system]-h[fluid-wagon]"
   }, 
   {
@@ -61,7 +69,9 @@ data:extend({
       {type = "item", name = "processing-unit", amount = 5},
       {type = "item", name = "copper-cable", amount = 20}
     },
-    result = "electric-train-battery-charging-station"
+    results = {
+      {type="item", name="electric-train-battery-charging-station", amount=1}
+    }
   }, 
   -- Experimental charging station
   {
@@ -75,7 +85,9 @@ data:extend({
       {type = "item", name = "copper-cable", amount = 200},
       {type = "item", name = "electric-train-battery-charging-station", amount = 1}
     },
-    result = "experimental-electric-train-battery-charging-station"
+    results = {
+      {type="item", name="experimental-electric-train-battery-charging-station", amount=1}
+    }
   },
   {
     type = "recipe",
@@ -89,7 +101,9 @@ data:extend({
       {type = "item", name = "battery", amount = 20}
     },
     localised_name = {"recipe-name.electric-train-discharged-battery-pack-desc"},
-    result = "electric-train-discharged-battery-pack",
+    results = {
+      {type="item", name="electric-train-discharged-battery-pack", amount=1}
+    },
     order = "s-[battery-pack-a]"
   },
   {
@@ -104,7 +118,9 @@ data:extend({
       {type = "item", name = "battery", amount = 5}
     },
     localised_name = {"recipe-name.electric-train-alkaline-battery-pack-desc"},
-    result = "electric-train-alkaline-battery-pack",
+    results = {
+      {type="item", name="electric-train-alkaline-battery-pack", amount=1}
+    },
     order = "s-[battery-pack-a]"
   },
   -- Speed, acceleration and efficiency battery-packs
@@ -122,7 +138,9 @@ data:extend({
       {type = "item", name = "speed-module-3", amount = 1}
     },
     localised_name = {"recipe-name.discharged-speed-battery-pack-desc"},
-    result = "discharged-speed-battery-pack",
+    results = {
+      {type="item", name="discharged-speed-battery-pack", amount=1}
+    },
     order = "s-[battery-pack-d]"
   },
   {
@@ -139,7 +157,9 @@ data:extend({
       {type = "item", name = "productivity-module-3", amount = 1}
     },
     localised_name = {"recipe-name.discharged-acceleration-battery-pack-desc"},
-    result = "discharged-acceleration-battery-pack",
+    results = {
+      {type="item", name="discharged-acceleration-battery-pack", amount=1}
+    },
     order = "s-[battery-pack-b]"
   },
   {
@@ -156,7 +176,9 @@ data:extend({
       {type = "item", name = "efficiency-module-3", amount = 1}
     },
     localised_name = {"recipe-name.discharged-efficiency-battery-pack-desc"},
-    result = "discharged-efficiency-battery-pack",
+    results = {
+      {type="item", name="discharged-efficiency-battery-pack", amount=1}
+    },
     order = "s-[battery-pack-c]"
   }, 
   -- Charging speed, acceleration and efficiency battery-packs

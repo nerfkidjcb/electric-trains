@@ -139,8 +139,10 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     icon_size = 128,
     allow_as_intermediate = false,
     localised_name = {"recipe-name.speed-battery-pack-refurbish-desc"},
-    result = "discharged-speed-battery-pack",
-    order = "s-[battery-refurbish-d]"
+    order = "s-[battery-refurbish-d]",
+    results = {
+      {type="item", name="discharged-speed-battery-pack", amount=1}
+    }
   },{
     type = "recipe",
     name = "acceleration-battery-pack-refurbish",
@@ -156,8 +158,10 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     icon_size = 128,
     allow_as_intermediate = false,
     localised_name = {"recipe-name.acceleration-battery-pack-refurbish-desc"},
-    result = "discharged-acceleration-battery-pack",
-    order = "s-[battery-refurbish-b]"
+    order = "s-[battery-refurbish-b]",
+    results = {
+      {type="item", name="discharged-acceleration-battery-pack", amount=1}
+    }
   },{
     type = "recipe",
     name = "efficiency-battery-pack-refurbish",
@@ -173,8 +177,10 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     icon_size = 128,
     allow_as_intermediate = false,
     localised_name = {"recipe-name.efficiency-battery-pack-refurbish-desc"},
-    result = "discharged-efficiency-battery-pack",
-    order = "s-[battery-refurbish-c]"
+    order = "s-[battery-refurbish-c]",
+    results = {
+      {type="item", name="discharged-efficiency-battery-pack", amount=1}
+    }
   },
     
   
@@ -193,8 +199,10 @@ if settings.startup["train-battery-decay-enable-setting"].value then
     icon_size = 128,
     allow_as_intermediate = false,
     localised_name = {"recipe-name.electric-train-battery-pack-refurbish-desc"},
-    result = "electric-train-discharged-battery-pack",
-    order = "s-[battery-refurbish-a]"
+    order = "s-[battery-refurbish-a]",
+    results = {
+      {type="item", name="electric-train-discharged-battery-pack", amount=1}
+    }
   }, -- Speed, acceleration and efficiency battery-pack ref
 
 })
@@ -225,16 +233,23 @@ end
 -- Changes to recipes and technologies.
 ------------------------------------------
 
-  table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {"steel-plate", 40})
-  table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {"rocket-control-unit", 10})
-  table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {"electric-engine-unit", 50})
-  table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {"steel-plate", 40})
-  table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {"rocket-control-unit", 10})
-  table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {"electric-engine-unit", 50})
-  table.insert(data.raw["recipe"]["recipe-electric-cargo-wagon"].ingredients, {"steel-plate", 40})
-  table.insert(data.raw["recipe"]["recipe-electric-cargo-wagon"].ingredients, {"electric-engine-unit", 5})
-  table.insert(data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients, {"steel-plate", 40})
-  table.insert(data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients, {"electric-engine-unit", 5})
+  -- Electric Locomotive
+table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {type = "item", name = "steel-plate", amount = 40})
+table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {type = "item", name = "rocket-control-unit", amount = 10})
+table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {type = "item", name = "electric-engine-unit", amount = 50})
+
+-- Electric Locomotive Wagon
+table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {type = "item", name = "steel-plate", amount = 40})
+table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {type = "item", name = "rocket-control-unit", amount = 10})
+table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {type = "item", name = "electric-engine-unit", amount = 50})
+
+-- Electric Cargo Wagon
+table.insert(data.raw["recipe"]["recipe-electric-cargo-wagon"].ingredients, {type = "item", name = "steel-plate", amount = 40})
+table.insert(data.raw["recipe"]["recipe-electric-cargo-wagon"].ingredients, {type = "item", name = "electric-engine-unit", amount = 5})
+
+-- Electric Fluid Wagon
+table.insert(data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients, {type = "item", name = "steel-plate", amount = 40})
+table.insert(data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients, {type = "item", name = "electric-engine-unit", amount = 5})
 
 data:extend({ 
 {
@@ -564,13 +579,63 @@ data:extend({
     data.raw["recipe"]["efficiency-battery-pack"].ingredients = {{"effectivity-module", 1}, {"battery", 5}}
 
     -- Replace all processing units with advanced circuits, since blue chips are much  harder to get in SE.
-    data.raw["recipe"]["recipe-electric-locomotive"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 50}, {"locomotive", 1}, {"rocket-control-unit", 10}}
-    data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 50}, {"locomotive", 1}, {"rocket-control-unit", 10}}
-    data.raw["recipe"]["recipe-electric-cargo-wagon"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 5}, {"cargo-wagon", 1}}
-    data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"electric-engine-unit", 5}, {"fluid-wagon", 1}}
-    -- Change the charging station recipe to use advanced circuits instead of processing units.
-    data.raw["recipe"]["electric-train-battery-charging-station"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 10}, {"copper-cable", 50}}
-    data.raw["recipe"]["experimental-electric-train-battery-charging-station"].ingredients = {{"steel-plate", 40}, {"advanced-circuit", 50}, {"copper-cable", 200}}
+data:extend({
+    {
+        type = "recipe",
+        name = "recipe-electric-locomotive",
+        ingredients = {
+            {type = "item", name = "steel-plate", amount = 40},
+            {type = "item", name = "advanced-circuit", amount = 10},
+            {type = "item", name = "electric-engine-unit", amount = 50},
+            {type = "item", name = "locomotive", amount = 1},
+            {type = "item", name = "rocket-control-unit", amount = 10}
+        },
+        results = {
+          {type="item", name="electric-locomotive", amount=1}
+        },
+        enabled = true,
+        energy_required = 10,  -- Set your desired energy requirement
+    }
+})
+    -- Electric Locomotive Wagon
+    data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients = {
+      {type = "item", name = "steel-plate", amount = 40},
+      {type = "item", name = "advanced-circuit", amount = 10},
+      {type = "item", name = "electric-engine-unit", amount = 50},
+      {type = "item", name = "locomotive", amount = 1},
+      {type = "item", name = "rocket-control-unit", amount = 10}
+    }
+
+    -- Electric Cargo Wagon
+    data.raw["recipe"]["recipe-electric-cargo-wagon"].ingredients = {
+      {type = "item", name = "steel-plate", amount = 40},
+      {type = "item", name = "advanced-circuit", amount = 10},
+      {type = "item", name = "electric-engine-unit", amount = 5},
+      {type = "item", name = "cargo-wagon", amount = 1}
+    }
+
+    -- Electric Fluid Wagon
+    data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients = {
+      {type = "item", name = "steel-plate", amount = 40},
+      {type = "item", name = "advanced-circuit", amount = 10},
+      {type = "item", name = "electric-engine-unit", amount = 5},
+      {type = "item", name = "fluid-wagon", amount = 1}
+    }
+
+    -- Electric Train Battery Charging Station
+    data.raw["recipe"]["electric-train-battery-charging-station"].ingredients = {
+      {type = "item", name = "steel-plate", amount = 40},
+      {type = "item", name = "advanced-circuit", amount = 10},
+      {type = "item", name = "copper-cable", amount = 50}
+    }
+
+    -- Experimental Electric Train Battery Charging Station
+    data.raw["recipe"]["experimental-electric-train-battery-charging-station"].ingredients = {
+      {type = "item", name = "steel-plate", amount = 40},
+      {type = "item", name = "advanced-circuit", amount = 50},
+      {type = "item", name = "copper-cable", amount = 200}
+    }
+
 
     -- Allow charging in space
     data.raw["assembling-machine"]["electric-train-battery-charging-station"].se_allow_in_space = true
