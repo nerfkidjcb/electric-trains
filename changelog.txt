@@ -3,7 +3,7 @@ Version: 0.2.10
 Date: 22. 10. 2024
   Info:
     - Compatibility for Update 2.0 and Space Age. Resulting in end of support for Factorio 1.X.
-    - Added de local
+    - Added de localisation.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.9
 Date: 01. 02. 2024
