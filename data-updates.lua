@@ -244,12 +244,10 @@ end
 
   -- Electric Locomotive
 table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {type = "item", name = "steel-plate", amount = 40})
-table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {type = "item", name = "rocket-control-unit", amount = 10})
 table.insert(data.raw["recipe"]["recipe-electric-locomotive"].ingredients, {type = "item", name = "electric-engine-unit", amount = 50})
 
 -- Electric Locomotive Wagon
 table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {type = "item", name = "steel-plate", amount = 40})
-table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {type = "item", name = "rocket-control-unit", amount = 10})
 table.insert(data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients, {type = "item", name = "electric-engine-unit", amount = 50})
 
 -- Electric Cargo Wagon
@@ -287,7 +285,7 @@ data:extend({
     type = "unlock-recipe",
     recipe = "electric-train-battery-pack-recharge"
   }},
-  prerequisites = {"steel-processing", "advanced-electronics-2", "battery", "railway", "production-science-pack", "utility-science-pack", "electric-engine", "rocket-control-unit"},
+  prerequisites = {"steel-processing", "processing-unit", "battery", "railway", "production-science-pack", "utility-science-pack", "electric-engine"},
   unit = {
     count = 2000,
     ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
@@ -431,7 +429,7 @@ data:extend({
       type = "unlock-recipe",
       recipe = "speed-battery-pack-recharge"
     }},
-    prerequisites = {"tech-electric-trains", "tech-electric-trains-experimental-charging"},
+    prerequisites = {"tech-electric-trains", "tech-electric-trains-experimental-charging", "speed-module-3"},
     unit = {
       count = 40000,
       ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
@@ -454,7 +452,7 @@ data:extend({
       type = "unlock-recipe",
       recipe = "acceleration-battery-pack-recharge"
     }},
-    prerequisites = {"tech-electric-trains", "tech-electric-trains-experimental-charging"},
+    prerequisites = {"tech-electric-trains", "tech-electric-trains-experimental-charging", "productivity-module-3"},
     unit = {
       count = 40000,
       ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
@@ -477,7 +475,7 @@ data:extend({
       type = "unlock-recipe",
       recipe = "efficiency-battery-pack-recharge"
     }},
-    prerequisites = {"tech-electric-trains", "tech-electric-trains-experimental-charging"},
+    prerequisites = {"tech-electric-trains", "tech-electric-trains-experimental-charging", "efficiency-module-3"},
     unit = {
       count = 40000,
       ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
@@ -519,7 +517,7 @@ data:extend({
     if mods["space-age"] then
       data.raw["technology"]["tech-electric-trains"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "electric-engine"}
     else
-      data.raw["technology"]["tech-electric-trains"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "rocket-control-unit", "electric-engine"}
+      data.raw["technology"]["tech-electric-trains"].prerequisites = {"logistic-science-pack", "chemical-science-pack", "electric-engine"}
     end
 
 
@@ -601,7 +599,6 @@ data:extend({
             {type = "item", name = "advanced-circuit", amount = 10},
             {type = "item", name = "electric-engine-unit", amount = 50},
             {type = "item", name = "locomotive", amount = 1},
-            --{type = "item", name = "rocket-control-unit", amount = 10}
         },
         results = {
           {type="item", name="electric-locomotive", amount=1}
@@ -616,7 +613,6 @@ data:extend({
       {type = "item", name = "advanced-circuit", amount = 10},
       {type = "item", name = "electric-engine-unit", amount = 50},
       {type = "item", name = "locomotive", amount = 1},
-      --{type = "item", name = "rocket-control-unit", amount = 10}
     }
 
     -- Electric Cargo Wagon
