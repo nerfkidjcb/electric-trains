@@ -3,6 +3,7 @@ Version: 0.2.10
 Date: 22. 10. 2024
   Info:
     - Compatibility for Update 2.0 and Space Age. Resulting in end of support for Factorio 1.X.
+    - Also removed references to low quality sprites due to the above. (Factorio might handle compression differently now, not sure)
     - Added de localisation.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.9
