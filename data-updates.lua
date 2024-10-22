@@ -17,8 +17,8 @@ elseif settings.startup["electric-cargo-wagon-capacity-setting"].value == "120 S
   data.raw["cargo-wagon"]["electric-cargo-wagon"].inventory_size = 120
 end
 
-if settings.startup["electric-fluid-wagon-capacity-setting"].value == "25.000 (Vanilla)" then
-  data.raw["fluid-wagon"]["electric-fluid-wagon"].capacity = 25000
+if settings.startup["electric-fluid-wagon-capacity-setting"].value == "50.000 (Vanilla)" then
+  data.raw["fluid-wagon"]["electric-fluid-wagon"].capacity = 50000
 end
 
 if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ" then

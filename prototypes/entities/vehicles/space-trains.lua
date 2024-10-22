@@ -903,7 +903,7 @@ data:extend({ -- Battery charging interface
         volume = 0.8
     },
     max_health = 600,
-    capacity = 30000,
+    capacity = 60000,
     corpse = "fluid-wagon-remnants",
     dying_explosion = "fluid-wagon-explosion",
     collision_box = {{-0.6, -2.4}, {0.6, 2.4}},
