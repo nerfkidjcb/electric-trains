@@ -507,7 +507,7 @@ data:extend({
 
 
   -- If the Space Exploration mod is installed, make compatibility changes.
-  if mods["space-exploration"] then
+  if mods["space-exploration"]  or  mods["space-age"] then
     -- Update the tech-electric-trains technology.
     -- Empty the ingredients table.
     data.raw["technology"]["tech-electric-trains"].unit.ingredients = {}
@@ -583,9 +583,9 @@ data:extend({
     data.raw["technology"]["tech-electric-trains-braking-force-1"] = nil
 
     -- Make the new powerpacks only need tier one module
-    data.raw["recipe"]["speed-battery-pack"].ingredients = {{"speed-module", 1}, {"battery", 5}}
-    data.raw["recipe"]["acceleration-battery-pack"].ingredients = {{"productivity-module", 1}, {"battery", 5}}
-    data.raw["recipe"]["efficiency-battery-pack"].ingredients = {{"effectivity-module", 1}, {"battery", 5}}
+    data.raw["recipe"]["speed-battery-pack"].ingredients = {{type = "item", name = "speed-module", amount = 1}, {type = "item", name = "battery", amount = 5}}
+    data.raw["recipe"]["acceleration-battery-pack"].ingredients = {{type = "item", name = "productivity-module", amount = 1}, {type = "item", name = "battery", amount = 5}}
+    data.raw["recipe"]["efficiency-battery-pack"].ingredients = {{type = "item", name = "effectivity-module", amount = 1}, {type = "item", name = "battery", amount = 5}}
 
     -- Replace all processing units with advanced circuits, since blue chips are much  harder to get in SE.
 data:extend({
@@ -597,7 +597,7 @@ data:extend({
             {type = "item", name = "advanced-circuit", amount = 10},
             {type = "item", name = "electric-engine-unit", amount = 50},
             {type = "item", name = "locomotive", amount = 1},
-            {type = "item", name = "rocket-control-unit", amount = 10}
+            --{type = "item", name = "rocket-control-unit", amount = 10}
         },
         results = {
           {type="item", name="electric-locomotive", amount=1}
@@ -612,7 +612,7 @@ data:extend({
       {type = "item", name = "advanced-circuit", amount = 10},
       {type = "item", name = "electric-engine-unit", amount = 50},
       {type = "item", name = "locomotive", amount = 1},
-      {type = "item", name = "rocket-control-unit", amount = 10}
+      --{type = "item", name = "rocket-control-unit", amount = 10}
     }
 
     -- Electric Cargo Wagon
@@ -645,6 +645,10 @@ data:extend({
       {type = "item", name = "copper-cable", amount = 200}
     }
 
+    -- Return here if just space-age is installed. (Assuming only one of the two mods is installed.)
+    if mods["space-age"] then
+      return
+    end
 
     -- Allow charging in space
     data.raw["assembling-machine"]["electric-train-battery-charging-station"].se_allow_in_space = true
