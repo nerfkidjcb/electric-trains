@@ -486,7 +486,7 @@ data:extend({
     }
   }})
 
-  if settings.startup["train-battery-decay-enable-setting"].value then
+  if settings.startup["train-battery-decay-enable-setting"].value == "true" then
     table.insert(data.raw["technology"]["tech-electric-trains"].effects, {
       type = "unlock-recipe",
       recipe = "electric-train-battery-pack-refurbish"
@@ -661,7 +661,7 @@ data:extend({
     -- Check for the installed version of Space Exploration and handle it.
     old_version = util.split(mods["space-exploration"], ".")
     -- Check if the mod settings for decay are enabled.
-    if settings.startup["train-battery-decay-enable-setting"].value then
+    if settings.startup["train-battery-decay-enable-setting"].value == "true" then
       -- Check if this is pre v0.6.0 SE
       if tonumber(old_version[2]) <= 5 then
         -- Add the new recipes to the recycling category.

@@ -1,8 +1,9 @@
 data:extend({{
-  type = "bool-setting",
+  type = "string-setting",
   name = "train-battery-decay-enable-setting",
   setting_type = "startup",
-  default_value = true
+  default_value = "true",
+  allowed_values = {"true", "false"}
 }, {
   type = "string-setting",
   name = "train-battery-pack-energy-density-setting",
