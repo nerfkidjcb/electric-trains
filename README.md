@@ -70,7 +70,7 @@ Or,
 
 ## Planned Features
 
-- Adding an input filter to locomotives to allow for selective powerpack loading.
+- Check out the mod page. That's the most up to date source of information.
 
 ## Changelog
 
