@@ -4,6 +4,7 @@ Date: 22. 10. 2024
   Info:
     - Update fluid wagon capacity to match fluid 2.0 changes
     - Fixed issues when playing with base game (no Space Age)
+    - Technology prerequisites are more consistent with the context of other mod configurations
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.10
 Date: 22. 10. 2024
