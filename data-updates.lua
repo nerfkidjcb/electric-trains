@@ -603,8 +603,7 @@ data:extend({
         results = {
           {type="item", name="electric-locomotive", amount=1}
         },
-        enabled = true,
-        energy_required = 10,  -- Set your desired energy requirement
+        enabled = false
     }
 })
     -- Electric Locomotive Wagon
