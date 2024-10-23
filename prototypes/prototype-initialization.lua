@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------
 -- -- -- VEHICLES
 ---------------------------------------------------------------------------------------
-require("entities/vehicles/space-trains")
+require("entities/buildings-and-stock")
 require("items/vehicles")
 require("items/items")

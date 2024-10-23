@@ -1,9 +1,16 @@
-local space_train_light_color = {
+local electric_train_front_light_color = {
     r = 0.25,
     g = 0.25,
     b = 0.8,
     a = 0.25
 }
+local electric_train_back_light_color = {
+    r = 0.8,
+    g = 0.25,
+    b = 0.8,
+    a = 0.25
+}
+local space
 local train_scale = 0.425
 local fluid_wagon_scale = 0.375
 local cargo_wagon_scale = 0.4
@@ -377,7 +384,7 @@ data:extend({ -- Battery charging interface
         shift = {-0.6, -16},
         size = 2,
         intensity = 0.8,
-        color = space_train_light_color
+        color = electric_train_front_light_color
     }, {
         type = "oriented",
         minimum_darkness = 0.3,
@@ -392,7 +399,7 @@ data:extend({ -- Battery charging interface
         shift = {0.6, -16},
         size = 2,
         intensity = 0.8,
-        color = space_train_light_color
+        color = electric_train_front_light_color
     }},
     color = {
         r = 0.92,

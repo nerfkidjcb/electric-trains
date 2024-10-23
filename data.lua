@@ -4,8 +4,8 @@
 -- -- -- CONTENTS INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
 -- -- Adding new achievements
-require("prototypes/entities-initialization")
-require("vanilla-changes/vehicles-changes")
+require("prototypes/prototype-initialization")
+require("vanilla-changes/recipes")
 
 data:extend(
 {
