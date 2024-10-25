@@ -33,7 +33,7 @@ if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ
   data.raw["item"]["electric-train-alkaline-battery-pack"].fuel_value = "240MJ"
 end
 
-if settings.startup["train-battery-decay-enable-setting"].value then
+if settings.startup["train-battery-decay-enable-setting"].value == "true" then
   data:extend({{
     type = "item",
     name = "electric-train-destroyed-battery-pack",
