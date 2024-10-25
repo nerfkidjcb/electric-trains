@@ -1,22 +1,32 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.14
+Date: 25. 10. 2024
+  Bugfixes:
+    - Fixed issue where charging powerpacks would result in decay regardless of the startup setting.
+  Quality of Life:
+    - Added some code comments and refactored changelog for better categorization.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.13
 Date: 24. 10. 2024
   Info:
-    - Fixed bug where Electric Locomotive was available to craft before researching Electric Trains when Space Age was enabled.
     - Renamed some scripts for developer sanity.
+  Bugfixes
+    - Fixed bug where Electric Locomotive was available to craft before researching Electric Trains when Space Age was enabled.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.12
 Date: 23. 10. 2024
   Info:
     - Fixed a mistake with the de localisation.
+  Quality of Life:
     - Cleaned out recently deprecated graphics for smaller mod size and better load times.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.11
 Date: 22. 10. 2024
   Info:
-    - Update fluid wagon capacity to match fluid 2.0 changes
-    - Fixed issues when playing with base game (no Space Age)
-    - Technology prerequisites are more consistent with the context of other mod configurations
+    - Fixed issues when playing with base game (no Space Age).
+  Balancing:
+    - Update fluid wagon capacity to match fluid 2.0 changes.
+    - Technology prerequisites are more consistent with the context of other mod configurations.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.10
 Date: 22. 10. 2024
@@ -32,7 +42,7 @@ Date: 01. 02. 2024
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.8
 Date: 29. 01. 2024
-  Info:
+  Bugfixes:
     - Fixed bug when loading alkaline powerpack update with increased fuel values in mod settings.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.7
@@ -51,23 +61,24 @@ Date: 29. 01. 2024
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.5
 Date: 28. 01. 2024
-  Info:
+  Bugfixes:
     - Fixed SE compatibility bug where the advanced powerpack recipes had wrong modules. (Credit to bmc4 for pointing this out)
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.4
 Date: 28. 01. 2024
   Info:
     - Made some migrations in mod files to be more compatible with other mods. (You will be hit with a migrated content pop up when loading into an older versioned save, but don't worry! Nothing will be affected.)
+  Quality of Life:
     - Electric fluid wagon now appears before the artillery wagon (next to vanilla fluid wagon) in the crafting menu.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 26. 01. 2024
-  Info:
+  Bugfixes:
     - Fixed bug where increased powerpack fuel value was not being applied to higher tier powerpacks.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.2
 Date: 25. 01. 2024
-  Info:
+  Bugfixes:
     - Fixed bug where turning off PowerPack decay in mod settings would stop Factorio loading when SE was active.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.1
