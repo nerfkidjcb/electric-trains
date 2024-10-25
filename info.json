@@ -7,8 +7,6 @@
   "description": "This should be overwritten by the Factorio mod page unless you downloaded this manually. Check out the link below :)",
   "dependencies": [
     "base >= 2.0",
-    "? space-exploration >= 0.5.103",
-    "? Krastorio2 >= 1.2.21",
     "? space-age >= 0.2.0"
   ],
   "package": {
