@@ -25,5 +25,4 @@ jobs:
       - name: Upload Built ZIP file
         uses: actions/upload-artifact@v3
         with:
-          name: electric-trains-latest
           path: electric-trains-github-output.zip
