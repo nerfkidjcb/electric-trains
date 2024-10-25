@@ -13,7 +13,7 @@ Version: 0.2.13
 Date: 24. 10. 2024
   Info:
     - Renamed some scripts for developer sanity.
-  Bugfixes
+  Bugfixes:
     - Fixed bug where Electric Locomotive was available to craft before researching Electric Trains when Space Age was enabled.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.12
