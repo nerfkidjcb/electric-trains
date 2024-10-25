@@ -215,10 +215,12 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
 })
 else
   data.raw["recipe"]["electric-train-battery-pack-recharge"].results = {{
+    type = "item",
     name = "electric-train-battery-pack",
     amount = 1
   }}
   data.raw["recipe"]["faster-electric-train-battery-pack-recharge"].results = {{
+    type = "item",
     name = "electric-train-battery-pack",
     amount = 1
   }}
@@ -230,10 +232,12 @@ else
 }}
 
   data.raw["recipe"]["acceleration-battery-pack-recharge"].results = {{
+    type = "item",
     name = "acceleration-battery-pack",
     amount = 1
   }}
   data.raw["recipe"]["efficiency-battery-pack-recharge"].results = {{
+    type = "item",
     name = "efficiency-battery-pack",
     amount = 1
   }}
