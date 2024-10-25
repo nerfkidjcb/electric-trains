@@ -24,13 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - name: Figure out derectory
-        run: |
-          pwd,
-          cd/,
-          pwd
+      
       # Runs a set of commands using the runners shell
       - name: Run Electric Trains build script
         run: |
+          ls,
+          cd /,
           chmod +x build.sh,
           ./build.sh
