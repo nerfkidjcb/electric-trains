@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.14
 Date: 25. 10. 2024
+  Info:
+    - Removed SE and K2 optional dependencies while they are not 2.0 compatible. Compatibility code has been preserved.
   Bugfixes:
     - Fixed issue where charging powerpacks would result in decay regardless of the startup setting.
   Quality of Life:
