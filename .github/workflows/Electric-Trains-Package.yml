@@ -1,4 +1,4 @@
-name: CI
+name: Build and Upload
 
 on:
   push:
@@ -17,7 +17,9 @@ jobs:
       - name: Run Electric Trains build script
         run: |
           chmod +x build.sh
-          sudo apt-get install -y pngquant
+          echo Installing pngquant...
+          sudo apt-get install -y pngquant > /dev/null 2>&1
+          echo Running build script...
           ./build.sh
 
       - name: Upload Built ZIP file
