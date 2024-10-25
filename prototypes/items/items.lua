@@ -180,4 +180,4 @@ data:extend({{
     order = "s-c[discharged-battery-pack]",
     stack_size = 20
 },
-})
+}) -- Destroyed packs are added in /data-updates.lua per mod settings
