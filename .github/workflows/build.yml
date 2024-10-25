@@ -17,7 +17,7 @@ jobs:
       - name: Run Electric Trains build script
         run: |
           chmod +x build.sh
-          sudo apt-get install -y libxml2-utils
+          sudo apt-get install -y pngquant
           ./build.sh
 
       - name: Upload Built ZIP file
