@@ -10,9 +10,9 @@ elseif settings.startup["electric-locomotive-speed-setting"].value == "378 km/h"
   data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 1.75
   data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 1.75
 elseif settings.startup["electric-locomotive-speed-setting"].value == "714 km/h (Extended)" then
-  data.raw["locomotive"]["electric-locomotive"].max_speed = 3.0
-  data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 3.0
-  data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 3.0
+  data.raw["locomotive"]["electric-locomotive"].max_speed = 3.3
+  data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 3.3
+  data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 3.3
 end
 
 if settings.startup["electric-cargo-wagon-capacity-setting"].value == "40 Slots (Vanilla)" then
