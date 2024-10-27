@@ -293,7 +293,16 @@ data:extend({ -- Battery charging interface
     -- Circuit things
     draw_circuit_wires = true,
     enable_logistic_control_behavior = true,
-    circuit_wire_max_distance = 7.5
+    circuit_wire_max_distance = 7.5,
+
+    -- Modules and effects
+    module_slots = 2,
+    allowed_effects = {"speed", "consumption", "pollution"},
+    effect_receiver = {
+        uses_module_effects = true,
+        uses_beacon_effects = true,
+        uses_surface_effects = true,
+    }
 }, 
 -- Experimental Battery Charging Interface
 {
@@ -319,9 +328,9 @@ data:extend({ -- Battery charging interface
     drawing_box = {{-1, -1.5}, {1, 1}},
     energy_source = {
         type = "electric",
-        buffer_capacity = "30MJ",
+        buffer_capacity = "150MJ",
         usage_priority = "primary-input",
-        input_flow_limit = "10MW",
+        input_flow_limit = "100MW",
         output_flow_limit = "0kW",
         drain = "500W"
     },
@@ -379,9 +388,18 @@ data:extend({ -- Battery charging interface
     -- Circuit things
     draw_circuit_wires = true,
     enable_logistic_control_behavior = true,
-    circuit_wire_max_distance = 7.5
+    circuit_wire_max_distance = 7.5,
+
+    -- Modules and effects
+    module_slots = 4,
+    allowed_effects = {"speed", "consumption", "pollution"},
+    effect_receiver = {
+        uses_module_effects = true,
+        uses_beacon_effects = true,
+        uses_surface_effects = true,
+    }
 }, 
--- Actual Space Trains now
+-- Actual Trains now
 {
     type = "locomotive",
     name = "electric-locomotive",
