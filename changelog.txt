@@ -5,6 +5,9 @@ Date: 27. 10. 2024
     - Included "Extended" (3x Vanilla) start up settings for fluid wagon capacity, and max speeds. Thanks to H4ckerxx44 for the PR
   Bugfixes:
     - Reimplemented lighting/reflection graphics that were no longer accessible from update 2.0
+  Balancing:
+    - Standard powerpack refurbishment requires less (200 -> 20) sulfuric acid and less (120 -> 60 seconds) times.
+    - Experiemental (Speed, Acceleration, Efficiency) powerpack refurbishment requires more (5 -> 10) battieres. 
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.15
 Date: 27. 10. 2024
