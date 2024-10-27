@@ -9,6 +9,10 @@ elseif settings.startup["electric-locomotive-speed-setting"].value == "378 km/h"
   data.raw["locomotive"]["electric-locomotive"].max_speed = 1.75
   data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 1.75
   data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 1.75
+elseif settings.startup["electric-locomotive-speed-setting"].value == "714 km/h (Extended)" then
+  data.raw["locomotive"]["electric-locomotive"].max_speed = 3.0
+  data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 3.0
+  data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 3.0
 end
 
 if settings.startup["electric-cargo-wagon-capacity-setting"].value == "40 Slots (Vanilla)" then
@@ -19,6 +23,8 @@ end
 
 if settings.startup["electric-fluid-wagon-capacity-setting"].value == "50.000 (Vanilla)" then
   data.raw["fluid-wagon"]["electric-fluid-wagon"].capacity = 50000
+elseif settings.startup["electric-fluid-wagon-capacity-setting"].value == "150.000 (Extended)" then
+  data.raw["fluid-wagon"]["electric-fluid-wagon"].capacity = 150000
 end
 
 if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ" then
