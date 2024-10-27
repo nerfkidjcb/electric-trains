@@ -29,6 +29,7 @@ DOCUMENTATION=".documentation"
 VSCODE=".vscode"
 CONTROL_LUA="control.lua"
 DATA_LUA="data.lua"
+PUBLIC="public"
 
 if [ "$USE_CONSTANT_NAME" = true ]; then
   FINAL_MOD_FOLDER=$CONSTANT_NAME
@@ -59,7 +60,9 @@ echo "Copying files to build directory..."
 # - not .gitignore
 # - not .documentation
 # - not .vscode
-find . -maxdepth 1 ! -regex ".*/$DIR_NAME" ! -regex ".*/$BUILDER_NAME" ! -regex ".*/$GIT" ! -regex ".*/$GITIGNORE" ! -regex ".*/$DOCUMENTATION" ! -regex ".*/$VSCODE" ! -regex '.' ! -regex '.*.zip' -exec cp -r '{}' "$DIR_NAME/${FINAL_MOD_FOLDER%.zip}" \;
+# - not public folder
+find . -maxdepth 1 ! -regex ".*/$DIR_NAME" ! -regex ".*/$BUILDER_NAME" ! -regex ".*/$GIT" ! -regex ".*/$GITIGNORE" ! -regex ".*/$DOCUMENTATION" ! -regex ".*/$VSCODE" ! -regex ".*/$PUBLIC" ! -regex '.' ! -regex '.*.zip' -exec cp -r '{}' "$DIR_NAME/${FINAL_MOD_FOLDER%.zip}" \;
+#find . -maxdepth 1 ! -regex ".*/$DIR_NAME" ! -regex ".*/$BUILDER_NAME" ! -regex ".*/$GIT" ! -regex ".*/$GITIGNORE" ! -regex ".*/$DOCUMENTATION" ! -regex ".*/$VSCODE" ! -regex '.' ! -regex '.*.zip' -exec cp -r '{}' "$DIR_NAME/${FINAL_MOD_FOLDER%.zip}" \;
 
 echo "Running pngquant on png files..."
 # run pngquant on the png files
