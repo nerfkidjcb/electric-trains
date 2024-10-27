@@ -166,7 +166,7 @@ data:extend({{
         }}
     },
     fuel_category = "electrical",
-    fuel_value = "120MJ",
+    fuel_value = "240MJ",
     burnt_result = "discharged-efficiency-battery-pack",
     subgroup = "intermediate-product",
     order = "s-c[battery-pack]",

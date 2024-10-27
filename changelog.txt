@@ -6,6 +6,7 @@ Date: 27. 10. 2024
   Bugfixes:
     - Reimplemented lighting/reflection graphics that were no longer accessible from update 2.0
   Balancing:
+    - Efficiency powerpacks have significantly increased fuel value (120MJ -> 240MJ)
     - Standard powerpack refurbishment requires less (200 -> 20) sulfuric acid and less (120 -> 60 seconds) times.
     - Experiemental (Speed, Acceleration, Efficiency) powerpack refurbishment requires more (5 -> 10) battieres. 
 ---------------------------------------------------------------------------------------------------
