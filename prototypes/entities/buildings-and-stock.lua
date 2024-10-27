@@ -288,8 +288,14 @@ data:extend({ -- Battery charging interface
         audible_distance_modifier = 0.5,
         fade_in_ticks = 4,
         fade_out_ticks = 20
-    }
-}, -- Experimental Battery Charging Interface
+    },
+
+    -- Circuit things
+    draw_circuit_wires = true,
+    enable_logistic_control_behavior = true,
+    circuit_wire_max_distance = 7.5
+}, 
+-- Experimental Battery Charging Interface
 {
     type = "assembling-machine",
     name = "experimental-electric-train-battery-charging-station",
@@ -368,7 +374,12 @@ data:extend({ -- Battery charging interface
         audible_distance_modifier = 0.5,
         fade_in_ticks = 4,
         fade_out_ticks = 20
-    }
+    },
+
+    -- Circuit things
+    draw_circuit_wires = true,
+    enable_logistic_control_behavior = true,
+    circuit_wire_max_distance = 7.5
 }, 
 -- Actual Space Trains now
 {

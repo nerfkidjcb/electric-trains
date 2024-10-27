@@ -3,6 +3,7 @@ Version: 0.2.16
 Date: 27. 10. 2024
   Features:
     - Included "Extended" (3x Vanilla) start up settings for fluid wagon capacity, and max speeds. Thanks to H4ckerxx44 for the PR
+    - Both charging stations can connect to the circuit network and support 2.0 assembling machine logic. (Set recipe, read ingredients, working + completed status)
   Bugfixes:
     - Reimplemented lighting/reflection graphics that were no longer accessible from update 2.0
   Balancing:
