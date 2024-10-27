@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.2.16
-Date: 27. 10. 2024
+Version: 0.3.0
+Date: XX. 10. 2024
   Features:
     - Both charging stations can connect to the circuit network and support 2.0 assembling machine logic. (Set recipe, read ingredients, working + completed status)
     - Charging stations have been given module slots (2 for standard and 4 for experimental) (efficiency or speed modules)
