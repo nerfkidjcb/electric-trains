@@ -236,8 +236,7 @@ data:extend({ -- Battery charging interface
         buffer_capacity = "30MJ",
         usage_priority = "primary-input",
         input_flow_limit = "10MW",
-        output_flow_limit = "0kW",
-        drain = "500W"
+        output_flow_limit = "0kW"
     },
     fast_replaceable_group = "assembling-machine",
     graphics_set = {
@@ -331,8 +330,7 @@ data:extend({ -- Battery charging interface
         buffer_capacity = "150MJ",
         usage_priority = "primary-input",
         input_flow_limit = "100MW",
-        output_flow_limit = "0kW",
-        drain = "500W"
+        output_flow_limit = "0kW"
     },
     fast_replaceable_group = "assembling-machine",
     graphics_set = {

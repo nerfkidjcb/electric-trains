@@ -3,7 +3,7 @@ Version: 0.2.16
 Date: 27. 10. 2024
   Features:
     - Both charging stations can connect to the circuit network and support 2.0 assembling machine logic. (Set recipe, read ingredients, working + completed status)
-    - Charging stations have been given module slots (2 for base and 4 for experimental) (efficiency or speed modules)
+    - Charging stations have been given module slots (2 for standard and 4 for experimental) (efficiency or speed modules)
     - Charging stations can now be affected by beacons (efficiency or speed effects)
     - Included "Extended" (3x Vanilla) start up settings for fluid wagon capacity, and max speeds. Thanks to H4ckerxx44 for the PR
   Bugfixes:
@@ -13,6 +13,7 @@ Date: 27. 10. 2024
     - Efficiency powerpacks have significantly increased fuel value (120MJ -> 240MJ)
     - Standard powerpack refurbishment requires less (200 -> 20) sulfuric acid and less (120 -> 60 seconds) times.
     - Experiemental (Speed, Acceleration, Efficiency) powerpack refurbishment requires more (5 -> 10) battieres. 
+    - Adjusted minimum energy consumption for both charging stations. (Standard 500W -> 56.67kW, Experiemental 500W -> 333kW)
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.15
 Date: 27. 10. 2024
