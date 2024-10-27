@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.15
-Date: TODO. 10. 2024
+Date: 27. 10. 2024
   Info:
     - Updated build script for more efficient mod packaging (+ GH Actions)
+    - Configured electric locomotives to support remote control feature from 2.0
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.14
 Date: 25. 10. 2024
