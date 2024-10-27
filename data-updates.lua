@@ -9,6 +9,10 @@ elseif settings.startup["electric-locomotive-speed-setting"].value == "378 km/h"
   data.raw["locomotive"]["electric-locomotive"].max_speed = 1.75
   data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 1.75
   data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 1.75
+elseif settings.startup["electric-locomotive-speed-setting"].value == "714 km/h (Extended)" then
+  data.raw["locomotive"]["electric-locomotive"].max_speed = 3.3
+  data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 3.3
+  data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 3.3
 end
 
 if settings.startup["electric-cargo-wagon-capacity-setting"].value == "40 Slots (Vanilla)" then
@@ -19,6 +23,8 @@ end
 
 if settings.startup["electric-fluid-wagon-capacity-setting"].value == "50.000 (Vanilla)" then
   data.raw["fluid-wagon"]["electric-fluid-wagon"].capacity = 50000
+elseif settings.startup["electric-fluid-wagon-capacity-setting"].value == "150.000 (Extended)" then
+  data.raw["fluid-wagon"]["electric-fluid-wagon"].capacity = 150000
 end
 
 if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ" then
@@ -29,7 +35,7 @@ if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ
   -- Update the other battery packs too.
   data.raw["item"]["speed-battery-pack"].fuel_value = "64MJ"
   data.raw["item"]["acceleration-battery-pack"].fuel_value = "64MJ"
-  data.raw["item"]["efficiency-battery-pack"].fuel_value = "240MJ"
+  data.raw["item"]["efficiency-battery-pack"].fuel_value = "480MJ"
   data.raw["item"]["electric-train-alkaline-battery-pack"].fuel_value = "240MJ"
 end
 
@@ -132,7 +138,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
     category = "chemistry",
     ingredients = {
       {type = "item", name = "destroyed-speed-battery-pack", amount = 1}, 
-      {type = "item", name = "battery", amount = 5}, 
+      {type = "item", name = "battery", amount = 10}, 
       {
       type = "fluid",
       name = "sulfuric-acid",
@@ -154,7 +160,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
     category = "chemistry",
     ingredients = {
       {type = "item", name = "destroyed-acceleration-battery-pack", amount = 1}, 
-      {type = "item", name = "battery", amount = 5}, {
+      {type = "item", name = "battery", amount = 10}, {
       type = "fluid",
       name = "sulfuric-acid",
       amount = 200
@@ -175,7 +181,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
     category = "chemistry",
     ingredients = {
       {type = "item", name = "destroyed-efficiency-battery-pack", amount = 1}, 
-      {type = "item", name = "battery", amount = 5}, {
+      {type = "item", name = "battery", amount = 10}, {
       type = "fluid",
       name = "sulfuric-acid",
       amount = 200
@@ -193,14 +199,15 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
   {
     type = "recipe",
     name = "electric-train-battery-pack-refurbish",
-    energy_required = 120,
+    energy_required = 60,
     enabled = false,
     category = "chemistry",
     ingredients = {
-      {type = "item", name = "electric-train-destroyed-battery-pack", amount = 1}, {
+      {type = "item", name = "electric-train-destroyed-battery-pack", amount = 1},
+      {type = "item", name = "battery", amount = 5}, {
       type = "fluid",
       name = "sulfuric-acid",
-      amount = 200
+      amount = 20
     }},
     icon = "__electric-trains__/graphics/icons/destroyed-battery.png",
     icon_size = 128,
