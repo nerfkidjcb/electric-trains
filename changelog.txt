@@ -11,7 +11,7 @@ Date: XX. 10. 2024
     - As a result of the work on modules/effects, the issue where the experiemental charging station appears to not have full power has been fixed.
   Balancing:
     - Efficiency powerpacks have significantly increased fuel value (120MJ -> 240MJ)
-    - Standard powerpack refurbishment requires less (200 -> 20) sulfuric acid and less (120 -> 60 seconds) times.
+    - Standard powerpack refurbishment requires less (200 -> 20) sulfuric acid and less (120 -> 60 seconds) time.
     - Experiemental (Speed, Acceleration, Efficiency) powerpack refurbishment requires more (5 -> 10) battieres. 
     - Adjusted minimum energy consumption for both charging stations. (Standard 500W -> 56.67kW, Experiemental 500W -> 333kW)
 ---------------------------------------------------------------------------------------------------
