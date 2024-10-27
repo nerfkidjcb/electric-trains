@@ -296,7 +296,7 @@ data:extend({ -- Battery charging interface
 
     -- Modules and effects
     module_slots = 2,
-    allowed_effects = {"speed", "consumption", "pollution"},
+    allowed_effects = {"speed", "consumption", "pollution", "quality"},
     effect_receiver = {
         uses_module_effects = true,
         uses_beacon_effects = true,
@@ -390,7 +390,7 @@ data:extend({ -- Battery charging interface
 
     -- Modules and effects
     module_slots = 4,
-    allowed_effects = {"speed", "consumption", "pollution"},
+    allowed_effects = {"speed", "consumption", "pollution", "quality"},
     effect_receiver = {
         uses_module_effects = true,
         uses_beacon_effects = true,
