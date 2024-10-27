@@ -15,7 +15,7 @@ data:extend({{
   name = "electric-fluid-wagon-capacity-setting",
   setting_type = "startup",
   default_value = "60.000 (Default)",
-  allowed_values = {"50.000 (Vanilla)", "60.000 (Default)"}
+  allowed_values = {"50.000 (Vanilla)", "60.000 (Default)", "150.000 (Extended)"}
 }, {
   type = "string-setting",
   name = "electric-cargo-wagon-capacity-setting",
@@ -27,5 +27,5 @@ data:extend({{
   name = "electric-locomotive-speed-setting",
   setting_type = "startup",
   default_value = "518 km/h (Default)",
-  allowed_values = {"238 km/h (Vanilla)", "378 km/h", "518 km/h (Default)"}
+  allowed_values = {"238 km/h (Vanilla)", "378 km/h", "518 km/h (Default)", "714 km/h (Extended)"}
 }})
