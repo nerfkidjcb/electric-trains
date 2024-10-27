@@ -3,6 +3,8 @@ Version: 0.2.16
 Date: 27. 10. 2024
   Features:
     - Included "Extended" (3x Vanilla) start up settings for fluid wagon capacity, and max speeds. Thanks to H4ckerxx44 for the PR
+  Bugfixes:
+    - Reimplemented lighting/reflection graphics that went missing a few updates ago
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.15
 Date: 27. 10. 2024

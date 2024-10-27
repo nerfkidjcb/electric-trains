@@ -118,6 +118,68 @@ function experimental_space_accumulator_charge()
     }
 end
 
+local rolling_stock_back_light = function()
+    return
+    {
+      {
+        minimum_darkness = 0.3,
+        color = {1, 0.1, 0.05, 0},
+        shift = {-0.6, 3.5},
+        size = 2,
+        intensity = 0.6,
+        add_perspective = true
+      },
+      {
+        minimum_darkness = 0.3,
+        color = {1, 0.1, 0.05, 0},
+        shift = {0.6, 3.5},
+        size = 2,
+        intensity = 0.6,
+        add_perspective = true
+      }
+    }
+end
+
+local rolling_stock_stand_by_light = function()
+    return
+    {
+        {
+        minimum_darkness = 0.3,
+        color = {0.05, 0.2, 1, 0},
+        shift = {-0.6, -3.5},
+        size = 2,
+        intensity = 0.5,
+        add_perspective = true
+        },
+        {
+        minimum_darkness = 0.3,
+        color = {0.05, 0.2, 1, 0},
+        shift = {0.6, -3.5},
+        size = 2,
+        intensity = 0.5,
+        add_perspective = true
+        }
+    }
+end
+
+local locomotive_reflection = function()
+    return
+    {
+      pictures =
+      {
+        filename = "__base__/graphics/entity/locomotive/reflection/locomotive-reflection.png",
+        priority = "extra-high",
+        width = 20,
+        height = 52,
+        shift = util.by_pixel(0, 40),
+        variation_count = 1,
+        scale = 5
+      },
+      rotate = true,
+      orientation_to_variation = false
+    }
+end  
+
 space_train_wheels = {
     priority = "very-low",
     width = 250,
@@ -402,6 +464,8 @@ data:extend({ -- Battery charging interface
         intensity = 0.8,
         color = electric_train_front_light_color
     }},
+    back_light = rolling_stock_back_light(),
+    stand_by_light = rolling_stock_stand_by_light(),
     color = {
         r = 0.92,
         g = 0.07,
@@ -561,6 +625,7 @@ data:extend({ -- Battery charging interface
         volume = 0.4
     },
     sound_minimum_speed = 0.5,
+    water_reflection = locomotive_reflection()
 }, 
 {
     type = "locomotive",
@@ -624,7 +689,8 @@ data:extend({ -- Battery charging interface
         fuel_inventory_size = 3,
         burnt_inventory_size = 3
     },
-    
+    back_light = rolling_stock_back_light(),
+    stand_by_light = rolling_stock_stand_by_light(),
     color = {
         r = 0.92,
         g = 0.07,
@@ -754,7 +820,7 @@ data:extend({ -- Battery charging interface
         volume = 0.4
     },
     sound_minimum_speed = 0.5,
-
+    water_reflection = locomotive_reflection()
 },{
     type = "cargo-wagon",
     name = "electric-cargo-wagon",
@@ -807,6 +873,8 @@ data:extend({ -- Battery charging interface
         decrease = 3,
         percent = 20
     }},
+    back_light = rolling_stock_back_light(),
+    stand_by_light = rolling_stock_stand_by_light(),
     color = {
         r = 0.43,
         g = 0.23,
@@ -896,6 +964,7 @@ data:extend({ -- Battery charging interface
     close_sound = sounds.cargo_wagon_close,
     sound_minimum_speed = 1,
     vehicle_impact_sound = sounds.generic_impact,
+    water_reflection = locomotive_reflection()
 }, {
     type = "fluid-wagon",
     name = "electric-fluid-wagon",
@@ -948,6 +1017,8 @@ data:extend({ -- Battery charging interface
         decrease = 3,
         percent = 20
     }},
+    back_light = rolling_stock_back_light(),
+    stand_by_light = rolling_stock_stand_by_light(),
     color = {
         r = 0.43,
         g = 0.23,
@@ -1017,4 +1088,5 @@ data:extend({ -- Battery charging interface
     crash_trigger = crash_trigger(),
     sound_minimum_speed = 0.1,
     vehicle_impact_sound = sounds.generic_impact,
+    water_reflection = locomotive_reflection()
 }})
