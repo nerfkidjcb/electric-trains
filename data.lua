@@ -7,6 +7,10 @@
 require("prototypes/prototype-initialization")
 require("vanilla-changes/recipes")
 
+if mods["elevated-rails"] then
+  require("__electric-trains__.prototypes.entities.sloped-electric-trains-updates").apply_all_base()
+end
+
 data:extend(
 {
   {

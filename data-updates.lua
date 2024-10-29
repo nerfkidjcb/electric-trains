@@ -273,7 +273,7 @@ data:extend({
 {
   type = "technology",
   name = "tech-electric-trains",
-  mod = "space-trains",
+  mod = "electric-trains",
   icon = "__electric-trains__/graphics/icons/space-trains-tech.png",
   icon_size = 256,
   icon_mipmaps = 4,
