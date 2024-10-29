@@ -11,10 +11,10 @@ local electric_train_back_light_color = {
     a = 0.25
 }
 local space
-local train_scale = 0.425
-local fluid_wagon_scale = 0.375
-local cargo_wagon_scale = 0.4
-local wagon_vertical_shift = -0.8
+train_scale = 0.425
+fluid_wagon_scale = 0.375
+cargo_wagon_scale = 0.4
+wagon_vertical_shift = -0.8
 local connection_length = 3
 local train_speed = 2.4
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
@@ -23,7 +23,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 function space_accumulator_picture(tint, repeat_count)
     return {
         layers = {{
-            filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station.png",
+            filename = "__electric-trains__/graphics/entity/electric-train-charging-station/hr_space_charging_station.png",
             priority = "high",
             width = 128,
             height = 192,
@@ -33,7 +33,7 @@ function space_accumulator_picture(tint, repeat_count)
             animation_speed = 0.5,
             scale = 0.5            
         }, {
-            filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_shadow.png",
+            filename = "__electric-trains__/graphics/entity/electric-train-charging-station/hr_space_charging_station_shadow.png",
             priority = "high",
             width = 285,
             height = 91,
@@ -48,7 +48,7 @@ end
 function experimental_space_accumulator_picture(tint, repeat_count)
     return {
         layers = {{
-            filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_experimental_space_charging_station.png",
+            filename = "__electric-trains__/graphics/entity/electric-train-charging-station/hr_experimental_space_charging_station.png",
             priority = "high",
             width = 128,
             height = 192,
@@ -58,7 +58,7 @@ function experimental_space_accumulator_picture(tint, repeat_count)
             animation_speed = 1.5,
             scale = 0.5
         }, {
-            filename = "__electric-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_shadow.png",
+            filename = "__electric-trains__/graphics/entity/electric-train-charging-station/hr_space_charging_station_shadow.png",
             priority = "high",
             width = 285,
             height = 91,
@@ -78,7 +78,7 @@ function space_accumulator_charge()
             b = 1,
             a = 1
         }, 30), {    
-            filenames = {"__electric-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_lightning.png"},
+            filenames = {"__electric-trains__/graphics/entity/electric-train-charging-station/hr_space_charging_station_lightning.png"},
             priority = "high",
             width = 128,
             height = 192,
@@ -102,7 +102,7 @@ function experimental_space_accumulator_charge()
             a = 1
         }, 30), {
         
-            filenames = {"__electric-trains__/graphics/entity/space-train-charging-station/hr_space_charging_station_lightning.png"},
+            filenames = {"__electric-trains__/graphics/entity/electric-train-charging-station/hr_space_charging_station_lightning.png"},
             priority = "high",
             width = 128,
             height = 192,
@@ -526,8 +526,8 @@ data:extend({ -- Battery charging interface
             dice = 4,
             width = 1000,
             height = 600,
+            tint_as_overlay = true,
             direction_count = 256,
-            allow_low_quality_rotation = true,
             filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_mask_1.png",
                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_mask_2.png",
                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_mask_3.png",
@@ -546,9 +546,9 @@ data:extend({ -- Battery charging interface
             flags = {"shadow"},
             width = 1000,
             height = 600,
+            tint_as_overlay = true,
             direction_count = 256,
             draw_as_shadow = true,
-            allow_low_quality_rotation = true,
             filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_shadows_1.png",
                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_shadows_2.png",
                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_locomotive_shadows_3.png",
