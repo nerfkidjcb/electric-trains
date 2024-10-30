@@ -310,7 +310,7 @@ data:extend({
   {
     type = "technology",
     name = "tech-alkaline-battery-pack",
-    mod = "space-trains",
+    mod = "electric-trains",
     icon = "__electric-trains__/graphics/icons/alkaline-battery.png",
     icon_size = 128,
     icon_mipmaps = 4,
@@ -332,7 +332,7 @@ data:extend({
   {
     type = "technology",
     name = "tech-electric-trains-experimental-charging",
-    mod = "space-trains",
+    mod = "electric-trains",
     icon = "__electric-trains__/graphics/icons/experimental-electric-train-charging-station.png",
     icon_size = 128,
     icon_mipmaps = 4,
