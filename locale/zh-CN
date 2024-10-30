@@ -1,0 +1,99 @@
+[entity-name]
+electric-locomotive=MAGLEV电力机车
+electric-locomotive-wagon=MAGLEV货运机车
+electric-cargo-wagon=MAGLEV货运车厢
+electric-fluid-wagon=MAGLEV液罐车厢
+electric-train-battery-charging-station=列车动力包充电站
+experimental-electric-train-battery-charging-station=实验型列车动力包充电站
+
+[entity-description]
+electric-locomotive=使用电力的MAGLEV机车。这种设计的机车有比内燃机车更高的加速度和最高速型度.
+electric-locomotive-wagon=功能与电力机车相同，但主要用于货运.
+electric-cargo-wagon=与电力机车兼容的大容量货运车厢。使用MAGLEV技术来减小阻力.
+electric-fluid-wagon=与电力机车兼容的大容量液罐车厢。使用MAGLEV技术来减小阻力.
+electric-train-battery-charging-station=为电动机车动力包充电的充电站.
+experimental-electric-train-battery-charging-station=为电动机车动力包充电的实验型充电站. 这种新型充电站有更高的充电速率,但更容易导致动力包损坏.
+
+[recipe-name]
+recipe-electric-locomotive=MAGLEV电力机车
+recipe-electric-cargo-wagon=MAGLEV货运车厢
+recipe-electric-fluid-wagon=MAGLEV液罐车厢
+recipe-electric-locomotive-wagon=MAGLEV货运机车
+electric-train-battery-pack-recharge=列车动力包充能
+electric-train-battery-pack-refurbish-desc=列车动力包整修
+electric-train-alkaline-battery-pack-desc=制造列车一次性电源组
+electric-train-discharged-battery-pack-desc=列车动力包制造
+faster-electric-train-battery-pack-recharge=加速列车动力包充能
+acceleration-battery-pack-recharge=涡轮型列车动力包充能
+acceleration-battery-pack-refurbish-desc=涡轮型列车动力包整修
+discharged-acceleration-battery-pack-desc=涡轮型列车动力包制造
+speed-battery-pack-recharge=高速型列车动力包充能
+speed-battery-pack-refurbish-desc=高速型列车动力包整修
+discharged-speed-battery-pack-desc=高速型列车动力包制造
+efficiency-battery-pack-recharge=效能型列车动力包充能
+efficiency-battery-pack-refurbish-desc=效能型列车动力包整修
+discharged-efficiency-battery-pack-desc=效能型列车动力包制造
+
+[item-name]
+item-electric-locomotive=MAGLEV电力机车
+item-electric-locomotive-wagon=MAGLEV货运机车
+item-electric-cargo-wagon=MAGLEV货运车厢
+item-electric-fluid-wagon=MAGLEV液罐车厢
+electric-train-battery-charging-station=列车动力包充电站
+experimental-electric-train-battery-charging-station=实验型列车动力包充电站
+electric-train-battery-pack=列车动力包（已充电）
+electric-train-alkaline-battery-pack=列车一次性电源组
+electric-train-discharged-battery-pack=列车动力包（已耗尽）
+electric-train-destroyed-battery-pack=列车动力包（损坏）
+discharged-acceleration-battery-pack=涡轮型列车动力包（已耗尽）
+acceleration-battery-pack=涡轮型列车动力包（已充电）
+destroyed-acceleration-battery-pack=涡轮型列车列车动力包（损坏）
+discharged-speed-battery-pack=高速型列车动力包（已耗尽）
+speed-battery-pack=高速型列车动力包（已充电）
+destroyed-speed-battery-pack=高速型列车动力包（损坏）
+discharged-efficiency-battery-pack=效能型列车动力包（已耗尽）
+efficiency-battery-pack=效能型列车动力包（已充电）
+destroyed-efficiency-battery-pack=效能型列车动力包（损坏）
+
+[technology-name]
+tech-electric-trains=MAGLEV电力机车
+tech-alkaline-battery-pack=一次性电源组
+tech-electric-trains-braking-force=MAGLEV机车制动性能
+tech-electric-trains-experimental-charging=实验型列车动力包充电站
+tech-electric-locomotive-wagon=MAGLEV货运机车
+tech-acceleration-battery-pack=涡轮型列车动力包
+tech-speed-battery-pack=高速型列车动力包
+tech-efficiency-battery-pack=效能型列车动力包
+
+[technology-description]
+tech-electric-trains=特殊设计的列车,使用电池动力包而不是燃料.
+tech-alkaline-battery-pack=以加速度和最高速型度为代价的可充电动力包的廉价替代品. 一次性电源组不可充电.
+tech-electric-trains-braking-force=通过对电动机车的持续测试和研究, 机车的制动力可以提高5%.
+tech-electric-trains-experimental-charging=通过对电动机车的持续测试和研究, 开发了一种新的实验充电站. 其可以以300%的速度为电动机车动力包充电.然而在充电过程中,动力包可能过载损坏.
+tech-electric-locomotive-wagon=解锁电动货运机车,其功能与电动机车相同, 但主要用于货运.
+tech-acceleration-battery-pack=一种实验型的电动机车动力包，其加速度（+50%）高于标准电动列车动力包. 但其最高速度（-20%）和效率（-20%）较低.
+tech-speed-battery-pack=一种实验型的电动机车动力包，其最高速度（+50%）高于标准电动列车动力包. 但其加速度（-20%）和效率（-20%）较低.
+tech-efficiency-battery-pack=一种实验型的电动机车动力包，其效率（+200%）高于标准电动列车动力包, 没有其他的副作用!
+
+[fuel-category-name]
+electrical=电源
+
+#Mod Settings
+[mod-setting-name]
+electric-locomotive-speed-setting=MAGLEV电力机车基础速度
+electric-cargo-wagon-capacity-setting=MAGLEV货运车厢负载
+electric-fluid-wagon-capacity-setting=MAGLEV液罐车厢负载
+train-battery-pack-energy-density-setting=动力包能量密度
+train-battery-decay-enable-setting=动力包整修
+[mod-setting-description]
+electric-locomotive-speed-setting=设定MAGLEV电力机车的最高速度. 不同的动力包仍然生效.
+electric-cargo-wagon-capacity-setting=设定MAGLEV货运车厢的最高负载.
+electric-fluid-wagon-capacity-setting=设定MAGLEV液罐车厢的最高负载.
+train-battery-pack-energy-density-setting=设定列车动力包的能量密度.
+train-battery-decay-enable-setting=禁用或启用机车动力包的损耗及其整修功能. 禁用时, 动力包不会损耗.
+
+[mod-name]
+electric-trains=MAGLEV电力机车
+
+[mod-description]
+electric-trains=[color=green]Electric Trains[/color]\n添加了高速运行的MAGLEV电力机车。
