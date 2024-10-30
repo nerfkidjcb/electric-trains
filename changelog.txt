@@ -1,9 +1,10 @@
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
-Date: 30. 10. 2024
+Date: XX. 10. 2024
   Info:
     - Updated for factoripedia simulations
+    - Added zh-CN localisation (Thanks to Houraiji_Kyuusyou for the PR)
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 29. 10. 2024
