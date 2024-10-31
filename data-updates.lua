@@ -61,7 +61,10 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
     burnt_result = "electric-train-discharged-battery-pack",
     subgroup = "intermediate-product",
     order = "s-a[destroyed-battery-pack]",
-    stack_size = 20
+    stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
   }, -- Destroyed speed, acceleration and efficiency battery-packs
   {
     type = "item",
@@ -84,7 +87,10 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
     burnt_result = "discharged-speed-battery-pack",
     subgroup = "intermediate-product",
     order = "s-d[destroyed-battery-pack]",
-    stack_size = 20
+    stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
   },{
     type = "item",
     name = "destroyed-acceleration-battery-pack",
@@ -106,7 +112,10 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
     burnt_result = "discharged-acceleration-battery-pack",
     subgroup = "intermediate-product",
     order = "s-b[destroyed-battery-pack]",
-    stack_size = 20
+    stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
   }, {
     type = "item",
     name = "destroyed-efficiency-battery-pack",
@@ -128,7 +137,10 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
     burnt_result = "discharged-efficiency-battery-pack",
     subgroup = "intermediate-product",
     order = "s-c[destroyed-battery-pack]",
-    stack_size = 20
+    stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
   }, -- Refurb for speed, acceleration and efficiency battery-packs
   {
     type = "recipe",

@@ -1,3 +1,4 @@
+local item_sounds = require("__base__.prototypes.item_sounds")
 data:extend({{
     type = "item",
     name = "electric-train-battery-charging-station",
@@ -6,7 +7,10 @@ data:extend({{
     subgroup = "production-machine",
     order = "h[train-system]",
     place_result = "electric-train-battery-charging-station",
-    stack_size = 10
+    stack_size = 10,
+    inventory_move_sound = item_sounds.electric_large_inventory_move,
+    pick_sound = item_sounds.electric_large_inventory_pickup,
+    drop_sound = item_sounds.electric_large_inventory_move
 }, -- Experimental charging station
 {
     type = "item",
@@ -16,7 +20,10 @@ data:extend({{
     subgroup = "production-machine",
     order = "i[train-system]",
     place_result = "experimental-electric-train-battery-charging-station",
-    stack_size = 10
+    stack_size = 10,
+    inventory_move_sound = item_sounds.electric_large_inventory_move,
+    pick_sound = item_sounds.electric_large_inventory_pickup,
+    drop_sound = item_sounds.electric_large_inventory_move
 },
 {
     type = "item",
@@ -44,6 +51,9 @@ data:extend({{
     subgroup = "intermediate-product",
     order = "s-a[battery-pack]",
     stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move,
     fuel_acceleration_multiplier = 0.65,
     fuel_top_speed_multiplier = 0.8
 },
@@ -72,7 +82,10 @@ data:extend({{
     burnt_result = "electric-train-discharged-battery-pack",
     subgroup = "intermediate-product",
     order = "s-b[battery-pack]",
-    stack_size = 20
+    stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
 },{
     type = "item",
     name = "electric-train-discharged-battery-pack",
@@ -80,7 +93,10 @@ data:extend({{
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "s-a[discharged-battery-pack]",
-    stack_size = 60
+    stack_size = 60,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
 }, -- Speed, acceleration and efficiency battery-packs
 {
     type = "item",
@@ -109,7 +125,10 @@ data:extend({{
     burnt_result = "discharged-speed-battery-pack",
     subgroup = "intermediate-product",
     order = "s-d[battery-pack]",
-    stack_size = 20
+    stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
 
 },{
     type = "item",
@@ -118,7 +137,10 @@ data:extend({{
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "s-d[discharged-battery-pack]",
-    stack_size = 20
+    stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
 },{
     type = "item",
     name = "acceleration-battery-pack",
@@ -146,7 +168,10 @@ data:extend({{
     burnt_result = "discharged-acceleration-battery-pack",
     subgroup = "intermediate-product",
     order = "s-b[battery-pack]",
-    stack_size = 20
+    stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
 }, {
     type = "item",
     name = "discharged-acceleration-battery-pack",
@@ -154,7 +179,10 @@ data:extend({{
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "s-b[discharged-battery-pack]",
-    stack_size = 20
+    stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
 }, {
     type = "item",
     name = "efficiency-battery-pack",
@@ -180,7 +208,10 @@ data:extend({{
     burnt_result = "discharged-efficiency-battery-pack",
     subgroup = "intermediate-product",
     order = "s-c[battery-pack]",
-    stack_size = 20
+    stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
 }, {
     type = "item",
     name = "discharged-efficiency-battery-pack",
@@ -188,6 +219,9 @@ data:extend({{
     icon_size = 128,
     subgroup = "intermediate-product",
     order = "s-c[discharged-battery-pack]",
-    stack_size = 20
+    stack_size = 20,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move
 },
 }) -- Destroyed packs are added in /data-updates.lua per mod settings
