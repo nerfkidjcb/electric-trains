@@ -5,10 +5,13 @@ Date: XX. 10. 2024
   Info:
     - Updated for factoripedia simulations
     - Added zh-CN localisation (Thanks to Houraiji_Kyuusyou for the PR)
+    - Formatted the codebase properly (finally)
   Features:
     - (Space Age) Added a startup setting (default true) to lock electric train tech behind electromagnetism. This also update recipes to utiluse electromagnetic facilities and newer materials
     - (Space Age) You can only stack one electric Locomotive/Wagon in a rocket at a time. (I would encourage crafting on site)
     - Added electrical pickup/placement inventory sounds
+  Bugfixes:
+    - Fixed scaling issue where charged and destroyed powerpacks were very small when placed on ground or belts.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 29. 10. 2024

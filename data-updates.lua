@@ -62,13 +62,13 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
                     {
                         size = 128,
                         filename = "__electric-trains__/graphics/icons/destroyed-battery.png",
-                        scale = 0.125
+                        scale = 0.25
                     }, {
                         draw_as_light = true,
                         flags = {"light"},
                         size = 128,
                         filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
-                        scale = 0.125
+                        scale = 0.25
                     }
                 }
             },
@@ -90,13 +90,13 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
                     {
                         size = 128,
                         filename = "__electric-trains__/graphics/icons/speed-battery/destroyed-speed-battery.png",
-                        scale = 0.125
+                        scale = 0.25
                     }, {
                         draw_as_light = true,
                         flags = {"light"},
                         size = 128,
                         filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
-                        scale = 0.125
+                        scale = 0.25
                     }
                 }
             },
@@ -117,13 +117,13 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
                     {
                         size = 128,
                         filename = "__electric-trains__/graphics/icons/acceleration-battery/destroyed-acceleration-battery.png",
-                        scale = 0.125
+                        scale = 0.25
                     }, {
                         draw_as_light = true,
                         flags = {"light"},
                         size = 128,
                         filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
-                        scale = 0.125
+                        scale = 0.25
                     }
                 }
             },
@@ -144,13 +144,13 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
                     {
                         size = 128,
                         filename = "__electric-trains__/graphics/icons/efficiency-battery/destroyed-efficiency-battery.png",
-                        scale = 0.125
+                        scale = 0.25
                     }, {
                         draw_as_light = true,
                         flags = {"light"},
                         size = 128,
                         filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
-                        scale = 0.125
+                        scale = 0.25
                     }
                 }
             },

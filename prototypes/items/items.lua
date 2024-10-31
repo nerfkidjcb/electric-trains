@@ -35,13 +35,13 @@ data:extend({
                 {
                     size = 128,
                     filename = "__electric-trains__/graphics/icons/battery.png",
-                    scale = 0.125
+                    scale = 0.25
                 }, {
                     draw_as_light = false,
                     flags = {"light"},
                     size = 128,
                     filename = "__electric-trains__/graphics/icons/battery_light.png",
-                    scale = 0.125
+                    scale = 0.25
                 }
             }
         },
@@ -68,13 +68,13 @@ data:extend({
                 {
                     size = 128,
                     filename = "__electric-trains__/graphics/icons/battery.png",
-                    scale = 0.125
+                    scale = 0.25
                 }, {
                     draw_as_light = true,
                     flags = {"light"},
                     size = 128,
                     filename = "__electric-trains__/graphics/icons/battery_light.png",
-                    scale = 0.125
+                    scale = 0.25
                 }
             }
         },
@@ -111,13 +111,13 @@ data:extend({
                 {
                     size = 128,
                     filename = "__electric-trains__/graphics/icons/speed-battery/speed-battery.png",
-                    scale = 0.125
+                    scale = 0.25
                 }, {
                     draw_as_light = true,
                     flags = {"light"},
                     size = 128,
                     filename = "__electric-trains__/graphics/icons/battery_light.png",
-                    scale = 0.125
+                    scale = 0.25
                 }
             }
         },
@@ -156,13 +156,13 @@ data:extend({
                 {
                     size = 128,
                     filename = "__electric-trains__/graphics/icons/acceleration-battery/acceleration-battery.png",
-                    scale = 0.125
+                    scale = 0.25
                 }, {
                     draw_as_light = true,
                     flags = {"light"},
                     size = 128,
                     filename = "__electric-trains__/graphics/icons/battery_light.png",
-                    scale = 0.125
+                    scale = 0.25
                 }
             }
         },
@@ -200,13 +200,13 @@ data:extend({
                 {
                     size = 128,
                     filename = "__electric-trains__/graphics/icons/efficiency-battery/efficiency-battery.png",
-                    scale = 0.125
+                    scale = 0.25
                 }, {
                     draw_as_light = true,
                     flags = {"light"},
                     size = 128,
                     filename = "__electric-trains__/graphics/icons/battery_light.png",
-                    scale = 0.125
+                    scale = 0.25
                 }
             }
         },
