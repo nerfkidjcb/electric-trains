@@ -1,7 +1,12 @@
 
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: XX. 11. 2024
+  Bugfixes:
+    - Fixed strtup crash when loading game with Elvated Rails enabled and low sprite settings
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
-Date: 1. 11. 2024
+Date: 01. 11. 2024
   Bugfixes:
     - Fixed crash when powerpack decay disabled and Space Age was enabled.
     - Fixed issue where electric locomotive wagon was omitted from speed startup settings.
