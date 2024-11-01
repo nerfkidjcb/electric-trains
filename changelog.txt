@@ -1,5 +1,11 @@
 
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 1. 11. 2024
+  Bugfixes:
+    - Fixed crash when powerpack decay disabled and Space Age was enabled.
+    - Fixed issue where electric locomotive wagon was ommitted from speed startup settings.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: 31. 10. 2024
   Info:

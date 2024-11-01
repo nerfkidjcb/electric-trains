@@ -4,15 +4,18 @@
 if settings.startup["electric-locomotive-speed-setting"].value ==
     "238 km/h (Vanilla)" then
     data.raw["locomotive"]["electric-locomotive"].max_speed = 1.1
+    data.raw["locomotive"]["electric-locomotive-wagon"].max_speed = 1.1
     data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 1.1
     data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 1.1
 elseif settings.startup["electric-locomotive-speed-setting"].value == "378 km/h" then
     data.raw["locomotive"]["electric-locomotive"].max_speed = 1.75
+    data.raw["locomotive"]["electric-locomotive-wagon"].max_speed = 1.75
     data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 1.75
     data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 1.75
 elseif settings.startup["electric-locomotive-speed-setting"].value ==
     "714 km/h (Extended)" then
     data.raw["locomotive"]["electric-locomotive"].max_speed = 3.3
+    data.raw["locomotive"]["electric-locomotive-wagon"].max_speed = 3.3
     data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 3.3
     data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 3.3
 end
@@ -645,7 +648,8 @@ if mods["space-exploration"] or
         data.raw["item"]["electric-train-battery-pack"].weight = 10 * kg
         data.raw["item"]["electric-train-discharged-battery-pack"].weight = 10 *
                                                                                 kg
-        if settings.startup["train-battery-decay-enable-setting"].value then
+        if settings.startup["train-battery-decay-enable-setting"].value ==
+            "true" then
             data.raw["item"]["electric-train-destroyed-battery-pack"].weight =
                 10 * kg
         end
@@ -914,7 +918,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value ==
         "fulgora"
     data.raw["item"]["electric-train-battery-pack"].weight = 10 * kg
     data.raw["item"]["electric-train-discharged-battery-pack"].weight = 10 * kg
-    if settings.startup["train-battery-decay-enable-setting"].value then
+    if settings.startup["train-battery-decay-enable-setting"].value == "true" then
         data.raw["item"]["electric-train-destroyed-battery-pack"].weight = 10 *
                                                                                kg
     end
