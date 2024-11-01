@@ -4,7 +4,7 @@ Version: 0.3.3
 Date: 1. 11. 2024
   Bugfixes:
     - Fixed crash when powerpack decay disabled and Space Age was enabled.
-    - Fixed issue where electric locomotive wagon was ommitted from speed startup settings.
+    - Fixed issue where electric locomotive wagon was omitted from speed startup settings.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: 31. 10. 2024
@@ -13,7 +13,7 @@ Date: 31. 10. 2024
     - Added zh-CN localisation (Thanks to Houraiji_Kyuusyou for the PR)
     - Formatted the codebase properly (finally)
   Features:
-    - (Space Age) Added a startup setting (default true) to lock electric train tech behind electromagnetism. This also update recipes to utiluse electromagnetic facilities and newer materials
+    - (Space Age) Added a startup setting (default true) to lock electric train tech behind electromagnetism. This also update recipes to utilise electromagnetic facilities and newer materials
     - (Space Age) You can only stack one electric Locomotive/Wagon in a rocket at a time. (I would encourage crafting on site)
     - Added electrical pickup/placement inventory sounds
   Bugfixes:
