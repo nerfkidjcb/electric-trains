@@ -53,6 +53,37 @@ if settings.startup["train-battery-pack-energy-density-setting"].value ==
         "240MJ"
 end
 
+if settings.startup["extended-train-spacing"].value == "true" then
+    local updated_joint_distance = 6 -- Adds 2 tiles in between where the wheels are mounted
+    local updated_connection_length = 3.2 -- Account for the increased joint distance
+    local updated_collision_box = {{-0.6, -3.6}, {0.6, 3.6}}
+
+    data.raw["locomotive"]["electric-locomotive"].joint_distance =
+        updated_joint_distance
+    data.raw["locomotive"]["electric-locomotive"].connection_distance =
+        updated_connection_length
+    data.raw["locomotive"]["electric-locomotive"].collision_box =
+        updated_collision_box
+    data.raw["locomotive"]["electric-locomotive-wagon"].joint_distance =
+        updated_joint_distance
+    data.raw["locomotive"]["electric-locomotive-wagon"].connection_distance =
+        updated_connection_length
+    data.raw["locomotive"]["electric-locomotive-wagon"].collision_box =
+        updated_collision_box
+    data.raw["cargo-wagon"]["electric-cargo-wagon"].joint_distance =
+        updated_joint_distance
+    data.raw["cargo-wagon"]["electric-cargo-wagon"].connection_distance =
+        updated_connection_length
+    data.raw["cargo-wagon"]["electric-cargo-wagon"].collision_box =
+        updated_collision_box
+    data.raw["fluid-wagon"]["electric-fluid-wagon"].joint_distance =
+        updated_joint_distance
+    data.raw["fluid-wagon"]["electric-fluid-wagon"].connection_distance =
+        updated_connection_length
+    data.raw["fluid-wagon"]["electric-fluid-wagon"].collision_box =
+        updated_collision_box
+end
+
 if settings.startup["train-battery-decay-enable-setting"].value == "true" then
     data:extend({
         {
