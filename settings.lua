@@ -7,6 +7,12 @@ data:extend({
         allowed_values = {"true", "false"}
     }, {
         type = "string-setting",
+        name = "extended-train-spacing",
+        setting_type = "startup",
+        default_value = "false",
+        allowed_values = {"true", "false"}
+    }, {
+        type = "string-setting",
         name = "train-battery-decay-enable-setting",
         setting_type = "startup",
         default_value = "true",

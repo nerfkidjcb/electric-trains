@@ -1,9 +1,9 @@
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.4
-Date: XX. 11. 2024
-  Bugfixes:
-    - Fixed strtup crash when loading game with Elvated Rails enabled and low sprite settings
+Date: 08. 11. 2024
+  Features:
+    - Added a startup setting to increase train spacing for those using big buildings from AAI Industry.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: 01. 11. 2024

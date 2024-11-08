@@ -53,6 +53,18 @@ if settings.startup["train-battery-pack-energy-density-setting"].value ==
         "240MJ"
 end
 
+if settings.startup["extended-train-spacing"].value == "true" then
+    local connection_length = 4 -- Adds 1 to normal 3, one tile each side.
+    data.raw["locomotive"]["electric-locomotive"].connection_distance =
+        connection_length
+    data.raw["locomotive"]["electric-locomotive-wagon"].connection_distance =
+        connection_length
+    data.raw["cargo-wagon"]["electric-cargo-wagon"].connection_distance =
+        connection_length
+    data.raw["fluid-wagon"]["electric-fluid-wagon"].connection_distance =
+        connection_length
+end
+
 if settings.startup["train-battery-decay-enable-setting"].value == "true" then
     data:extend({
         {
