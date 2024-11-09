@@ -20,7 +20,7 @@ data:extend({{
         name = "electric-locomotive",
         amount = 1
     }},
-    order = "a[train-system]-f[locomotive]"
+    order = "c[rolling-stock]-f[locomotive]"
 }, -- Electric Wagon Locomotive
 {
     type = "recipe",
@@ -41,7 +41,7 @@ data:extend({{
         name = "electric-locomotive-wagon",
         amount = 1
     }},
-    order = "a[train-system]-f[locomotiveb]"
+    order = "c[rolling-stock]-f[locomotiveb]"
 }, {
     type = "recipe",
     name = "recipe-electric-cargo-wagon",
@@ -61,7 +61,7 @@ data:extend({{
         name = "electric-cargo-wagon",
         amount = 1
     }},
-    order = "a[train-system]-h[cargo-wagon]"
+    order = "c[rolling-stock]-h[cargo-wagon]"
 }, {
     type = "recipe",
     name = "recipe-electric-fluid-wagon",
@@ -81,7 +81,7 @@ data:extend({{
         name = "electric-fluid-wagon",
         amount = 1
     }},
-    order = "a[train-system]-h[fluid-wagon]"
+    order = "c[rolling-stock]-h[fluid-wagon]"
 }, {
     type = "recipe",
     name = "electric-train-battery-charging-station",

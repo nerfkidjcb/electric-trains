@@ -1,11 +1,11 @@
 {
   "name": "electric-trains",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "title": "Electric Trains",
   "author": "NerfKidJcb",
   "factorio_version": "2.0",
   "description": "This should be overwritten by the Factorio mod page unless you downloaded this manually. Check out the link below :)",
-  "dependencies": ["base >= 2.0", "? space-age >= 0.2.0", "? quality >= 0.2.0"],
+  "dependencies": ["base >= 2.0", "? space-age >= 0.2.0"],
   "package": {
     "ignore": [
       ".crowdin.yml",

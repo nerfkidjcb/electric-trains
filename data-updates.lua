@@ -917,7 +917,6 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
         data.raw["item"]["electric-train-destroyed-battery-pack"].weight = 10 * kg
     end
     -- ----------------- Change the recipes now to use the electromagentics facility ---------------- --
-    data.raw["recipe"]["recipe-electric-locomotive"].subgroup = "fulgora-processes"
     data.raw["recipe"]["recipe-electric-locomotive"].category = "electromagnetics"
     data.raw["recipe"]["recipe-electric-locomotive"].allow_productivity = true
     data.raw["recipe"]["recipe-electric-locomotive"].ingredients = {{
@@ -945,7 +944,6 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
         name = "supercapacitor",
         amount = 5
     }}
-    data.raw["recipe"]["recipe-electric-locomotive-wagon"].subgroup = "fulgora-processes"
     data.raw["recipe"]["recipe-electric-locomotive-wagon"].category = "electromagnetics"
     data.raw["recipe"]["recipe-electric-locomotive-wagon"].allow_productivity = true
     data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients = {{
@@ -973,7 +971,6 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
         name = "supercapacitor",
         amount = 5
     }}
-    data.raw["recipe"]["recipe-electric-cargo-wagon"].subgroup = "fulgora-processes"
     data.raw["recipe"]["recipe-electric-cargo-wagon"].category = "electromagnetics"
     data.raw["recipe"]["recipe-electric-cargo-wagon"].allow_productivity = true
     data.raw["recipe"]["recipe-electric-cargo-wagon"].ingredients = {{
@@ -1001,7 +998,6 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
         name = "supercapacitor",
         amount = 1
     }}
-    data.raw["recipe"]["recipe-electric-fluid-wagon"].subgroup = "fulgora-processes"
     data.raw["recipe"]["recipe-electric-fluid-wagon"].category = "electromagnetics"
     data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients = {{
         type = "item",
