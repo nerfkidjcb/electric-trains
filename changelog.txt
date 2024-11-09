@@ -4,6 +4,8 @@ Version: 0.3.5
 Date: 08. 11. 2024
   Info:
     - Added Russian translation (Thanks to umbraphile for the PR)
+  Bugfixes:
+    - Fix startup bug appearing with Base game 2.0.16 where the item_sounds wasn't properly defined.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.4
 Date: 08. 11. 2024
