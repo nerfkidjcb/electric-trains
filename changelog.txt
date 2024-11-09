@@ -1,7 +1,7 @@
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.5
-Date: 08. 11. 2024
+Date: 09. 11. 2024
   Info:
     - Added Russian translation (Thanks to umbraphile for the PR)
   Bugfixes:
