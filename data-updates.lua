@@ -44,9 +44,9 @@ if settings.startup["train-battery-pack-energy-density-setting"].value == "80 MJ
 end
 
 if settings.startup["extended-train-spacing"].value == "true" then
-    local updated_joint_distance = 6 -- Adds 2 tiles in between where the wheels are mounted
-    local updated_connection_length = 3.2 -- Account for the increased joint distance
-    local updated_collision_box = {{-0.6, -3.6}, {0.6, 3.6}}
+    local updated_joint_distance = 5.6
+    local updated_connection_length = 3.4
+    local updated_collision_box = {{-0.6, -3.4}, {0.6, 3.4}}
 
     data.raw["locomotive"]["electric-locomotive"].joint_distance = updated_joint_distance
     data.raw["locomotive"]["electric-locomotive"].connection_distance = updated_connection_length
