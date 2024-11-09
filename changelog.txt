@@ -1,7 +1,7 @@
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.6
-Date: XX. 11. 2024
+Date: 09. 11. 2024
   Info:
     - Moved Electric rolling stock back to the logistics section of the crafting GUI. Was previously moved when Space Age is enabled.
     - Shifted these items to be listed after the base game rolling stock in both the crafting and logistics GUI.
