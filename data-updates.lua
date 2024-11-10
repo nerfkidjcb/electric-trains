@@ -517,7 +517,7 @@ data:extend({{
     unit = {
         count = 4000,
         ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
-                       {"production-science-pack", 1}, {"utility-science-pack", 1}},
+                       {"production-science-pack", 1}, {"utility-science-pack", 1}, {"military-science-pack", 1}},
         time = 60
     }
 }})
@@ -701,7 +701,8 @@ if mods["space-exploration"] or (mods["space-age"] and settings.startup["lock-be
     -- Empty the ingredients table.
     data.raw["technology"]["tech-electric-artillery-wagon"].unit.ingredients = {}
     data.raw["technology"]["tech-electric-artillery-wagon"].unit.ingredients =
-        {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}}
+        {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+         {"military-science-pack", 1}}
     data.raw["technology"]["tech-electric-artillery-wagon"].unit.count = 4000
     -- Remove the old science prerequisites.
     data.raw["technology"]["tech-electric-artillery-wagon"].prerequisites = {}
