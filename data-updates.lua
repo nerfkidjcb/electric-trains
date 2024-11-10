@@ -970,7 +970,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     data.raw["locomotive"]["electric-locomotive-wagon"].surface_conditions = one_gravity_condition
     data.raw["cargo-wagon"]["electric-cargo-wagon"].surface_conditions = one_gravity_condition
     data.raw["fluid-wagon"]["electric-fluid-wagon"].surface_conditions = one_gravity_condition
-    data.raw["fluid-wagon"]["electric-artillery-wagon"].surface_conditions = one_gravity_condition
+    data.raw["artillery-wagon"]["electric-artillery-wagon"].surface_conditions = one_gravity_condition
     -- --------------------------- Add weights and default import planets --------------------------- --
     data.raw["item-with-entity-data"]["electric-locomotive"].default_import_location = "fulgora"
     data.raw["item-with-entity-data"]["electric-locomotive"].weight = 1000 * kg
@@ -980,8 +980,8 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     data.raw["item-with-entity-data"]["electric-cargo-wagon"].weight = 1000 * kg
     data.raw["item-with-entity-data"]["electric-fluid-wagon"].default_import_location = "fulgora"
     data.raw["item-with-entity-data"]["electric-fluid-wagon"].weight = 1000 * kg
-    data.raw["item"]["electric-artillery-wagon"].default_import_location = "fulgora"
-    data.raw["item"]["electric-artillery-wagon"].weight = 1000 * kg
+    data.raw["item-with-entity-data"]["electric-artillery-wagon"].default_import_location = "fulgora"
+    data.raw["item-with-entity-data"]["electric-artillery-wagon"].weight = 1000 * kg
     data.raw["item"]["electric-train-battery-charging-station"].default_import_location = "fulgora"
     data.raw["item"]["electric-train-battery-charging-station"].weight = 100 * kg
     data.raw["item"]["electric-train-battery-pack"].default_import_location = "fulgora"
