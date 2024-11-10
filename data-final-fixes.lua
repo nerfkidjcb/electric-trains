@@ -1,8 +1,7 @@
 -- Inherit the base locomotive equipment grid.
 local function inherit_grid(base_name, copy_to_name)
     -- Ensure that base technologies exist.
-    if not data.raw[base_name] or not data.raw[base_name][base_name] or
-        not data.raw[base_name][copy_to_name] then
+    if not data.raw[base_name] or not data.raw[base_name][base_name] or not data.raw[base_name][copy_to_name] then
         -- log("Technology doesn't exist")
         return
     end

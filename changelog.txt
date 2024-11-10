@@ -1,10 +1,34 @@
 
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: 09. 11. 2024
+  Bugfixes:
+    - Fixed issue with rolling stock spacing when extended spacing enabled.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 09. 11. 2024
+  Info:
+    - Moved Electric rolling stock back to the logistics section of the crafting GUI. Was previously moved when Space Age is enabled.
+    - Shifted these items to be listed after the base game rolling stock in both the crafting and logistics GUI.
+    - Removed quality as an optional dependency, as causing it to load first effectively removes the ability to recycle destroyed packs. (Make a thread if you want to hear more about this)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 09. 11. 2024
+  Info:
+    - Added Russian translation (Thanks to umbraphile for the PR)
+  Bugfixes:
+    - Fix startup bug appearing with Base game 2.0.16 where the item_sounds wasn't properly defined.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 08. 11. 2024
+  Features:
+    - Added a startup setting to increase train spacing for those using big buildings from AAI Industry.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
-Date: 1. 11. 2024
+Date: 01. 11. 2024
   Bugfixes:
     - Fixed crash when powerpack decay disabled and Space Age was enabled.
-    - Fixed issue where electric locomotive wagon was ommitted from speed startup settings.
+    - Fixed issue where electric locomotive wagon was omitted from speed startup settings.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: 31. 10. 2024
@@ -13,7 +37,7 @@ Date: 31. 10. 2024
     - Added zh-CN localisation (Thanks to Houraiji_Kyuusyou for the PR)
     - Formatted the codebase properly (finally)
   Features:
-    - (Space Age) Added a startup setting (default true) to lock electric train tech behind electromagnetism. This also update recipes to utiluse electromagnetic facilities and newer materials
+    - (Space Age) Added a startup setting (default true) to lock electric train tech behind electromagnetism. This also update recipes to utilise electromagnetic facilities and newer materials
     - (Space Age) You can only stack one electric Locomotive/Wagon in a rocket at a time. (I would encourage crafting on site)
     - Added electrical pickup/placement inventory sounds
   Bugfixes:

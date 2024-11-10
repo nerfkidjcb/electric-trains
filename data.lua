@@ -8,12 +8,16 @@ require("prototypes/prototype-initialization")
 require("vanilla-changes/recipes")
 
 if mods["elevated-rails"] then
-    require(
-        "__electric-trains__.prototypes.entities.sloped-electric-trains-updates").apply_all_base()
+    require("__electric-trains__.prototypes.entities.sloped-electric-trains-updates").apply_all_base()
 end
 
-data:extend({
-    {type = "fuel-category", name = "electrical"},
-    {type = "recipe-category", name = "electrical"},
-    {type = "recipe-category", name = "faster-electrical"}
-})
+data:extend({{
+    type = "fuel-category",
+    name = "electrical"
+}, {
+    type = "recipe-category",
+    name = "electrical"
+}, {
+    type = "recipe-category",
+    name = "faster-electrical"
+}})
