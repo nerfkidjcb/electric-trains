@@ -50,4 +50,15 @@ data:extend({{
     inventory_move_sound = item_sounds.metal_large_inventory_move,
     pick_sound = item_sounds.locomotive_inventory_pickup,
     drop_sound = item_sounds.metal_large_inventory_move
+}, {
+    type = "item-with-entity-data",
+    name = "electric-artillery-wagon",
+    icon = "__electric-trains__/graphics/icons/electric-artillery-wagon.png",
+    subgroup = "train-transport",
+    order = "c[rolling-stock]-j[artillery-wagon]",
+    inventory_move_sound = item_sounds.artillery_large_inventory_move,
+    pick_sound = item_sounds.artillery_large_inventory_pickup,
+    drop_sound = item_sounds.artillery_large_inventory_move,
+    place_result = "electric-artillery-wagon",
+    stack_size = 5
 }})

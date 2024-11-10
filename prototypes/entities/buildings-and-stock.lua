@@ -932,25 +932,26 @@ data:extend({ -- Battery charging interface
                 lines_per_file = 8,
                 shift = {0, wagon_vertical_shift},
                 scale = cargo_wagon_scale
-            }, {
-                flags = {"mask"},
-                priority = "very-low",
-                dice = 4,
-                width = 1000,
-                height = 600,
-                direction_count = 128,
-                allow_low_quality_rotation = true,
-                back_equals_front = true,
-                apply_runtime_tint = true,
-                shift = {0, wagon_vertical_shift},
-                filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_cargo_wagon_mask_1.png",
-                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_cargo_wagon_mask_2.png",
-                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_cargo_wagon_mask_3.png",
-                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_cargo_wagon_mask_4.png"},
-                line_length = 4,
-                lines_per_file = 8,
-                scale = cargo_wagon_scale
-            }, {
+            }, --  {
+            --     flags = {"mask"},
+            --     priority = "very-low",
+            --     dice = 4,
+            --     width = 1000,
+            --     height = 600,
+            --     direction_count = 128,
+            --     allow_low_quality_rotation = true,
+            --     back_equals_front = true,
+            --     apply_runtime_tint = true,
+            --     shift = {0, wagon_vertical_shift},
+            --     filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_cargo_wagon_mask_1.png",
+            --                  "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_cargo_wagon_mask_2.png",
+            --                  "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_cargo_wagon_mask_3.png",
+            --                  "__electric-trains__/graphics/entity/vehicles/space-trains/hr_space_cargo_wagon_mask_4.png"},
+            --     line_length = 4,
+            --     lines_per_file = 8,
+            --     scale = cargo_wagon_scale
+            -- },
+            {
                 flags = {"shadow"},
                 priority = "very-low",
                 dice = 4,
@@ -1124,4 +1125,184 @@ data:extend({ -- Battery charging interface
     sound_minimum_speed = 0.1,
     vehicle_impact_sound = sounds.generic_impact,
     water_reflection = locomotive_reflection()
+}, {
+    type = "artillery-wagon",
+    name = "electric-artillery-wagon",
+    icon = "__base__/graphics/icons/artillery-wagon.png",
+    flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
+    inventory_size = 1,
+    ammo_stack_limit = 120,
+    minable = {
+        mining_time = 1,
+        result = "electric-artillery-wagon"
+    },
+    mined_sound = sounds.deconstruct_large(0.8),
+    max_health = 800,
+    deliver_category = "vehicle",
+    corpse = "artillery-wagon-remnants",
+    dying_explosion = "artillery-wagon-explosion",
+    collision_box = {{-0.6, -2.4}, {0.6, 2.4}},
+    selection_box = {{-1, -2.703125}, {1, 3.296875}},
+    damaged_trigger_effect = hit_effects.entity(),
+    vertical_selection_shift = -0.796875,
+    weight = 6000,
+    max_speed = train_speed,
+    braking_force = 3,
+    friction_force = 0.50,
+    air_resistance = 0.015,
+    connection_distance = 3,
+    joint_distance = 4,
+    energy_per_hit_point = 2,
+    gun = "artillery-wagon-cannon",
+    turret_rotation_speed = 0.002,
+    turn_after_shooting_cooldown = 60,
+    cannon_parking_frame_count = 8,
+    cannon_parking_speed = 0.25,
+    manual_range_modifier = 2.5,
+    icon_draw_specification = {
+        scale = 0.7,
+        shift = {0, -0.5}
+    },
+    resistances = {{
+        type = "fire",
+        decrease = 15,
+        percent = 50
+    }, {
+        type = "physical",
+        decrease = 15,
+        percent = 30
+    }, {
+        type = "impact",
+        decrease = 50,
+        percent = 50
+    }, {
+        type = "explosion",
+        decrease = 15,
+        percent = 30
+    }, {
+        type = "acid",
+        decrease = 3,
+        percent = 20
+    }},
+    back_light = rolling_stock_back_light(),
+    stand_by_light = rolling_stock_stand_by_light(),
+    color = {
+        r = 0.43,
+        g = 0.23,
+        b = 0,
+        a = 0.5
+    },
+    pictures = {
+        rotated = {
+            layers = {util.sprite_load("__base__/graphics/entity/artillery-wagon/artillery-wagon-base", {
+                dice = 4,
+                priority = "very-low",
+                allow_low_quality_rotation = true,
+                direction_count = 256,
+                scale = 0.5,
+                usage = "train"
+            }), util.sprite_load("__base__/graphics/entity/artillery-wagon/artillery-wagon-base-shadow", {
+                dice = 4,
+                priority = "very-low",
+                allow_low_quality_rotation = true,
+                draw_as_shadow = true,
+                direction_count = 256,
+                scale = 0.5,
+                usage = "train"
+            })}
+        }
+    },
+    cannon_barrel_pictures = {
+        rotated = {
+            layers = {util.sprite_load("__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-barrel", {
+                priority = "very-low",
+                allow_low_quality_rotation = true,
+                direction_count = 256,
+                scale = 0.5,
+                usage = "train"
+            }), util.sprite_load("__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-barrel-shadow", {
+                priority = "very-low",
+                allow_low_quality_rotation = true,
+                draw_as_shadow = true,
+                direction_count = 256,
+                scale = 0.5,
+                usage = "train"
+            })}
+        }
+    },
+    cannon_base_pictures = {
+        rotated = {
+            layers = {util.sprite_load("__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base", {
+                priority = "very-low",
+                allow_low_quality_rotation = true,
+                direction_count = 256,
+                scale = 0.5,
+                usage = "train"
+            }), util.sprite_load("__base__/graphics/entity/artillery-wagon/artillery-wagon-cannon-base-shadow", {
+                priority = "very-low",
+                allow_low_quality_rotation = true,
+                draw_as_shadow = true,
+                direction_count = 256,
+                scale = 0.5,
+                usage = "train"
+            })}
+        }
+    },
+    cannon_base_height = 1.672049,
+    cannon_base_shift_when_vertical = -2.5357685,
+    cannon_base_shift_when_horizontal = -2.0702245,
+
+    cannon_barrel_recoil_shiftings = { -- East-North-Up (when cannon is facing North)
+    {0.0100, -0.0000, -0.0000}, {0.0093, -0.1973, -0.0878}, {0.0088, -0.3945, -0.1755}, {0.0083, -0.5918, -0.2635},
+    {0.0078, -0.7888, -0.3513}, {0.0070, -0.9860, -0.4390}, {0.0070, -0.9828, -0.4375}, {0.0070, -0.9753, -0.4343},
+    {0.0073, -0.9635, -0.4290}, {0.0073, -0.9475, -0.4220}, {0.0073, -0.9278, -0.4130}, {0.0073, -0.9043, -0.4025},
+    {0.0075, -0.8770, -0.3905}, {0.0075, -0.8463, -0.3768}, {0.0075, -0.8123, -0.3618}, {0.0078, -0.7755, -0.3453},
+    {0.0078, -0.7360, -0.3278}, {0.0080, -0.6940, -0.3090}, {0.0080, -0.6498, -0.2893}, {0.0083, -0.6040, -0.2690},
+    {0.0083, -0.5565, -0.2478}, {0.0085, -0.5080, -0.2263}, {0.0085, -0.4588, -0.2043}, {0.0088, -0.4088, -0.1820},
+    {0.0088, -0.3590, -0.1598}, {0.0090, -0.3095, -0.1378}, {0.0093, -0.2605, -0.1160}, {0.0093, -0.2128, -0.0948},
+    {0.0095, -0.1663, -0.0740}, {0.0095, -0.1213, -0.0540}, {0.0098, -0.0785, -0.0350}, {0.0098, -0.0380, -0.0170}},
+    cannon_barrel_light_direction = {0.5976251, -0.0242053, -0.8014102}, -- ENU
+
+    minimap_representation = {
+        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-artillery-wagon-minimap-representation.png",
+        flags = {"icon"},
+        size = {20, 40},
+        scale = 0.5
+    },
+    selected_minimap_representation = {
+        filename = "__electric-trains__/graphics/entity/vehicles/space-trains/electric-artillery-wagon-selected-minimap-representation.png",
+        flags = {"icon"},
+        size = {20, 40},
+        scale = 0.5
+    },
+    wheels = space_train_wheels,
+    -- drive_over_tie_trigger = drive_over_tie(),
+    -- drive_over_tie_trigger_minimal_speed = 0.5,
+    -- tie_distance = 50,
+    working_sound = sounds.train_wagon_wheels,
+    crash_trigger = crash_trigger(),
+    open_sound = sounds.artillery_open,
+    close_sound = sounds.artillery_close,
+    rotating_sound = {
+        sound = {
+            filename = "__base__/sound/fight/artillery-rotation-loop.ogg",
+            volume = 0.2
+        },
+        stopped_sound = {
+            filename = "__base__/sound/fight/artillery-rotation-stop.ogg"
+        }
+    },
+    water_reflection = {
+        pictures = {
+            filename = "__base__/graphics/entity/artillery-wagon/reflection/artillery-wagon-reflection.png",
+            priority = "extra-high",
+            width = 32,
+            height = 52,
+            shift = util.by_pixel(0, 40),
+            variation_count = 1,
+            scale = 5
+        },
+        rotate = true,
+        orientation_to_variation = false
+    }
 }})

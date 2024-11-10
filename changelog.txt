@@ -1,5 +1,14 @@
 
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+Date: 10. 11. 2024
+  Info:
+    - Removed cargo wagon tint mask
+    - Adjusted offset of elevated locomotive sprite
+    - Updated Russian locale for extended spacing setting
+  Features:
+    - Added long awaited (at least for me) electric artillery wagon. Get to your biter negotations faster, and with maglev. 20% more shell capacity, faster rotations and increased top speed and health.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.7
 Date: 09. 11. 2024
   Bugfixes:
