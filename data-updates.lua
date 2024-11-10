@@ -7,20 +7,20 @@ if settings.startup["electric-locomotive-speed-setting"].value == "238 km/h (Van
     data.raw["locomotive"]["electric-locomotive-wagon"].max_speed = 1.1
     data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 1.1
     data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 1.1
-    data.raw["fluid-wagon"]["electric-artillery-wagon"].max_speed = 1.1
+    data.raw["artillery-wagon"]["electric-artillery-wagon"].max_speed = 1.1
 
 elseif settings.startup["electric-locomotive-speed-setting"].value == "378 km/h" then
     data.raw["locomotive"]["electric-locomotive"].max_speed = 1.75
     data.raw["locomotive"]["electric-locomotive-wagon"].max_speed = 1.75
     data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 1.75
     data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 1.75
-    data.raw["fluid-wagon"]["electric-artillery-wagon"].max_speed = 1.75
+    data.raw["artillery-wagon"]["electric-artillery-wagon"].max_speed = 1.75
 elseif settings.startup["electric-locomotive-speed-setting"].value == "714 km/h (Extended)" then
     data.raw["locomotive"]["electric-locomotive"].max_speed = 3.3
     data.raw["locomotive"]["electric-locomotive-wagon"].max_speed = 3.3
     data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 3.3
     data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 3.3
-    data.raw["fluid-wagon"]["electric-artillery-wagon"].max_speed = 3.3
+    data.raw["artillery-wagon"]["electric-artillery-wagon"].max_speed = 3.3
 
 end
 
@@ -65,9 +65,9 @@ if settings.startup["extended-train-spacing"].value == "true" then
     data.raw["fluid-wagon"]["electric-fluid-wagon"].joint_distance = updated_joint_distance
     data.raw["fluid-wagon"]["electric-fluid-wagon"].connection_distance = updated_connection_length
     data.raw["fluid-wagon"]["electric-fluid-wagon"].collision_box = updated_collision_box
-    data.raw["fluid-wagon"]["electric-artillery-wagon"].joint_distance = updated_joint_distance
-    data.raw["fluid-wagon"]["electric-artillery-wagon"].connection_distance = updated_connection_length
-    data.raw["fluid-wagon"]["electric-artillery-wagon"].collision_box = updated_collision_box
+    data.raw["artillery-wagon"]["electric-artillery-wagon"].joint_distance = updated_joint_distance
+    data.raw["artillery-wagon"]["electric-artillery-wagon"].connection_distance = updated_connection_length
+    data.raw["artillery-wagon"]["electric-artillery-wagon"].collision_box = updated_collision_box
 
 end
 
@@ -630,7 +630,7 @@ if mods["space-exploration"] or (mods["space-age"] and settings.startup["lock-be
         data.raw["locomotive"]["electric-locomotive-wagon"].surface_conditions = one_gravity_condition
         data.raw["cargo-wagon"]["electric-cargo-wagon"].surface_conditions = one_gravity_condition
         data.raw["fluid-wagon"]["electric-fluid-wagon"].surface_conditions = one_gravity_condition
-        data.raw["fluid-wagon"]["electric-artillery-wagon"].surface_conditions = one_gravity_condition
+        data.raw["artillery-wagon"]["electric-artillery-wagon"].surface_conditions = one_gravity_condition
         --------------------------- Add weights and default import planets --------------------------- --
         data.raw["item-with-entity-data"]["electric-locomotive"].default_import_location = "fulgora"
         data.raw["item-with-entity-data"]["electric-locomotive"].weight = 1000 * kg
