@@ -101,18 +101,18 @@ updates.electric_locomotive_wagon = {
                     direction_count = 80,
                     scale = corrected_train_scale * 1.07,
                     usage = "train"
-                }), --       util.sprite_load(
-            -- "__electric-trains__/graphics/entity/elevated-rails/space-cargo-wagon/space-cargo-wagon-sloped-mask", {
-            --     dice = 4,
-            --     priority = "very-low",
-            --     flags = {"mask"},
-            --     apply_runtime_tint = true,
-            --     tint_as_overlay = true,
-            --     direction_count = 80,
-            --     scale = corrected_train_scale * 1.07,
-            --     usage = "train"
-            -- }),
-            util.sprite_load(
+                }),
+                      util.sprite_load(
+                "__electric-trains__/graphics/entity/elevated-rails/space-cargo-wagon/space-cargo-wagon-sloped-mask", {
+                    dice = 4,
+                    priority = "very-low",
+                    flags = {"mask"},
+                    apply_runtime_tint = true,
+                    tint_as_overlay = true,
+                    direction_count = 80,
+                    scale = corrected_train_scale * 1.07,
+                    usage = "train"
+                }), util.sprite_load(
                 "__electric-trains__/graphics/entity/elevated-rails/space-cargo-wagon/space-cargo-wagon-sloped-shadow",
                 {
                     dice = 4,
