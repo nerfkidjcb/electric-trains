@@ -7,16 +7,21 @@ if settings.startup["electric-locomotive-speed-setting"].value == "238 km/h (Van
     data.raw["locomotive"]["electric-locomotive-wagon"].max_speed = 1.1
     data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 1.1
     data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 1.1
+    data.raw["fluid-wagon"]["electric-artillery-wagon"].max_speed = 1.1
+
 elseif settings.startup["electric-locomotive-speed-setting"].value == "378 km/h" then
     data.raw["locomotive"]["electric-locomotive"].max_speed = 1.75
     data.raw["locomotive"]["electric-locomotive-wagon"].max_speed = 1.75
     data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 1.75
     data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 1.75
+    data.raw["fluid-wagon"]["electric-artillery-wagon"].max_speed = 1.75
 elseif settings.startup["electric-locomotive-speed-setting"].value == "714 km/h (Extended)" then
     data.raw["locomotive"]["electric-locomotive"].max_speed = 3.3
     data.raw["locomotive"]["electric-locomotive-wagon"].max_speed = 3.3
     data.raw["cargo-wagon"]["electric-cargo-wagon"].max_speed = 3.3
     data.raw["fluid-wagon"]["electric-fluid-wagon"].max_speed = 3.3
+    data.raw["fluid-wagon"]["electric-artillery-wagon"].max_speed = 3.3
+
 end
 
 if settings.startup["electric-cargo-wagon-capacity-setting"].value == "40 Slots (Vanilla)" then
@@ -60,6 +65,10 @@ if settings.startup["extended-train-spacing"].value == "true" then
     data.raw["fluid-wagon"]["electric-fluid-wagon"].joint_distance = updated_joint_distance
     data.raw["fluid-wagon"]["electric-fluid-wagon"].connection_distance = updated_connection_length
     data.raw["fluid-wagon"]["electric-fluid-wagon"].collision_box = updated_collision_box
+    data.raw["fluid-wagon"]["electric-artillery-wagon"].joint_distance = updated_joint_distance
+    data.raw["fluid-wagon"]["electric-artillery-wagon"].connection_distance = updated_connection_length
+    data.raw["fluid-wagon"]["electric-artillery-wagon"].collision_box = updated_collision_box
+
 end
 
 if settings.startup["train-battery-decay-enable-setting"].value == "true" then
@@ -494,6 +503,25 @@ data:extend({{
     }
 }})
 
+-- Electric Artillery Wagon
+data:extend({{
+    type = "technology",
+    name = "tech-electric-artillery-wagon",
+    icon = "__electric-trains__/graphics/icons/electric-artillery-wagon.png",
+    icon_size = 64,
+    effects = {{
+        type = "unlock-recipe",
+        recipe = "recipe-electric-artillery-wagon"
+    }},
+    prerequisites = {"tech-electric-trains", "artillery"},
+    unit = {
+        count = 4000,
+        ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+                       {"production-science-pack", 1}, {"utility-science-pack", 1}},
+        time = 60
+    }
+}})
+
 -- Speed battery packs
 data:extend({{
     type = "technology",
@@ -602,6 +630,7 @@ if mods["space-exploration"] or (mods["space-age"] and settings.startup["lock-be
         data.raw["locomotive"]["electric-locomotive-wagon"].surface_conditions = one_gravity_condition
         data.raw["cargo-wagon"]["electric-cargo-wagon"].surface_conditions = one_gravity_condition
         data.raw["fluid-wagon"]["electric-fluid-wagon"].surface_conditions = one_gravity_condition
+        data.raw["fluid-wagon"]["electric-artillery-wagon"].surface_conditions = one_gravity_condition
         --------------------------- Add weights and default import planets --------------------------- --
         data.raw["item-with-entity-data"]["electric-locomotive"].default_import_location = "fulgora"
         data.raw["item-with-entity-data"]["electric-locomotive"].weight = 1000 * kg
@@ -667,6 +696,19 @@ if mods["space-exploration"] or (mods["space-age"] and settings.startup["lock-be
     data.raw["technology"]["tech-electric-locomotive-wagon"].prerequisites = {"logistic-science-pack",
                                                                               "chemical-science-pack",
                                                                               "tech-electric-trains"}
+
+    -- Update the tech-electric-artillery-wagon technology.
+    -- Empty the ingredients table.
+    data.raw["technology"]["tech-electric-artillery-wagon"].unit.ingredients = {}
+    data.raw["technology"]["tech-electric-artillery-wagon"].unit.ingredients =
+        {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}}
+    data.raw["technology"]["tech-electric-artillery-wagon"].unit.count = 4000
+    -- Remove the old science prerequisites.
+    data.raw["technology"]["tech-electric-artillery-wagon"].prerequisites = {}
+    -- Add the new science prerequisites.
+    data.raw["technology"]["tech-electric-artillery-wagon"].prerequisites = {"logistic-science-pack",
+                                                                             "chemical-science-pack",
+                                                                             "tech-electric-trains"}
 
     -- Update the tech-speed-battery-pack technology.
     -- Empty the ingredients table.
@@ -807,6 +849,34 @@ if mods["space-exploration"] or (mods["space-age"] and settings.startup["lock-be
         amount = 1
     }}
 
+    -- Electric Artillery Wagon
+    data.raw["recipe"]["recipe-electric-artillery-wagon"].ingredients = {{
+        type = "item",
+        name = "artillery-wagon",
+        amount = 1
+    }, {
+        type = "item",
+        name = 'electric-engine-unit',
+        amount = 20
+
+    }, {
+        type = "item",
+        name = "iron-gear-wheel",
+        amount = 20
+    }, {
+        type = "item",
+        name = "steel-plate",
+        amount = 20
+    }, {
+        type = "item",
+        name = "pipe",
+        amount = 16
+    }, {
+        type = "item",
+        name = "advanced-circuit",
+        amount = 10
+    }}
+
     -- Electric Fluid Wagon
     data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients = {{
         type = "item",
@@ -899,6 +969,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     data.raw["locomotive"]["electric-locomotive-wagon"].surface_conditions = one_gravity_condition
     data.raw["cargo-wagon"]["electric-cargo-wagon"].surface_conditions = one_gravity_condition
     data.raw["fluid-wagon"]["electric-fluid-wagon"].surface_conditions = one_gravity_condition
+    data.raw["fluid-wagon"]["electric-artillery-wagon"].surface_conditions = one_gravity_condition
     -- --------------------------- Add weights and default import planets --------------------------- --
     data.raw["item-with-entity-data"]["electric-locomotive"].default_import_location = "fulgora"
     data.raw["item-with-entity-data"]["electric-locomotive"].weight = 1000 * kg
@@ -908,6 +979,8 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     data.raw["item-with-entity-data"]["electric-cargo-wagon"].weight = 1000 * kg
     data.raw["item-with-entity-data"]["electric-fluid-wagon"].default_import_location = "fulgora"
     data.raw["item-with-entity-data"]["electric-fluid-wagon"].weight = 1000 * kg
+    data.raw["item"]["electric-artillery-wagon"].default_import_location = "fulgora"
+    data.raw["item"]["electric-artillery-wagon"].weight = 1000 * kg
     data.raw["item"]["electric-train-battery-charging-station"].default_import_location = "fulgora"
     data.raw["item"]["electric-train-battery-charging-station"].weight = 100 * kg
     data.raw["item"]["electric-train-battery-pack"].default_import_location = "fulgora"
@@ -970,6 +1043,42 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
         type = "item",
         name = "supercapacitor",
         amount = 5
+    }}
+    data.raw["recipe"]["recipe-electric-artillery-wagon"].category = "electromagnetics"
+    data.raw["recipe"]["recipe-electric-artillery-wagon"].allow_productivity = true
+    data.raw["recipe"]["recipe-electric-artillery-wagon"].ingredients = {{
+        type = "item",
+        name = "artillery-wagon",
+        amount = 1
+    }, {
+        type = "item",
+        name = 'electric-engine-unit',
+        amount = 20
+
+    }, {
+        type = "item",
+        name = "iron-gear-wheel",
+        amount = 20
+    }, {
+        type = "item",
+        name = "steel-plate",
+        amount = 20
+    }, {
+        type = "item",
+        name = "pipe",
+        amount = 16
+    }, {
+        type = "item",
+        name = "processing-unit",
+        amount = 10
+    }, {
+        type = "item",
+        name = "superconductor",
+        amount = 5
+    }, {
+        type = "item",
+        name = "supercapacitor",
+        amount = 1
     }}
     data.raw["recipe"]["recipe-electric-cargo-wagon"].category = "electromagnetics"
     data.raw["recipe"]["recipe-electric-cargo-wagon"].allow_productivity = true
@@ -1217,6 +1326,19 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     data.raw["technology"]["tech-electric-locomotive-wagon"].prerequisites = {}
     -- Add the new science prerequisites.
     data.raw["technology"]["tech-electric-locomotive-wagon"].prerequisites = {"tech-electric-trains"}
+
+    -- Update the tech-electric-artillery-wagon technology.
+    -- Empty the ingredients table.
+    data.raw["technology"]["tech-electric-artillery-wagon"].unit.ingredients = {}
+    data.raw["technology"]["tech-electric-artillery-wagon"].unit.ingredients =
+        {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+         {"production-science-pack", 1}, {"utility-science-pack", 1}, {"space-science-pack", 1},
+         {"electromagnetic-science-pack", 1}, {"military-science-pack", 1}, {"metallurgic-science-pack", 1}}
+    data.raw["technology"]["tech-electric-artillery-wagon"].unit.count = 4000
+    -- Remove the old science prerequisites.
+    data.raw["technology"]["tech-electric-artillery-wagon"].prerequisites = {}
+    -- Add the new science prerequisites.
+    data.raw["technology"]["tech-electric-artillery-wagon"].prerequisites = {"tech-electric-trains", "artillery"}
 
     -- Update the tech-speed-battery-pack technology.
     -- Empty the ingredients table.

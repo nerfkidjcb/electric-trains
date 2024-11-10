@@ -84,6 +84,42 @@ data:extend({{
     order = "c[rolling-stock]-h[fluid-wagon]"
 }, {
     type = "recipe",
+    name = "recipe-electric-artillery-wagon",
+    energy_required = 60,
+    enabled = false,
+    ingredients = {{
+        type = "item",
+        name = "artillery-wagon",
+        amount = 1
+    }, {
+        type = "item",
+        name = 'electric-engine-unit',
+        amount = 20
+
+    }, {
+        type = "item",
+        name = "iron-gear-wheel",
+        amount = 20
+    }, {
+        type = "item",
+        name = "steel-plate",
+        amount = 20
+    }, {
+        type = "item",
+        name = "pipe",
+        amount = 16
+    }, {
+        type = "item",
+        name = "processing-unit",
+        amount = 10
+    }},
+    results = {{
+        type = "item",
+        name = "electric-artillery-wagon",
+        amount = 1
+    }}
+}, {
+    type = "recipe",
     name = "electric-train-battery-charging-station",
     energy_required = 60,
     enabled = false,

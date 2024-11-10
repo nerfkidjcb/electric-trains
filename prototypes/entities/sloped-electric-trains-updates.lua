@@ -205,10 +205,77 @@ updates.fluid_wagon = {
     }
 }
 
+updates.artillery_wagon = {
+    wheels = updates.wheels,
+    pictures = {
+        slope_angle_between_frames = 1.25,
+        sloped = {
+            layers = {util.sprite_load("__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base",
+                {
+                    dice = 4,
+                    priority = "very-low",
+                    direction_count = 160,
+                    scale = 0.5,
+                    usage = "train"
+                }),
+                      util.sprite_load(
+                "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-shadow", {
+                    dice = 4,
+                    priority = "very-low",
+                    draw_as_shadow = true,
+                    direction_count = 160,
+                    scale = 0.5,
+                    usage = "train"
+                })}
+        }
+    },
+    cannon_base_pictures = {
+        slope_angle_between_frames = 1.25,
+        sloped = {
+            layers = {util.sprite_load(
+                "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base", {
+                    priority = "very-low",
+                    direction_count = 160,
+                    scale = 0.5,
+                    usage = "train"
+                }),
+                      util.sprite_load(
+                "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-shadow", {
+                    priority = "very-low",
+                    draw_as_shadow = true,
+                    direction_count = 160,
+                    scale = 0.5,
+                    usage = "train"
+                })}
+        }
+    },
+    cannon_barrel_pictures = {
+        slope_angle_between_frames = 1.25,
+        sloped = {
+            layers = {util.sprite_load(
+                "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel", {
+                    priority = "very-low",
+                    direction_count = 160,
+                    scale = 0.5,
+                    usage = "train"
+                }),
+                      util.sprite_load(
+                "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-shadow", {
+                    priority = "very-low",
+                    draw_as_shadow = true,
+                    direction_count = 160,
+                    scale = 0.5,
+                    usage = "train"
+                })}
+        }
+    }
+}
+
 updates.apply_all_base = function()
     meld(data.raw["locomotive"]["electric-locomotive"], updates.locomotive)
     meld(data.raw["cargo-wagon"]["electric-cargo-wagon"], updates.cargo_wagon)
     meld(data.raw["fluid-wagon"]["electric-fluid-wagon"], updates.fluid_wagon)
     meld(data.raw["locomotive"]["electric-locomotive-wagon"], updates.electric_locomotive_wagon)
+    meld(data.raw["artillery-wagon"]["electric-artillery-wagon"], updates.artillery_wagon)
 end
 return updates
