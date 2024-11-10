@@ -5,6 +5,7 @@ Date: 10. 11. 2024
   Info:
     - Removed cargo wagon tint mask
     - Adjusted offset of elevated locomotive sprite
+    - Updated Russian locale for extended spacing setting
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.7
 Date: 09. 11. 2024
