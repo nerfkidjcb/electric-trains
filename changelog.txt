@@ -1,4 +1,8 @@
-
+---------------------------------------------------------------------------------------------------
+Version: 0.3.10
+Date: 02. 12. 2024
+  Bugfixes:
+    - Fixed missing artillery prerequisite in space age when tech is locked behind electromagnetics
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.9
 Date: 10. 11. 2024
