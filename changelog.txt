@@ -1,4 +1,10 @@
-
+---------------------------------------------------------------------------------------------------
+Version: 0.3.10
+Date: 02. 12. 2024
+  Bugfixes:
+    - Fixed missing artillery prerequisite in space age when tech is locked behind electromagnetics
+  Info:
+    - Updated zh-CN localisation (Thanks to Houraiji_Kyuusyou)
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.9
 Date: 10. 11. 2024
