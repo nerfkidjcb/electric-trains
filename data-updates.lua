@@ -76,18 +76,12 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
         type = "item",
         name = "electric-train-destroyed-battery-pack",
         icon = "__electric-trains__/graphics/icons/destroyed-battery.png",
-        icon_size = 128,
+        icon_size = 64,
         pictures = {
             layers = {{
-                size = 128,
+                size = 64,
                 filename = "__electric-trains__/graphics/icons/destroyed-battery.png",
-                scale = 0.25
-            }, {
-                draw_as_light = true,
-                flags = {"light"},
-                size = 128,
-                filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
-                scale = 0.25
+                scale = 0.5
             }}
         },
         burnt_result = "electric-train-discharged-battery-pack",
@@ -102,18 +96,12 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
         type = "item",
         name = "destroyed-speed-battery-pack",
         icon = "__electric-trains__/graphics/icons/speed-battery/destroyed-speed-battery.png",
-        icon_size = 128,
+        icon_size = 64,
         pictures = {
             layers = {{
-                size = 128,
+                size = 64,
                 filename = "__electric-trains__/graphics/icons/speed-battery/destroyed-speed-battery.png",
-                scale = 0.25
-            }, {
-                draw_as_light = true,
-                flags = {"light"},
-                size = 128,
-                filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
-                scale = 0.25
+                scale = 0.5
             }}
         },
         burnt_result = "discharged-speed-battery-pack",
@@ -127,18 +115,12 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
         type = "item",
         name = "destroyed-acceleration-battery-pack",
         icon = "__electric-trains__/graphics/icons/acceleration-battery/destroyed-acceleration-battery.png",
-        icon_size = 128,
+        icon_size = 64,
         pictures = {
             layers = {{
-                size = 128,
+                size = 64,
                 filename = "__electric-trains__/graphics/icons/acceleration-battery/destroyed-acceleration-battery.png",
-                scale = 0.25
-            }, {
-                draw_as_light = true,
-                flags = {"light"},
-                size = 128,
-                filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
-                scale = 0.25
+                scale = 0.5
             }}
         },
         burnt_result = "discharged-acceleration-battery-pack",
@@ -152,18 +134,12 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
         type = "item",
         name = "destroyed-efficiency-battery-pack",
         icon = "__electric-trains__/graphics/icons/efficiency-battery/destroyed-efficiency-battery.png",
-        icon_size = 128,
+        icon_size = 64,
         pictures = {
             layers = {{
-                size = 128,
+                size = 64,
                 filename = "__electric-trains__/graphics/icons/efficiency-battery/destroyed-efficiency-battery.png",
-                scale = 0.25
-            }, {
-                draw_as_light = true,
-                flags = {"light"},
-                size = 128,
-                filename = "__electric-trains__/graphics/icons/destroyed-battery_light.png",
-                scale = 0.25
+                scale = 0.5
             }}
         },
         burnt_result = "discharged-efficiency-battery-pack",
@@ -194,7 +170,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
             amount = 200
         }},
         icon = "__electric-trains__/graphics/icons/speed-battery/destroyed-speed-battery.png",
-        icon_size = 128,
+        icon_size = 64,
         allow_as_intermediate = false,
         localised_name = {"recipe-name.speed-battery-pack-refurbish-desc"},
         order = "s-[battery-refurbish-d]",
@@ -223,7 +199,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
             amount = 200
         }},
         icon = "__electric-trains__/graphics/icons/acceleration-battery/destroyed-acceleration-battery.png",
-        icon_size = 128,
+        icon_size = 64,
         allow_as_intermediate = false,
         localised_name = {"recipe-name.acceleration-battery-pack-refurbish-desc"},
         order = "s-[battery-refurbish-b]",
@@ -252,7 +228,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
             amount = 200
         }},
         icon = "__electric-trains__/graphics/icons/efficiency-battery/destroyed-efficiency-battery.png",
-        icon_size = 128,
+        icon_size = 64,
         allow_as_intermediate = false,
         localised_name = {"recipe-name.efficiency-battery-pack-refurbish-desc"},
         order = "s-[battery-refurbish-c]",
@@ -281,7 +257,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
             amount = 20
         }},
         icon = "__electric-trains__/graphics/icons/destroyed-battery.png",
-        icon_size = 128,
+        icon_size = 64,
         allow_as_intermediate = false,
         localised_name = {"recipe-name.electric-train-battery-pack-refurbish-desc"},
         order = "s-[battery-refurbish-a]",
@@ -377,9 +353,8 @@ data:extend({{
     type = "technology",
     name = "tech-electric-trains",
     mod = "electric-trains",
-    icon = "__electric-trains__/graphics/icons/space-trains-tech.png",
+    icon = "__electric-trains__/graphics/technology/tech-electric-trains.png",
     icon_size = 256,
-    icon_mipmaps = 4,
     effects = {{
         type = "unlock-recipe",
         recipe = "recipe-electric-locomotive"
@@ -414,9 +389,8 @@ data:extend({{
     type = "technology",
     name = "tech-alkaline-battery-pack",
     mod = "electric-trains",
-    icon = "__electric-trains__/graphics/icons/alkaline-battery.png",
-    icon_size = 128,
-    icon_mipmaps = 4,
+    icon = "__electric-trains__/graphics/technology/tech-alkaline-battery-pack.png",
+    icon_size = 256,
     effects = {{
         type = "unlock-recipe",
         recipe = "recipe-electric-train-alkaline-battery-pack"
@@ -434,9 +408,8 @@ data:extend({{
     type = "technology",
     name = "tech-electric-trains-experimental-charging",
     mod = "electric-trains",
-    icon = "__electric-trains__/graphics/icons/experimental-electric-train-charging-station.png",
-    icon_size = 128,
-    icon_mipmaps = 4,
+    icon = "__electric-trains__/graphics/technology/tech-electric-trains-experimental-charging.png",
+    icon_size = 256,
     effects = {{
         type = "unlock-recipe",
         recipe = "experimental-electric-train-battery-charging-station"
@@ -458,11 +431,9 @@ data:extend({{
     type = "technology",
     name = "tech-electric-trains-braking-force-1",
     icon_size = 256,
-    icon_mipmaps = 4,
     icons = {{
-        icon = "__electric-trains__/graphics/icons/space-trains-tech.png",
-        icon_size = 256,
-        icon_mipmaps = 4
+        icon = "__electric-trains__/graphics/technology/tech-electric-trains-braking-force-1.png",
+        icon_size = 256
     }, {
         icon = "__core__/graphics/icons/technology/constants/constant-braking-force.png",
         icon_size = 128,
@@ -488,8 +459,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "tech-electric-locomotive-wagon",
-    icon = "__electric-trains__/graphics/icons/electric-locomotive-wagon.png",
-    icon_size = 64,
+    icon = "__electric-trains__/graphics/technology/tech-electric-locomotive-wagon.png",
+    icon_size = 256,
     effects = {{
         type = "unlock-recipe",
         recipe = "recipe-electric-locomotive-wagon"
@@ -507,8 +478,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "tech-electric-artillery-wagon",
-    icon = "__electric-trains__/graphics/icons/electric-artillery-wagon.png",
-    icon_size = 64,
+    icon = "__electric-trains__/graphics/technology/tech-electric-artillery-wagon.png",
+    icon_size = 256,
     effects = {{
         type = "unlock-recipe",
         recipe = "recipe-electric-artillery-wagon"
@@ -526,9 +497,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "tech-speed-battery-pack",
-    icon = "__electric-trains__/graphics/icons/speed-battery/speed-battery.png",
-    icon_size = 128,
-    icon_mipmaps = 4,
+    icon = "__electric-trains__/graphics/technology/tech-speed-battery-pack.png",
+    icon_size = 256,
     effects = {{
         type = "unlock-recipe",
         recipe = "speed-battery-pack"
@@ -549,9 +519,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "tech-acceleration-battery-pack",
-    icon = "__electric-trains__/graphics/icons/acceleration-battery/acceleration-battery.png",
-    icon_size = 128,
-    icon_mipmaps = 4,
+    icon = "__electric-trains__/graphics/technology/tech-acceleration-battery-pack.png",
+    icon_size = 256,
     effects = {{
         type = "unlock-recipe",
         recipe = "acceleration-battery-pack"
@@ -572,9 +541,8 @@ data:extend({{
 data:extend({{
     type = "technology",
     name = "tech-efficiency-battery-pack",
-    icon = "__electric-trains__/graphics/icons/efficiency-battery/efficiency-battery.png",
-    icon_size = 128,
-    icon_mipmaps = 4,
+    icon = "__electric-trains__/graphics/technology/tech-efficiency-battery-pack.png",
+    icon_size = 256,
     effects = {{
         type = "unlock-recipe",
         recipe = "efficiency-battery-pack"

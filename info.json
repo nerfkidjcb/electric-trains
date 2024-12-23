@@ -11,6 +11,7 @@
       ".crowdin.yml",
       ".git",
       ".github",
+      ".unused-graphics",
       ".gitignore",
       ".build",
       "LICENSE",

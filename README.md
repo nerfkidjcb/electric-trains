@@ -24,12 +24,12 @@ Once again I would like to thank FragJacker for creating the original mod, and f
 
   ![Discharged Powerpack](graphics/icons/discharged-battery.png)
 
-  ![Powerpack Charging Station](graphics/icons/electric-train-charging-station.png)
+  ![Powerpack Charging Station](graphics/readme/electric-train-charging-station.png)
   ![Charged Powerpack](graphics/icons/battery.png)
 
 Or,
 
-![Experimental Powerpack Charging Station](graphics/icons/experimental-electric-train-charging-station.png)
+![Experimental Powerpack Charging Station](graphics/readme/experimental-electric-train-charging-station.png)
 ![Experimental Charged Powerpack](graphics/icons/fast-battery.png)
 
 - (0.1.2+) an Experimental Train Powerpack Charging Station which works much faster, but uses considerably more power, and has a much higher chance of destroying the powerpack.
@@ -52,7 +52,7 @@ Or,
 
 - 0.2.7+ There are now inexpensive, non-rechargable alkaline powerpacks. They are not as powerful as the rechargeable powerpacks, but are a good alternative if you don't want to deal with the recharging infrastructure.
 
-  ![Alkaline Powerpack](graphics/icons/alkaline-battery.png)
+  ![Alkaline Powerpack](graphics/readme/alkaline-battery.png)
 
 - Electric trains have subtly different MiniMap icons to distinguish them from vanilla trains:
 

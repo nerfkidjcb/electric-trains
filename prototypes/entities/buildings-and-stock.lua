@@ -25,8 +25,8 @@ function space_accumulator_picture(tint, repeat_count)
         layers = {{
             filename = "__electric-trains__/graphics/entity/electric-train-charging-station/hr_space_charging_station.png",
             priority = "high",
-            width = 128,
-            height = 192,
+            width = 256,
+            height = 256,
             repeat_count = repeat_count,
             shift = util.by_pixel(0, -16),
             tint = tint,
@@ -50,8 +50,8 @@ function experimental_space_accumulator_picture(tint, repeat_count)
         layers = {{
             filename = "__electric-trains__/graphics/entity/electric-train-charging-station/hr_experimental_space_charging_station.png",
             priority = "high",
-            width = 128,
-            height = 192,
+            width = 256,
+            height = 256,
             repeat_count = repeat_count,
             shift = util.by_pixel(0, -16),
             tint = tint,
@@ -204,7 +204,7 @@ data:extend({ -- Battery charging interface
     type = "assembling-machine",
     name = "electric-train-battery-charging-station",
     icon = "__electric-trains__/graphics/icons/electric-train-charging-station.png",
-    icon_size = 128,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {
         mining_time = 0.1,
@@ -297,7 +297,7 @@ data:extend({ -- Battery charging interface
     type = "assembling-machine",
     name = "experimental-electric-train-battery-charging-station",
     icon = "__electric-trains__/graphics/icons/experimental-electric-train-charging-station.png",
-    icon_size = 128,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {
         mining_time = 1,
