@@ -169,7 +169,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
             name = "sulfuric-acid",
             amount = 200
         }},
-        icon = "__electric-trains__/graphics/icons/speed-battery/destroyed-speed-battery.png",
+        icon = "__electric-trains__/graphics/icons/speed-battery/refurbishment-speed-battery.png",
         icon_size = 64,
         allow_as_intermediate = false,
         localised_name = {"recipe-name.speed-battery-pack-refurbish-desc"},
@@ -198,7 +198,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
             name = "sulfuric-acid",
             amount = 200
         }},
-        icon = "__electric-trains__/graphics/icons/acceleration-battery/destroyed-acceleration-battery.png",
+        icon = "__electric-trains__/graphics/icons/acceleration-battery/refurbishment-acceleration-battery.png",
         icon_size = 64,
         allow_as_intermediate = false,
         localised_name = {"recipe-name.acceleration-battery-pack-refurbish-desc"},
@@ -227,7 +227,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
             name = "sulfuric-acid",
             amount = 200
         }},
-        icon = "__electric-trains__/graphics/icons/efficiency-battery/destroyed-efficiency-battery.png",
+        icon = "__electric-trains__/graphics/icons/efficiency-battery/refurbishment-efficiency-battery.png",
         icon_size = 64,
         allow_as_intermediate = false,
         localised_name = {"recipe-name.efficiency-battery-pack-refurbish-desc"},
@@ -256,7 +256,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
             name = "sulfuric-acid",
             amount = 20
         }},
-        icon = "__electric-trains__/graphics/icons/destroyed-battery.png",
+        icon = "__electric-trains__/graphics/icons/refurbishment-battery.png",
         icon_size = 64,
         allow_as_intermediate = false,
         localised_name = {"recipe-name.electric-train-battery-pack-refurbish-desc"},
