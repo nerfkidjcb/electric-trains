@@ -773,6 +773,26 @@ data:extend({ -- Battery charging interface
                 scale = train_scale
             }, {
                 priority = "very-low",
+                dice = 4,
+                width = 1000,
+                height = 600,
+                direction_count = 256,
+                allow_low_quality_rotation = true,
+                filenames = {"__electric-trains__/graphics/entity/vehicles/space-trains/hr_electric_locomotive_wagon_toplight_1.png",
+                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_electric_locomotive_wagon_toplight_2.png",
+                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_electric_locomotive_wagon_toplight_3.png",
+                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_electric_locomotive_wagon_toplight_4.png",
+                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_electric_locomotive_wagon_toplight_5.png",
+                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_electric_locomotive_wagon_toplight_6.png",
+                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_electric_locomotive_wagon_toplight_7.png",
+                             "__electric-trains__/graphics/entity/vehicles/space-trains/hr_electric_locomotive_wagon_toplight_8.png"
+                            },
+                line_length = 4,
+                lines_per_file = 8,
+                shift = {0, wagon_vertical_shift},
+                scale = train_scale
+            }, {
+                priority = "very-low",
                 flags = {"shadow"},
                 width = 1000,
                 height = 600,
