@@ -3,7 +3,7 @@ data:extend({{
     type = "item",
     name = "electric-train-battery-charging-station",
     icon = "__electric-trains__/graphics/icons/electric-train-charging-station.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "production-machine",
     order = "h[train-system]",
     place_result = "electric-train-battery-charging-station",
@@ -16,7 +16,7 @@ data:extend({{
     type = "item",
     name = "experimental-electric-train-battery-charging-station",
     icon = "__electric-trains__/graphics/icons/experimental-electric-train-charging-station.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "production-machine",
     order = "i[train-system]",
     place_result = "experimental-electric-train-battery-charging-station",
@@ -28,18 +28,18 @@ data:extend({{
     type = "item",
     name = "electric-train-alkaline-battery-pack",
     icon = "__electric-trains__/graphics/icons/alkaline-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     pictures = {
         layers = {{
-            size = 128,
+            size = 64,
             filename = "__electric-trains__/graphics/icons/battery.png",
-            scale = 0.25
+            scale = 0.5
         }, {
             draw_as_light = false,
             flags = {"light"},
-            size = 128,
+            size = 64,
             filename = "__electric-trains__/graphics/icons/battery_light.png",
-            scale = 0.25
+            scale = 0.5
         }}
     },
     fuel_category = "electrical",
@@ -59,18 +59,18 @@ data:extend({{
     type = "item",
     name = "electric-train-battery-pack",
     icon = "__electric-trains__/graphics/icons/battery.png",
-    icon_size = 128,
+    icon_size = 64,
     pictures = {
         layers = {{
-            size = 128,
+            size = 64,
             filename = "__electric-trains__/graphics/icons/battery.png",
-            scale = 0.25
+            scale = 0.5
         }, {
             draw_as_light = true,
             flags = {"light"},
-            size = 128,
+            size = 64,
             filename = "__electric-trains__/graphics/icons/battery_light.png",
-            scale = 0.25
+            scale = 0.5
         }}
     },
     fuel_category = "electrical",
@@ -88,7 +88,7 @@ data:extend({{
     type = "item",
     name = "electric-train-discharged-battery-pack",
     icon = "__electric-trains__/graphics/icons/discharged-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "intermediate-product",
     order = "s-a[discharged-battery-pack]",
     stack_size = 60,
@@ -100,18 +100,18 @@ data:extend({{
     type = "item",
     name = "speed-battery-pack",
     icon = "__electric-trains__/graphics/icons/speed-battery/speed-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     pictures = {
         layers = {{
-            size = 128,
+            size = 64,
             filename = "__electric-trains__/graphics/icons/speed-battery/speed-battery.png",
-            scale = 0.25
+            scale = 0.5
         }, {
             draw_as_light = true,
             flags = {"light"},
-            size = 128,
+            size = 64,
             filename = "__electric-trains__/graphics/icons/battery_light.png",
-            scale = 0.25
+            scale = 0.5
         }}
     },
     fuel_category = "electrical",
@@ -132,7 +132,7 @@ data:extend({{
     type = "item",
     name = "discharged-speed-battery-pack",
     icon = "__electric-trains__/graphics/icons/speed-battery/discharged-speed-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "intermediate-product",
     order = "s-d[discharged-battery-pack]",
     stack_size = 20,
@@ -143,18 +143,18 @@ data:extend({{
     type = "item",
     name = "acceleration-battery-pack",
     icon = "__electric-trains__/graphics/icons/acceleration-battery/acceleration-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     pictures = {
         layers = {{
-            size = 128,
+            size = 64,
             filename = "__electric-trains__/graphics/icons/acceleration-battery/acceleration-battery.png",
-            scale = 0.25
+            scale = 0.5
         }, {
             draw_as_light = true,
             flags = {"light"},
-            size = 128,
+            size = 64,
             filename = "__electric-trains__/graphics/icons/battery_light.png",
-            scale = 0.25
+            scale = 0.5
         }}
     },
     fuel_category = "electrical",
@@ -174,7 +174,7 @@ data:extend({{
     type = "item",
     name = "discharged-acceleration-battery-pack",
     icon = "__electric-trains__/graphics/icons/acceleration-battery/discharged-acceleration-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "intermediate-product",
     order = "s-b[discharged-battery-pack]",
     stack_size = 20,
@@ -185,18 +185,18 @@ data:extend({{
     type = "item",
     name = "efficiency-battery-pack",
     icon = "__electric-trains__/graphics/icons/efficiency-battery/efficiency-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     pictures = {
         layers = {{
-            size = 128,
+            size = 64,
             filename = "__electric-trains__/graphics/icons/efficiency-battery/efficiency-battery.png",
-            scale = 0.25
+            scale = 0.5
         }, {
             draw_as_light = true,
             flags = {"light"},
-            size = 128,
+            size = 64,
             filename = "__electric-trains__/graphics/icons/battery_light.png",
-            scale = 0.25
+            scale = 0.5
         }}
     },
     fuel_category = "electrical",
@@ -214,7 +214,7 @@ data:extend({{
     type = "item",
     name = "discharged-efficiency-battery-pack",
     icon = "__electric-trains__/graphics/icons/efficiency-battery/discharged-efficiency-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "intermediate-product",
     order = "s-c[discharged-battery-pack]",
     stack_size = 20,

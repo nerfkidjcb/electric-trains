@@ -319,7 +319,7 @@ data:extend({{
     energy_required = 60,
     enabled = false,
     icon = "__electric-trains__/graphics/icons/speed-battery/fast-speed-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "intermediate-product",
     allow_as_intermediate = false,
     ingredients = {{
@@ -348,7 +348,7 @@ data:extend({{
     energy_required = 60,
     enabled = false,
     icon = "__electric-trains__/graphics/icons/acceleration-battery/fast-acceleration-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "intermediate-product",
     allow_as_intermediate = false,
     ingredients = {{
@@ -377,7 +377,7 @@ data:extend({{
     energy_required = 60,
     enabled = false,
     icon = "__electric-trains__/graphics/icons/efficiency-battery/fast-efficiency-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "intermediate-product",
     allow_as_intermediate = false,
     ingredients = {{
@@ -406,7 +406,7 @@ data:extend({{
     energy_required = 60,
     enabled = false,
     icon = "__electric-trains__/graphics/icons/battery.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "intermediate-product",
     allow_as_intermediate = false,
     ingredients = {{
@@ -435,7 +435,7 @@ data:extend({{
     energy_required = 20,
     enabled = false,
     icon = "__electric-trains__/graphics/icons/fast-battery.png",
-    icon_size = 128,
+    icon_size = 64,
     subgroup = "intermediate-product",
     allow_as_intermediate = false,
     ingredients = {{
