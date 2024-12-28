@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 28. 12. 2024
+  Features:
+    - Large rework of graphics, including better item, refurbishment, and research icons as well as increased contrast (Thanks to snouz for the awesome PR)
+  Info:
+    - Updated mod thumbnail as part of the graphics rework
+    - Cleaned some unused graphics
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.10
 Date: 02. 12. 2024
   Bugfixes:

@@ -1,6 +1,6 @@
 {
   "name": "electric-trains",
-  "version": "0.3.10",
+  "version": "0.4.0",
   "title": "Electric Trains",
   "author": "NerfKidJcb",
   "factorio_version": "2.0",
@@ -11,6 +11,7 @@
       ".crowdin.yml",
       ".git",
       ".github",
+      ".unused-graphics",
       ".gitignore",
       ".build",
       "LICENSE",
