@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.0
-Date: XX. 12. 2024
+Date: 28. 12. 2024
   Features:
     - Large rework of graphics, including better item, refurbishment, and research icons as well as increased contrast (Thanks to snouz for the awesome PR)
   Info:
