@@ -1,4 +1,24 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 28. 12. 2024
+  Features:
+    - Large rework of graphics, including better item, refurbishment, and research icons as well as increased contrast (Thanks to snouz for the awesome PR)
+  Info:
+    - Updated mod thumbnail as part of the graphics rework
+    - Cleaned some unused graphics
 
+---------------------------------------------------------------------------------------------------
+Version: 0.3.10
+Date: 02. 12. 2024
+  Bugfixes:
+    - Fixed missing artillery prerequisite in space age when tech is locked behind electromagnetics
+  Info:
+    - Updated zh-CN localisation (Thanks to Houraiji_Kyuusyou)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.9
+Date: 10. 11. 2024
+  Bugfixes:
+    - Fixed issue with loading space age after updating to 0.3.8
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.8
 Date: 10. 11. 2024
