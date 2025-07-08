@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 08. 07. 2025
+  Bugfixes:
+    - Fixed the infamous "Layers of rotated sprite need to have equal direction_count." Thanks to robot256 for the PR
+  Info:
+    - Added FR locale Thanks to Fr-Dae for the PR
+    - Some RU locale changes 
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 28. 12. 2024
   Features:
