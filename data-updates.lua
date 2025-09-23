@@ -668,10 +668,21 @@ if mods["space-exploration"] or (mods["space-age"] and settings.startup["lock-be
     -- Update the tech-electric-artillery-wagon technology.
     -- Empty the ingredients table.
     data.raw["technology"]["tech-electric-artillery-wagon"].unit.ingredients = {}
-    data.raw["technology"]["tech-electric-artillery-wagon"].unit.ingredients =
-        {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
-         {"military-science-pack", 1}, {"utility-science-pack", 1}, {"space-science-pack", 1},
-         {"metallurgic-science-pack", 1}}
+    if mods["space-age"] then
+      data.raw["technology"]["tech-electric-artillery-wagon"].unit.ingredients =
+          {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+           {"military-science-pack", 1}, {"utility-science-pack", 1}, {"space-science-pack", 1},
+           {"metallurgic-science-pack", 1}}
+    elseif mods["space-exploration"] then
+      data.raw["technology"]["tech-electric-artillery-wagon"].unit.ingredients =
+          {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+           {"military-science-pack", 1}, {"utility-science-pack", 1}, {"space-science-pack", 1},
+           {"se-material-science-pack-1", 1}}
+    else
+      data.raw["technology"]["tech-electric-artillery-wagon"].unit.ingredients =
+          {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
+           {"military-science-pack", 1}, {"utility-science-pack", 1}, {"space-science-pack", 1}}
+    end
     data.raw["technology"]["tech-electric-artillery-wagon"].unit.count = 4000
     -- Remove the old science prerequisites.
     data.raw["technology"]["tech-electric-artillery-wagon"].prerequisites = {}

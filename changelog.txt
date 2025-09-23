@@ -2,7 +2,7 @@
 Version: 0.4.2
 Date: 23. 09. 2025
   Bugfixes:
-    - Fixed bug when loading with Space exploration 0.7 it crashes due to missing metallurgic-science-pack in tech-electric-artillery-wagon. Thanks to robot256 for the PR
+    - Fixed compatibility with Space Exploration 0.7. Thanks to robot256 for the PR
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 08. 07. 2025
