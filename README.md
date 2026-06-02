@@ -23,20 +23,20 @@ Once again I would like to thank FragJacker for creating the original mod, and f
 
 - Train Powerpacks (stack-size 20-Empty 20-Charged 20-Destroyed), that are charged in a new Train Powerpack Charging Station or an Experimental Train Powerpack Charging Station. These are used to power the electric trains. The Train Powerpack Charging Station is a new building that is unlocked with the electric train research. It can charge 3X faster than normal but has an increased chance of destroying the powerpack and a large energy consumption.
 
-  ![Discharged Powerpack](graphics/icons/discharged-battery.png)
+  ![Discharged Powerpack](graphics/icons/electric-battery/discharged-battery.png)
   ![Powerpack Charging Station](graphics/readme/electric-train-charging-station.png)
-  ![Charged Powerpack](graphics/icons/battery.png)
+  ![Charged Powerpack](graphics/icons/electric-battery/charged-battery.png)
 
 Or,
 
 ![Experimental Powerpack Charging Station](graphics/technology/tech-electric-trains-experimental-charging.png)
-![Experimental Charged Powerpack](graphics/icons/fast-battery.png)
+![Experimental Charged Powerpack](graphics/icons/electric-battery/faster-recharge-battery.png)
 
 - (0.1.2+) an Experimental Train Powerpack Charging Station which works much faster, but uses considerably more power, and has a much higher chance of destroying the powerpack.
 
 - Train PowerPacks have a 1% chance of becoming destroyed when charging normally, and a 15% chance of becoming destroyed when charging in the experimental charging station.
 
-  ![Destroyed Powerpack](graphics/icons/destroyed-battery.png)
+  ![Destroyed Powerpack](graphics/icons/electric-battery/destroyed-battery.png)
 
 - You can refurbish old powerpacks in a vanilla chemical plant with a new recipe.
 
@@ -44,11 +44,11 @@ Or,
 
 - 0.2.0+ After researching Experimental Train Powerpack Charging Station, you can research the new Experimental Train Powerpacks; Speed, Efficiency and Acceleration. Each require a tier three module to craft and bring substantial benefits to the electric trains.
 
-  ![Speed Powerpack](graphics/icons/speed-battery/speed-battery.png) Speed Train Powerpack
+  ![Speed Powerpack](graphics/icons/speed-battery/charged-speed-battery.png) Speed Train Powerpack
 
-  ![Efficiency Powerpack](graphics/icons/efficiency-battery/efficiency-battery.png) Efficiency Train Powerpack
+  ![Efficiency Powerpack](graphics/icons/efficiency-battery/charged-efficiency-battery.png) Efficiency Train Powerpack
 
-  ![Acceleration Powerpack](graphics/icons/acceleration-battery/acceleration-battery.png) Acceleration Train Powerpack
+  ![Acceleration Powerpack](graphics/icons/acceleration-battery/charged-acceleration-battery.png) Acceleration Train Powerpack
 
 - 0.2.7+ There are now inexpensive, non-rechargable alkaline powerpacks. They are not as powerful as the rechargeable powerpacks, but are a good alternative if you don't want to deal with the recharging infrastructure.
 
@@ -56,9 +56,9 @@ Or,
 
 - Electric trains have subtly different MiniMap icons to distinguish them from vanilla trains:
 
-  ![MiniMap Icons](graphics/entity/vehicles/space-trains/electric-locomotive-minimap-representation.png)
-  ![MiniMap Icons](graphics/entity/vehicles/space-trains/electric-cargo-wagon-minimap-representation.png)
-  ![MiniMap Icons](graphics/entity/vehicles/space-trains/electric-fluid-wagon-minimap-representation.png)
+  ![MiniMap Icons](graphics/icons/representation/electric-locomotive-minimap-representation.png)
+  ![MiniMap Icons](graphics/icons/representation/electric-cargo-wagon-minimap-representation.png)
+  ![MiniMap Icons](graphics/icons/representation/electric-fluid-wagon-minimap-representation.png)
 
 - Electric Wagon Locomotive, which is the same as a normal Electric Locomotive with the visual properties of an Electric Wagon. You can also select the colour of the entity.
 
@@ -74,7 +74,7 @@ Or,
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for details.
+See [changelog](changelog.txt) for details.
 
 ## Contributing
 

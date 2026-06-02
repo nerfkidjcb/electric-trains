@@ -1,0 +1,28 @@
+{
+    "recipe": [
+        [
+            "recipe-electric-locomotive",
+            "electric-locomotive"
+        ],
+        [
+            "recipe-electric-locomotive-wagon",
+            "electric-locomotive-wagon"
+        ],
+        [
+            "recipe-electric-cargo-wagon",
+            "electric-cargo-wagon"
+        ],
+        [
+            "recipe-electric-fluid-wagon",
+            "electric-fluid-wagon"
+        ],
+        [
+            "recipe-electric-artillery-wagon",
+            "electric-artillery-wagon"
+        ],
+        [
+            "recipe-electric-train-alkaline-battery-pack",
+            "electric-train-alkaline-battery-pack"
+        ]
+    ]
+}

@@ -1,17 +1,27 @@
 local meld = require("__core__.lualib.meld")
 
 local updates = {}
+local train_scale = 0.425
+local fluid_wagon_scale = 0.375
 local corrected_train_scale = train_scale * 1.07
 local corrected_fluid_wagon_scale = fluid_wagon_scale * 1.12
 
+local cargo_path = "__electric-trains__/graphics/entity/space-cargo-wagon/"
+local fluid_path = "__electric-trains__/graphics/entity/space-fluid-wagon/"
+local loco_path = "__electric-trains__/graphics/entity/space-locomotive/"
+local maglev_path = "__electric-trains__/graphics/entity/space-train-maglev-cushion/"
+local artillery_path = "__elevated-rails__/graphics/entity/artillery-wagon/"
+
 updates.wheels = {
     sloped = util.sprite_load(
-        "__electric-trains__/graphics/entity/elevated-rails/space-locomotive/space-train-maglev-cushion-sloped", {
+        maglev_path .. "space-train-maglev-cushion-sloped",
+        {
             priority = "very-low",
             direction_count = 160,
             scale = 0.775 / 2,
             usage = "train"
-        }),
+        }
+    ),
     slope_angle_between_frames = 1.25
 }
 
@@ -20,57 +30,65 @@ updates.locomotive = {
     pictures = {
         slope_angle_between_frames = 1.25,
         sloped = {
-            layers = {util.sprite_load(
-                "__electric-trains__/graphics/entity/elevated-rails/space-locomotive/space-locomotive-sloped", {
-                    dice = 4,
-                    priority = "very-low",
-                    direction_count = 160,
-                    scale = corrected_train_scale,
-                    usage = "train"
-                }),
-                      util.sprite_load(
-                "__electric-trains__/graphics/entity/elevated-rails/space-locomotive/space-locomotive-sloped-mask", {
-                    dice = 4,
-                    priority = "very-low",
-                    flags = {"mask"},
-                    apply_runtime_tint = true,
-                    tint_as_overlay = true,
-                    direction_count = 160,
-                    scale = corrected_train_scale,
-                    usage = "train"
-                }),
-                      util.sprite_load(
-                "__electric-trains__/graphics/entity/elevated-rails/space-locomotive/space-locomotive-sloped-shadow", {
-                    dice = 4,
-                    priority = "very-low",
-                    flags = {"shadow"},
-                    draw_as_shadow = true,
-                    direction_count = 160,
-                    scale = corrected_train_scale,
-                    usage = "train"
-                })}
+            layers = {
+                util.sprite_load(loco_path .. "space-locomotive-sloped",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        direction_count = 160,
+                        scale = corrected_train_scale,
+                        usage = "train"
+                    }
+                ),
+                util.sprite_load(loco_path .. "space-locomotive-sloped-mask",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        flags = { "mask" },
+                        apply_runtime_tint = true,
+                        tint_as_overlay = true,
+                        direction_count = 160,
+                        scale = corrected_train_scale,
+                        usage = "train"
+                    }
+                ),
+                util.sprite_load(loco_path .. "space-locomotive-sloped-shadow",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        flags = { "shadow" },
+                        draw_as_shadow = true,
+                        direction_count = 160,
+                        scale = corrected_train_scale,
+                        usage = "train"
+                    }
+                )
+            }
         }
     },
     front_light_pictures = {
         slope_angle_between_frames = 1.25,
         sloped = {
-            layers = {util.sprite_load(
-                "__electric-trains__/graphics/entity/elevated-rails/space-locomotive/space-locomotive-sloped-lights", {
-                    dice = 4,
-                    priority = "very-low",
-                    blend_mode = "additive",
-                    draw_as_light = true,
-                    direction_count = 160,
-                    scale = corrected_train_scale,
-                    usage = "train"
-                })}
+            layers = {
+                util.sprite_load(loco_path .. "space-locomotive-sloped-lights",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        blend_mode = "additive",
+                        draw_as_light = true,
+                        direction_count = 160,
+                        scale = corrected_train_scale,
+                        usage = "train"
+                    }
+                )
+            }
         }
     },
     elevated_rail_sound = {
         sound = {
             filename = "__elevated-rails__/sound/elevated-train-driving.ogg",
             volume = 1.0,
-            modifiers = {volume_multiplier("elevation", 1.0)}
+            modifiers = { volume_multiplier("elevation", 1.0) }
         },
         match_volume_to_activity = true,
         activity_to_volume_modifiers = {
@@ -93,35 +111,40 @@ updates.electric_locomotive_wagon = {
         slope_angle_between_frames = 1.25,
         slope_back_equals_front = true,
         sloped = {
-            layers = {util.sprite_load(
-                "__electric-trains__/graphics/entity/elevated-rails/space-cargo-wagon/space-cargo-wagon-sloped", {
-                    dice = 4,
-                    priority = "very-low",
-                    back_equals_front = true,
-                    direction_count = 80,
-                    scale = corrected_train_scale * 1.07,
-                    usage = "train"
-                }),
-                      util.sprite_load(
-                "__electric-trains__/graphics/entity/elevated-rails/space-cargo-wagon/space-cargo-wagon-sloped-mask", {
-                    dice = 4,
-                    priority = "very-low",
-                    flags = {"mask"},
-                    apply_runtime_tint = true,
-                    tint_as_overlay = true,
-                    direction_count = 80,
-                    scale = corrected_train_scale * 1.07,
-                    usage = "train"
-                }), util.sprite_load(
-                "__electric-trains__/graphics/entity/elevated-rails/space-cargo-wagon/space-cargo-wagon-sloped-shadow",
-                {
-                    dice = 4,
-                    priority = "very-low",
-                    draw_as_shadow = true,
-                    direction_count = 80,
-                    scale = corrected_train_scale * 1.07,
-                    usage = "train"
-                })}
+            layers = {
+                util.sprite_load(cargo_path .. "space-cargo-wagon-sloped",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        back_equals_front = true,
+                        direction_count = 80,
+                        scale = corrected_train_scale * 1.07,
+                        usage = "train"
+                    }
+                ),
+                util.sprite_load(cargo_path .. "space-cargo-wagon-sloped-mask",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        flags = { "mask" },
+                        apply_runtime_tint = true,
+                        tint_as_overlay = true,
+                        direction_count = 80,
+                        scale = corrected_train_scale * 1.07,
+                        usage = "train"
+                    }
+                ),
+                util.sprite_load(cargo_path .. "space-cargo-wagon-sloped-shadow",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        draw_as_shadow = true,
+                        direction_count = 80,
+                        scale = corrected_train_scale * 1.07,
+                        usage = "train"
+                    }
+                )
+            }
         }
     }
 }
@@ -132,35 +155,40 @@ updates.cargo_wagon = {
         slope_angle_between_frames = 1.25,
         slope_back_equals_front = true,
         sloped = {
-            layers = {util.sprite_load(
-                "__electric-trains__/graphics/entity/elevated-rails/space-cargo-wagon/space-cargo-wagon-sloped", {
-                    dice = 4,
-                    priority = "very-low",
-                    back_equals_front = true,
-                    direction_count = 80,
-                    scale = corrected_train_scale,
-                    usage = "train"
-                }), --       util.sprite_load(
-            -- "__electric-trains__/graphics/entity/elevated-rails/space-cargo-wagon/space-cargo-wagon-sloped-mask", {
-            --     dice = 4,
-            --     priority = "very-low",
-            --     flags = {"mask"},
-            --     apply_runtime_tint = true,
-            --     tint_as_overlay = true,
-            --     direction_count = 80,
-            --     scale = corrected_train_scale,
-            --     usage = "train"
-            -- }), 
-            util.sprite_load(
-                "__electric-trains__/graphics/entity/elevated-rails/space-cargo-wagon/space-cargo-wagon-sloped-shadow",
-                {
-                    dice = 4,
-                    priority = "very-low",
-                    draw_as_shadow = true,
-                    direction_count = 80,
-                    scale = corrected_train_scale,
-                    usage = "train"
-                })}
+            layers = {
+                util.sprite_load(cargo_path .. "space-cargo-wagon-sloped",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        back_equals_front = true,
+                        direction_count = 80,
+                        scale = corrected_train_scale,
+                        usage = "train"
+                    }
+                ),
+                util.sprite_load(cargo_path .. "space-cargo-wagon-sloped-mask", -- ???
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        flags = { "mask" },
+                        apply_runtime_tint = true,
+                        tint_as_overlay = true,
+                        direction_count = 80,
+                        scale = corrected_train_scale,
+                        usage = "train"
+                    }
+                ),
+                util.sprite_load(cargo_path .. "space-cargo-wagon-sloped-shadow",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        draw_as_shadow = true,
+                        direction_count = 80,
+                        scale = corrected_train_scale,
+                        usage = "train"
+                    }
+                )
+            }
         }
     }
 }
@@ -171,36 +199,41 @@ updates.fluid_wagon = {
         slope_angle_between_frames = 1.25,
         slope_back_equals_front = true,
         sloped = {
-            layers = {util.sprite_load(
-                "__electric-trains__/graphics/entity/elevated-rails/space-fluid-wagon/space-fluid-wagon-sloped", {
-                    dice = 4,
-                    priority = "very-low",
-                    direction_count = 80,
-                    scale = corrected_fluid_wagon_scale,
-                    usage = "train"
-                }),
-            -- util.sprite_load("__electric-trains__/graphics/entity/elevated-rails/space-cargo-wagon/space-fluid-wagon-sloped-mask",
-            --   {
-            --     dice = 4,
-            --     priority = "very-low",
-            --     flags = { "mask" },
-            --     apply_runtime_tint = true,
-            --     tint_as_overlay = true,
-            --     direction_count = 80,
-            --     scale = corrected_fluid_wagon_scale,
-            --     usage = "train"
-            --   }
-            -- ),
-                      util.sprite_load(
-                "__electric-trains__/graphics/entity/elevated-rails/space-fluid-wagon/space-fluid-wagon-sloped-shadow",
-                {
-                    dice = 4,
-                    priority = "very-low",
-                    draw_as_shadow = true,
-                    direction_count = 80,
-                    scale = corrected_fluid_wagon_scale,
-                    usage = "train"
-                })}
+            layers = {
+                util.sprite_load(fluid_path .. "space-fluid-wagon-sloped",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        direction_count = 80,
+                        scale = corrected_fluid_wagon_scale,
+                        usage = "train"
+                    }
+                ),
+                --[[ add ignore block 29-12-2025 10:37 --
+                util.sprite_load(fluid_path .. "space-fluid-wagon-sloped-mask",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        flags = { "mask" },
+                        apply_runtime_tint = true,
+                        tint_as_overlay = true,
+                        direction_count = 80,
+                        scale = corrected_fluid_wagon_scale,
+                        usage = "train"
+                    }
+                ),
+                --]]
+                util.sprite_load(fluid_path .. "space-fluid-wagon-sloped-shadow",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        draw_as_shadow = true,
+                        direction_count = 80,
+                        scale = corrected_fluid_wagon_scale,
+                        usage = "train"
+                    }
+                )
+            }
         }
     }
 }
@@ -210,63 +243,75 @@ updates.artillery_wagon = {
     pictures = {
         slope_angle_between_frames = 1.25,
         sloped = {
-            layers = {util.sprite_load("__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base",
-                {
-                    dice = 4,
-                    priority = "very-low",
-                    direction_count = 160,
-                    scale = 0.5,
-                    usage = "train"
-                }),
-                      util.sprite_load(
-                "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-base-shadow", {
-                    dice = 4,
-                    priority = "very-low",
-                    draw_as_shadow = true,
-                    direction_count = 160,
-                    scale = 0.5,
-                    usage = "train"
-                })}
+            layers = {
+                util.sprite_load(artillery_path .. "artillery-wagon-sloped-base",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        direction_count = 160,
+                        scale = 0.5,
+                        usage = "train"
+                    }
+                ),
+                util.sprite_load(artillery_path .. "artillery-wagon-sloped-base-shadow",
+                    {
+                        dice = 4,
+                        priority = "very-low",
+                        draw_as_shadow = true,
+                        direction_count = 160,
+                        scale = 0.5,
+                        usage = "train"
+                    }
+                )
+            }
         }
     },
     cannon_base_pictures = {
         slope_angle_between_frames = 1.25,
         sloped = {
-            layers = {util.sprite_load(
-                "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base", {
-                    priority = "very-low",
-                    direction_count = 160,
-                    scale = 0.5,
-                    usage = "train"
-                }),
-                      util.sprite_load(
-                "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-base-shadow", {
-                    priority = "very-low",
-                    draw_as_shadow = true,
-                    direction_count = 160,
-                    scale = 0.5,
-                    usage = "train"
-                })}
+            layers = {
+                util.sprite_load(artillery_path .. "artillery-wagon-sloped-cannon-base",
+                    {
+                        priority = "very-low",
+                        direction_count = 160,
+                        scale = 0.5,
+                        usage = "train"
+                    }
+                ),
+                util.sprite_load(artillery_path .. "artillery-wagon-sloped-cannon-base-shadow",
+                    {
+                        priority = "very-low",
+                        draw_as_shadow = true,
+                        direction_count = 160,
+                        scale = 0.5,
+                        usage = "train"
+                    }
+                )
+            }
         }
     },
     cannon_barrel_pictures = {
         slope_angle_between_frames = 1.25,
         sloped = {
-            layers = {util.sprite_load(
-                "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel", {
-                    priority = "very-low",
-                    direction_count = 160,
-                    scale = 0.5,
-                    usage = "train"
-                }),
-                      util.sprite_load(
-                "__elevated-rails__/graphics/entity/artillery-wagon/artillery-wagon-sloped-cannon-barrel-shadow", {
-                    priority = "very-low",
-                    draw_as_shadow = true,
-                    direction_count = 160,
-                    scale = 0.5,
-                    usage = "train"
-                })}
+            layers = {
+                util.sprite_load(artillery_path .. "artillery-wagon-sloped-cannon-barrel",
+                    {
+                        priority = "very-low",
+                        direction_count = 160,
+                        scale = 0.5,
+                        usage = "train"
+                    }
+                ),
+                util.sprite_load(artillery_path .. "artillery-wagon-sloped-cannon-barrel-shadow",
+                    {
+                        priority = "very-low",
+                        draw_as_shadow = true,
+                        direction_count = 160,
+                        scale = 0.5,
+                        usage = "train"
+                    }
+                )
+            }
         }
     }
 }
@@ -278,4 +323,5 @@ updates.apply_all_base = function()
     meld(data.raw["locomotive"]["electric-locomotive-wagon"], updates.electric_locomotive_wagon)
     meld(data.raw["artillery-wagon"]["electric-artillery-wagon"], updates.artillery_wagon)
 end
+
 return updates
