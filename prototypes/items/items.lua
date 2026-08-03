@@ -46,7 +46,7 @@ data:extend({{
     fuel_value = "120MJ",
     fuel_acceleration_multiplier_quality_bonus = 0.25,
     fuel_top_speed_multiplier_quality_bonus = 0.25,
-    burnt_result = "",
+    burnt_result = nil,
     subgroup = "intermediate-product",
     order = "s-a[battery-pack]",
     stack_size = 20,

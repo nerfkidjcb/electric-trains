@@ -281,7 +281,6 @@ data:extend({ -- Battery charging interface
 
     -- Circuit things
     draw_circuit_wires = true,
-    enable_logistic_control_behavior = true,
     circuit_wire_max_distance = 7.5,
 
     -- Modules and effects
@@ -374,7 +373,6 @@ data:extend({ -- Battery charging interface
 
     -- Circuit things
     draw_circuit_wires = true,
-    enable_logistic_control_behavior = true,
     circuit_wire_max_distance = 7.5,
 
     -- Modules and effects
@@ -1019,7 +1017,6 @@ data:extend({ -- Battery charging interface
         },
         match_volume_to_activity = true
     },
-    crash_trigger = crash_trigger(),
     open_sound = sounds.cargo_wagon_open,
     close_sound = sounds.cargo_wagon_close,
     sound_minimum_speed = 1,
@@ -1146,7 +1143,6 @@ data:extend({ -- Battery charging interface
         },
         match_volume_to_activity = true
     },
-    crash_trigger = crash_trigger(),
     sound_minimum_speed = 0.1,
     vehicle_impact_sound = sounds.generic_impact,
     water_reflection = locomotive_reflection()
@@ -1305,7 +1301,6 @@ data:extend({ -- Battery charging interface
     -- drive_over_tie_trigger_minimal_speed = 0.5,
     -- tie_distance = 50,
     working_sound = sounds.train_wagon_wheels,
-    crash_trigger = crash_trigger(),
     open_sound = sounds.artillery_open,
     close_sound = sounds.artillery_close,
     rotating_sound = {
