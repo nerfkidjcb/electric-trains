@@ -336,7 +336,7 @@ data:extend({{
     }, {
         type = "item",
         name = "speed-battery-pack",
-        shared_probability = { min = 0.05, max = 0.95 },
+        shared_probability = { min = 0.05, max = 1 },
         amount = 1
     }}
 }, {
@@ -365,7 +365,7 @@ data:extend({{
     }, {
         type = "item",
         name = "acceleration-battery-pack",
-        shared_probability = { min = 0.05, max = 0.95 },
+        shared_probability = { min = 0.05, max = 1 },
         amount = 1
     }}
 }, {
@@ -394,7 +394,7 @@ data:extend({{
     }, {
         type = "item",
         name = "efficiency-battery-pack",
-        shared_probability = { min = 0.05, max = 0.95 },
+        shared_probability = { min = 0.05, max = 1 },
         amount = 1
     }}
 }, {
@@ -422,7 +422,7 @@ data:extend({{
     }, {
         type = "item",
         name = "electric-train-battery-pack",
-        shared_probability = { min = 0.01, max = 0.95 },
+        shared_probability = { min = 0.01, max = 1 },
         amount = 1
     }}
 }, {
