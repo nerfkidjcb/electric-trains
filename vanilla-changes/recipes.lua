@@ -172,7 +172,7 @@ data:extend({{
 }, {
     type = "recipe",
     name = "electric-train-battery-pack",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     energy_required = 10,
     enabled = false,
     allow_as_intermediate = false,
@@ -195,7 +195,7 @@ data:extend({{
 }, {
     type = "recipe",
     name = "recipe-electric-train-alkaline-battery-pack",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     energy_required = 10,
     enabled = false,
     allow_as_intermediate = false,
@@ -219,7 +219,7 @@ data:extend({{
 {
     type = "recipe",
     name = "speed-battery-pack",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     energy_required = 20,
     enabled = false,
     allow_as_intermediate = false,
@@ -250,7 +250,7 @@ data:extend({{
 }, {
     type = "recipe",
     name = "acceleration-battery-pack",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     energy_required = 20,
     enabled = false,
     allow_as_intermediate = false,
@@ -281,7 +281,7 @@ data:extend({{
 }, {
     type = "recipe",
     name = "efficiency-battery-pack",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     energy_required = 20,
     enabled = false,
     allow_as_intermediate = false,
@@ -313,7 +313,7 @@ data:extend({{
 {
     type = "recipe",
     name = "speed-battery-pack-recharge",
-    category = "faster-electrical",
+    categories = {"faster-electrical"},
     hidden = false,
     hide_from_player_crafting = true,
     energy_required = 60,
@@ -331,18 +331,18 @@ data:extend({{
     results = {{
         type = "item",
         name = "destroyed-speed-battery-pack",
-        probability = 0.05,
+        shared_probability = { min = 0, max = 0.05 },
         amount = 1
     }, {
         type = "item",
         name = "speed-battery-pack",
-        probability = 0.95,
+        shared_probability = { min = 0.05, max = 0.95 },
         amount = 1
     }}
 }, {
     type = "recipe",
     name = "acceleration-battery-pack-recharge",
-    category = "faster-electrical",
+    categories = {"faster-electrical"},
     hidden = false,
     hide_from_player_crafting = true,
     energy_required = 60,
@@ -360,18 +360,18 @@ data:extend({{
     results = {{
         type = "item",
         name = "destroyed-acceleration-battery-pack",
-        probability = 0.05,
+        shared_probability = { min = 0, max = 0.05 },
         amount = 1
     }, {
         type = "item",
         name = "acceleration-battery-pack",
-        probability = 0.95,
+        shared_probability = { min = 0.05, max = 0.95 },
         amount = 1
     }}
 }, {
     type = "recipe",
     name = "efficiency-battery-pack-recharge",
-    category = "faster-electrical",
+    categories = {"faster-electrical"},
     hidden = false,
     hide_from_player_crafting = true,
     energy_required = 60,
@@ -389,18 +389,18 @@ data:extend({{
     results = {{
         type = "item",
         name = "destroyed-efficiency-battery-pack",
-        probability = 0.05,
+        shared_probability = { min = 0, max = 0.05 },
         amount = 1
     }, {
         type = "item",
         name = "efficiency-battery-pack",
-        probability = 0.95,
+        shared_probability = { min = 0.05, max = 0.95 },
         amount = 1
     }}
 }, {
     type = "recipe",
     name = "electric-train-battery-pack-recharge",
-    category = "electrical",
+    categories = {"electrical"},
     hidden = false,
     hide_from_player_crafting = true,
     energy_required = 60,
@@ -417,19 +417,19 @@ data:extend({{
     results = {{
         type = "item",
         name = "electric-train-destroyed-battery-pack",
-        probability = 0.01,
+        shared_probability = { min = 0, max = 0.01 },
         amount = 1
     }, {
         type = "item",
         name = "electric-train-battery-pack",
-        probability = 0.99,
+        shared_probability = { min = 0.01, max = 0.95 },
         amount = 1
     }}
 }, {
     -- Faster space train battery pack recharge
     type = "recipe",
     name = "faster-electric-train-battery-pack-recharge",
-    category = "faster-electrical",
+    categories = {"faster-electrical"},
     hidden = false,
     hide_from_player_crafting = true,
     energy_required = 20,
@@ -447,12 +447,12 @@ data:extend({{
     results = {{
         type = "item",
         name = "electric-train-destroyed-battery-pack",
-        probability = 0.15,
+        shared_probability = { min = 0, max = 0.15 },
         amount = 1
     }, {
         type = "item",
         name = "electric-train-battery-pack",
-        probability = 0.85,
+        shared_probability = { min = 0.15, max = 1 },
         amount = 1
     }}
 }})

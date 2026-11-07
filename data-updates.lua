@@ -155,7 +155,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
         name = "speed-battery-pack-refurbish",
         energy_required = 120,
         enabled = false,
-        category = "chemistry",
+        categories = {"chemistry"},
         ingredients = {{
             type = "item",
             name = "destroyed-speed-battery-pack",
@@ -184,7 +184,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
         name = "acceleration-battery-pack-refurbish",
         energy_required = 120,
         enabled = false,
-        category = "chemistry",
+        categories = {"chemistry"},
         ingredients = {{
             type = "item",
             name = "destroyed-acceleration-battery-pack",
@@ -213,7 +213,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
         name = "efficiency-battery-pack-refurbish",
         energy_required = 120,
         enabled = false,
-        category = "chemistry",
+        categories = {"chemistry"},
         ingredients = {{
             type = "item",
             name = "destroyed-efficiency-battery-pack",
@@ -242,7 +242,7 @@ if settings.startup["train-battery-decay-enable-setting"].value == "true" then
         name = "electric-train-battery-pack-refurbish",
         energy_required = 60,
         enabled = false,
-        category = "chemistry",
+        categories = {"chemistry"},
         ingredients = {{
             type = "item",
             name = "electric-train-destroyed-battery-pack",
@@ -935,10 +935,10 @@ if mods["space-exploration"] or (mods["space-age"] and settings.startup["lock-be
             data.raw["recipe"]["efficiency-battery-pack-refurbish"].subgroup = "recycling"
         end
         -- Recyling stuff
-        data.raw["recipe"]["electric-train-battery-pack-refurbish"].category = "hard-recycling"
-        data.raw["recipe"]["speed-battery-pack-refurbish"].category = "hard-recycling"
-        data.raw["recipe"]["acceleration-battery-pack-refurbish"].category = "hard-recycling"
-        data.raw["recipe"]["efficiency-battery-pack-refurbish"].category = "hard-recycling"
+        data.raw["recipe"]["electric-train-battery-pack-refurbish"].categories = {"hard-recycling"}
+        data.raw["recipe"]["speed-battery-pack-refurbish"].categories = {"hard-recycling"}
+        data.raw["recipe"]["acceleration-battery-pack-refurbish"].categories = {"hard-recycling"}
+        data.raw["recipe"]["efficiency-battery-pack-refurbish"].categories = {"hard-recycling"}
     end
 
 elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "true" then
@@ -971,7 +971,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
         data.raw["item"]["electric-train-destroyed-battery-pack"].weight = 10 * kg
     end
     -- ----------------- Change the recipes now to use the electromagentics facility ---------------- --
-    data.raw["recipe"]["recipe-electric-locomotive"].category = "electromagnetics"
+    data.raw["recipe"]["recipe-electric-locomotive"].categories = {"electromagnetics"}
     data.raw["recipe"]["recipe-electric-locomotive"].allow_productivity = true
     data.raw["recipe"]["recipe-electric-locomotive"].ingredients = {{
         type = "item",
@@ -998,7 +998,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
         name = "supercapacitor",
         amount = 5
     }}
-    data.raw["recipe"]["recipe-electric-locomotive-wagon"].category = "electromagnetics"
+    data.raw["recipe"]["recipe-electric-locomotive-wagon"].categories = {"electromagnetics"}
     data.raw["recipe"]["recipe-electric-locomotive-wagon"].allow_productivity = true
     data.raw["recipe"]["recipe-electric-locomotive-wagon"].ingredients = {{
         type = "item",
@@ -1025,7 +1025,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
         name = "supercapacitor",
         amount = 5
     }}
-    data.raw["recipe"]["recipe-electric-artillery-wagon"].category = "electromagnetics"
+    data.raw["recipe"]["recipe-electric-artillery-wagon"].categories = {"electromagnetics"}
     data.raw["recipe"]["recipe-electric-artillery-wagon"].allow_productivity = true
     data.raw["recipe"]["recipe-electric-artillery-wagon"].ingredients = {{
         type = "item",
@@ -1061,7 +1061,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
         name = "supercapacitor",
         amount = 1
     }}
-    data.raw["recipe"]["recipe-electric-cargo-wagon"].category = "electromagnetics"
+    data.raw["recipe"]["recipe-electric-cargo-wagon"].categories = {"electromagnetics"}
     data.raw["recipe"]["recipe-electric-cargo-wagon"].allow_productivity = true
     data.raw["recipe"]["recipe-electric-cargo-wagon"].ingredients = {{
         type = "item",
@@ -1088,7 +1088,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
         name = "supercapacitor",
         amount = 1
     }}
-    data.raw["recipe"]["recipe-electric-fluid-wagon"].category = "electromagnetics"
+    data.raw["recipe"]["recipe-electric-fluid-wagon"].categories = {"electromagnetics"}
     data.raw["recipe"]["recipe-electric-fluid-wagon"].ingredients = {{
         type = "item",
         name = "steel-plate",
@@ -1116,7 +1116,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     }}
     data.raw["recipe"]["electric-train-battery-charging-station"].allow_productivity = true
     data.raw["recipe"]["electric-train-battery-charging-station"].subgroup = "fulgora-processes"
-    data.raw["recipe"]["electric-train-battery-charging-station"].category = "electromagnetics"
+    data.raw["recipe"]["electric-train-battery-charging-station"].categories = {"electromagnetics"}
     data.raw["recipe"]["electric-train-battery-charging-station"].ingredients = {{
         type = "item",
         name = "processing-unit",
@@ -1137,7 +1137,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     -- epxerimental charging station
     data.raw["recipe"]["experimental-electric-train-battery-charging-station"].allow_productivity = true
     data.raw["recipe"]["experimental-electric-train-battery-charging-station"].subgroup = "fulgora-processes"
-    data.raw["recipe"]["experimental-electric-train-battery-charging-station"].category = "electromagnetics"
+    data.raw["recipe"]["experimental-electric-train-battery-charging-station"].categories = {"electromagnetics"}
     data.raw["recipe"]["experimental-electric-train-battery-charging-station"].ingredients = {{
         type = "item",
         name = "processing-unit",
@@ -1158,7 +1158,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     -- normal powerpacks
     data.raw["recipe"]["electric-train-battery-pack"].allow_productivity = true
     data.raw["recipe"]["electric-train-battery-pack"].subgroup = "fulgora-processes"
-    data.raw["recipe"]["electric-train-battery-pack"].category = "electromagnetics"
+    data.raw["recipe"]["electric-train-battery-pack"].categories = {"electromagnetics"}
     data.raw["recipe"]["electric-train-battery-pack"].ingredients = {{
         type = "item",
         name = "supercapacitor",
@@ -1175,7 +1175,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     -- alkaline powerpacks
     data.raw["recipe"]["recipe-electric-train-alkaline-battery-pack"].allow_productivity = true
     data.raw["recipe"]["recipe-electric-train-alkaline-battery-pack"].subgroup = "fulgora-processes"
-    data.raw["recipe"]["recipe-electric-train-alkaline-battery-pack"].category = "electromagnetics"
+    data.raw["recipe"]["recipe-electric-train-alkaline-battery-pack"].categories = {"electromagnetics"}
     data.raw["recipe"]["recipe-electric-train-alkaline-battery-pack"].ingredients = {{
         type = "item",
         name = "supercapacitor",
@@ -1192,7 +1192,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     -- speed powerpacks
     data.raw["recipe"]["speed-battery-pack"].allow_productivity = true
     data.raw["recipe"]["speed-battery-pack"].subgroup = "fulgora-processes"
-    data.raw["recipe"]["speed-battery-pack"].category = "electromagnetics"
+    data.raw["recipe"]["speed-battery-pack"].categories = {"electromagnetics"}
     data.raw["recipe"]["speed-battery-pack"].ingredients = {{
         type = "item",
         name = "supercapacitor",
@@ -1213,7 +1213,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     -- acceleration powerpacks
     data.raw["recipe"]["acceleration-battery-pack"].allow_productivity = true
     data.raw["recipe"]["acceleration-battery-pack"].subgroup = "fulgora-processes"
-    data.raw["recipe"]["acceleration-battery-pack"].category = "electromagnetics"
+    data.raw["recipe"]["acceleration-battery-pack"].categories = {"electromagnetics"}
     data.raw["recipe"]["acceleration-battery-pack"].ingredients = {{
         type = "item",
         name = "supercapacitor",
@@ -1234,7 +1234,7 @@ elseif mods["space-age"] and settings.startup["lock-behind-fulgora"].value == "t
     -- efficiency powerpacks
     data.raw["recipe"]["efficiency-battery-pack"].allow_productivity = true
     data.raw["recipe"]["efficiency-battery-pack"].subgroup = "fulgora-processes"
-    data.raw["recipe"]["efficiency-battery-pack"].category = "electromagnetics"
+    data.raw["recipe"]["efficiency-battery-pack"].categories = {"electromagnetics"}
     data.raw["recipe"]["efficiency-battery-pack"].ingredients = {{
         type = "item",
         name = "supercapacitor",

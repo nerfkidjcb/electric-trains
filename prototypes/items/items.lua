@@ -42,11 +42,11 @@ data:extend({{
             scale = 0.5
         }}
     },
-    fuel_category = "electrical",
+    fuel_categories = {"electrical"},
     fuel_value = "120MJ",
     fuel_acceleration_multiplier_quality_bonus = 0.25,
     fuel_top_speed_multiplier_quality_bonus = 0.25,
-    burnt_result = "",
+    burnt_result = nil,
     subgroup = "intermediate-product",
     order = "s-a[battery-pack]",
     stack_size = 20,
@@ -73,7 +73,7 @@ data:extend({{
             scale = 0.5
         }}
     },
-    fuel_category = "electrical",
+    fuel_categories = {"electrical"},
     fuel_value = "40MJ",
     fuel_acceleration_multiplier_quality_bonus = 0.25,
     fuel_top_speed_multiplier_quality_bonus = 0.25,
@@ -114,7 +114,7 @@ data:extend({{
             scale = 0.5
         }}
     },
-    fuel_category = "electrical",
+    fuel_categories = {"electrical"},
     fuel_value = "32MJ",
     fuel_top_speed_multiplier = 1.5,
     fuel_acceleration_multiplier = 0.8,
@@ -157,7 +157,7 @@ data:extend({{
             scale = 0.5
         }}
     },
-    fuel_category = "electrical",
+    fuel_categories = {"electrical"},
     fuel_value = "32MJ",
     fuel_top_speed_multiplier = 0.8,
     fuel_acceleration_multiplier = 1.5,
@@ -199,7 +199,7 @@ data:extend({{
             scale = 0.5
         }}
     },
-    fuel_category = "electrical",
+    fuel_categories = {"electrical"},
     fuel_value = "240MJ",
     fuel_acceleration_multiplier_quality_bonus = 0.25,
     fuel_top_speed_multiplier_quality_bonus = 0.25,
